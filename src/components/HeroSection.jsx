@@ -21,13 +21,13 @@ import swiper5Img from "../Image/swiper-5.jpg";
 export function HeroSection() {
     const { t } = useTranslation();
     return (
-        <div className='container1 py-7 px-0 rounded-2xl relative group'>
+        <div className='container1 pt-7 px-0 rounded-2xl relative group'>
             <Swiper
                 spaceBetween={30}
                 loop={true}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 3500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
                 pagination={{

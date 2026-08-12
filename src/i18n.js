@@ -55,6 +55,10 @@ const resources = {
                     requestCall: "Заказать звонок",
                 },
             },
+            categorySection: {
+                categoryTitle: "Категории",
+                modelLength: "моделей",
+            },
         },
     },
     uz: {
@@ -111,6 +115,10 @@ const resources = {
                     requestCall: "Qo'ng'iroq qilishni so'rang",
                 },
             },
+            categorySection: {
+                categoryTitle: "Kategoriyalar",
+                modelLength: "ta model",
+            },
         },
     },
     en: {
@@ -165,6 +173,10 @@ const resources = {
                     readMore: "Read more",
                     requestCall: "Request a call",
                 },
+            },
+            categorySection: {
+                categoryTitle: "Categories",
+                modelLength: "models",
             },
         },
     },

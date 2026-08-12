@@ -211,4 +211,38 @@ export const Images = {
             />
         </svg>
     ),
+    swiperPrevBtnIcon: (props) => (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width={24}
+            height={24}
+            fill='none'
+            {...props}
+        >
+            <path
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={1.4}
+                d='M15.75 20.25 7.5 12l8.25-8.25'
+            />
+        </svg>
+    ),
+    swiperNextBtnIcon: (props) => (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width={24}
+            height={24}
+            fill='none'
+            {...props}
+        >
+            <path
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={1.4}
+                d='M8.25 20.25 16.5 12 8.25 3.75'
+            />
+        </svg>
+    ),
 };

@@ -2,8 +2,9 @@ import { img } from "framer-motion/client";
 
 export const categoriesData = [
     {
+        id: 1,
         slug: "shtornye-avtomobili",
-        img: "",
+        img: "/src/Image/kategoriy-1.webp",
         title: {
             uz: "Pardali avtomobillar",
             ru: "Шторные автомобили",
@@ -11,7 +12,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 2,
         slug: "krany-manipulyatory",
+        img: "/src/Image/kategoriy-2.webp",
         title: {
             uz: "Kran-manipulyatorlar",
             ru: "Краны-манипуляторы",
@@ -19,7 +22,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 3,
         slug: "avtotoplivozapravshchiki",
+        img: "/src/Image/kategoriy-3.png",
         title: {
             uz: "Yonilg'i quyish mashinalari (ATZ)",
             ru: "Автотопливозаправщики",
@@ -27,7 +32,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 4,
         slug: "avtogidropodiyemniki",
+        img: "/src/Image/kategoriy-4.webp",
         title: {
             uz: "Avtogidroko'targichlar (Vishka)",
             ru: "Автогидроподъёмники",
@@ -35,7 +42,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 5,
         slug: "avtocisterny",
+        img: "/src/Image/kategoriy-5.webp",
         title: {
             uz: "Avtosisternalar",
             ru: "Автоцистерны",
@@ -43,23 +52,27 @@ export const categoriesData = [
         },
     },
     {
+        id: 6,
         slug: "avtoevakuatory",
+        img: "/src/Image/kategoriy-6.webp",
         title: {
             uz: "Avtoevakuatorlar",
             ru: "Автоэвакуаторы",
             en: "Tow trucks",
         },
     },
+    // {
+    //     slug: "bortovye-avtomobili",
+    //     title: {
+    //         uz: "Bortli avtomobillar",
+    //         ru: "Бортовые автомобили",
+    //         en: "Flatbed trucks",
+    //     },
+    // },
     {
-        slug: "bortovye-avtomobili",
-        title: {
-            uz: "Bortli avtomobillar",
-            ru: "Бортовые автомобили",
-            en: "Flatbed trucks",
-        },
-    },
-    {
+        id: 7,
         slug: "izotermicheskie-furgony",
+        img: "/src/Image/kategoriy-7.webp",
         title: {
             uz: "Izotermik furgonlar",
             ru: "Изотермические фургоны",
@@ -67,7 +80,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 8,
         slug: "konteynerovozy",
+        img: "/src/Image/kategoriy-8.png",
         title: {
             uz: "Konteyner tashuvchilar",
             ru: "Контейнеровозы",
@@ -75,7 +90,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 9,
         slug: "kryukovye-pogruzchiki",
+        img: "/src/Image/kategoriy-9.webp",
         title: {
             uz: "Ilgakli yuklagichlar (Multilift)",
             ru: "Крюковые погрузчики",
@@ -83,7 +100,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 10,
         slug: "samosvaly",
+        img: "/src/Image/kategoriy-10.png",
         title: {
             uz: "Samosvallar",
             ru: "Самосвалы",
@@ -91,7 +110,9 @@ export const categoriesData = [
         },
     },
     {
+        id: 11,
         slug: "avtomobili-dopog-kategoriya-exii",
+        img: "/src/Image/kategoriy-11.webp",
         title: {
             uz: "DOPOG EX/II toifasidagi xavfli yuk avtomobillari",
             ru: "Автомобили ДОПОГ категория EXII",
