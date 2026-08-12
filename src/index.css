@@ -12,3 +12,27 @@
     margin-inline: auto;
     padding-inline: 20px;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero-bullet:hover {
+  background-color: #ffffff;
+}
+
+.hero-bullet-active {
+  background-color: white;
+}

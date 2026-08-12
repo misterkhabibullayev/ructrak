@@ -8,7 +8,7 @@ function Header() {
     const { t } = useTranslation();
 
     return (
-        <header className='py-3.5 dark:bg-zinc-950 transition-all duration-300'>
+        <header className='py-3.5 dark:bg-slate-950 transition-all duration-300'>
             <div className='w-full container1'>
                 <div className='flex items-center justify-between'>
                     <div>

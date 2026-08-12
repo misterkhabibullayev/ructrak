@@ -1,6 +1,9 @@
+import { img } from "framer-motion/client";
+
 export const categoriesData = [
     {
         slug: "shtornye-avtomobili",
+        img: "",
         title: {
             uz: "Pardali avtomobillar",
             ru: "Шторные автомобили",
