@@ -3,17 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import "../index.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { Images } from "../utils/images";
+import { Navigation, Pagination } from "swiper/modules";
 import { categoriesData } from "../data/categoriesData";
 import { productsData } from "../data/productsData";
+import { Images } from "../utils/images";
 
 export function KategorySection() {
   const { t, i18n } = useTranslation();
