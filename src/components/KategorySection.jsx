@@ -1,26 +1,25 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import "../index.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { Images } from "../utils/images";
+import { Navigation, Pagination } from "swiper/modules";
 import { categoriesData } from "../data/categoriesData";
 import { productsData } from "../data/productsData";
+import { Images } from "../utils/images";
 
 export function KategorySection() {
     const { t, i18n } = useTranslation();
     const currentLang = i18n.language;
     return (
-        <div className='container1 my-20'>
+        <div className='container1 mt-20'>
             <div className='flex items-center justify-between mb-8'>
                 <h1 className='font-FiraSans font-medium text-[28px] md:text-[42px] dark:text-white'>
                     {t("categorySection.categoryTitle")}
