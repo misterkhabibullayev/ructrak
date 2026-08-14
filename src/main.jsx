@@ -3,7 +3,9 @@ import { createRoot } from "react-dom/client";
 import HomePage from "./app/app";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import "aos/dist/aos.css";
 import './i18n.js';
+
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>

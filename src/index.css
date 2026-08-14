@@ -9,6 +9,9 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+}
 .container1 {
   width: 100%;
   max-width: 1360px;

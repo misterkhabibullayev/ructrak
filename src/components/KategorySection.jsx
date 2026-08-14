@@ -45,9 +45,13 @@ export function KategorySection() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          {categoriesData.map((item) => (
+          {categoriesData.map((item, index) => (
             <SwiperSlide key={item.id} className="py-10">
-              <div className="w-full h-full py-4.5 px-3.5 border border-[#EBEBEB] rounded-lg shadow-my hover:border-[#FEC80B] hover:shadow-hover transition-all duration-300">
+              <div
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                className="w-full h-full py-4.5 px-3.5 border border-[#EBEBEB] rounded-lg shadow-my hover:border-[#FEC80B] hover:shadow-hover transition-all duration-300"
+              >
                 <a
                   href={`/catalog/${item.slug}`}
                   className="inline-block w-full h-full"

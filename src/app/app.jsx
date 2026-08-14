@@ -4,6 +4,7 @@ import { useThemeStore } from "../store/useThemeStore";
 import { HeroSection } from "../components/HeroSection";
 import { KategorySection } from "../components/KategorySection";
 import { AboutCompanySection } from "../components/AboutCompany";
+import Aos from "aos";
 
 function HomePage() {
   const { theme } = useThemeStore();
@@ -16,6 +17,12 @@ function HomePage() {
       root.classList.remove("dark");
     }
   }, [theme]);
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+    Aos.refresh();
+  }, []);
   return (
     <>
       <div>
