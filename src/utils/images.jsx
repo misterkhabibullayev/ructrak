@@ -122,7 +122,7 @@ export const Images = {
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
       <path fill="none" d="M0 0h24v24H0z" />
       <path
-        fill="currentColor"
+        fill="#000"
         d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"
       />
     </svg>
@@ -238,6 +238,32 @@ export const Images = {
         fill="#000"
         d="M26.495 16.495a.7.7 0 0 0 0-.99L22.04 11.05a.7.7 0 1 0-.99.99L25.01 16l-3.96 3.96a.7.7 0 1 0 .99.99l4.455-4.455ZM6 16.7h20v-1.4H6v1.4Z"
       />
+    </svg>
+  ),
+  LoadingIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={100}
+      height={100}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="#A1A1A1"
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"
+        opacity={0.5}
+      />
+      <path fill="#FEC80B" d="M20 12h2A10 10 0 0 0 12 2v2a8 8 0 0 1 8 8Z">
+        <animateTransform
+          attributeName="transform"
+          dur="1s"
+          from="0 12 12"
+          repeatCount="indefinite"
+          to="360 12 12"
+          type="rotate"
+        />
+      </path>
     </svg>
   ),
 };

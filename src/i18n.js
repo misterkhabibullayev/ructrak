@@ -5,6 +5,35 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   ru: {
     translation: {
+      metaTitleDescriptions: {
+        mainTitle: "Главная страница - Ructrak",
+        mainDescription:
+          "Ructrak — надежная площадка для спецтехники и качественных запчастей. Познакомьтесь с широким ассортиментом каталогов, выгодными ценами и быстрой доставкой.",
+        catalogTitle: "Каталог - Ructrak",
+        catalogDescription:
+          "Каталог качественных и гарантированных запчастей и оборудования. Найдите нужный вам товар по доступным ценам и оформите заказ онлайн.",
+        newsTitle: "Новости - Ructrak",
+        newsDescription:
+          "Будьте в курсе последних новостей Ructrak, полезных статей и важных технических событий.",
+        galleryTitle: "Галерея - Ructrak",
+        galleryDescription:
+          "Галерея качественных фотографий продукции Ructrak и реализованных проектов.",
+        vakansiTitle: "Вакансии - Ructrak",
+        vakansiDescription:
+          "Присоединяйтесь к команде Ructrak! Ознакомьтесь с актуальными вакансиями и вакансиями в нашей компании и отправьте свое резюме.",
+        contactsTitle: "Контакты и общение - Ructrak",
+        contactsDescription:
+          "Контактные телефоны Ructrak, адрес и карта проезда. У вас есть вопросы? Связаться с нами!",
+        collabTitle: "Партнерство и поставщики - Ructrak",
+        collabDescription:
+          "Установите взаимовыгодное партнерство с Ructrak. Специальные условия и предложения для поставщиков и партнеров.",
+        serviceTitle: "Сервис и обслуживание - Ructrak",
+        serviceDescription:
+          "Профессиональный сервис и обслуживание спецтехники. Опытные специалисты и гарантия качества ремонта.",
+        kreditsTitle: "Условия кредитования и лизинга - Ructrak",
+        kreditsDescription:
+          "Приобретайте специализированное оборудование на выгодных условиях кредитования и лизинга. Низкие процентные ставки и быстрое оформление заявок.",
+      },
       header: {
         tagline: "производство и продажа автоспецтехники",
         workTime: "Время работы",
@@ -70,6 +99,35 @@ const resources = {
   },
   uz: {
     translation: {
+      metaTitleDescriptions: {
+        mainTitle: "Bosh sahifa - Ructrak",
+        mainDescription:
+          "Ructrak — maxsus texnikalar va sifatli ehtiyot qismlarning ishonchli platformasi. Keng turdagi katalog, hamyonbop narxlar va tezkor yetkazib berish xizmati bilan tanishing.",
+        catalogTitle: "Katalog - Ructrak",
+        catalogDescription:
+          "Sifatli hamda kafolatlangan ehtiyot qismlar va uskunalar katalogi. O'zingizga kerakli mahsulotni qulay narxlarda toping va onlayn buyurtma bering.",
+        newsTitle: "Yangiliklar - Ructrak",
+        newsDescription:
+          "Ructrak kompaniyasining eng so'nggi yangiliklari, foydali maqolalari va texnika olamidagi muhim voqealardan xabardor bo'ling.",
+        galleryTitle: "Galereya - Ructrak",
+        galleryDescription:
+          "Ructrak mahsulotlari hamda amalga oshirilgan loyihalarning yuqori sifatli fotosuratlari galereyasi.",
+        vakansiTitle: "Vakansiyalar - Ructrak",
+        vakansiDescription:
+          "Ructrak jamoasiga qo'shiling! Kompaniyamizdagi dolzarb bo'sh ish o'rinlari bilan tanishing va o'z rezyumengizni yuboring.",
+        contactsTitle: "Kontaktlar va Bog'lanish - Ructrak",
+        contactsDescription:
+          "Ructrak aloqa telefon raqamlari, manzil va joylashuv xaritasi. Savollaringiz bormi? Biz bilan bog'laning!",
+        collabTitle: "Hamkorlik va Yetkazib beruvchilar - Ructrak",
+        collabDescription:
+          "Ructrak bilan o'zaro manfaatli hamkorlikni yo'lga qo'ying. Yetkazib beruvchilar va hamkorlar uchun maxsus shartlar hamda takliflar.",
+        serviceTitle: "Servis va Texnik xizmat ko'rsatish - Ructrak",
+        serviceDescription:
+          "Maxsus texnikalar uchun professional servis va xizmat ko'rsatish. Tajribali mutaxassislar va sifatli ta'mirlash kafolati.",
+        kreditsTitle: "Kredit va Lizing Shartlari - Ructrak",
+        kreditsDescription:
+          "Maxsus texnikalarni qulay kredit va lizing shartlari asosida xarid qiling. Past foiz stavkalari va tezkor rasmiylashtirish.",
+      },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
         workTime: "Ish vaqti",
@@ -137,6 +195,35 @@ const resources = {
   },
   en: {
     translation: {
+      metaTitleDescriptions: {
+        mainTitle: "Main Page - Ructrak",
+        mainDescription:
+          "Ructrak is a reliable platform for heavy machinery and quality spare parts. Explore our wide range of catalogs, great prices, and fast delivery.",
+        catalogTitle: "Catalog - Ructrak",
+        catalogDescription:
+          "Catalog of high-quality and guaranteed spare parts and equipment. Find the product you need at affordable prices and place an order online.",
+        newsTitle: "News - Ructrak",
+        newsDescription:
+          "Stay tuned for the latest Ructrak news, useful articles, and important technical updates.",
+        galleryTitle: "Gallery - Ructrak",
+        galleryDescription:
+          "Gallery of high-quality photos featuring Ructrak products and completed projects.",
+        vakansiTitle: "Vacancies - Ructrak",
+        vakansiDescription:
+          "Join the Ructrak team! Check out the current job openings at our company and send us your resume.",
+        contactsTitle: "Contacts & Communication - Ructrak",
+        contactsDescription:
+          "Ructrak contact numbers, address, and location map. Have questions? Contact us!",
+        collabTitle: "Partnership & Suppliers - Ructrak",
+        collabDescription:
+          "Establish a mutually beneficial partnership with Ructrak. Special terms and offers for suppliers and partners.",
+        serviceTitle: "Service & Maintenance - Ructrak",
+        serviceDescription:
+          "Professional service and maintenance for heavy machinery. Experienced specialists and guaranteed repair quality.",
+        kreditsTitle: "Credit & Leasing Terms - Ructrak",
+        kreditsDescription:
+          "Purchase specialized equipment on favorable credit and leasing terms. Low interest rates and quick application processing.",
+      },
       header: {
         tagline: "production and sale of special vehicles",
         workTime: "Working hours",
