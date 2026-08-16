@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+=======
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+>>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
 @import "tailwindcss";
 
 @theme {
@@ -9,9 +13,12 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+<<<<<<< HEAD
 html {
   scroll-behavior: smooth;
 }
+=======
+>>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
 .container1 {
   width: 100%;
   max-width: 1360px;
@@ -41,6 +48,7 @@ html {
 
 .hero-bullet-active {
   background-color: white;
+<<<<<<< HEAD
 }
 
 @keyframes customFadeUp {
@@ -57,3 +65,6 @@ html {
 .animate-fade-up {
   animation: customFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+=======
+}
+>>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
