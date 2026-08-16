@@ -5,7 +5,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   ru: {
     translation: {
-<<<<<<< HEAD
       metaTitleDescriptions: {
         mainTitle: "Главная страница - Ructrak",
         mainDescription:
@@ -35,8 +34,6 @@ const resources = {
         kreditsDescription:
           "Приобретайте специализированное оборудование на выгодных условиях кредитования и лизинга. Низкие процентные ставки и быстрое оформление заявок.",
       },
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
       header: {
         tagline: "производство и продажа автоспецтехники",
         workTime: "Время работы",
@@ -92,24 +89,16 @@ const resources = {
       },
       aboutCompanySection: {
         title: "О компании",
-<<<<<<< HEAD
-=======
-        titleSpan: "Рустрак",
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
         description1:
           "Наша компания занимает лидирующие позиции на рынке спецтехники: каждый день мы вносим свой вклад в развитие отечественного автопрома и укрепление российской экономики.",
         description2:
           "«РусТрак» является ведущим производителем коммерческого транспорта и специализированной техники. Наша работа признана и высоко оценена крупнейшими отечественными корпорациями и государственными структурами: мы поставляем спецтехнику для таких корпораций, как Газпром, Росатом, Россети, РСК «МИГ» и других.",
-<<<<<<< HEAD
         more: "Подробнее",
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
       },
     },
   },
   uz: {
     translation: {
-<<<<<<< HEAD
       metaTitleDescriptions: {
         mainTitle: "Bosh sahifa - Ructrak",
         mainDescription:
@@ -139,8 +128,6 @@ const resources = {
         kreditsDescription:
           "Maxsus texnikalarni qulay kredit va lizing shartlari asosida xarid qiling. Past foiz stavkalari va tezkor rasmiylashtirish.",
       },
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
         workTime: "Ish vaqti",
@@ -196,7 +183,6 @@ const resources = {
         categoryTitle: "Kategoriyalar",
         modelLength: "ta model",
       },
-<<<<<<< HEAD
       aboutCompanySection: {
         title: "Kompaniya haqida",
         description1:
@@ -205,13 +191,10 @@ const resources = {
           "«RusTrak» tijorat transporti va ixtisoslashtirilgan texnikalarning yetakchi ishlab chiqaruvchisi hisoblanadi. Faoliyatimiz yirik korporatsiyalar va davlat tuzilmalari tomonidan yuqori baholangan: biz Gazprom, Rosatom, Rosseti, RSK «MIG» va boshqa ko'plab yirik korporatsiyalar uchun maxsus texnikalar yetkazib beramiz.",
         more: "Batafsil",
       },
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
     },
   },
   en: {
     translation: {
-<<<<<<< HEAD
       metaTitleDescriptions: {
         mainTitle: "Main Page - Ructrak",
         mainDescription:
@@ -241,8 +224,6 @@ const resources = {
         kreditsDescription:
           "Purchase specialized equipment on favorable credit and leasing terms. Low interest rates and quick application processing.",
       },
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
       header: {
         tagline: "production and sale of special vehicles",
         workTime: "Working hours",
@@ -296,7 +277,6 @@ const resources = {
         categoryTitle: "Categories",
         modelLength: "models",
       },
-<<<<<<< HEAD
       aboutCompanySection: {
         title: "About company",
         description1:
@@ -305,8 +285,6 @@ const resources = {
           "«RusTrak» is a leading manufacturer of commercial vehicles and specialized equipment. Our work is recognized and highly appreciated by major corporations and government agencies: we supply specialized equipment for corporations such as Gazprom, Rosatom, Rosseti, RAC «MiG», and others.",
         more: "Learn More",
       },
-=======
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
     },
   },
 };

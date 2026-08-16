@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useRef, useState } from "react";
->>>>>>> 697f6efe2e862981e7423133fbd24678b57f6dd4
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
