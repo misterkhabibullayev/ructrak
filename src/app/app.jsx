@@ -7,18 +7,25 @@ import "aos/dist/aos.css";
 
 function App() {
   const routes = useRoutes(router);
-
-
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
     Aos.refresh();
   }, []);
-  return <>
-    <Suspense fallback={<Loading />}>
-      {routes}
-    </Suspense>
-  </>;
+
+  return (
+    <>
+      <Suspense
+        fallback={
+          <div className="fixed inset-0 z-50 flex items-center justify-center">
+            <Loading />
+          </div>
+        }
+      >
+        {routes}
+      </Suspense>
+    </>
+  );
 }
 export default App;

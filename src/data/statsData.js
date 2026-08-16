@@ -31,7 +31,7 @@ export const statsData = [
     id: 3,
     value: 11,
     title: {
-      uz: "konsernlar",
+      uz: "xavotirlar",
       ru: "концернов",
       en: "concerns",
     },

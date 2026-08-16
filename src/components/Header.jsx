@@ -47,6 +47,7 @@ function Header() {
                             </div>
                             <div className="">
                                 <LanguageThemeToggle />
+                                
                             </div>
                             <div>
                                 <button className='w-11.5 h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full'>

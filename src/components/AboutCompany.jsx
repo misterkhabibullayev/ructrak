@@ -31,7 +31,7 @@ export function AboutCompanySection() {
               {t("aboutCompanySection.description2")}
             </p>
           </div>
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" className="hidden md:block">
             <a
               href="/about"
               className="inline-flex items-center gap-2 py-1.5 px-6 bg-[#FEC80B] hover:bg-[#FFD43A] rounded "
