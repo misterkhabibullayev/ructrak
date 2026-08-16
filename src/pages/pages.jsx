@@ -7,6 +7,8 @@ const PhotoGalleryPage = lazy(() => import("./PhotoGalleryPage"));
 const SearchPage = lazy(() => import("./SearchPage"));
 const ServicePage = lazy(() => import("./ServicePage"));
 const ContactsPage = lazy(() => import("./ContactsPage"));
+const CartPage = lazy(() => import("./CartPage"));
+const FavoritesPage = lazy(() => import("./FavoritesPage"));
 
 export {
   HomePage,
@@ -16,4 +18,6 @@ export {
   SearchPage,
   ServicePage,
   ContactsPage,
+  CartPage,
+  FavoritesPage,
 };

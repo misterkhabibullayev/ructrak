@@ -9,8 +9,14 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html,
+  body {
+    @apply bg-white dark:bg-slate-900 transition-colors duration-300
+  }
+}
+button {
+  cursor: pointer;
 }
 .container1 {
   width: 100%;
@@ -18,6 +24,7 @@ html {
   margin-inline: auto;
   padding-inline: 20px;
 }
+
 
 .swiper {
   width: 100%;

@@ -37,6 +37,8 @@ const resources = {
       header: {
         tagline: "производство и продажа автоспецтехники",
         workTime: "Время работы",
+        modalworkTime1: "Пн-пт: с 8:00 до 18:00",
+        modalworkTime2: "Сб-вс: Выходной",
         address: "г. Нижний Новгород ул. Торфяная, 35",
         forRegions: "Для регионов:",
         nizhnyNovgorod: "Нижний Новгород:",
@@ -131,6 +133,8 @@ const resources = {
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
         workTime: "Ish vaqti",
+        modalworkTime1: "Dush-Jum: 8:00 dan 18:00 gacha",
+        modalworkTime2: "Shan-Yak: Dam olish kuni",
         address: "Nijniy Novgorod sh., Torfyanaya ko'ch., 35",
         forRegions: "Hududlar uchun:",
         nizhnyNovgorod: "Nijniy Novgorod:",
@@ -227,6 +231,8 @@ const resources = {
       header: {
         tagline: "production and sale of special vehicles",
         workTime: "Working hours",
+        modalworkTime1: "Mon-Fri: 8:00 AM – 6:00 PM",
+        modalworkTime2: "Sat-Sun: Closed",
         address: "Nizhny Novgorod, Torfyanaya st., 35",
         forRegions: "For regions:",
         nizhnyNovgorod: "Nizhny Novgorod:",
