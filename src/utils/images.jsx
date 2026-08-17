@@ -19,11 +19,11 @@ export const Images = {
       />
     </svg>
   ),
-  telephoneIcon: ({ width = 32, height = 32, ...props }) => (
+  telephoneIcon: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
+      width={32}
+      height={32}
       viewBox="0 0 24 24"
       {...props}
     >
@@ -141,8 +141,8 @@ export const Images = {
   sunIcon: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={16}
-      height={16}
+      width={25}
+      height={25}
       viewBox="0 0 24 24"
       {...props}
     >
@@ -156,8 +156,8 @@ export const Images = {
   moonIcon: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={16}
-      height={16}
+      width={25}
+      height={25}
       viewBox="0 0 512 512"
       {...props}
     >
@@ -174,6 +174,22 @@ export const Images = {
       <path
         fill="#000"
         d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"
+      />
+    </svg>
+  ),
+  locationIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={22}
+      height={22}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M11.262 22.134S4 16.018 4 10a8 8 0 1 1 16 0c0 6.018-7.262 12.134-7.262 12.134-.404.372-1.069.368-1.476 0M12 13.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
       />
     </svg>
   ),

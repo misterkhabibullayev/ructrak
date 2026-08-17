@@ -10,9 +10,9 @@ export function LangModal() {
 
   // Tillay ro'yxati va ularga mos flag ikonkalari
   const languages = [
-    { code: "uz", label: "UZ", Icon: Images.uzbekistanFlagIcon },
-    { code: "ru", label: "RU", Icon: Images.russiaFlagIcon },
-    { code: "en", label: "EN", Icon: Images.unitedStatesFlagIcon },
+    { code: "uz", label: "UZ", title: "O'zbekcha", Icon: Images.uzbekistanFlagIcon },
+    { code: "ru", label: "RU", title: "Русский", Icon: Images.russiaFlagIcon },
+    { code: "en", label: "EN", title: "English", Icon: Images.unitedStatesFlagIcon },
   ];
 
   const CurrentFlag =
@@ -74,7 +74,9 @@ export function LangModal() {
                     }`}
                   >
                     <Flag />
-                    <span className="font-FiraSans font-normal text-[15px] leading-[110%]">{lang.label}</span>
+                    <span className="font-FiraSans font-normal text-[15px] leading-[110%]">
+                      {lang.label}
+                    </span>
                   </button>
                 );
               })}
