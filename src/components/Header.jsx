@@ -16,25 +16,28 @@ function Header() {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    if (headerTopRef.current) {
-      const topHeaderHeight = headerTopRef.current.offsetHeight;
-      
-      if (window.scrollY >= topHeaderHeight) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    }
-  };
+    const handleScroll = () => {
+      if (headerTopRef.current) {
+        const topHeaderHeight = headerTopRef.current.offsetHeight;
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+        if (window.scrollY >= topHeaderHeight) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <header ref={headerTopRef} className="dark:bg-slate-950 transition-all duration-300">
+      <header
+        ref={headerTopRef}
+        className="dark:bg-slate-950 transition-all duration-300"
+      >
         <div className="w-full container1">
           <div className="flex items-center justify-between pt-3.5 pb-2">
             <div>
@@ -140,27 +143,30 @@ function Header() {
         </div>
       </header>
       <div className="sticky top-0 z-50">
-        <AnimatePresence>
-          {isSticky && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{
-                duration: 0.35,
-                ease: [0.04, 0.62, 0.23, 0.98],
-              }}
-              className="overflow-hidden bg-white dark:bg-slate-950"
-            >
-              <div className="py-1.5">
-                <BottomHeaderTop />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <hr className="text-[#FEC80B]" />
-        <div className=" bg-white dark:bg-slate-950 pt-2.5 pb-3.5">
-          <HeaderBottom />
+        <hr className={`text-[#FEC80B] ${isSticky ? "hidden" : "block"}`} />
+        <div className=" bg-white dark:bg-slate-950 pt-2.5">
+          <AnimatePresence>
+            {isSticky && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 36, opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{
+                  duration: 0.35,
+                  ease: [0.04, 0.62, 0.23, 0.98],
+                }}
+                className="overflow-hidden bg-white dark:bg-slate-950"
+              >
+                <div className="">
+                  <BottomHeaderTop />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <hr className={`text-[#FEC80B] ${isSticky ? "block" : "hidden"}`} />
+          <div className="pt-2.5 pb-3.5">
+            <HeaderBottom />
+          </div>
         </div>
       </div>
     </>
