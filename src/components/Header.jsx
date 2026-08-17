@@ -149,7 +149,7 @@ function Header() {
             {isSticky && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 36, opacity: 1 }}
+                animate={{ height: 30, opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{
                   duration: 0.35,
