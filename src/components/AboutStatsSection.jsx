@@ -16,7 +16,7 @@ function AboutStatsSection() {
                 </h1>
               </div>
               <p className="font-FiraSans font-medium text-[32px] leading-[120%] mb-6">
-                {item?.title?.[currentLang].toUpperCase()}
+                {item?.title?.[currentLang]}
               </p>
               <div>
                 <p className="font-FiraSans font-normal text-[18px] leading-[150%] line-clamp-4">
