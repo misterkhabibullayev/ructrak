@@ -70,7 +70,7 @@ function Header() {
                           duration: 0.5,
                           ease: [0.04, 0.62, 0.23, 0.98],
                         }}
-                        className="absolute top-full right-0 z-10 bg-white dark:bg-slate-900 shadow-lg rounded-lg p-3.5 overflow-hidden"
+                        className="absolute top-full right-0 z-51 bg-white dark:bg-slate-900 shadow-lg rounded-lg p-3.5 overflow-hidden"
                       >
                         <div
                           className={`flex flex-col gap-3 transition-all duration-500 ${isOpen ? "opacity-100" : "opacity-0"}`}

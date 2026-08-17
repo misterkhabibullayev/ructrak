@@ -1,8 +1,10 @@
+import kategoriyImg1 from "../Image/kategoriy-1.webp";
+
 export const categoriesData = [
   {
     id: 1,
     slug: "shtornye-avtomobili",
-    img: "/src/Image/kategoriy-1.webp",
+    img: kategoriyImg1,
     title: {
       uz: "Pardali avtomobillar",
       ru: "Шторные автомобили",
