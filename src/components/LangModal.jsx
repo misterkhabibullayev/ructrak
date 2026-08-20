@@ -43,7 +43,7 @@ export function LangModal() {
         onClick={() => setIsOpen((prev) => !prev)}
         className="w-full h-full flex items-center gap-1 cursor-pointer"
       >
-        <CurrentFlag className="w-8.75 h-8.75" />
+        <CurrentFlag className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
       </button>
 
       <AnimatePresence>

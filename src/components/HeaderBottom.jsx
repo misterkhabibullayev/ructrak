@@ -106,7 +106,7 @@ export function HeaderBottom({ isSticky }) {
                 </nav>
               </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <div className="hidden md:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
                 <input
                   type="search"
@@ -116,14 +116,14 @@ export function HeaderBottom({ isSticky }) {
                 <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
               </div>
               <div className="block md:hidden">
-                <Images.searchIcon className="w-8.75 h-8.75 text-black dark:text-white transition-all duration-300" />
+                <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
               </div>
               <div>
                 <Link
                   to="/cart"
                   className="text-black dark:text-white transition-all duration-300"
                 >
-                  <Images.cartIcon />
+                  <Images.cartIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
                 </Link>
               </div>
               <div>
@@ -131,7 +131,7 @@ export function HeaderBottom({ isSticky }) {
                   to="/favorites"
                   className="text-black dark:text-white transition-all duration-300"
                 >
-                  <Images.favoritesIcon />
+                  <Images.favoritesIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
                 </Link>
               </div>
               <div
