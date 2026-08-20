@@ -7,7 +7,7 @@ function AboutStatsSection() {
   return (
     <section className="bg-[#FEC80B] py-12.5">
       <div className="container1">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-34">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-15 md:gap-34">
           {statsData.map((item) => (
             <div key={item.id} data-aos="fade-up">
               <div>

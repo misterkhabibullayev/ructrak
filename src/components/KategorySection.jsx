@@ -19,18 +19,18 @@ export function KategorySection() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="container1 mt-20">
         <div className="flex items-center justify-between mb-8">
           <h1 className="font-FiraSans font-medium text-[28px] md:text-[42px] dark:text-white">
             {t("categorySection.categoryTitle")}
           </h1>
-          <div>
-            <button className="custom-prev-btn">
-              <Images.swiperPrevBtnIcon className="text-black dark:text-white" />
+          <div className="flex items-center gap-2.5">
+            <button className="custom-prev-btn border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300">
+              <Images.swiperPrevBtnIcon className="text-black dark:text-white group-hover:text-black" />
             </button>
-            <button className="custom-next-btn">
-              <Images.swiperNextBtnIcon className="text-black dark:text-white" />
+            <button className="custom-next-btn border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300">
+              <Images.swiperNextBtnIcon className="text-black dark:text-white group-hover:text-black" />
             </button>
           </div>
         </div>
@@ -38,6 +38,20 @@ export function KategorySection() {
           <Swiper
             slidesPerView={4}
             spaceBetween={24}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              }
+            }}
             loop={true}
             navigation={{
               prevEl: ".custom-prev-btn",

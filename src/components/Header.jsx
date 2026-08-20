@@ -43,15 +43,15 @@ function Header() {
             <div>
               <Link to="/" className="flex items-center gap-2.5">
                 <Images.logoImage className="text-black dark:text-white transition-all duration-300" />
-                <div className="w-0.5 h-5.75 bg-[#FEC80B]"></div>
-                <p className="font-FiraSans font-normal text-[14px] leading-[110%] text-[#000000] max-w-48 dark:text-white transition-all duration-300">
+                <div className="hidden lg:block w-0.5 h-5.75 bg-[#FEC80B]"></div>
+                <p className="hidden lg:block font-FiraSans font-normal text-[14px] leading-[110%] text-[#000000] max-w-48 dark:text-white transition-all duration-300">
                   {t("header.tagline")}
                 </p>
               </Link>
             </div>
-            <div className="flex items-center gap-8">
-              <div className="flex flex-col">
-                <div className="flex items-center justify-end relative">
+            <div className="flex items-center gap-6 lg:gap-8">
+              <div className="hidden md:flex md:flex-col">
+                <div className="hidden lg:flex lg:items-center lg:justify-end relative">
                   <button
                     onClick={() => setIsOpen((prev) => !prev)}
                     className="cursor-pointer dark:text-white transition-all duration-300"
@@ -89,19 +89,33 @@ function Header() {
                     )}
                   </AnimatePresence>
                 </div>
-                <p className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1]">
+                <p className="max-w-50 text-right font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1]">
                   {t("header.address")}
                 </p>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="flex flex-col items-end">
+              <div className="flex items-center gap-4 lg:gap-6">
+                <div className="hidden md:flex md:flex-col md:items-end">
                   <div className="flex items-end gap-0.5 dark:text-white transition-all duration-300">
-                    <span>{t("header.forRegions")}</span>
-                    <a href="tel:8 (800) 77-77-210">8 (800) 77-77-210</a>
+                    <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap">
+                      {t("header.forRegions")}
+                    </span>
+                    <a
+                      href="tel:8 (800) 77-77-210"
+                      className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap"
+                    >
+                      8 (800) 77-77-210
+                    </a>
                   </div>
                   <div className="flex items-end gap-0.5 dark:text-white transition-all duration-300">
-                    <span>{t("header.nizhnyNovgorod")}</span>
-                    <a href="tel:8 (831) 225-00-55">8 (831) 225-00-55</a>
+                    <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap">
+                      {t("header.nizhnyNovgorod")}
+                    </span>
+                    <a
+                      href="tel:8 (831) 225-00-55"
+                      className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap"
+                    >
+                      8 (831) 225-00-55
+                    </a>
                   </div>
                 </div>
                 <div>
@@ -155,7 +169,7 @@ function Header() {
                   duration: 0.35,
                   ease: [0.04, 0.62, 0.23, 0.98],
                 }}
-                className="overflow-hidden bg-white dark:bg-slate-950"
+                className="bg-white dark:bg-slate-950"
               >
                 <div className="">
                   <BottomHeaderTop />
@@ -165,7 +179,7 @@ function Header() {
           </AnimatePresence>
           <hr className={`text-[#FEC80B] ${isSticky ? "block" : "hidden"}`} />
           <div className="pt-2.5 pb-3.5">
-            <HeaderBottom />
+            <HeaderBottom isSticky={isSticky} setIsSticky={setIsSticky} />
           </div>
         </div>
       </div>
