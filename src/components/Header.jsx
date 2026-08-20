@@ -89,12 +89,12 @@ function Header() {
                     )}
                   </AnimatePresence>
                 </div>
-                <p className="max-w-50 text-right font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1]">
+                <p className="max-w-50 md:max-w-full text-right font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1]">
                   {t("header.address")}
                 </p>
               </div>
               <div className="flex items-center gap-4 lg:gap-6">
-                <div className="hidden md:flex md:flex-col md:items-end">
+                <div className="hidden md:flex md:flex-col md:gap-2 md:items-end">
                   <div className="flex items-end gap-0.5 dark:text-white transition-all duration-300">
                     <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap">
                       {t("header.forRegions")}
