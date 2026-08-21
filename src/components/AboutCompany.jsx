@@ -40,7 +40,7 @@ export function AboutCompanySection() {
             </a>
           </div>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 overflow-hidden">
           <img data-aos="fade-left" src={aboutImg} alt="about img" />
         </div>
       </div>

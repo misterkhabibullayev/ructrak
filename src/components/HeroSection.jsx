@@ -21,7 +21,7 @@ export function HeroSection() {
   const { t } = useTranslation();
   return (
     <section>
-      <div className="container1 pt-7 px-0 rounded-2xl relative group">
+      <div className="container1 pt-7 md:rounded-2xl relative group">
         <Swiper
           spaceBetween={30}
           loop={true}
@@ -40,10 +40,10 @@ export function HeroSection() {
           className="mySwiper"
         >
           <SwiperSlide
-            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat rounded-2xl "
+            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat md:md:rounded-2xl "
             style={{ backgroundImage: `url(${swiper1Img})` }}
           >
-            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent rounded-l-2xl">
+            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent md:md:rounded-l-2xl">
               <div className="my-auto px-8">
                 <h1
                   data-aos="fade-up"
@@ -60,7 +60,7 @@ export function HeroSection() {
                   <br />
                   {t("heroSection.swiper1.price")}
                 </p>
-                <div>
+                <div className="flex items-start">
                   <button
                     data-aos="fade-up"
                     data-aos-delay="200"
@@ -73,10 +73,10 @@ export function HeroSection() {
             </div>
           </SwiperSlide>
           <SwiperSlide
-            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat rounded-2xl "
+            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat md:rounded-2xl "
             style={{ backgroundImage: `url(${swiper2Img})` }}
           >
-            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent rounded-l-2xl">
+            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent md:rounded-l-2xl">
               <div className="my-auto px-8">
                 <h1 className="font-FiraSans font-extrabold text-[32px] md:text-[40px] leading-[120%] text-white max-w-[60%] md:max-w-120 mb-8 md:mb-0">
                   {t("heroSection.swiper2.swiperTitle")}
@@ -84,7 +84,7 @@ export function HeroSection() {
                 <p className="hidden md:block font-FiraSans font-normal text-[18px] mt-4 mb-8 text-white max-w-full md:max-w-113">
                   {t("heroSection.swiper2.description")}
                 </p>
-                <div>
+                <div className="flex items-center">
                   <button className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]">
                     {t("heroSection.swiper2.readMore")}
                   </button>
@@ -93,10 +93,10 @@ export function HeroSection() {
             </div>
           </SwiperSlide>
           <SwiperSlide
-            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat rounded-2xl "
+            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat md:rounded-2xl "
             style={{ backgroundImage: `url(${swiper3Img})` }}
           >
-            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent rounded-l-2xl">
+            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent md:rounded-l-2xl">
               <div className="my-auto px-8">
                 <h1 className="font-FiraSans font-extrabold text-[32px] md:text-[40px] leading-[120%] text-white max-w-full md:max-w-120 mb-8 md:mb-0">
                   {t("heroSection.swiper3.swiperTitle")}
@@ -104,7 +104,7 @@ export function HeroSection() {
                 <p className="hidden md:block font-FiraSans font-normal text-[18px] mt-4 mb-8 text-white max-w-full md:max-w-113">
                   {t("heroSection.swiper3.description")}
                 </p>
-                <div className="flex flex-col gap-3 md:flex-row">
+                <div className="flex flex-col gap-3 md:flex-row items-start">
                   <a
                     href="/about"
                     className="px-7.5 py-3 bg-[#FEC80B] border-2 border-[#FEC80B] text-black rounded cursor-pointer hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-center text-[16px] leading-[110%]"
@@ -119,18 +119,18 @@ export function HeroSection() {
             </div>
           </SwiperSlide>
           <SwiperSlide
-            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat rounded-2xl "
+            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat md:rounded-2xl "
             style={{ backgroundImage: `url(${swiper4Img})` }}
           >
-            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent rounded-l-2xl">
+            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent md:rounded-l-2xl">
               <div className="my-auto px-8">
-                <h1 className="font-FiraSans font-extrabold text-[14px] md:text-[28px] leading-[120%] text-white max-w-full md:max-w-120 mb-8 md:mb-0">
+                <h1 className="font-FiraSans font-extrabold text-[20px] md:text-[28px] leading-[120%] text-white max-w-1/2 md:max-w-120 mb-8 md:mb-0">
                   {t("heroSection.swiper4.swiperTitle")}
                 </h1>
                 <p className="hidden md:block font-FiraSans font-normal text-[16px] mt-4 mb-8 text-white max-w-full md:max-w-113">
                   {t("heroSection.swiper4.description")}
                 </p>
-                <div className="flex flex-col gap-3 md:flex-row">
+                <div className="flex flex-col gap-3 md:flex-row items-start">
                   <a
                     href="/catalog/krany-manipulyatory/"
                     className="px-7.5 py-3 bg-[#FEC80B] border-2 border-[#FEC80B] text-black rounded cursor-pointer hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-center text-[16px] leading-[110%]"
@@ -145,18 +145,18 @@ export function HeroSection() {
             </div>
           </SwiperSlide>
           <SwiperSlide
-            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat rounded-2xl "
+            className="w-full h-full flex items-center bg-cover bg-center bg-no-repeat md:rounded-2xl "
             style={{ backgroundImage: `url(${swiper5Img})` }}
           >
-            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent rounded-l-2xl">
+            <div className="w-full h-120 flex items-center bg-linear-to-r from-black via-black/60 to-transparent md:rounded-l-2xl">
               <div className="my-auto px-8">
-                <h1 className="font-FiraSans font-extrabold text-[14px] md:text-[28px] leading-[120%] text-white max-w-full md:max-w-120 mb-8 md:mb-0">
+                <h1 className="font-FiraSans font-extrabold text-[20px] md:text-[28px] leading-[120%] text-white max-w-1/2 md:max-w-120 mb-8 md:mb-0">
                   {t("heroSection.swiper5.swiperTitle")}
                 </h1>
                 <p className="hidden md:block font-FiraSans font-normal text-[16px] mt-4 mb-8 text-white max-w-full md:max-w-113">
                   {t("heroSection.swiper5.description")}
                 </p>
-                <div className="flex flex-col gap-3 md:flex-row">
+                <div className="flex flex-col gap-3 md:flex-row items-start">
                   <a
                     href="/catalog/krany-manipulyatory/"
                     className="px-7.5 py-3 bg-[#FEC80B] border-2 border-[#FEC80B] text-black rounded cursor-pointer hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-center text-[16px] leading-[110%]"

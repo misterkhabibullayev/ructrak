@@ -107,7 +107,7 @@ export function HeaderBottom({ isSticky }) {
               </div>
             </div>
             <div className="flex items-center gap-2 md:gap-4">
-              <div className="hidden md:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
+              <div className="hidden xl:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
                 <input
                   type="search"
                   placeholder={t("header.searchPlaceholder")}
