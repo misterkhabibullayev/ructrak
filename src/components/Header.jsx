@@ -39,7 +39,7 @@ function Header() {
         className="dark:bg-slate-950 transition-all duration-300"
       >
         <div className="w-full container1">
-          <div className="flex items-center justify-between pt-3.5 pb-2">
+          <div className="flex items-center justify-between pt-3.5 pb-2.5">
             <div>
               <Link to="/" className="flex items-center gap-2.5">
                 <div className="">
@@ -149,7 +149,7 @@ function Header() {
                   </button>
                 </div>
                 <div>
-                  <button className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                  <button aria-label={t("header.requestCall")} className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full">
                     <Images.telephoneIcon className="w-5 md:w-7 h-5 md:h-7" />
                   </button>
                 </div>
@@ -160,7 +160,7 @@ function Header() {
       </header>
       <div className="sticky top-0 z-50">
         <hr className={`text-[#FEC80B] ${isSticky ? "hidden" : "block"}`} />
-        <div className=" bg-white dark:bg-slate-950 pt-2">
+        <div className=" bg-white dark:bg-slate-950">
           <AnimatePresence>
             {isSticky && (
               <motion.div
@@ -171,16 +171,14 @@ function Header() {
                   duration: 0.35,
                   ease: [0.04, 0.62, 0.23, 0.98],
                 }}
-                className="bg-white dark:bg-slate-950"
+                className=""
               >
-                <div className="">
-                  <BottomHeaderTop />
-                </div>
+                <BottomHeaderTop />
               </motion.div>
             )}
           </AnimatePresence>
-          <hr className={`text-[#FEC80B] ${isSticky ? "block" : "hidden"}`} />
           <div className="pt-2.5 pb-3.5">
+            <hr className={`text-[#FEC80B] mb-2.5 ${isSticky ? "block" : "hidden"}`} />
             <HeaderBottom isSticky={isSticky} setIsSticky={setIsSticky} />
           </div>
         </div>

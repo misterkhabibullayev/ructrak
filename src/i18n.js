@@ -49,6 +49,12 @@ const resources = {
         news: "Новости",
         contacts: "Контакты",
         searchPlaceholder: "Поиск...",
+        search: "Поиск",
+        favorites: "Избранное",
+        cart: "Тележка",
+        language: "Язык",
+        requesCall: "Запросить звонок",
+        homeLink: "Рустрак - Главная страница"
       },
       modal: {
         aboutRuctrak: "О компании ООО «Рустрак»",
@@ -167,6 +173,12 @@ const resources = {
         news: "Yangiliklar",
         contacts: "Kontaktlar",
         searchPlaceholder: "Qidirish...",
+        search: "Qidirish",
+        favorites: "Sevimlilar",
+        cart: "Savat",
+        language: "Til",
+        requesCall: "Qo'ng'iroqni so'rash",
+        homeLink: "Ructrak - Bosh sahifa"
       },
       modal: {
         aboutRuctrak: "«Rustrak» MChJ haqida",
@@ -287,6 +299,12 @@ const resources = {
         news: "News",
         contacts: "Contacts",
         searchPlaceholder: "Search...",
+        search: "Search",
+        favorites: "Favorites",
+        cart: "Cart",
+        language: "Language",
+        requestCall: "Request Call",
+        homeLink: "Ructrak - Home page"
       },
       modal: {
         aboutRuctrak: "About LLC «Rustrak»",

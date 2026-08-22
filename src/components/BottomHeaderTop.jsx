@@ -32,7 +32,8 @@ function BottomHeaderTop() {
 
   const currentLangObject =
     languages.find((lang) => lang.code === i18n.language) || languages[0];
-  const CurrentTitle = currentLangObject.label;
+  const CurrentTitle = currentLangObject.title;
+  const CurrentTitleMobile = currentLangObject.label
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
@@ -51,7 +52,7 @@ function BottomHeaderTop() {
   return (
     <>
       <div className="container1">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between pt-1.5">
           <div className="text-black dark:text-white group flex items-center gap-1">
             <div className="flex items-center justify-center">
               <Images.locationIcon className="group-hover:text-[#FEC80B] transition-all duration-300" />
@@ -75,8 +76,11 @@ function BottomHeaderTop() {
                 className="w-full h-full flex items-center gap-1 cursor-pointer"
               >
                 <CurrentFlag className="w-6 h-6" />
-                <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-black dark:text-white">
+                <span className="hidden min-[575px]:flex font-FiraSans font-normal text-[15px] leading-[110%] text-black dark:text-white">
                   {CurrentTitle}
+                </span>
+                <span className="min-[575px]:hidden flex font-FiraSans font-normal text-[15px] leading-[110%] text-black dark:text-white">
+                  {CurrentTitleMobile}
                 </span>
               </button>
 

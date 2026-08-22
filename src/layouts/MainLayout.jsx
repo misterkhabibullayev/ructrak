@@ -7,7 +7,7 @@ function MainLayout() {
   const { theme } = useThemeStore();
 
   useEffect(() => {
-    const root = document.documentElement; // <html> elementi
+    const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
     } else {

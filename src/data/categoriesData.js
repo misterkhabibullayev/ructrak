@@ -1,4 +1,14 @@
 import kategoriyImg1 from "../Image/kategoriy-1.webp";
+import kategoriyImg2 from "../Image/kategoriy-2.webp";
+import kategoriyImg3 from "../Image/kategoriy-3.png";
+import kategoriyImg4 from "../Image/kategoriy-4.webp";
+import kategoriyImg5 from "../Image/kategoriy-5.webp";
+import kategoriyImg6 from "../Image/kategoriy-6.webp";
+import kategoriyImg7 from "../Image/kategoriy-7.webp";
+import kategoriyImg8 from "../Image/kategoriy-8.png";
+import kategoriyImg9 from "../Image/kategoriy-9.webp";
+import kategoriyImg10 from "../Image/kategoriy-10.png";
+import kategoriyImg11 from "../Image/kategoriy-11.webp";
 
 export const categoriesData = [
   {
@@ -14,7 +24,7 @@ export const categoriesData = [
   {
     id: 2,
     slug: "krany-manipulyatory",
-    img: "/src/Image/kategoriy-2.webp",
+    img: kategoriyImg2,
     title: {
       uz: "Kran-manipulyatorlar",
       ru: "Краны-манипуляторы",
@@ -24,7 +34,7 @@ export const categoriesData = [
   {
     id: 3,
     slug: "avtotoplivozapravshchiki",
-    img: "/src/Image/kategoriy-3.png",
+    img: kategoriyImg3,
     title: {
       uz: "Yonilg'i quyish mashinalari (ATZ)",
       ru: "Автотопливозаправщики",
@@ -34,7 +44,7 @@ export const categoriesData = [
   {
     id: 4,
     slug: "avtogidropodiyemniki",
-    img: "/src/Image/kategoriy-4.webp",
+    img: kategoriyImg4,
     title: {
       uz: "Avtogidroko'targichlar (Vishka)",
       ru: "Автогидроподъёмники",
@@ -44,7 +54,7 @@ export const categoriesData = [
   {
     id: 5,
     slug: "avtocisterny",
-    img: "/src/Image/kategoriy-5.webp",
+    img: kategoriyImg5,
     title: {
       uz: "Avtosisternalar",
       ru: "Автоцистерны",
@@ -54,7 +64,7 @@ export const categoriesData = [
   {
     id: 6,
     slug: "avtoevakuatory",
-    img: "/src/Image/kategoriy-6.webp",
+    img: kategoriyImg6,
     title: {
       uz: "Avtoevakuatorlar",
       ru: "Автоэвакуаторы",
@@ -64,7 +74,7 @@ export const categoriesData = [
   {
     id: 7,
     slug: "izotermicheskie-furgony",
-    img: "/src/Image/kategoriy-7.webp",
+    img: kategoriyImg7,
     title: {
       uz: "Izotermik furgonlar",
       ru: "Изотермические фургоны",
@@ -74,7 +84,7 @@ export const categoriesData = [
   {
     id: 8,
     slug: "konteynerovozy",
-    img: "/src/Image/kategoriy-8.png",
+    img: kategoriyImg8,
     title: {
       uz: "Konteyner tashuvchilar",
       ru: "Контейнеровозы",
@@ -84,7 +94,7 @@ export const categoriesData = [
   {
     id: 9,
     slug: "kryukovye-pogruzchiki",
-    img: "/src/Image/kategoriy-9.webp",
+    img: kategoriyImg9,
     title: {
       uz: "Ilgakli yuklagichlar (Multilift)",
       ru: "Крюковые погрузчики",
@@ -94,7 +104,7 @@ export const categoriesData = [
   {
     id: 10,
     slug: "samosvaly",
-    img: "/src/Image/kategoriy-10.png",
+    img: kategoriyImg10,
     title: {
       uz: "Samosvallar",
       ru: "Самосвалы",
@@ -104,7 +114,7 @@ export const categoriesData = [
   {
     id: 11,
     slug: "avtomobili-dopog-kategoriya-exii",
-    img: "/src/Image/kategoriy-11.webp",
+    img: kategoriyImg11,
     title: {
       uz: "EXII toifasidagi ADR transport vositalari",
       ru: "Автомобили ДОПОГ категория EXII",

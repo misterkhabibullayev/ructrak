@@ -93,6 +93,7 @@ export function KategorySection() {
                         <img
                           src={item.img}
                           alt={item?.title?.[currentLang]}
+                          loading="lazy"
                           className="w-full h-full object-cover"
                         />
                       </div>

@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Images } from "../utils/images";
 import { Link } from "react-router-dom";
-import CatalogModal from "./CatalogModal";
-import { useState } from "react";
+
+import { lazy, Suspense, useState } from "react";
 import { LangModal } from "./LangModal";
 import { AnimatePresence, motion } from "framer-motion";
 
+const CatalogModal = lazy(() => import("../components/CatalogModal"));
 export function HeaderBottom({ isSticky }) {
   const { t } = useTranslation();
   const [activeMenu, setActiveMenu] = useState(null);
@@ -20,6 +21,7 @@ export function HeaderBottom({ isSticky }) {
             <div className="flex items-center gap-4 md:gap-10">
               <button
                 onClick={() => toggleMenu("catalog")}
+                aria-label={t("header.catalog")}
                 className="py-1.25 md:py-2.25 px-2 md:px-4 bg-[#FEC80B] flex items-center gap-4 rounded cursor-pointer transition-all duration-300"
               >
                 {activeMenu === "catalog" ? (
@@ -50,12 +52,13 @@ export function HeaderBottom({ isSticky }) {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden flex flex-col min-[556px]:hidden"
                   >
-                    <a
-                      href="/"
+                    <Link
+                      to={"/"}
+                      aria-label={t("header.homeLink")}
                       className="font-FiraSans font-extrabold text-[16px] text-black dark:text-white"
                     >
                       РУСTРАК
-                    </a>
+                    </Link>
                     <a
                       href="tel:88005110525"
                       className="font-FiraSans font-normal text-[13px] text-zinc-400 whitespace-nowrap"
@@ -74,7 +77,7 @@ export function HeaderBottom({ isSticky }) {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden min-[556px]:flex items-center hidden"
                   >
-                    <Link to="/" className="flex items-center gap-2.5">
+                    <Link to="/" aria-label={t("header.homeLink")} className="flex items-center gap-2.5">
                       <Images.logoImage className="text-black dark:text-white transition-all duration-300 shrink-0" />
                     </Link>
                   </motion.div>
@@ -84,6 +87,7 @@ export function HeaderBottom({ isSticky }) {
                 <nav className="text-black dark:text-white transition-all duration-300 hidden lg:flex md:items-center gap-7.5 font-FiraSans font-normal text-[16px] leading-[130%]">
                   <button
                     onClick={() => toggleMenu("about")}
+                    aria-label={t("header.aboutUs")}
                     className="flex items-center gap-1 cursor-pointer"
                   >
                     {t("header.aboutUs")}
@@ -95,6 +99,7 @@ export function HeaderBottom({ isSticky }) {
                   </button>
                   <button
                     onClick={() => toggleMenu("media")}
+                    aria-label={t("header.media")}
                     className="flex items-center gap-1 cursor-pointer"
                   >
                     {t("header.media")}
@@ -104,13 +109,13 @@ export function HeaderBottom({ isSticky }) {
                       ▼
                     </span>
                   </button>
-                  <Link to="/service" className="">
+                  <Link to="/service" className="" aria-label={t("header.service")}>
                     {t("header.service")}
                   </Link>
-                  <Link to="/news" className="">
+                  <Link to="/news" className="" aria-label={t("header.news")}>
                     {t("header.news")}
                   </Link>
-                  <Link to="/contacts" className="">
+                  <Link to="/contacts" className="" aria-label={t("header.contacts")}>
                     {t("header.contacts")}
                   </Link>
                 </nav>
@@ -120,17 +125,19 @@ export function HeaderBottom({ isSticky }) {
               <div className="hidden xl:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
                 <input
                   type="search"
+                  aria-label={t("header.search")}
                   placeholder={t("header.searchPlaceholder")}
                   className="bg-transparent text-gray-900 placeholder:text-black dark:text-white dark:placeholder:text-white outline-none min-w-60"
                 />
                 <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
               </div>
               <div className="block md:hidden">
-                <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
+                <Images.searchIcon  className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
               </div>
               <div>
                 <Link
                   to="/cart"
+                  aria-label={t("header.cart")}
                   className="text-black dark:text-white transition-all duration-300"
                 >
                   <Images.cartIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
@@ -139,6 +146,7 @@ export function HeaderBottom({ isSticky }) {
               <div>
                 <Link
                   to="/favorites"
+                  aria-label={t("header.favorites")}
                   className="text-black dark:text-white transition-all duration-300"
                 >
                   <Images.favoritesIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
@@ -150,17 +158,21 @@ export function HeaderBottom({ isSticky }) {
                 <LangModal />
               </div>
               <div className={isSticky ? "block" : "hidden"}>
-                <button className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                <button aria-label={t("header.requesCall")} className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
                   <Images.telephoneIcon className="w-4.25 h-4.25 md:w-6.75 md:h-6.75" />
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <CatalogModal
-          activeMenu={activeMenu}
-          onClose={() => setActiveMenu(false)}
-        />
+        <Suspense fallback={null}>
+          {activeMenu && (
+            <CatalogModal
+              activeMenu={activeMenu}
+              onClose={() => setActiveMenu(false)}
+            />
+          )}
+        </Suspense>
       </div>
     </>
   );
