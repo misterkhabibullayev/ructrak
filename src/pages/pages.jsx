@@ -9,6 +9,7 @@ const ServicePage = lazy(() => import("./ServicePage"));
 const ContactsPage = lazy(() => import("./ContactsPage"));
 const CartPage = lazy(() => import("./CartPage"));
 const FavoritesPage = lazy(() => import("./FavoritesPage"));
+const NotFoundPage = lazy(() => import("./NotFoundPage"));
 
 export {
   HomePage,
@@ -20,4 +21,5 @@ export {
   ContactsPage,
   CartPage,
   FavoritesPage,
+  NotFoundPage
 };

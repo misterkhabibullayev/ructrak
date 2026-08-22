@@ -6,6 +6,7 @@ import {
   FavoritesPage,
   HomePage,
   NewsPage,
+  NotFoundPage,
   PhotoGalleryPage,
   SearchPage,
   ServicePage,
@@ -51,6 +52,10 @@ export const router = [
       {
         path: "favorites",
         element: <FavoritesPage />
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />
       }
     ],
   },

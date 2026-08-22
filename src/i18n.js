@@ -50,6 +50,27 @@ const resources = {
         contacts: "Контакты",
         searchPlaceholder: "Поиск...",
       },
+      modal: {
+        aboutRuctrak: "О компании ООО «Рустрак»",
+        news: "Новости",
+        partners: "Наши партнёры",
+        production: "Производство",
+        suppliers: "Поставщикам и партнёрам",
+        reviews: "Отзывы",
+        certifikat: "Сертификаты",
+        vakansi: "Вакансии",
+        leasing: "Кредит и лизинг",
+        photogallery: "Фотогалерея",
+        video: "Видео",
+        promo: "Рекламные материалы",
+        info: "Информационные материалы",
+      },
+      notFound: {
+        sahifaTopilmadi: "Страница не найдена",
+        sahifaOchirilgan:
+          "Пожалуйста воспользуйтесь навигацией или формой поиска, чтобы найти интересующую Вас информацию.",
+        homepagegaqaytish: "Перейти в каталог",
+      },
       heroSection: {
         swiper1: {
           swiperTitle: "Шторные фургоны КАМАЗ 4308 в наличии",
@@ -145,6 +166,27 @@ const resources = {
         news: "Yangiliklar",
         contacts: "Kontaktlar",
         searchPlaceholder: "Qidirish...",
+      },
+      modal: {
+        aboutRuctrak: "«Rustrak» MChJ haqida",
+        news: "Yangiliklar",
+        partners: "Bizning hamkorlarimiz",
+        production: "Ishlab chiqarish",
+        suppliers: "Tadbirkorlar va hamkorlarga",
+        reviews: "Sharhlar",
+        certifikat: "Sertifikatlar",
+        vakansi: "Bo'sh ish o'rinlari",
+        leasing: "Kredit va lizing",
+        photogallery: "Fotogalereya",
+        video: "Video",
+        promo: "Reklama materiallari",
+        info: "Axborot materiallari",
+      },
+      notFound: {
+        sahifaTopilmadi: "Sahifa topilmadi",
+        sahifaOchirilgan:
+          "Sizni qiziqtirgan ma'lumotlarni topish uchun navigatsiya yoki qidiruv shaklidan foydalaning.",
+        homepagegaqaytish: "Katalogga o'tish",
       },
       heroSection: {
         swiper1: {
@@ -243,6 +285,27 @@ const resources = {
         news: "News",
         contacts: "Contacts",
         searchPlaceholder: "Search...",
+      },
+      modal: {
+        aboutRuctrak: "About LLC «Rustrak»",
+        news: "News",
+        partners: "Our partners",
+        production: "Production",
+        suppliers: "For suppliers and partners",
+        reviews: "Reviews",
+        certifikat: "Certificates",
+        vakansi: "Vacancies",
+        leasing: "Credit and leasing",
+        photogallery: "Photo gallery",
+        video: "Video",
+        promo: "Promotional materials",
+        info: "Information materials",
+      },
+      notFound: {
+        sahifaTopilmadi: "Page not found",
+        sahifaOchirilgan:
+          "Please use the navigation or search form to find the information you are interested in.",
+        homepagegaqaytish: "Go to catalog",
       },
       heroSection: {
         swiper1: {

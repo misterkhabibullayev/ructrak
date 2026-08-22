@@ -1,10 +1,16 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { categoriesData } from "../data/categoriesData";
+import { Link } from "react-router-dom";
 
 function CatalogModal({ activeMenu }) {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
   useEffect(() => {
     if (activeMenu) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = "hidden";
     } else {
@@ -39,7 +45,39 @@ function CatalogModal({ activeMenu }) {
                 activeMenu ? "opacity-100" : "opacity-0"
               }`}
             >
-              bu modal
+              <div className="grid grid-cols-1 min-[575px]:grid-cols-2 md:grid-cols-3">
+                <div>
+                  <h3>{t("header.catalog")}</h3>
+                  <div className="flex flex-col">
+                    {categoriesData.map((item) => (
+                      <Link to={`/catalog/${item.slug}`}>{item.title[currentLang]}</Link>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3>{t("header.aboutUs")}</h3>
+                  <div className="flex flex-col">
+                    <Link to={`about`}>{t("modal.aboutRuctrak")}</Link>
+                    <Link to={`news`}>{t("modal.news")}</Link>
+                    <Link to={`partners`}>{t("modal.partners")}</Link>
+                    <Link to={`production`}>{t("modal.production")}</Link>
+                    <Link to={`suppliers`}>{t("modal.suppliers")}</Link>
+                    <Link to={`reviews`}>{t("modal.reviews")}</Link>
+                    <Link to={`cert`}>{t("modal.certifikat")}</Link>
+                    <Link to={`vacancies`}>{t("modal.vakansi")}</Link>
+                    <Link to={`leasing`}>{t("modal.leasing")}</Link>
+                  </div>
+                </div>
+                <div>
+                  <h3>{t("header.media")}</h3>
+                  <div>
+                    <Link to={`photogallery`}>{t("modal.photogallery")}</Link>
+                    <Link to={`video`}>{t("modal.video")}</Link>
+                    <Link to={`promo`}>{t("modal.promo")}</Link>
+                    <Link to={`info`}>{t("modal.info")}</Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>

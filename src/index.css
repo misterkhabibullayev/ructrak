@@ -12,7 +12,7 @@
 @layer base {
   html,
   body {
-    @apply bg-white dark:bg-slate-900 transition-colors duration-300
+    @apply bg-white dark:bg-slate-900 transition-colors duration-300;
   }
 }
 button {
@@ -24,7 +24,6 @@ button {
   margin-inline: auto;
   padding-inline: 20px;
 }
-
 
 .swiper {
   width: 100%;

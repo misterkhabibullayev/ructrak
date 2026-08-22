@@ -61,14 +61,6 @@ export const categoriesData = [
       en: "Tow trucks",
     },
   },
-  // {
-  //     slug: "bortovye-avtomobili",
-  //     title: {
-  //         uz: "Bortli avtomobillar",
-  //         ru: "Бортовые автомобили",
-  //         en: "Flatbed trucks",
-  //     },
-  // },
   {
     id: 7,
     slug: "izotermicheskie-furgony",
@@ -114,7 +106,7 @@ export const categoriesData = [
     slug: "avtomobili-dopog-kategoriya-exii",
     img: "/src/Image/kategoriy-11.webp",
     title: {
-      uz: "DOPOG EX/II toifasidagi xavfli yuk avtomobillari",
+      uz: "EXII toifasidagi ADR transport vositalari",
       ru: "Автомобили ДОПОГ категория EXII",
       en: "ADR / EXII category trucks",
     },
