@@ -42,7 +42,9 @@ function Header() {
           <div className="flex items-center justify-between pt-3.5 pb-2">
             <div>
               <Link to="/" className="flex items-center gap-2.5">
-                <Images.logoImage className="text-black dark:text-white transition-all duration-300" />
+                <div className="">
+                  <Images.logoImage className="text-black dark:text-white transition-all duration-300" />
+                </div>
                 <div className="hidden lg:block w-0.5 h-5.75 bg-[#FEC80B]"></div>
                 <p className="hidden lg:block font-FiraSans font-normal text-[14px] leading-[110%] text-[#000000] max-w-48 dark:text-white transition-all duration-300">
                   {t("header.tagline")}
@@ -121,7 +123,7 @@ function Header() {
                 <div>
                   <button
                     onClick={toggleTheme}
-                    className="w-11.5 h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full"
+                    className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full"
                   >
                     {theme === "light" ? (
                       <motion.div
@@ -131,7 +133,7 @@ function Header() {
                         exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Images.sunIcon />
+                        <Images.sunIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
                       </motion.div>
                     ) : (
                       <motion.div
@@ -141,14 +143,14 @@ function Header() {
                         exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Images.moonIcon />
+                        <Images.moonIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
                       </motion.div>
                     )}
                   </button>
                 </div>
                 <div>
-                  <button className="w-11.5 h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full">
-                    <Images.telephoneIcon />
+                  <button className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                    <Images.telephoneIcon className="w-5 md:w-7 h-5 md:h-7" />
                   </button>
                 </div>
               </div>
@@ -158,7 +160,7 @@ function Header() {
       </header>
       <div className="sticky top-0 z-50">
         <hr className={`text-[#FEC80B] ${isSticky ? "hidden" : "block"}`} />
-        <div className=" bg-white dark:bg-slate-950 pt-2.5">
+        <div className=" bg-white dark:bg-slate-950 pt-2">
           <AnimatePresence>
             {isSticky && (
               <motion.div

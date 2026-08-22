@@ -6,8 +6,8 @@ function NotFound() {
   const { t } = useTranslation();
   return (
     <div className="container1">
-      <div className="flex flex-col md:flex-row md:justify-between px-30">
-        <div className="w-90">
+      <div className="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between px-0 md:px-30 mx-auto">
+        <div className="w-full md:w-90">
           <h1 className="font-FiraSans font-bold text-[80px] md:text-[190px] text-[#FEC80B] text-center">
             404
           </h1>
@@ -19,7 +19,7 @@ function NotFound() {
           </p>
           <Link to={"/catalog"} className="flex items-center justify-center rounded w-full py-3.25 px-7.5 font-FiraSans font-normal text-black text-[16px] bg-[#FEC80B] ">{t("notFound.homepagegaqaytish")}</Link>
         </div>
-        <div className="w-143.5 h-143.5 flex items-center justify-center">
+        <div className="w-70 md:w-143.5 md:h-143.5 flex items-center justify-center">
           <img src={Img404} alt="notFound" />
         </div>
       </div>

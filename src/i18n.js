@@ -64,6 +64,7 @@ const resources = {
         video: "Видео",
         promo: "Рекламные материалы",
         info: "Информационные материалы",
+        remont: "Ремонт"
       },
       notFound: {
         sahifaTopilmadi: "Страница не найдена",
@@ -181,6 +182,7 @@ const resources = {
         video: "Video",
         promo: "Reklama materiallari",
         info: "Axborot materiallari",
+        remont: "Ta'mirlash"
       },
       notFound: {
         sahifaTopilmadi: "Sahifa topilmadi",
@@ -300,6 +302,7 @@ const resources = {
         video: "Video",
         promo: "Promotional materials",
         info: "Information materials",
+        remont: "Repair"
       },
       notFound: {
         sahifaTopilmadi: "Page not found",

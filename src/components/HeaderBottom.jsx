@@ -17,10 +17,10 @@ export function HeaderBottom({ isSticky }) {
       <div className="relative">
         <div className="container1">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-5 md:gap-10">
+            <div className="flex items-center gap-4 md:gap-10">
               <button
                 onClick={() => toggleMenu("catalog")}
-                className="py-2.25 px-4 bg-[#FEC80B] flex items-center gap-4 rounded cursor-pointer transition-all duration-300"
+                className="py-1.25 md:py-2.25 px-2 md:px-4 bg-[#FEC80B] flex items-center gap-4 rounded cursor-pointer transition-all duration-300"
               >
                 {activeMenu === "catalog" ? (
                   <Images.closeIcon />
@@ -41,20 +41,30 @@ export function HeaderBottom({ isSticky }) {
                   )}
                 </AnimatePresence>
               </button>
-              <div className="flex flex-col min-[556px]:hidden">
-                <a
-                  href="/"
-                  className="font-FiraSans font-extrabold text-[16px] text-black dark:text-white"
-                >
-                  РУСTРАК
-                </a>
-                <a
-                  href="tel:88005110525"
-                  className="font-FiraSans font-normal text-[13px] text-zinc-400 whitespace-nowrap"
-                >
-                  8 800-511-05-25
-                </a>
-              </div>
+              <AnimatePresence>
+                {isSticky && (
+                  <motion.div
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: "auto", opacity: 1 }}
+                    exit={{ width: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden flex flex-col min-[556px]:hidden"
+                  >
+                    <a
+                      href="/"
+                      className="font-FiraSans font-extrabold text-[16px] text-black dark:text-white"
+                    >
+                      РУСTРАК
+                    </a>
+                    <a
+                      href="tel:88005110525"
+                      className="font-FiraSans font-normal text-[13px] text-zinc-400 whitespace-nowrap"
+                    >
+                      8 800-511-05-25
+                    </a>
+                  </motion.div>
+                )}
+              </AnimatePresence>
               <AnimatePresence>
                 {isSticky && (
                   <motion.div
@@ -140,8 +150,8 @@ export function HeaderBottom({ isSticky }) {
                 <LangModal />
               </div>
               <div className={isSticky ? "block" : "hidden"}>
-                <button className="w-8.75 h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
-                  <Images.telephoneIcon width={25} height={25} />
+                <button className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                  <Images.telephoneIcon className="w-4.25 h-4.25 md:w-6.75 md:h-6.75" />
                 </button>
               </div>
             </div>
@@ -149,7 +159,7 @@ export function HeaderBottom({ isSticky }) {
         </div>
         <CatalogModal
           activeMenu={activeMenu}
-          onClose={() => setActiveMenu(null)}
+          onClose={() => setActiveMenu(false)}
         />
       </div>
     </>

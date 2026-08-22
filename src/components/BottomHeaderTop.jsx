@@ -32,7 +32,7 @@ function BottomHeaderTop() {
 
   const currentLangObject =
     languages.find((lang) => lang.code === i18n.language) || languages[0];
-  const CurrentTitle = currentLangObject.title;
+  const CurrentTitle = currentLangObject.label;
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
@@ -60,7 +60,7 @@ function BottomHeaderTop() {
               href="https://www.google.com/maps/place/IT+Park/@41.5584113,60.6209181,18z/data=!4m6!3m5!1s0x41dfc9842c81fc9d:0x9e434d2b8a616ce9!8m2!3d41.5584081!4d60.6218835!16s%2Fg%2F11s8nxmc2_?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="max-w-37.5 md:max-w-full font-FiraSans font-normal text-[10px] md:text-[14px] leading-[110%] text-black dark:text-white group-hover:text-[#FEC80B] transition-all duration-300"
+              className="max-w-35 md:max-w-full font-FiraSans font-normal text-[10px] md:text-[14px] leading-[110%] text-black dark:text-white group-hover:text-[#FEC80B] transition-all duration-300"
             >
               {t("header.address")}
             </a>
@@ -109,7 +109,7 @@ function BottomHeaderTop() {
                           >
                             <Flag className="w-6 h-6" />
                             <span className="font-FiraSans font-normal text-[15px] leading-[110%]">
-                              {lang.title}
+                              {lang.label}
                             </span>
                           </button>
                         );
