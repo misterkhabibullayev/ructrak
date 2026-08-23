@@ -11,7 +11,7 @@ import "../index.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import swiper1Img from "../Image/swiper-1.webp";
+import swiper1Img from "/Image/swiper-1.webp";
 import swiper2Img from "../Image/swiper-2.webp";
 import swiper3Img from "../Image/swiper-3.jpg";
 import swiper4Img from "../Image/swiper-4.jpg";

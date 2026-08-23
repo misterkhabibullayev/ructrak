@@ -5,10 +5,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import Loading from "../components/Loading";
 
 function App() {
   const routes = useRoutes(router);
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -18,12 +19,19 @@ function App() {
 
   return (
     <>
-    <Helmet>
-      <title>{t("metaTitleDescriptions.mainTitle")}</title>
-      <meta name="description" content={t("metaTitleDescriptions.mainDescription")} />
-    </Helmet>
+      <Helmet>
+        <title>{t("metaTitleDescriptions.mainTitle")}</title>
+        <meta
+          name="description"
+          content={t("metaTitleDescriptions.mainDescription")}
+        />
+      </Helmet>
       <Suspense
-        fallback={<div>Yuklanmoqda...</div>}
+        fallback={
+          <div>
+            <Loading />
+          </div>
+        }
       >
         {routes}
       </Suspense>

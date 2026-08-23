@@ -149,7 +149,8 @@ const resources = {
   uz: {
     translation: {
       metaTitleDescriptions: {
-        mainTitle: "RusTrak, maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
+        mainTitle:
+          "RusTrak, maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
         mainDescription:
           "Ructrak — maxsus texnikalar va sifatli ehtiyot qismlarning ishonchli platformasi. Keng turdagi katalog, hamyonbop narxlar va tezkor yetkazib berish xizmati bilan tanishing.",
         catalogTitle: "Katalog - Ructrak",
@@ -214,6 +215,25 @@ const resources = {
         promo: "Reklama materiallari",
         info: "Axborot materiallari",
         remont: "Ta'mirlash",
+      },
+      requestModal: {
+        modalTitleZakaz: "Qayta qo'ng'iroqni buyurtma qilish",
+        modalTitleKommer: "Tijorat taklifini olish",
+        modalP: "Menejerimiz tez orada siz bilan bog'lanadi",
+        inputLabel1: "Ismingiz *",
+        inputPlacholder1: "Ibrohim",
+        inputError: "Ushbu maydonni to'ldirish majburiy",
+        inputLabel2: "Telefon raqamingiz *",
+        agreeText: "Men <0>shaxsiy ma'lumotlarni qayta ishlashga</0> roziman",
+        submitBtnCall: "Ariza qoldirish",
+        emailInputLabel: "E-mail *",
+        submitBtnKp: "KP olish",
+        uspeshna: "Muvaffaqiyatli!",
+        uspeshnaP:
+          "Ma'lumotlaringiz menejerimizga yuborildi. Biz tez orada siz bilan bog'lanamiz!",
+        close: "Yopish",
+        uvedam: "Munosib yuk mashinasini tanlash",
+        submitBtnVariant: "Variantlarni olish",
       },
       notFound: {
         sahifaTopilmadi: "Sahifa topilmadi",
@@ -340,6 +360,25 @@ const resources = {
         promo: "Promotional materials",
         info: "Information materials",
         remont: "Repair",
+      },
+      requestModal: {
+        modalTitleZakaz: "Request a Call",
+        modalTitleKommer: "Get a Commercial Offer",
+        modalP: "Our manager will contact you shortly",
+        inputLabel1: "Your Name *",
+        inputPlacholder1: "John",
+        inputError: "This field is required",
+        inputLabel2: "Phone Number *",
+        agreeText: "I agree to <0>the processing of personal data</0>",
+        submitBtnCall: "Submit Request",
+        emailInputLabel: "E-mail *",
+        submitBtnKp: "Get Commercial Offer",
+        uspeshna: "Success!",
+        uspeshnaP:
+          "Your details have been sent to our manager. We will contact you shortly!",
+        close: "Close",
+        uvedam: "Find a similar truck",
+        submitBtnVariant: "Get Options",
       },
       notFound: {
         sahifaTopilmadi: "Page not found",
