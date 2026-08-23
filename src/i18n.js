@@ -6,7 +6,7 @@ const resources = {
   ru: {
     translation: {
       metaTitleDescriptions: {
-        mainTitle: "Главная страница - Ructrak",
+        mainTitle: "Завод производитель автоспецтехники «РусТрак»",
         mainDescription:
           "Ructrak — надежная площадка для спецтехники и качественных запчастей. Познакомьтесь с широким ассортиментом каталогов, выгодными ценами и быстрой доставкой.",
         catalogTitle: "Каталог - Ructrak",
@@ -149,7 +149,7 @@ const resources = {
   uz: {
     translation: {
       metaTitleDescriptions: {
-        mainTitle: "Bosh sahifa - Ructrak",
+        mainTitle: "RusTrak, maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
         mainDescription:
           "Ructrak — maxsus texnikalar va sifatli ehtiyot qismlarning ishonchli platformasi. Keng turdagi katalog, hamyonbop narxlar va tezkor yetkazib berish xizmati bilan tanishing.",
         catalogTitle: "Katalog - Ructrak",
@@ -275,7 +275,7 @@ const resources = {
   en: {
     translation: {
       metaTitleDescriptions: {
-        mainTitle: "Main Page - Ructrak",
+        mainTitle: "RusTrak, a manufacturer of special-purpose vehicles",
         mainDescription:
           "Ructrak is a reliable platform for heavy machinery and quality spare parts. Explore our wide range of catalogs, great prices, and fast delivery.",
         catalogTitle: "Catalog - Ructrak",
