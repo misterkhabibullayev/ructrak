@@ -6,14 +6,17 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useThemeStore } from "../store/useThemeStore";
 import BottomHeaderTop from "./BottomHeaderTop";
+import RequestCall from "./RequestCallModal";
 
 function Header() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useThemeStore();
+  const [request, setRequest] = useState(null);
 
   const headerTopRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
+  const closeRequest = () => setRequest(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,9 +152,14 @@ function Header() {
                   </button>
                 </div>
                 <div>
-                  <button aria-label={t("header.requestCall")} className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                  <button
+                    onClick={() => setRequest("call")}
+                    aria-label={t("header.requestCall")}
+                    className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full"
+                  >
                     <Images.telephoneIcon className="w-5 md:w-7 h-5 md:h-7" />
                   </button>
+                  {request && <RequestCall request={request} closeRequest={closeRequest} />}
                 </div>
               </div>
             </div>
@@ -178,7 +186,9 @@ function Header() {
             )}
           </AnimatePresence>
           <div className="pt-2.5 pb-3.5">
-            <hr className={`text-[#FEC80B] mb-2.5 ${isSticky ? "block" : "hidden"}`} />
+            <hr
+              className={`text-[#FEC80B] mb-2.5 ${isSticky ? "block" : "hidden"}`}
+            />
             <HeaderBottom isSticky={isSticky} setIsSticky={setIsSticky} />
           </div>
         </div>

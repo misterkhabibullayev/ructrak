@@ -25,7 +25,7 @@ export function KategorySection() {
           <h1 className="font-FiraSans font-medium text-[28px] md:text-[42px] dark:text-white">
             {t("categorySection.categoryTitle")}
           </h1>
-          <div className="flex items-center gap-2.5">
+          <div className="hidden md:flex items-center gap-2.5">
             <button className="custom-prev-btn border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300">
               <Images.swiperPrevBtnIcon className="text-black dark:text-white group-hover:text-black" />
             </button>
@@ -39,12 +39,16 @@ export function KategorySection() {
             slidesPerView={4}
             spaceBetween={24}
             breakpoints={{
-              320: {
+              0: {
                 slidesPerView: 1,
                 spaceBetween: 12,
               },
-              768: {
+              575: {
                 slidesPerView: 2,
+                spaceBetween: 15
+              },
+              768: {
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               1024: {

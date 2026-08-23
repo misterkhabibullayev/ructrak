@@ -54,7 +54,7 @@ const resources = {
         cart: "Тележка",
         language: "Язык",
         requesCall: "Запросить звонок",
-        homeLink: "Рустрак - Главная страница"
+        homeLink: "Рустрак - Главная страница",
       },
       modal: {
         aboutRuctrak: "О компании ООО «Рустрак»",
@@ -70,7 +70,26 @@ const resources = {
         video: "Видео",
         promo: "Рекламные материалы",
         info: "Информационные материалы",
-        remont: "Ремонт"
+        remont: "Ремонт",
+      },
+      requestModal: {
+        modalTitleZakaz: "Заказать звонок",
+        modalTitleKommer: "Получить коммерческое предложение",
+        modalP: "Наш менеджер свяжется с Вами в ближайшее время",
+        inputLabel1: "Ваше имя *",
+        inputPlacholder1: "Иван",
+        inputError: "Поле обязательно для заполнения",
+        inputLabel2: "Телефон *",
+        agreeText: "Я согласен <0>на обработку персональных данных</0>",
+        submitBtnCall: "Оставить заявку",
+        emailInputLabel: "E-mail *",
+        submitBtnKp: "Получить КП",
+        uspeshna: "Успешно!",
+        uspeshnaP:
+          "Ваши данные направлены нашему менеджеру. Мы свяжемся с вами в ближайшее время!",
+        close: "Закрыть",
+        uvedam: "Подобрать аналогичный грузовик",
+        submitBtnVariant: "Получить варианты",
       },
       notFound: {
         sahifaTopilmadi: "Страница не найдена",
@@ -178,7 +197,7 @@ const resources = {
         cart: "Savat",
         language: "Til",
         requesCall: "Qo'ng'iroqni so'rash",
-        homeLink: "Ructrak - Bosh sahifa"
+        homeLink: "Ructrak - Bosh sahifa",
       },
       modal: {
         aboutRuctrak: "«Rustrak» MChJ haqida",
@@ -194,7 +213,7 @@ const resources = {
         video: "Video",
         promo: "Reklama materiallari",
         info: "Axborot materiallari",
-        remont: "Ta'mirlash"
+        remont: "Ta'mirlash",
       },
       notFound: {
         sahifaTopilmadi: "Sahifa topilmadi",
@@ -304,7 +323,7 @@ const resources = {
         cart: "Cart",
         language: "Language",
         requestCall: "Request Call",
-        homeLink: "Ructrak - Home page"
+        homeLink: "Ructrak - Home page",
       },
       modal: {
         aboutRuctrak: "About LLC «Rustrak»",
@@ -320,7 +339,7 @@ const resources = {
         video: "Video",
         promo: "Promotional materials",
         info: "Information materials",
-        remont: "Repair"
+        remont: "Repair",
       },
       notFound: {
         sahifaTopilmadi: "Page not found",
