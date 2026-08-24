@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import { lazy, Suspense, useState } from "react";
 import { LangModal } from "./LangModal";
 import { AnimatePresence, motion } from "framer-motion";
+import RequestCall from "./RequestCallModal";
 
 const CatalogModal = lazy(() => import("../components/CatalogModal"));
 export function HeaderBottom({ isSticky }) {
   const { t } = useTranslation();
   const [activeMenu, setActiveMenu] = useState(null);
+  const [request, setRequest] = useState(null);
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
@@ -158,9 +160,10 @@ export function HeaderBottom({ isSticky }) {
                 <LangModal />
               </div>
               <div className={isSticky ? "block" : "hidden"}>
-                <button aria-label={t("header.requesCall")} className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                <button onClick={() => setRequest("call")} aria-label={t("header.requesCall")} className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
                   <Images.telephoneIcon className="w-4.25 h-4.25 md:w-6.75 md:h-6.75" />
                 </button>
+                <RequestCall request={request} />
               </div>
             </div>
           </div>
