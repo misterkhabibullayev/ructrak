@@ -29,7 +29,7 @@ function ProductFilter() {
       <div>
         {categoriesFilter.map((item) => (
           <div key={item.id}>
-            <img src={item?.media?.gallery?.[0]} alt="salom" />
+            <img src={item?.media?.mainImage} alt="salom" />
             <div>
               <button onClick={() => handleProductOpen(item.id)}>
                 menga xabar bering
