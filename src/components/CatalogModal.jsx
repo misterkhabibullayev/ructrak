@@ -70,11 +70,11 @@ function CatalogModal({ activeMenu, onClose }) {
             ease: [0.04, 0.62, 0.23, 0.98],
           }}
           onClick={onClose}
-          className="absolute top-[130%] left-0 z-30 w-full overflow-auto"
+          className="absolute top-[130%] left-0 z-30 w-full overflow-hidden"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full h-screen bg-zinc-200 text-black dark:bg-slate-900 dark:text-white"
+            className="w-full h-screen bg-zinc-200 text-black dark:bg-slate-900 dark:text-white overflow-y-auto"
           >
             <div
               className={`container1 transition-all duration-500 ${
