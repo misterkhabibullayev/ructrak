@@ -8,6 +8,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
   const location = useLocation();
   const prevPathname = useRef(location.pathname);
   const currentLang = i18n.language;
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -26,6 +27,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
   const handleClose = useCallback(() => {
     setFormData({ name: "", email: "", phone: "", agree: true });
     setErrors({ name: false, email: false, phone: false, agree: false });
+    setIsSuccess(false);
     closeRequest();
   }, [closeRequest]);
   useEffect(() => {
@@ -34,8 +36,6 @@ function RequestCall({ request, closeRequest, activeProduct }) {
       prevPathname.current = location.pathname;
     }
   }, [location.pathname, handleClose]);
-
-  
 
   if (!request) return null;
 
@@ -129,6 +129,8 @@ function RequestCall({ request, closeRequest, activeProduct }) {
       return;
     }
 
+    setIsSuccess(true);
+
     const cleanData = {
       phone: formData.phone.trim(),
       agree: formData.agree,
@@ -153,7 +155,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
         <button
           onClick={handleClose}
           aria-label={t("requestModal.close")}
-          className="absolute top-2.25 right-2.25"
+          className="absolute top-2.25 right-2.25 z-11"
         >
           <Images.closeIcon className="text-black dark:text-white" />
         </button>
@@ -388,6 +390,23 @@ function RequestCall({ request, closeRequest, activeProduct }) {
             </div>
           </div>
         </form>
+        {isSuccess && (
+          <div className="absolute top-0 left-0 w-full h-full bg-[#fec80b] transition-all duration-300 flex items-center justify-center p-6 md:p-12.5 rounded-lg z-10">
+            <div>
+              <h2 className="font-FiraSans font-medium text-[24px] md:text-[32px] leading-[120%] mb-1.5 md:mb-2 text-center">{t("requestModal.uspeshna")}</h2>
+              <p className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-center mb-3 md:mb-17">{t("requestModal.uspeshnaP")}</p>
+              <div className="flex items-center justify-center">
+                <button
+                  onClick={closeRequest}
+                  aria-label={t("requestModal.close")}
+                  className="p-4 border-2 border-black rounded max-w-75 w-full hover:bg-black hover:text-white transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                >
+                  {t("requestModal.close")}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
