@@ -5,6 +5,7 @@
   --font-FiraSans: "Fira Sans", sans-serif;
   --shadow-my: 0 4px 24px rgba(150, 150, 150, 0.12);
   --shadow-hover: 0 4px 24px rgba(254, 200, 11, 0.25);
+  --shadow-InputHover: 0 4px 10px rgba(254, 200, 11, 0.25);
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -39,6 +40,26 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #5a5d62; /* Hover bo'lganda gray-400 */
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #fec80b;
+  border-color: #fec80b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
 }
 
 .swiper {

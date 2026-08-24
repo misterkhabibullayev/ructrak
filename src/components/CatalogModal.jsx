@@ -74,10 +74,10 @@ function CatalogModal({ activeMenu, onClose }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full h-screen bg-zinc-200 text-black dark:bg-slate-900 dark:text-white overflow-y-auto pb-50"
+            className="w-full h-screen bg-zinc-200 text-black dark:bg-slate-900 dark:text-white overflow-y-auto pb-35 lg:pb-50"
           >
             <div
-              className={`container1 transition-all duration-500 ${
+              className={`container1 h-full flex flex-col justify-between transition-all duration-500 ${
                 activeMenu ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -434,7 +434,7 @@ function CatalogModal({ activeMenu, onClose }) {
                     )}
                   </div>
 
-                  <div className="flex items-start lg:justify-end">
+                  <div className="flex items-start lg:justify-end mb-10 lg:mb-0">
                     <ul className="flex flex-col gap-0 min-[575px]:gap-6 list-none">
                       <li>
                         <Link
@@ -463,12 +463,41 @@ function CatalogModal({ activeMenu, onClose }) {
                       <li>
                         <Link
                           to={`contacts`}
-                          className="font-FiraSans font-extrabold text-[22px] leading-[160%] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
+                          className="font-FiraSans font-extrabold text-[22px] leading-[160%] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300 pb-5"
                         >
                           {t("header.contacts")}
                         </Link>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="flex min-[575px]:hidden flex-col gap-2">
+                <p className="w-full font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1]">
+                  {t("header.address")}
+                </p>
+                <div className="">
+                  <div className="flex items-end gap-0.5 dark:text-white transition-all duration-300">
+                    <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap">
+                      {t("header.forRegions")}
+                    </span>
+                    <a
+                      href="tel:8 (800) 77-77-210"
+                      className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap"
+                    >
+                      8 (800) 77-77-210
+                    </a>
+                  </div>
+                  <div className="flex items-end gap-0.5 dark:text-white transition-all duration-300">
+                    <span className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap">
+                      {t("header.nizhnyNovgorod")}
+                    </span>
+                    <a
+                      href="tel:8 (831) 225-00-55"
+                      className="font-FiraSans font-normal text-[15px] leading-[110%] text-[#A1A1A1] whitespace-nowrap"
+                    >
+                      8 (831) 225-00-55
+                    </a>
                   </div>
                 </div>
               </div>

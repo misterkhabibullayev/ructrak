@@ -150,7 +150,7 @@ const resources = {
     translation: {
       metaTitleDescriptions: {
         mainTitle:
-          "RusTrak, maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
+          "RusTrak - maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
         mainDescription:
           "Ructrak — maxsus texnikalar va sifatli ehtiyot qismlarning ishonchli platformasi. Keng turdagi katalog, hamyonbop narxlar va tezkor yetkazib berish xizmati bilan tanishing.",
         catalogTitle: "Katalog - Ructrak",
@@ -217,7 +217,7 @@ const resources = {
         remont: "Ta'mirlash",
       },
       requestModal: {
-        modalTitleZakaz: "Qayta qo'ng'iroqni buyurtma qilish",
+        modalTitleZakaz: "Qo'ng'iroq buyurtma qilish",
         modalTitleKommer: "Tijorat taklifini olish",
         modalP: "Menejerimiz tez orada siz bilan bog'lanadi",
         inputLabel1: "Ismingiz *",
@@ -232,7 +232,7 @@ const resources = {
         uspeshnaP:
           "Ma'lumotlaringiz menejerimizga yuborildi. Biz tez orada siz bilan bog'lanamiz!",
         close: "Yopish",
-        uvedam: "Munosib yuk mashinasini tanlash",
+        uvedam: "O'xshash yuk mashinasini toping",
         submitBtnVariant: "Variantlarni olish",
       },
       notFound: {
@@ -295,7 +295,7 @@ const resources = {
   en: {
     translation: {
       metaTitleDescriptions: {
-        mainTitle: "RusTrak, a manufacturer of special-purpose vehicles",
+        mainTitle: "RusTrak - a manufacturer of special-purpose vehicles",
         mainDescription:
           "Ructrak is a reliable platform for heavy machinery and quality spare parts. Explore our wide range of catalogs, great prices, and fast delivery.",
         catalogTitle: "Catalog - Ructrak",
