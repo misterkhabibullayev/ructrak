@@ -1,3 +1,8 @@
+import productImg1 from "../Image/shtorny-gruzovik-maz.webp";
+import productGallery1 from "../Image/438121-texnik-chizma.png";
+import productImg2 from "../Image/kran-manipulator.webp";
+import productGallery2 from "../Image/kran-manipulator.webp"
+
 export const productsData = [
     {
         id: "maz-438121",
@@ -17,10 +22,9 @@ export const productsData = [
         },
         inStock: true,
         media: {
-            mainImage: "/src/Image/shtorny-gruzovik-maz.webp",
+            mainImage: productImg1,
             gallery: [
-                "/src/Image/shtorny-gruzovik-maz.webp",
-                "/src/Image/shtorny-gruzovik-maz.webp",
+                productGallery1,
             ],
             blueprints: ["/src/Image/438121-texnik-chizma.png"],
         },
@@ -372,10 +376,9 @@ export const productsData = [
         },
         inStock: true,
         media: {
-            mainImage: "/src/Image/kran-manipulator.webp",
+            mainImage: productImg2,
             gallery: [
-                "/src/Image/kran-manipulator.webp",
-                "/src/Image/kran-manipulator.webp",
+                productGallery2,
             ],
             blueprints: ["/src/Image/kran-manipulator-texnika.jpg"],
         },
