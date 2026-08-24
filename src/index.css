@@ -49,17 +49,4 @@ button {
   background-color: white;
 }
 
-@keyframes customFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.animate-fade-up {
-  animation: customFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}

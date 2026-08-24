@@ -443,6 +443,11 @@ i18n
   .init({
     resources,
     fallbackLng: "uz",
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
+      loockupLocalStorage: "i18nextLng",
+    },
     interpolation: {
       escapeValue: false,
     },

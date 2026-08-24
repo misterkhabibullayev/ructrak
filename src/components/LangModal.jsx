@@ -8,7 +8,6 @@ export function LangModal() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Tillay ro'yxati va ularga mos flag ikonkalari
   const languages = [
     { code: "uz", label: "UZ", title: "O'zbekcha", Icon: Images.uzbekistanFlagIcon },
     { code: "ru", label: "RU", title: "Русский", Icon: Images.russiaFlagIcon },

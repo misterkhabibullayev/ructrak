@@ -45,7 +45,7 @@ export function KategorySection() {
               },
               575: {
                 slidesPerView: 2,
-                spaceBetween: 15
+                spaceBetween: 15,
               },
               768: {
                 slidesPerView: 3,
@@ -54,7 +54,7 @@ export function KategorySection() {
               1024: {
                 slidesPerView: 4,
                 spaceBetween: 24,
-              }
+              },
             }}
             loop={true}
             navigation={{

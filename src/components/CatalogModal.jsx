@@ -13,7 +13,6 @@ function CatalogModal({ activeMenu, onClose }) {
     catalog: false,
     aboutUs: false,
     media: false,
-    services: false,
   });
   const [isMobile, setIsMobile] = useState(false);
 
