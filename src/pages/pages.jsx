@@ -10,6 +10,8 @@ const ContactsPage = lazy(() => import("./ContactsPage"));
 const CartPage = lazy(() => import("./CartPage"));
 const FavoritesPage = lazy(() => import("./FavoritesPage"));
 const NotFoundPage = lazy(() => import("./NotFoundPage"));
+const ProductDetailesPage = lazy(() => import("./ProductDetailesPage"));
+const CatalogFilterPage = lazy(() => import("./CatalogFilterPage"));
 
 export {
   HomePage,
@@ -21,5 +23,7 @@ export {
   ContactsPage,
   CartPage,
   FavoritesPage,
-  NotFoundPage
+  NotFoundPage,
+  ProductDetailesPage,
+  CatalogFilterPage,
 };

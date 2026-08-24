@@ -153,7 +153,7 @@ function Header() {
                 </div>
                 <div>
                   <button
-                    onClick={() => setRequest("variant")}
+                    onClick={() => setRequest("call")}
                     aria-label={t("header.requestCall")}
                     className="w-8 md:w-11.5 h-8 md:h-11.5 flex items-center justify-center bg-[#FEC80B] rounded-full"
                   >

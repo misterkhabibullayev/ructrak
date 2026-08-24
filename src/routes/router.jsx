@@ -1,6 +1,7 @@
 import MainLayout from "../layouts/MainLayout";
 import {
   CartPage,
+  CatalogFilterPage,
   CatalogPage,
   ContactsPage,
   FavoritesPage,
@@ -8,6 +9,7 @@ import {
   NewsPage,
   NotFoundPage,
   PhotoGalleryPage,
+  ProductDetailesPage,
   SearchPage,
   ServicePage,
 } from "../pages/pages";
@@ -24,6 +26,14 @@ export const router = [
       {
         path: "catalog",
         element: <CatalogPage />,
+      },
+      {
+        path: "catalog/:filter",
+        element: <CatalogFilterPage />
+      },
+      {
+        path: "catalog/:filter/:detailes",
+        element: <ProductDetailesPage />
       },
       {
         path: "news",
