@@ -70,7 +70,7 @@ function CatalogModal({ activeMenu, onClose }) {
             ease: [0.04, 0.62, 0.23, 0.98],
           }}
           onClick={onClose}
-          className="absolute top-[130%] left-0 z-30 w-full overflow-hidden"
+          className="absolute top-[130%] left-0 z-30 w-full overflow-auto"
         >
           <div
             onClick={(e) => e.stopPropagation()}
