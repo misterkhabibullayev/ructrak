@@ -442,7 +442,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "uz",
+    fallbackLng: "en",
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],
