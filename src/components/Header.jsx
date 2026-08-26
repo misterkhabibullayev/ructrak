@@ -136,7 +136,7 @@ function Header() {
                         exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Images.sunIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
+                        <Images.moonIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
                       </motion.div>
                     ) : (
                       <motion.div
@@ -146,7 +146,7 @@ function Header() {
                         exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Images.moonIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
+                        <Images.sunIcon className="w-5 md:w-6.25 h-5 md:h-6.25" />
                       </motion.div>
                     )}
                   </button>

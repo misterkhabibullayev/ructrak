@@ -17,7 +17,6 @@ function ThemeToggle() {
           <button
             onClick={toggleTheme}
             className="relative flex items-center w-12 h-6 bg-[#FEC80B] rounded-full p-0.5 cursor-pointer transition-colors"
-            title="Mavzuni o'zgartirish"
           >
             <motion.div
               layout
