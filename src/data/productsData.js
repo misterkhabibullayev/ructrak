@@ -30,7 +30,7 @@ export const productsData = [
     arikul: "MAZ-438121",
     categorySlug: "shtornye-avtomobili",
     category: "Curtain trucks",
-    recommended: false,
+    recommended: true,
     title: {
       uz: "Curtainsider yuk mashinasi MAZ 438121 (5389D5 modeli)",
       ru: "Шторный грузовик МАЗ 438121 (модель 5389D5)",
@@ -749,7 +749,7 @@ export const productsData = [
     arikul: " МАЗ-6312С5-8535-012",
     categorySlug: "krany-manipulyatory",
     category: "Crane manipulators",
-    recommended: false,
+    recommended: true,
     title: {
       uz: "Kran-manipulyator MAZ 6312C5-8535-012 INMAN IT 150 bilan (4389N8 modeli)",
       ru: "Кран-манипулятор МАЗ 6312C5-8535-012 с КМУ ИНМАН ИТ 150 (модель 4389N8)",
@@ -1245,7 +1245,7 @@ export const productsData = [
     arikul: "KAMAZ-4308",
     categorySlug: "shtornye-avtomobili",
     category: "Curtain trucks",
-    recommended: false,
+    recommended: true,
     title: {
       uz: "Curtainsider yuk mashinasi KAMAZ 4308",
       ru: "Шторный грузовик КАМАЗ 4308",

@@ -122,7 +122,7 @@ function ScrollSlider() {
           </div>
 
           {/* SVG va Matn */}
-          <div className="w-full px-3 md:px-7 mt-6 min-[1300px]:mt-0 min-[1300px]:pl-10">
+          <div className="w-full px-3 md:px-7 mt-6 min-[1300px]:mt-0 min-[1300px]:px-10">
             <div className="flex min-[1300px]:flex-col gap-6">
               {SvgComponent && (
                 <div className="shrink-0">

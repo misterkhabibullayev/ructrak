@@ -38,7 +38,7 @@ export function HeaderBottom({ isSticky }) {
                       initial={{ width: 0, opacity: 0 }}
                       animate={{ width: "auto", opacity: 1 }}
                       exit={{ width: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      transition={{ duration: 0.1, ease: "easeInOut" }}
                       className="hidden font-FiraSans font-normal text-[18px] leading-[110%] text-black md:flex items-center justify-center whitespace-nowrap overflow-hidden"
                     >
                       {t("header.catalog")}
@@ -52,7 +52,7 @@ export function HeaderBottom({ isSticky }) {
                     initial={{ width: 0, opacity: 0 }}
                     animate={{ width: "auto", opacity: 1 }}
                     exit={{ width: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
                     className="overflow-hidden flex flex-col min-[456px]:hidden"
                   >
                     <Link
