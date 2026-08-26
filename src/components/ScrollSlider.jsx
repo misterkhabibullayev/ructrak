@@ -126,7 +126,7 @@ function ScrollSlider() {
             <div className="flex min-[1300px]:flex-col gap-6">
               {SvgComponent && (
                 <div className="shrink-0">
-                  <SvgComponent className="text-black dark:text-white w-10 h-10 md:w-14 md:h-14" />
+                  <SvgComponent className="text-black dark:text-white w-15 h-15" />
                 </div>
               )}
 

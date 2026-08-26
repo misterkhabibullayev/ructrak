@@ -15,8 +15,8 @@ function Header() {
   const [request, setRequest] = useState(null);
 
   const headerTopRef = useRef(null);
-  const [isSticky, setIsSticky] = useState(false);
   const closeRequest = () => setRequest(null);
+  const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
