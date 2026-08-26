@@ -60,7 +60,7 @@ function ScrollSlider() {
       <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between gap-10 md:gap-20 container1">
         <div className="w-full min-[890px]:w-[50%] lg:w-[45%]">
           <div className="relative w-full max-w-120">
-            <div className="w-full aspect-square">
+            <div className="w-70 mx-auto md:mx-0 md:w-full aspect-square">
               <img
                 className="w-full h-full object-contain"
                 src={sliderImage}
@@ -123,7 +123,7 @@ function ScrollSlider() {
 
           {/* SVG va Matn */}
           <div className="w-full px-3 md:px-7 mt-6 min-[1300px]:mt-0 min-[1300px]:pl-10">
-            <div className="flex flex-col gap-6">
+            <div className="flex min-[1300px]:flex-col gap-6">
               {SvgComponent && (
                 <div className="shrink-0">
                   <SvgComponent className="text-black dark:text-white w-10 h-10 md:w-14 md:h-14" />
