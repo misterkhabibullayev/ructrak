@@ -15,6 +15,7 @@ export function HeaderBottom({ isSticky }) {
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
+  const closeRequest = () => setRequest(null);
   return (
     <>
       <div className="relative">
@@ -52,7 +53,7 @@ export function HeaderBottom({ isSticky }) {
                     animate={{ width: "auto", opacity: 1 }}
                     exit={{ width: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden flex flex-col min-[556px]:hidden"
+                    className="overflow-hidden flex flex-col min-[456px]:hidden"
                   >
                     <Link
                       to={"/"}
@@ -77,7 +78,7 @@ export function HeaderBottom({ isSticky }) {
                     animate={{ width: "auto", opacity: 1 }}
                     exit={{ width: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden min-[556px]:flex items-center hidden"
+                    className="overflow-hidden min-[456px]:flex items-center hidden"
                   >
                     <Link to="/" aria-label={t("header.homeLink")} className="flex items-center gap-2.5">
                       <Images.logoImage className="text-black dark:text-white transition-all duration-300 shrink-0" />
@@ -163,7 +164,7 @@ export function HeaderBottom({ isSticky }) {
                 <button onClick={() => setRequest("call")} aria-label={t("header.requesCall")} className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
                   <Images.telephoneIcon className="w-4.25 h-4.25 md:w-6.75 md:h-6.75" />
                 </button>
-                <RequestCall request={request} />
+                <RequestCall request={request} closeRequest={closeRequest} />
               </div>
             </div>
           </div>

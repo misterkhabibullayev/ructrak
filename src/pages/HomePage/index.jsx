@@ -5,6 +5,7 @@ import { KategorySection } from "../../components/KategorySection";
 import { useTranslation } from "react-i18next";
 import AboutStatsSection from "../../components/AboutStatsSection";
 import SwiperSliderSection from "../../components/SwiperSliderSection";
+import Recommended from "../../components/RecommendedSection";
 
 function HomePage() {
   const {t} = useTranslation();
@@ -19,6 +20,7 @@ function HomePage() {
       <AboutCompanySection />
       <AboutStatsSection />
       <SwiperSliderSection />
+      <Recommended />
     </>
   );
 }

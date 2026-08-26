@@ -28,8 +28,26 @@ function RequestCall({ request, closeRequest, activeProduct }) {
     setFormData({ name: "", email: "", phone: "", agree: true });
     setErrors({ name: false, email: false, phone: false, agree: false });
     setIsSuccess(false);
-    closeRequest();
+    if (typeof closeRequest === "function") {
+      closeRequest();
+    }
   }, [closeRequest]);
+
+  useEffect(() => {
+    if (request) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "0px";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "0px";
+    };
+  }, [request]);
   useEffect(() => {
     if (prevPathname.current !== location.pathname) {
       handleClose();
@@ -393,8 +411,12 @@ function RequestCall({ request, closeRequest, activeProduct }) {
         {isSuccess && (
           <div className="absolute top-0 left-0 w-full h-full bg-[#fec80b] transition-all duration-300 flex items-center justify-center p-6 md:p-12.5 rounded-lg z-10">
             <div>
-              <h2 className="font-FiraSans font-medium text-[24px] md:text-[32px] leading-[120%] mb-1.5 md:mb-2 text-center">{t("requestModal.uspeshna")}</h2>
-              <p className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-center mb-3 md:mb-17">{t("requestModal.uspeshnaP")}</p>
+              <h2 className="font-FiraSans font-medium text-[24px] md:text-[32px] leading-[120%] mb-1.5 md:mb-2 text-center">
+                {t("requestModal.uspeshna")}
+              </h2>
+              <p className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-center mb-3 md:mb-17">
+                {t("requestModal.uspeshnaP")}
+              </p>
               <div className="flex items-center justify-center">
                 <button
                   onClick={closeRequest}
