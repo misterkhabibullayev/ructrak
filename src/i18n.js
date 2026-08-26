@@ -145,8 +145,6 @@ const resources = {
         more: "Подробнее",
       },
       scrollSlider: {
-        into: {},
-
         linePart: [
           {
             id: 1,
@@ -329,6 +327,35 @@ const resources = {
           "«RusTrak» tijorat transporti va ixtisoslashtirilgan texnikalarning yetakchi ishlab chiqaruvchisi hisoblanadi. Faoliyatimiz yirik korporatsiyalar va davlat tuzilmalari tomonidan yuqori baholangan: biz Gazprom, Rosatom, Rosseti, RSK «MIG» va boshqa ko'plab yirik korporatsiyalar uchun maxsus texnikalar yetkazib beramiz.",
         more: "Batafsil",
       },
+      scrollSlider: {
+        linePart: [
+          {
+            id: 1,
+            name: "Loyiha-konstruktorlik byurosi",
+            text: "Xususiy konstruktorlik byurosi mijozlarning individual loyihalarini amalga oshirish imkonini beradi.",
+          },
+          {
+            id: 2,
+            name: "Ishlab chiqish",
+            text: "Barcha loyihalar transport vositalari ishlab chiqaruvchilarining yo'riqnomalariga muvofiq ishlab chiqilgan.",
+          },
+          {
+            id: 3,
+            name: "Ishlab chiqarish bazasi",
+            text: "Xususiy ishlab chiqarish bazasi mahsulot tannarxini sezilarli darajada kamaytirishga va uning raqobatbardoshligini oshirishga imkon beradi.",
+          },
+          {
+            id: 4,
+            name: "Kafolat",
+            text: "Xususiy konstruktorlik byurosi mijozlarning individual loyihalarini amalga oshirish imkonini beradi. Ustki qurilmalar va bajarilgan ishlarga beriladigan kafolat shassi kafolatiga mos keladi.",
+          },
+          {
+            id: 5,
+            name: "Servis",
+            text: "Servis xizmati ko'rsatish: Rossiya Federatsiyasining barcha hududlarida keng hamkorlikdagi servis tarmog'i.",
+          },
+        ],
+      },
     },
   },
   en: {
@@ -471,6 +498,35 @@ const resources = {
         description2:
           "«RusTrak» is a leading manufacturer of commercial vehicles and specialized equipment. Our work is recognized and highly appreciated by major corporations and government agencies: we supply specialized equipment for corporations such as Gazprom, Rosatom, Rosseti, RAC «MiG», and others.",
         more: "Learn More",
+      },
+      scrollSlider: {
+        linePart: [
+          {
+            id: 1,
+            name: "Design Bureau",
+            text: "In-house design bureau allows us to implement custom client projects.",
+          },
+          {
+            id: 2,
+            name: "Development",
+            text: "All projects are developed in accordance with vehicle manufacturers' manuals.",
+          },
+          {
+            id: 3,
+            name: "Production Base",
+            text: "Our own production facility allows us to significantly reduce cost prices, increasing product competitiveness.",
+          },
+          {
+            id: 4,
+            name: "Warranty",
+            text: "In-house design bureau allows us to implement custom client projects. Warranty for superstructures and works corresponds to the chassis warranty.",
+          },
+          {
+            id: 5,
+            name: "Service",
+            text: "Service maintenance: an extensive partner service network throughout the Russian Federation.",
+          },
+        ],
       },
     },
   },

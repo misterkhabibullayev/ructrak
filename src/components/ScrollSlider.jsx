@@ -48,32 +48,34 @@ function ScrollSlider() {
   }, []);
 
   const positions = [
-    { top: "5%", left: "70%" },
-    { top: "23%", left: "95%" },
-    { top: "50%", left: "103.75%" },
-    { top: "77%", left: "96%" },
-    { top: "95%", left: "75%" },
+    { top: "5%", left: "64%" },
+    { top: "23%", left: "88%" },
+    { top: "50%", left: "97%" },
+    { top: "77%", left: "90%" },
+    { top: "95%", left: "70%" },
   ];
 
   return (
     <section ref={sectionRef} className="h-[500vh] my-10 min-[890px]:my-20">
-      <div className="h-dvh sticky gap-10 top-30 md:top-5 w-full flex flex-col justify-start min-[890px]:h-dvh min-[890px]:flex-row min-[890px]:items-center min-[890px]:justify-between px-6 md:px-10 lg:px-20 xl:px-30 container1">
-        <div className="w-1/2 md:w-[40%]">
-          <div className="relative w-full">
-            <img
-              className="w-full h-auto"
-              src={sliderImage}
-              alt="slider image"
-            />
+      <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between gap-10 md:gap-20 container1">
+        <div className="w-full min-[890px]:w-[50%] lg:w-[45%]">
+          <div className="relative w-full max-w-120">
+            <div className="w-full aspect-square">
+              <img
+                className="w-full h-full object-contain"
+                src={sliderImage}
+                alt="slider image"
+              />
+            </div>
 
-            <ul className="min-[890px]:absolute min-[890px]:inset-0 p-10">
+            <ul className="min-[890px]:absolute mt-10 min-[890px]:mt-0 inset-0 flex flex-col gap-3 min-[890px]:block">
               {items.map((elem, index) => {
                 const isActive = index === activeIndex;
 
                 return (
                   <li
                     key={elem.id || index}
-                    className="min-[890px]:absolute whitespace-nowrap"
+                    className="min-[890px]:absolute flex items-center gap-7"
                     style={{
                       top: positions[index]?.top || "0%",
                       left: positions[index]?.left || "0%",
@@ -81,15 +83,13 @@ function ScrollSlider() {
                     }}
                   >
                     <span
-                      className={`before:-left-3.5 before:top-2 before:absolute before:border-[#fec80b] before:content-[""] before:inline-block before:w-5 before:h-5 before:rounded-full before:border-2 max-[500px]:before:border max-[500px]:before:w-3 max-[500px]:before:h-3 max-[500px]:before:-left-3 max-[500px]:ml-2 min-[890px]:before:border-[#fec80b] min-[500px]:before:-left-5 min-[500px]:before:top-1 min-[500px]:before:w-5 min-[500px]:before:h-5 md:before:-left-5 min-[1024px]:before:-left-7 min-[1190px]:before:-left-6! min-[1330px]:before:-left-7! min-[1500px]:before:-left-7.5! min-[1750px]:before:-left-8.5! ml-1.5 ${
-                        isActive
-                          ? "before:bg-[#fec80b] min-[890px]:before:bg-[#fec80b]"
-                          : "before:bg-white dark:before:bg-slate-900"
+                      className={`shrink-0 w-3 h-3 min-[500px]:w-5 min-[500px]:h-5 rounded-full border border-[#fec80b] min-[500px]:border-2 ${
+                        isActive ? "bg-[#fec80b]" : "bg-white dark:bg-slate-900"
                       }`}
                     />
 
                     <span
-                      className={`max-[500px]:text-[14px] max-[890px]:text-xl benefits__button text ${
+                      className={`text-[14px] md:text-[20px] font-FiraSans font-normal leading-[110%] text-black dark:text-white whitespace-nowrap ${
                         isActive ? "opacity-100" : "opacity-40"
                       }`}
                     >
@@ -102,47 +102,38 @@ function ScrollSlider() {
           </div>
         </div>
 
-        <div className="relative w-full min-[890px]:w-[30%]">
-          <div className="relative w-0.5 h-120 max-[890px]:w-full max-[890px]:h-1 bg-transparent rounded-full overflow-visible min-[890px]:absolute min-[890px]:left-0 min-[890px]:top-1/2 min-[890px]:-translate-y-1/2">
+        <div className="relative w-full min-[1300px]:w-[40%] flex flex-col justify-center">
+          <div className="relative w-full h-1 min-[1300px]:w-0.5 min-[1300px]:h-120 dark:bg-slate-700 rounded-full overflow-hidden min-[1300px]:absolute min-[1300px]:left-0 min-[1300px]:top-1/2 min-[1300px]:-translate-y-1/2">
             {/* Desktop Line */}
             <div
-              className="absolute inset-0 origin-top rounded-full hidden min-[890px]:block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              className="absolute inset-0 origin-top rounded-full hidden min-[1300px]:block bg-[#fec80b] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{
                 transform: `scaleY(${progress})`,
               }}
-            >
-              <div className="w-full h-full bg-[#fec80b] rounded-full" />
-
-              {progress > 0 && (
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 pointer-events-none flex items-center justify-center"></div>
-              )}
-            </div>
+            />
 
             {/* Mobile Line */}
             <div
-              className="absolute inset-0 origin-left rounded-full hidden max-[890px]:block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              className="absolute inset-0 origin-left rounded-full block min-[1300px]:hidden bg-[#fec80b] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{
                 transform: `scaleX(${progress})`,
               }}
-            >
-              <div className="w-full h-full bg-[#fec80b] rounded-full" />
-
-              {progress > 0 && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 pointer-events-none flex items-center justify-center">
-                </div>
-              )}
-            </div>
+            />
           </div>
 
-          <div className="flex items-center w-full ml-3 md:ml-7 mt-10">
-            <div className="flex md:flex-col gap-10 mb-2">
-              <div className="mb-8">
-                {/* SVG RENDERING QISMI: */}
-                {SvgComponent && <SvgComponent />}
-              </div>
+          {/* SVG va Matn */}
+          <div className="w-full px-3 md:px-7 mt-6 min-[1300px]:mt-0 min-[1300px]:pl-10">
+            <div className="flex flex-col gap-6">
+              {SvgComponent && (
+                <div className="shrink-0">
+                  <SvgComponent className="text-black dark:text-white w-10 h-10 md:w-14 md:h-14" />
+                </div>
+              )}
 
-              <div className="w-full max-[890px]:w-full">
-                <p className="text-[20px] w-full">{item?.text}</p>
+              <div className="w-full">
+                <p className="w-full font-FiraSans font-normal text-[15px] md:text-[16px] leading-[130%] text-black dark:text-white">
+                  {item?.text}
+                </p>
               </div>
             </div>
           </div>
