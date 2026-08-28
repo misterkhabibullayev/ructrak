@@ -3,9 +3,11 @@
 
 @theme {
   --font-FiraSans: "Fira Sans", sans-serif;
-  --shadow-my: 0 4px 24px rgba(150, 150, 150, 0.12);
-  --shadow-hover: 0 4px 24px rgba(254, 200, 11, 0.25);
-  --shadow-InputHover: 0 4px 10px rgba(254, 200, 11, 0.25);
+  --shadow-my: 0 4px 24px 0 rgba(150, 150, 150, 0.12);
+  --shadow-hover: 0 4px 24px 0 rgba(254, 200, 11, 0.25);
+  --shadow-InputHover: 0 4px 10px 0 rgba(254, 200, 11, 0.25);
+  --shadow-Header: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  --shadow-HeaderDark: 0 2px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -85,5 +87,3 @@ button {
 .hero-bullet-active {
   background-color: white;
 }
-
-

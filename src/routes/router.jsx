@@ -40,6 +40,9 @@ export const router = [
         element: <NewsPage />,
       },
       {
+        path: "news/:newsdetailes"
+      },
+      {
         path: "photogallery",
         element: <PhotoGalleryPage />,
       },

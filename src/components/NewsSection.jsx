@@ -11,9 +11,8 @@ import "../index.css";
 // import required modules
 import { useTranslation } from "react-i18next";
 import { Navigation, Pagination } from "swiper/modules";
-import { categoriesData } from "../data/categoriesData";
-import { productsData } from "../data/productsData";
 import { Images } from "../utils/images";
+import { NewsData } from "../data/newsData";
 
 export function NewsSection() {
   const { t, i18n } = useTranslation();
@@ -26,10 +25,16 @@ export function NewsSection() {
             {t("categorySection.categoryTitle")}
           </h1>
           <div className="hidden md:flex items-center gap-2.5">
-            <button className="custom-prev-btn border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300">
+            <button
+              aria-label={t("recommendedSection.prev")}
+              className="custom-prev-btnNews border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300"
+            >
               <Images.swiperPrevBtnIcon className="text-black dark:text-white group-hover:text-black" />
             </button>
-            <button className="custom-next-btn border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300">
+            <button
+              aria-label={t("recommendedSection.next")}
+              className="custom-next-btnNews border border-slate-600 rounded group hover:bg-[#FEC80B]  p-1.75 transition-all duration-300"
+            >
               <Images.swiperNextBtnIcon className="text-black dark:text-white group-hover:text-black" />
             </button>
           </div>
@@ -58,51 +63,27 @@ export function NewsSection() {
             }}
             loop={true}
             navigation={{
-              prevEl: ".custom-prev-btn",
-              nextEl: ".custom-next-btn",
+              prevEl: ".custom-prev-btnNews",
+              nextEl: ".custom-next-btnNews",
             }}
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {categoriesData.map((item, index) => (
+            {NewsData.map((item) => (
               <SwiperSlide key={item.id} className="py-10">
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="w-full h-full py-4.5 px-3.5 border border-[#EBEBEB] rounded-lg shadow-my hover:border-[#FEC80B] hover:shadow-hover transition-all duration-300"
-                >
-                  <a
-                    href={`/catalog/${item.slug}`}
-                    className="inline-block w-full h-full"
-                  >
+                <div>
+                  <div>
+                    <img src={item.images[0]} alt={item.title[currentLang]} />
+                  </div>
+                  <div>
                     <div>
-                      <h2 className="font-FiraSans font-normal text-[24px] leading-[120%] text-black dark:text-white mb-0.5 line-clamp-1">
-                        {item?.title?.[currentLang]}
-                      </h2>
-                      <p className="font-FiraSans font-normal text-[16px] leading-[130%] text-[#A1A1A1]">
-                        <span>
-                          {
-                            productsData.filter(
-                              (product) => product.categorySlug === item.slug,
-                            ).length
-                          }
-                        </span>
-                        <span className="ml-1">
-                          {t("categorySection.modelLength")}
-                        </span>
-                      </p>
+                      <span>{item.publishedAt}</span>
+                      <h3>{item.title[currentLang]}</h3>
                     </div>
-                    <div className="flex items-end justify-end mt-6">
-                      <div className="w-57.5 h-57.5">
-                        <img
-                          src={item.img}
-                          alt={item?.title?.[currentLang]}
-                          loading="lazy"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                    <div>
+                      <span>{t("newsSection.podrobne")}</span>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

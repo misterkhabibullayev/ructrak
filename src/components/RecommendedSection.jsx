@@ -29,14 +29,16 @@ export default function Recommended() {
             </h1>
             <div className="hidden md:flex items-center gap-2.5">
               <button
+                aria-label={t("recommendedSection.prev")}
                 disabled={isBeginning}
-                className={`custom-prev-btn border border-slate-600 rounded p-1.75 transition-all duration-300 ${isBeginning ? "opacity-30 cursor-not-allowed" : "group hover:bg-[#FEC80B]"}`}
+                className={`custom-prev-btnRec border border-slate-600 rounded p-1.75 transition-all duration-300 ${isBeginning ? "opacity-30 cursor-not-allowed" : "group hover:bg-[#FEC80B]"}`}
               >
                 <Images.swiperPrevBtnIcon className="text-black dark:text-white group-hover:text-black" />
               </button>
               <button
+                aria-label={t("recommendedSection.next")}
                 disabled={isEnd}
-                className={`custom-next-btn border border-slate-600 rounded p-1.75 transition-all duration-300 ${isEnd ? "opacity-30 cursor-not-allowed" : "group hover:bg-[#FEC80B]"}`}
+                className={`custom-next-btnRec border border-slate-600 rounded p-1.75 transition-all duration-300 ${isEnd ? "opacity-30 cursor-not-allowed" : "group hover:bg-[#FEC80B]"}`}
               >
                 <Images.swiperNextBtnIcon className="text-black dark:text-white group-hover:text-black" />
               </button>
@@ -65,8 +67,8 @@ export default function Recommended() {
             }}
             modules={[Navigation]}
             navigation={{
-              prevEl: ".custom-prev-btn",
-              nextEl: ".custom-next-btn",
+              prevEl: ".custom-prev-btnRec",
+              nextEl: ".custom-next-btnRec",
             }}
             onSlideChange={(swiper) => {
               setIsBeginning(swiper.isBeginning);
@@ -80,9 +82,9 @@ export default function Recommended() {
           >
             {productsData
               ?.filter((product) => product.recommended === true)
-              .map((product) => (
+              .map((product, index) => (
                 <SwiperSlide key={product.id}>
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay={index * 100}>
                     <a href={`catalog/${product.categorySlug}/${product.slug}`}>
                       <div className="w-full h-55 md:65">
                         <img
@@ -94,7 +96,10 @@ export default function Recommended() {
                     </a>
                     <div className="px-3 py-4 bg-white dark:bg-slate-900">
                       <div>
-                        <a href={`catalog/${product.categorySlug}/${product.slug}`} className="font-FiraSans font-normal text-[18px] leading-[120%] text-black dark:text-white line-clamp-2">
+                        <a
+                          href={`catalog/${product.categorySlug}/${product.slug}`}
+                          className="font-FiraSans font-normal text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
+                        >
                           {product?.title?.[currentLang]}
                         </a>
                         {product.price.isPriceOnRequest && (

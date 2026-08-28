@@ -181,6 +181,10 @@ const resources = {
         prev: "Кнопка «Назад»",
         next: "Кнопка «Далее»",
       },
+      newsSection: {
+        Title: "Новости",
+        readMore: "Подробнее",
+      },
     },
   },
   uz: {
@@ -364,6 +368,10 @@ const resources = {
         prev: "Orqaga tugmasi",
         next: "Oldinga tugmasi",
       },
+      newsSection: {
+        title: "Yangiliklar",
+        readMore: "Batafsil o'qing",
+      },
     },
   },
   en: {
@@ -543,6 +551,10 @@ const resources = {
         poluchit: "Get a quote",
         prev: "Previous button",
         next: "Next button",
+      },
+      newsSection: {
+        title: "News",
+        readMore: "Read more",
       },
     },
   },
