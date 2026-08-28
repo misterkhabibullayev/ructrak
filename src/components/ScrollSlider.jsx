@@ -56,10 +56,10 @@ function ScrollSlider() {
   ];
 
   return (
-    <section ref={sectionRef} className="h-[500vh] my-10 min-[890px]:my-20">
-      <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between gap-10 md:gap-20 container1">
-        <div className="w-full min-[890px]:w-[50%] lg:w-[45%]">
-          <div className="relative w-full max-w-120">
+    <section ref={sectionRef} className="h-[500vh] my-10 md:my-20">
+      <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between gap-10 container1">
+        <div className="w-full md:w-[50%] lg:w-[45%]">
+          <div className="relative w-full max-w-120 mb-20 min-[1300px]:mb-0">
             <div className="w-70 mx-auto md:mx-0 md:w-full aspect-square">
               <img
                 className="w-full h-full object-contain"
@@ -103,7 +103,7 @@ function ScrollSlider() {
         </div>
 
         <div className="relative w-full min-[1300px]:w-[40%] flex flex-col justify-center">
-          <div className="relative w-full h-1 min-[1300px]:w-0.5 min-[1300px]:h-120 dark:bg-slate-700 rounded-full overflow-hidden min-[1300px]:absolute min-[1300px]:left-0 min-[1300px]:top-1/2 min-[1300px]:-translate-y-1/2">
+          <div className="absolute top-0 w-full h-1 min-[1300px]:w-0.5 min-[1300px]:h-120 dark:bg-slate-700 rounded-full overflow-hidden min-[1300px]:absolute min-[1300px]:left-0 min-[1300px]:top-1/2 min-[1300px]:-translate-y-1/2">
             {/* Desktop Line */}
             <div
               className="absolute inset-0 origin-top rounded-full hidden min-[1300px]:block bg-[#fec80b] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"

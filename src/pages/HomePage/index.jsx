@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import AboutStatsSection from "../../components/AboutStatsSection";
 import Recommended from "../../components/RecommendedSection";
 import ScrollSlider from "../../components/ScrollSlider";
+import { NewsSection } from "../../components/NewsSection";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ function HomePage() {
       <AboutStatsSection />
       <ScrollSlider />
       <Recommended />
+      <NewsSection />
     </>
   );
 }

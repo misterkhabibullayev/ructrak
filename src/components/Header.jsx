@@ -166,7 +166,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <div className="sticky top-0 z-50">
+      <div className={`sticky top-0 z-50 ${isSticky ? "shadow-InputHover" : ""}`}>
         <hr className={`text-[#FEC80B] ${isSticky ? "hidden" : "block"}`} />
         <div className=" bg-white dark:bg-slate-950">
           <AnimatePresence>
