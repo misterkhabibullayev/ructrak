@@ -185,6 +185,22 @@ const resources = {
         Title: "Новости",
         readMore: "Подробнее",
       },
+      feedbackForm: {
+        title: "ОСТАЛИСЬ ВОПРОСЫ?",
+        subtitle:
+          "Оставьте свои контактные данные, и мы перезвоним Вам в ближайшее время",
+        nameLabel: "Ваше имя",
+        namePlaceholder: "Иван",
+        inputError: "Поле обязательно для заполнения",
+        phoneLabel: "Телефон",
+        phonePlaceholder: "+998",
+        submitBtn: "Отправить",
+        policyText:
+          "Нажимая на кнопку отправить <0>Вы соглашаетесь на обработку персональных данных</0>",
+        successTitle: "УСПЕШНО!",
+        successDescription:
+          "Ваши данные направлену нашему менеджеру. Мы свяжемся с вами в ближайшее время!",
+      },
     },
   },
   uz: {
@@ -372,6 +388,22 @@ const resources = {
         title: "Yangiliklar",
         readMore: "Batafsil o'qing",
       },
+      feedbackForm: {
+        title: "SAVOLLARINGIZ QOLDIMI?",
+        subtitle:
+          "Aloqa ma'lumotlaringizni qoldiring, tez orada siz bilan bog'lanamiz",
+        nameLabel: "Ismingiz",
+        namePlaceholder: "Ivan",
+        inputError: "Ushbu maydonni to'ldirish majburiy",
+        phoneLabel: "Telefon",
+        phonePlaceholder: "+998",
+        submitBtn: "Yuborish",
+        policyText:
+          "Yuborish tugmasini bosish orqali <0>shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz</0>",
+        successTitle: "MUVAFFAQIYATLI!",
+        successDescription:
+          "Ma'lumotlaringiz menejerimizga yuborildi. Tez orada siz bilan bog'lanamiz!",
+      },
     },
   },
   en: {
@@ -555,6 +587,22 @@ const resources = {
       newsSection: {
         title: "News",
         readMore: "Read more",
+      },
+      feedbackForm: {
+        title: "STILL HAVE QUESTIONS?",
+        subtitle:
+          "Leave your contact details, and we will call you back shortly",
+        nameLabel: "Your name",
+        namePlaceholder: "Ivan",
+        inputError: "This field is required",
+        phoneLabel: "Phone",
+        phonePlaceholder: "+998",
+        submitBtn: "Submit",
+        policyText:
+          "By clicking the submit button <0>you agree to the processing of personal data</0>",
+        successTitle: "SUCCESS!",
+        successDescription:
+          "Your details have been sent to our manager. We will contact you shortly!",
       },
     },
   },

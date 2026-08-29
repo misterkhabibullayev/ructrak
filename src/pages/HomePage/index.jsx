@@ -7,6 +7,7 @@ import AboutStatsSection from "../../components/AboutStatsSection";
 import Recommended from "../../components/RecommendedSection";
 import ScrollSlider from "../../components/ScrollSlider";
 import { NewsSection } from "../../components/NewsSection";
+import FeedbackForm from "../../components/FeedbackForm";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ function HomePage() {
       <ScrollSlider />
       <Recommended />
       <NewsSection />
+      <FeedbackForm />
     </>
   );
 }
