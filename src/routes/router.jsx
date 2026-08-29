@@ -6,6 +6,7 @@ import {
   ContactsPage,
   FavoritesPage,
   HomePage,
+  NewsDeteiles,
   NewsPage,
   NotFoundPage,
   PhotoGalleryPage,
@@ -40,7 +41,8 @@ export const router = [
         element: <NewsPage />,
       },
       {
-        path: "news/:newsdetailes"
+        path: "news/:newsdetailes",
+        element: <NewsDeteiles />
       },
       {
         path: "photogallery",

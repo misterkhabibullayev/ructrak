@@ -12,6 +12,7 @@ const FavoritesPage = lazy(() => import("./FavoritesPage"));
 const NotFoundPage = lazy(() => import("./NotFoundPage"));
 const ProductDetailesPage = lazy(() => import("./ProductDetailesPage"));
 const CatalogFilterPage = lazy(() => import("./CatalogFilterPage"));
+const NewsDeteiles = lazy(() => import("./NewsDetailes"));
 
 export {
   HomePage,
@@ -26,4 +27,5 @@ export {
   NotFoundPage,
   ProductDetailesPage,
   CatalogFilterPage,
+  NewsDeteiles
 };

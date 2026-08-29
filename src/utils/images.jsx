@@ -499,4 +499,17 @@ export const Images = {
       />
     </svg>
   ),
+  rightArrowIcon: (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={0.95}
+        d="m21 12-5-5m5 5-5 5m5-5H3"
+      />
+    </svg>
+  ),
 };

@@ -49,7 +49,11 @@ export default function Recommended() {
             spaceBetween={24}
             breakpoints={{
               0: {
-                slidesPerView: 1,
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+              320: {
+                slidesPerView: 2,
                 spaceBetween: 12,
               },
               575: {
@@ -86,7 +90,7 @@ export default function Recommended() {
                 <SwiperSlide key={product.id}>
                   <div data-aos="fade-up" data-aos-delay={index * 100}>
                     <a href={`catalog/${product.categorySlug}/${product.slug}`}>
-                      <div className="w-full h-55 md:65">
+                      <div className="w-full aspect-square">
                         <img
                           src={product.media.mainImage}
                           alt={product.title[currentLang]}
@@ -98,12 +102,12 @@ export default function Recommended() {
                       <div>
                         <a
                           href={`catalog/${product.categorySlug}/${product.slug}`}
-                          className="font-FiraSans font-normal text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
+                          className="font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
                         >
                           {product?.title?.[currentLang]}
                         </a>
                         {product.price.isPriceOnRequest && (
-                          <p className="font-FiraSans font-medium text-[22px] leading-[120%] text-black dark:text-white mt-3.5 mb-2.75">
+                          <p className="font-FiraSans font-medium text-[11px] min-[456px]:text-[22px] leading-[120%] text-black dark:text-white mt-3.5 mb-2.75">
                             {t("recommendedSection.cena")}
                           </p>
                         )}
@@ -112,17 +116,17 @@ export default function Recommended() {
                         <a
                           href={`catalog/${product.categorySlug}/${product.slug}`}
                           aria-label={t("recommendedSection.podrobne")}
-                          className="py-3.25 px-7.75 bg-[#fec80b] hover:bg-[#FFD43A] rounded transition-all duration-300 font-FiraSans font-normal text-[16px] text-center leading-[110%] text-black mb-3 min-[890px]:mb-0"
+                          className="py-1.5 min-[456px]:py-3.25 px-2.75 min-[456px]:px-7.75 bg-[#fec80b] hover:bg-[#FFD43A] rounded transition-all duration-300 font-FiraSans font-normal text-[11px] min-[456px]:text-[16px] text-center leading-[110%] text-black mb-3 min-[890px]:mb-0"
                         >
                           {t("recommendedSection.podrobne")}
                         </a>
                         <button
                           onClick={() => setRequest("kp")}
                           aria-label={t("recommendedSection.poluchit")}
-                          className="font-FiraSans font-normal text-[16px] leading-[110%] text-[#A1A1A1] flex items-center justify-center gap-0.5"
+                          className="font-FiraSans font-normal text-[11px] min-[456px]:text-[16px] leading-[110%] text-[#A1A1A1] flex items-center justify-center gap-0.5"
                         >
                           {t("recommendedSection.poluchit")}
-                          <Images.arrowIcon />
+                          <Images.arrowIcon className="hidden min-[456px]:block" />
                         </button>
                       </div>
                     </div>

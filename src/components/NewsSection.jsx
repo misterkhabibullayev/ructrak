@@ -22,7 +22,7 @@ export function NewsSection() {
       <div className="container1">
         <div className="flex items-center justify-between mb-8">
           <h1 className="font-FiraSans font-medium text-[28px] md:text-[42px] dark:text-white">
-            {t("categorySection.categoryTitle")}
+            {t("newsSection.title")}
           </h1>
           <div className="hidden md:flex items-center gap-2.5">
             <button
@@ -45,7 +45,11 @@ export function NewsSection() {
             spaceBetween={24}
             breakpoints={{
               0: {
-                slidesPerView: 1,
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+              320: {
+                slidesPerView: 2,
                 spaceBetween: 12,
               },
               575: {
@@ -70,21 +74,34 @@ export function NewsSection() {
             className="mySwiper"
           >
             {NewsData.map((item) => (
-              <SwiperSlide key={item.id} className="py-10">
-                <div>
-                  <div>
-                    <img src={item.images[0]} alt={item.title[currentLang]} />
-                  </div>
-                  <div>
-                    <div>
-                      <span>{item.publishedAt}</span>
-                      <h3>{item.title[currentLang]}</h3>
+              <SwiperSlide key={item.id}>
+                <a href={`news/${item.slug}`}>
+                  <div className="group rounded-t-sm rounded-r-sm overflow-hidden">
+                    <div className="w-full aspect-square">
+                      <img
+                        src={item.images[0]}
+                        alt={item.title[currentLang]}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <div>
-                      <span>{t("newsSection.podrobne")}</span>
+                    <div className="flex flex-1 flex-col justify-between h-43.75 py-5.5 px-2.75">
+                      <div>
+                        <span className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-black dark:text-white">
+                          {item.publishedAt}
+                        </span>
+                        <h3 className="line-clamp-3 font-FiraSans font-medium text-[16px] min-[456px]:text-[18px] leading-[110%] text-black dark:text-white mt-0.5 md:mt-1">
+                          {item.title[currentLang]}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-4 text-[#A1A1A1] group-hover:text-[#fec80b] transition-all duration-300">
+                        <span className="font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[110%]">
+                          {t("newsSection.readMore")}
+                        </span>
+                        <Images.rightArrowIcon />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </SwiperSlide>
             ))}
           </Swiper>
