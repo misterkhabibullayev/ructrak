@@ -81,7 +81,7 @@ export function NewsSection() {
                   className="group rounded-t-sm rounded-r-sm overflow-hidden"
                 >
                   <a href={`news/${item.slug}`}>
-                    <div className="w-full aspect-square">
+                    <div className="w-full aspect-video">
                       <img
                         src={item.images[0]}
                         alt={item.title[currentLang]}

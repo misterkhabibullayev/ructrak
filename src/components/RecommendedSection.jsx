@@ -90,7 +90,7 @@ export default function Recommended() {
                 <SwiperSlide key={product.id}>
                   <div data-aos="fade-up" data-aos-delay={index * 100}>
                     <a href={`catalog/${product.categorySlug}/${product.slug}`}>
-                      <div className="w-full aspect-square">
+                      <div className="w-full aspect-video">
                         <img
                           src={product.media.mainImage}
                           alt={product.title[currentLang]}
