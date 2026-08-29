@@ -73,10 +73,14 @@ export function NewsSection() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-            {NewsData.map((item) => (
+            {NewsData.map((item, index) => (
               <SwiperSlide key={item.id}>
-                <a href={`news/${item.slug}`}>
-                  <div className="group rounded-t-sm rounded-r-sm overflow-hidden">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                  className="group rounded-t-sm rounded-r-sm overflow-hidden"
+                >
+                  <a href={`news/${item.slug}`}>
                     <div className="w-full aspect-square">
                       <img
                         src={item.images[0]}
@@ -100,8 +104,8 @@ export function NewsSection() {
                         <Images.rightArrowIcon />
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

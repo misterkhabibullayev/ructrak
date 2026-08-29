@@ -21,7 +21,7 @@ export default function Recommended() {
   const closeRequest = () => setRequest(null);
   return (
     <>
-      <section className="my-40 bg-[#F9F9F9] dark:bg-slate-950 py-14">
+      <section className="mt-40 mb-30 bg-[#F9F9F9] dark:bg-slate-950 py-14">
         <div className="container1">
           <div className="flex items-center justify-between mb-8">
             <h1 className="font-FiraSans font-medium text-[28px] md:text-[42px] dark:text-white">
