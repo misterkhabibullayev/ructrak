@@ -91,13 +91,13 @@ export default function FeedbackForm() {
   };
   return (
     <>
-      <section className="relative overflow-hidden bg-[#F9F9F9] dark:bg-slate-950">
+      <section className="relative overflow-hidden bg-[#F9F9F9] dark:bg-slate-950 py-12.5 min-[1200px]:py-0">
         <div className="container1">
           <div className="flex items-center">
             <div className="w-full h-full">
               <div className="mb-9.5">
-                <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black dark:text-white mb-1">{t("feedbackForm.title")}</h2>
-                <p className="font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black dark:text-white">{t("feedbackForm.subtitle")}</p>
+                <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black dark:text-white mb-1 text-center min-[1200px]:text-left">{t("feedbackForm.title")}</h2>
+                <p className="font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black dark:text-white text-center min-[1200px]:text-left">{t("feedbackForm.subtitle")}</p>
               </div>
               <div>
                 <form
@@ -168,17 +168,17 @@ export default function FeedbackForm() {
                       {t("requestModal.inputError")}
                     </span>
                   </div>
-                  <div className="pt-6.25">
+                  <div className="md:pt-6.25">
                     <button
                       type="submit"
-                      className="py-3.75 px-7.5 bg-[#fec80b] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] text-black"
+                      className="w-full md:w-auto py-3.75 px-7.5 bg-[#fec80b] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] text-black"
                     >
                       {t("feedbackForm.submitBtn")}
                     </button>
                   </div>
                 </form>
                 <div>
-                  <p className="font-FiraSans font-normal text-[14px] leading-[110%] text-black dark:text-white">
+                  <p className="font-FiraSans font-normal text-[14px] leading-[110%] text-black dark:text-white text-center min-[1200px]:text-left">
                     <Trans
                       i18nKey="feedbackForm.policyText"
                       components={[
