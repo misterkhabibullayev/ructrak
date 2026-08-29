@@ -57,9 +57,9 @@ function ScrollSlider() {
 
   return (
     <section ref={sectionRef} className="h-[500vh] my-10 md:my-20">
-      <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between gap-10 container1">
+      <div className="h-dvh sticky top-30 lg:top-10 w-full flex flex-col justify-start min-[1300px]:flex-row min-[1300px]:items-center min-[1300px]:justify-between container1">
         <div className="w-full md:w-[50%] lg:w-[45%]">
-          <div className="relative w-full max-w-120 mb-20 min-[1300px]:mb-0">
+          <div className="relative w-full max-w-120 mb-5 min-[1300px]:mb-0">
             <div className="w-70 mx-auto md:mx-0 md:w-full aspect-square">
               <img
                 className="w-full h-full object-contain"
