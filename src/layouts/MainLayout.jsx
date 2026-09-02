@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import { useThemeStore } from "../store/useThemeStore";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function MainLayout() {
   const { theme } = useThemeStore();
@@ -22,6 +23,7 @@ function MainLayout() {
         <main className="flex-1 dark:bg-slate-900">
           <Outlet />
         </main>
+        <Footer />
       </div>
     </>
   );

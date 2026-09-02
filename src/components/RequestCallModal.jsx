@@ -352,10 +352,10 @@ function RequestCall({ request, closeRequest, activeProduct }) {
             </div>
           </div>
 
-          <div>
+          <div className="text-black">
             <button
               type="submit"
-              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded ${
+              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] ${
                 request === "call" ? "block" : "hidden"
               }`}
             >
@@ -363,7 +363,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
             </button>
             <button
               type="submit"
-              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded ${
+              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] ${
                 request === "kp" ? "block" : "hidden"
               }`}
             >
@@ -371,7 +371,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
             </button>
             <button
               type="submit"
-              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded ${
+              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] ${
                 request === "variant" ? "block" : "hidden"
               }`}
             >

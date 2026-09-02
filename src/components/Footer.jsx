@@ -1,0 +1,267 @@
+import { useTranslation } from "react-i18next";
+import RequestCall from "./RequestCallModal";
+import { useState } from "react";
+import MaxRuImage from "../Image/max-messenger-sign-logo.svg";
+import TelegrmaImage from "../Image/telegram.svg";
+import VKImage from "../Image/VK_com-logo.svg";
+import RuTubeImage from "../Image/Rutube_icon.png";
+import YouTubeImage from "../Image/YouTube_full-color_icon.png";
+import DzenImage from "../Image/Yandex_Zen_logo_icon.png";
+import { Images } from "../utils/images";
+
+export default function Footer() {
+  const { t } = useTranslation();
+  const [request, setRequest] = useState(null);
+  const closeRequest = () => setRequest(null);
+
+  const [openAbout, setOpenAbout] = useState(false);
+  const [openMedia, setOpenMedia] = useState(false);
+  return (
+    <>
+      <footer className="bg-black pt-15.5 pb-9.75">
+        <div className="container1">
+          <div className="grid grid-cols-1 md:grid-cols-13 mb-7.5">
+            <div className="col-span-5 text-white">
+              <div className="flex flex-col gap-4 mb-8.5 md:mb-0">
+                <div className="flex flex-col gap-2">
+                  <p>
+                    {t("footer.phoneFax")}
+                    {": "}
+                    <a href="tel:8 (831) 225-00-55">8 (831) 225-00-55</a>
+                  </p>
+                  <p>
+                    {t("footer.email")}
+                    {": "}
+                    <a href="mailto:info@rtrf.ru">info@rtrf.ru</a>
+                  </p>
+                  <p>{t("footer.address")}</p>
+                </div>
+                <div>
+                  <button
+                    ck={() => setRequest("call")}
+                    aria-label={t("footer.requestCallBtn")}
+                    className="py-3.25 px-7.5 bg-[#FEC80B] text-black rounded hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                  >
+                    {t("footer.requestCallBtn")}
+                  </button>
+                  {request && (
+                    <RequestCall
+                      request={request}
+                      closeRequest={closeRequest}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="col-span-6 mb-4 md:mb-0">
+              <div>
+                <button
+                  onClick={() => setOpenAbout(!openAbout)}
+                  className="md:mb-8 text-white opacity-90 flex items-center"
+                >
+                  {t("footer.aboutTitle")}{" "}
+                  <span
+                    className={`md:hidden transition-transform duration-500 ${openAbout ? "rotate-180" : ""}`}
+                  >
+                    <Images.downIcon />
+                  </span>
+                </button>
+                <ul
+                  className={`md:block md:columns-2 md:gap-x-10 gap-y-4 ${openAbout ? "block pl-4 mt-4" : "hidden md:block"}`}
+                >
+                  <li className="mb-4">
+                    <a
+                      href="/about"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.aboutCompany")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/news"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.news")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/partners"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.partners")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/production"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.production")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/suppliers"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.suppliers")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/reviews"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.reviews")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/cert"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.certificates")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/vacancies"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.vacancies")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/leasing"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.creditLeasing")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/service"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.service")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/remont"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.repair")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/contacts"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.contacts")}
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="/stati"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.articles")}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-span-2 mb-4 md:mb-0">
+              <button
+                onClick={() => setOpenMedia(!openMedia)}
+                className="md:mb-8 text-white opacity-90 flex items-center"
+              >
+                {t("footer.mediaTitle")}
+                <span
+                  className={`md:hidden transition-all duration-500 ${openMedia ? "rotate-180" : ""}`}
+                >
+                  <Images.downIcon />
+                </span>
+              </button>
+              <ul
+                className={`flex flex-col gap-4 ${openMedia ? "flex pl-4 mt-4" : "hidden md:flex"}`}
+              >
+                <li>
+                  <a
+                    href="/photogallery"
+                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                  >
+                    {t("footer.photoGallery")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/video"
+                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                  >
+                    {t("footer.video")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/promo"
+                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                  >
+                    {t("footer.promoMaterials")}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4">
+            <div className="font-FiraSans font-normal text-[14px] leading-[100%] order-1 md:order-0">
+              <p className="text-white opacity-90 mb-2">
+                2009 - 2026 © Rus - Trucks
+              </p>
+              <p className="text-white opacity-90 max-w-100">
+                {t("footer.disclaimer")}
+              </p>
+            </div>
+            <div className="flex items-center gap-3 mb-10 md:mb-0 md:justify-end lg:justify-start">
+              <a
+                href="https://max.ru/"
+                target="_blank"
+                className="text-white w-8.75 h-8.75"
+              >
+                <img src={MaxRuImage} alt="sl" className="w-8.75" />
+              </a>
+              <a href="https://t.me/" target="_blank" className="text-white">
+                <img src={TelegrmaImage} alt="sl" className="w-8.75" />
+              </a>
+              <a href="https://vk.com/" target="_blank" className="text-white">
+                <img src={VKImage} alt="sl" className="w-8.75" />
+              </a>
+              <a
+                href="https://rutube.ru/"
+                target="_blank"
+                className="text-white"
+              >
+                <img src={RuTubeImage} alt="sl" className="w-8.75" />
+              </a>
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                className="text-white"
+              >
+                <img src={YouTubeImage} alt="sl" className="w-8.75" />
+              </a>
+              <a href="https://dzen.ru/" target="_blank" className="text-white">
+                <img src={DzenImage} alt="sl" className="w-8.75" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
