@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import Img404 from "../../Image/404.png";
+import Img404 from "../../Image/404.webp";
 import { Helmet } from "react-helmet-async";
 
 function NotFound() {
