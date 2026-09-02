@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { useThemeStore } from "../store/useThemeStore";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 function MainLayout() {
   const { theme } = useThemeStore();
@@ -15,10 +16,11 @@ function MainLayout() {
       root.classList.remove("dark");
     }
   }, [theme]);
-  
+
   return (
     <>
       <div className="min-h-screen flex flex-col transition-colors duration-300">
+        <ScrollToTop />
         <Header />
         <main className="flex-1 dark:bg-slate-900">
           <Outlet />

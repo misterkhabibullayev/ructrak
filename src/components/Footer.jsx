@@ -9,6 +9,7 @@ import RuTubeImage from "../Image/Rutube_icon.png";
 import YouTubeImage from "../Image/YouTube_full-color_icon.png";
 import DzenImage from "../Image/Yandex_Zen_logo_icon.png";
 import { Images } from "../utils/images";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -28,12 +29,12 @@ export default function Footer() {
                   <p>
                     {t("footer.phoneFax")}
                     {": "}
-                    <a href="tel:8 (831) 225-00-55">8 (831) 225-00-55</a>
+                    <Link to="tel:8 (831) 225-00-55">8 (831) 225-00-55</Link>
                   </p>
                   <p>
                     {t("footer.email")}
                     {": "}
-                    <a href="mailto:info@rtrf.ru">info@rtrf.ru</a>
+                    <Link to="mailto:info@rtrf.ru">info@rtrf.ru</Link>
                   </p>
                   <p>{t("footer.address")}</p>
                 </div>
@@ -73,108 +74,108 @@ export default function Footer() {
                 <div className="hidden md:block">
                   <ul className="md:columns-2 md:gap-x-10">
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/about"
+                      <Link
+                        to="/about"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.aboutCompany")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/news"
+                      <Link
+                        to="/news"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.news")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/partners"
+                      <Link
+                        to="/partners"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.partners")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/production"
+                      <Link
+                        to="/production"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.production")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/suppliers"
+                      <Link
+                        to="/suppliers"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.suppliers")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/reviews"
+                      <Link
+                        to="/reviews"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.reviews")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/cert"
+                      <Link
+                        to="/cert"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.certificates")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/vacancies"
+                      <Link
+                        to="/vacancies"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.vacancies")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/leasing"
+                      <Link
+                        to="/leasing"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.creditLeasing")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/service"
+                      <Link
+                        to="/service"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.service")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/remont"
+                      <Link
+                        to="/remont"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.repair")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/contacts"
+                      <Link
+                        to="/contacts"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.contacts")}
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-4 break-inside-avoid">
-                      <a
-                        href="/stati"
+                      <Link
+                        to="/stati"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.articles")}
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -191,108 +192,108 @@ export default function Footer() {
                       >
                         <ul className="pt-4 flex flex-col gap-4">
                           <li>
-                            <a
-                              href="/about"
+                            <Link
+                              to="/about"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.aboutCompany")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/news"
+                            <Link
+                              to="/news"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.news")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/partners"
+                            <Link
+                              to="/partners"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.partners")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/production"
+                            <Link
+                              to="/production"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.production")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/suppliers"
+                            <Link
+                              to="/suppliers"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.suppliers")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/reviews"
+                            <Link
+                              to="/reviews"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.reviews")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/cert"
+                            <Link
+                              to="/cert"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.certificates")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/vacancies"
+                            <Link
+                              to="/vacancies"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.vacancies")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/leasing"
+                            <Link
+                              to="/leasing"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.creditLeasing")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/service"
+                            <Link
+                              to="/service"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.service")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/remont"
+                            <Link
+                              to="/remont"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.repair")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/contacts"
+                            <Link
+                              to="/contacts"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.contacts")}
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
-                              href="/stati"
+                            <Link
+                              to="/stati"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.articles")}
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </motion.div>
@@ -320,28 +321,28 @@ export default function Footer() {
               <div className="hidden md:block">
                 <ul className="flex flex-col gap-4">
                   <li>
-                    <a
-                      href="/photogallery"
+                    <Link
+                      to="/photogallery"
                       className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                     >
                       {t("footer.photoGallery")}
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/video"
+                    <Link
+                      to="/video"
                       className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                     >
                       {t("footer.video")}
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/promo"
+                    <Link
+                      to="/promo"
                       className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                     >
                       {t("footer.promoMaterials")}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -358,28 +359,28 @@ export default function Footer() {
                     >
                       <ul className="pt-4 flex flex-col gap-4">
                         <li>
-                          <a
-                            href="/photogallery"
+                          <Link
+                            to="/photogallery"
                             className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                           >
                             {t("footer.photoGallery")}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/video"
+                          <Link
+                            to="/video"
                             className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                           >
                             {t("footer.video")}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            href="/promo"
+                          <Link
+                            to="/promo"
                             className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                           >
                             {t("footer.promoMaterials")}
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </motion.div>
@@ -398,36 +399,40 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-3 mb-10 md:mb-0 md:justify-end lg:justify-start">
-              <a
-                href="https://max.ru/"
+              <Link
+                to="https://max.ru/"
                 target="_blank"
                 className="text-white w-8.75 h-8.75"
               >
                 <img src={MaxRuImage} alt="sl" className="w-8.75" />
-              </a>
-              <a href="https://t.me/" target="_blank" className="text-white">
+              </Link>
+              <Link to="https://t.me/" target="_blank" className="text-white">
                 <img src={TelegrmaImage} alt="sl" className="w-8.75" />
-              </a>
-              <a href="https://vk.com/" target="_blank" className="text-white">
+              </Link>
+              <Link to="https://vk.com/" target="_blank" className="text-white">
                 <img src={VKImage} alt="sl" className="w-8.75" />
-              </a>
-              <a
-                href="https://rutube.ru/"
+              </Link>
+              <Link
+                to="https://rutube.ru/"
                 target="_blank"
                 className="text-white"
               >
                 <img src={RuTubeImage} alt="sl" className="w-8.75" />
-              </a>
-              <a
-                href="https://youtube.com/"
+              </Link>
+              <Link
+                to="https://youtube.com/"
                 target="_blank"
                 className="text-white"
               >
                 <img src={YouTubeImage} alt="sl" className="w-8.75" />
-              </a>
-              <a href="https://dzen.ru/" target="_blank" className="text-white">
+              </Link>
+              <Link
+                to="https://dzen.ru/"
+                target="_blank"
+                className="text-white"
+              >
                 <img src={DzenImage} alt="sl" className="w-8.75" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
