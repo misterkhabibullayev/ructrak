@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import RequestCall from "./RequestCallModal";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import MaxRuImage from "../Image/max-messenger-sign-logo.svg";
 import TelegrmaImage from "../Image/telegram.svg";
 import VKImage from "../Image/VK_com-logo.svg";
@@ -59,123 +60,248 @@ export default function Footer() {
                   onClick={() => setOpenAbout(!openAbout)}
                   className="md:mb-8 text-white opacity-90 flex items-center"
                 >
-                  {t("footer.aboutTitle")}{" "}
+                  {t("footer.aboutTitle")}
                   <span
-                    className={`md:hidden transition-transform duration-500 ${openAbout ? "rotate-180" : ""}`}
+                    className={`md:hidden transition-transform duration-500 ${
+                      openAbout ? "rotate-180" : ""
+                    }`}
                   >
                     <Images.downIcon />
                   </span>
                 </button>
-                <ul
-                  className={`md:block md:columns-2 md:gap-x-10 gap-y-4 ${openAbout ? "block pl-4 mt-4" : "hidden md:block"}`}
-                >
-                  <li className="mb-4">
-                    <a
-                      href="/about"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.aboutCompany")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/news"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.news")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/partners"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.partners")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/production"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.production")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/suppliers"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.suppliers")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/reviews"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.reviews")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/cert"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.certificates")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/vacancies"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.vacancies")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/leasing"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.creditLeasing")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/service"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.service")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/remont"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.repair")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/contacts"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.contacts")}
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a
-                      href="/stati"
-                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                    >
-                      {t("footer.articles")}
-                    </a>
-                  </li>
-                </ul>
+
+                <div className="hidden md:block">
+                  <ul className="md:columns-2 md:gap-x-10">
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/about"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.aboutCompany")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/news"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.news")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/partners"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.partners")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/production"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.production")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/suppliers"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.suppliers")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/reviews"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.reviews")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/cert"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.certificates")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/vacancies"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.vacancies")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/leasing"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.creditLeasing")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/service"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.service")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/remont"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.repair")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/contacts"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.contacts")}
+                      </a>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <a
+                        href="/stati"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("footer.articles")}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="md:hidden">
+                  <AnimatePresence initial={false}>
+                    {openAbout && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <ul className="pt-4 flex flex-col gap-4">
+                          <li>
+                            <a
+                              href="/about"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.aboutCompany")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/news"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.news")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/partners"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.partners")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/production"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.production")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/suppliers"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.suppliers")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/reviews"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.reviews")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/cert"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.certificates")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/vacancies"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.vacancies")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/leasing"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.creditLeasing")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/service"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.service")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/remont"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.repair")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/contacts"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.contacts")}
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/stati"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.articles")}
+                            </a>
+                          </li>
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
             </div>
+
             <div className="col-span-2 mb-4 md:mb-0">
               <button
                 onClick={() => setOpenMedia(!openMedia)}
@@ -183,39 +309,83 @@ export default function Footer() {
               >
                 {t("footer.mediaTitle")}
                 <span
-                  className={`md:hidden transition-all duration-500 ${openMedia ? "rotate-180" : ""}`}
+                  className={`md:hidden transition-transform duration-500 ${
+                    openMedia ? "rotate-180" : ""
+                  }`}
                 >
                   <Images.downIcon />
                 </span>
               </button>
-              <ul
-                className={`flex flex-col gap-4 ${openMedia ? "flex pl-4 mt-4" : "hidden md:flex"}`}
-              >
-                <li>
-                  <a
-                    href="/photogallery"
-                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                  >
-                    {t("footer.photoGallery")}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/video"
-                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                  >
-                    {t("footer.video")}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/promo"
-                    className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                  >
-                    {t("footer.promoMaterials")}
-                  </a>
-                </li>
-              </ul>
+
+              <div className="hidden md:block">
+                <ul className="flex flex-col gap-4">
+                  <li>
+                    <a
+                      href="/photogallery"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.photoGallery")}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/video"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.video")}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/promo"
+                      className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                    >
+                      {t("footer.promoMaterials")}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="md:hidden">
+                <AnimatePresence initial={false}>
+                  {openMedia && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <ul className="pt-4 flex flex-col gap-4">
+                        <li>
+                          <a
+                            href="/photogallery"
+                            className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                          >
+                            {t("footer.photoGallery")}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/video"
+                            className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                          >
+                            {t("footer.video")}
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/promo"
+                            className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                          >
+                            {t("footer.promoMaterials")}
+                          </a>
+                        </li>
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4">
