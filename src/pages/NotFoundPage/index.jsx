@@ -16,15 +16,15 @@ function NotFound() {
             <h1 className="font-FiraSans font-bold text-[50px] md:text-[190px] text-[#FEC80B] text-center">
               404
             </h1>
-            <h2 className="font-FiraSans font-bold text-[20px] text-[#FEC80B] mb-5 text-center ">
+            <h2 className="font-FiraSans font-bold text-[20px] md:text-[28px] text-[#FEC80B] mb-5 text-center ">
               {t("notFound.sahifaTopilmadi")}
             </h2>
-            <p className="font-FiraSans font-normal text-black dark:text-white text-[14px] mb-8 text-center">
+            <p className="font-FiraSans font-normal text-black dark:text-white text-[14px] md:text-[16px] mb-8 text-center">
               {t("notFound.sahifaOchirilgan")}
             </p>
             <Link
               to={"/catalog"}
-              className="flex items-center justify-center rounded w-full py-3.25 px-7.5 font-FiraSans font-normal text-black text-[14px] bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300"
+              className="flex items-center justify-center rounded w-full py-3.25 px-7.5 font-FiraSans font-normal text-black text-[14px] md:text-[16px] bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300"
             >
               {t("notFound.homepagegaqaytish")}
             </Link>
