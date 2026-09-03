@@ -8,11 +8,12 @@ function CatalogPage() {
   return (
     <>
       <div className="container1 py-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {categoriesData.map((item) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {categoriesData.map((item, index) => (
             <div key={item.id}>
               <div
                 data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="w-full h-full py-4.5 px-3.5 border border-[#EBEBEB] rounded-lg shadow-my hover:border-[#FEC80B] hover:shadow-hover transition-all duration-300"
               >
                 <a

@@ -227,6 +227,12 @@ const resources = {
         disclaimer:
           "Информация на сайте не является публичной офертой, определяемой согласно статье 435 Гражданского кодекса РФ и носит исключительно информационный характер.",
       },
+      bredCrumbs: {
+        main: "Главная",
+        catalog: "Каталог",
+        news: "Новости",
+        contacts: "Контакты"
+      }
     },
   },
   uz: {
@@ -682,6 +688,7 @@ const resources = {
         disclaimer:
           "The information on the site is not a public offer and is for informational purposes only.",
       },
+
     },
   },
 };

@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <button
-                    ck={() => setRequest("call")}
+                    onClick={() => setRequest("call")}
                     aria-label={t("footer.requestCallBtn")}
                     className="py-3.25 px-7.5 bg-[#FEC80B] text-black rounded hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
                   >
