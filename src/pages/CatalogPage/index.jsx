@@ -1,14 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { categoriesData } from "../../data/categoriesData";
 import { productsData } from "../../data/productsData";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 function CatalogPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   return (
     <>
-      <div className="container1 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="container1 pb-10">
+        <div>
+          <Breadcrumbs />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-5">
           {categoriesData.map((item, index) => (
             <div key={item.id}>
               <div

@@ -10,7 +10,7 @@ function NotFound() {
     <Helmet>
       <title>{t("notFound.sahifaTopilmadi")}</title>
     </Helmet>
-      <div className="container1 py-20 md:py-0">
+      <div className="container1 py-20 md:py-0 md:pb-37.5">
         <div className="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between px-0 md:px-30 mx-auto">
           <div className="w-full md:w-90">
             <h1 className="font-FiraSans font-bold text-[50px] md:text-[190px] text-[#FEC80B] text-center">

@@ -227,12 +227,21 @@ const resources = {
         disclaimer:
           "Информация на сайте не является публичной офертой, определяемой согласно статье 435 Гражданского кодекса РФ и носит исключительно информационный характер.",
       },
-      bredCrumbs: {
+      breadCrumbs: {
         main: "Главная",
         catalog: "Каталог",
         news: "Новости",
-        contacts: "Контакты"
-      }
+        contacts: "Контакты",
+      },
+      contactPage: {
+        title: "Контакты производителя автоспецтехники РусТрак",
+        adress: "603035 г. Нижний Новгород, ул. Торфяная, д. 35",
+        tel1: "Нижний Новгород:",
+        tel2: "Для регионов:",
+        email: "Электронная почта:",
+        remonplan: "Запись на техническое обслуживание:",
+        employees: "Сотрудники",
+      },
     },
   },
   uz: {
@@ -462,6 +471,21 @@ const resources = {
         disclaimer:
           "Saytdagi ma'lumotlar ommaviy oferta hisoblanmaydi va faqat ma'lumot berish xarakteriga ega.",
       },
+      breadCrumbs: {
+        main: "Bosh sahifa",
+        catalog: "Katalog",
+        news: "Yangiliklar",
+        contacts: "Kontaktlar",
+      },
+      contactPage: {
+        title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
+        adress: "603035 Nijniy Novgorod sh., Torfyanaya ko'ch., 35-uy",
+        tel1: "Nijniy Novgorod:",
+        tel2: "Hududlar uchun:",
+        email: "Elektron pochta:",
+        remonplan: "Texnik xizmat ko'rsatishga yozilish:",
+        employees: "Xodimlar"
+      },
     },
   },
   en: {
@@ -688,7 +712,21 @@ const resources = {
         disclaimer:
           "The information on the site is not a public offer and is for informational purposes only.",
       },
-
+      breadCrumbs: {
+        main: "Home",
+        catalog: "Catalog",
+        news: "News",
+        contacts: "Contacts",
+      },
+      contactPage: {
+        title: "Contacts of RusTrak special vehicles manufacturer",
+        adress: "603035 Nizhny Novgorod, Torfyanaya st., 35",
+        tel1: "Nizhny Novgorod:",
+        tel2: "For regions:",
+        email: "Email:",
+        remonplan: "Book maintenance service:",
+        employees: "Employees"
+      },
     },
   },
 };
