@@ -17,7 +17,7 @@ export default function Breadcrumbs() {
     <nav className="items-center gap-2 py-4 hidden md:flex font-FiraSans font-normal text-[14px] leading-[110%]">
       <Link
         to="/"
-        className="text-black dark:text-gray-400 hover:text-gray-400 dark:hover:text-white transition-colors"
+        className="text-black dark:text-gray-400 hover:text-gray-500 dark:hover:text-white transition-colors"
       >
         {t("breadCrumbs.main")}
       </Link>
@@ -49,7 +49,7 @@ export default function Breadcrumbs() {
             ) : (
               <Link
                 to={to}
-                className="text-black dark:text-gray-400 hover:text-white transition-colors"
+                className="text-black dark:text-gray-400 hover:text-gray-400 transition-all duration-300"
               >
                 {label}
               </Link>

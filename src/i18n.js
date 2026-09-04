@@ -242,6 +242,12 @@ const resources = {
         remonplan: "Запись на техническое обслуживание:",
         employees: "Сотрудники",
       },
+      newsPage: {
+        title: "Новости РусТрак",
+        showMore: "Показать ещё",
+        backBtn: "Back",
+        nextBtn: "Next",
+      },
     },
   },
   uz: {
@@ -484,7 +490,13 @@ const resources = {
         tel2: "Hududlar uchun:",
         email: "Elektron pochta:",
         remonplan: "Texnik xizmat ko'rsatishga yozilish:",
-        employees: "Xodimlar"
+        employees: "Xodimlar",
+      },
+      newsPage: {
+        title: "RusTrak yangiliklari",
+        showMore: "Ko'proq ko'rsatish",
+        backBtn: "Orqaga",
+        nextBtn: "Keyingisi",
       },
     },
   },
@@ -725,7 +737,13 @@ const resources = {
         tel2: "For regions:",
         email: "Email:",
         remonplan: "Book maintenance service:",
-        employees: "Employees"
+        employees: "Employees",
+      },
+      newsPage: {
+        title: "RusTrak news",
+        showMore: "Show more",
+        backBtn: "Back",
+        nextBtn: "Next",
       },
     },
   },

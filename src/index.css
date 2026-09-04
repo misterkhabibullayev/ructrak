@@ -9,6 +9,9 @@
   --shadow-Header: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
   --shadow-HeaderDark: 0 2px 20px 0 rgba(255, 255, 255, 0.2);
 }
+:root {
+  --font-FiraSans: "Fira Sans", sans-serif;
+}
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -89,4 +92,12 @@ button {
 
 .hero-bullet-active {
   background-color: white;
+}
+
+.newsDescription a {
+  color: blue;
+  transition: all 0.3s;
+}
+.newsDescription a:hover {
+  color: rgb(16, 16, 217);
 }

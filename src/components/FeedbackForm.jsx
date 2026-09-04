@@ -96,8 +96,12 @@ export default function FeedbackForm() {
           <div className="flex items-center">
             <div className="w-full h-full">
               <div className="mb-9.5">
-                <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black dark:text-white mb-1 text-center min-[1200px]:text-left">{t("feedbackForm.title")}</h2>
-                <p className="font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black dark:text-white text-center min-[1200px]:text-left">{t("feedbackForm.subtitle")}</p>
+                <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black dark:text-white mb-1 text-center md:text-left">
+                  {t("feedbackForm.title")}
+                </h2>
+                <p className="font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black dark:text-white text-center md:text-left">
+                  {t("feedbackForm.subtitle")}
+                </p>
               </div>
               <div>
                 <form
@@ -202,17 +206,23 @@ export default function FeedbackForm() {
             </div>
           </div>
         </div>
-        <div className={`absolute top-0 left-0 w-full h-full items-center bg-[#FEC80B] ${isSuccess ? "flex" : "hidden"}`}>
+        <div
+          className={`absolute top-0 left-0 w-full h-full items-center bg-[#FEC80B] ${isSuccess ? "flex" : "hidden"}`}
+        >
           <div className="container1 flex flex-col items-center">
-            <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black mb-1 text-center">{t("feedbackForm.successTitle")}</h2>
-            <p className="max-w-full md:max-w-105 font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black mb-3 text-center">{t("feedbackForm.successDescription")}</p>
+            <h2 className="font-FiraSans font-medium text-[24px] md:text-[42px] leading-[120%] text-black mb-1 text-center">
+              {t("feedbackForm.successTitle")}
+            </h2>
+            <p className="max-w-full md:max-w-105 font-FiraSans font-normal text-[14px] md:text-[18px] leading-[150%] text-black mb-3 text-center">
+              {t("feedbackForm.successDescription")}
+            </p>
             <button
-                  onClick={() => setIsSuccess(false)}
-                  aria-label={t("requestModal.close")}
-                  className="p-4 border-2 border-black rounded max-w-75 w-full hover:bg-black hover:text-white transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
-                >
-                  {t("requestModal.close")}
-                </button>
+              onClick={() => setIsSuccess(false)}
+              aria-label={t("requestModal.close")}
+              className="p-4 border-2 border-black rounded max-w-75 w-full hover:bg-black hover:text-white transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+            >
+              {t("requestModal.close")}
+            </button>
           </div>
         </div>
       </section>
