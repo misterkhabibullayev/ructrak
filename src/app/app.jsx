@@ -13,8 +13,8 @@ function App() {
   useEffect(() => {
     Aos.init({
       duration: 1000,
+      once: true,
     });
-    Aos.refresh();
   }, []);
 
   return (

@@ -11,32 +11,37 @@ import "swiper/css/navigation";
 
 import "../../index.css";
 import { Images } from "../../utils/images";
+import { useState, useRef } from "react";
 
 function NewsPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
-  // URL'dan sahifa raqamini olish (standart holatda 1)
   const [searchParams] = useSearchParams();
   const pageFromUrl = parseInt(searchParams.get("page") || "1", 10);
   const currentPage = isNaN(pageFromUrl) || pageFromUrl < 1 ? 1 : pageFromUrl;
 
-  // Paginatsiya sozlamalari
   const gridNewsData = NewsData.slice(1);
   const itemsPerPage = 8;
-  const totalItems = NewsData.length;
+  const totalItems = gridNewsData.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage) || 1;
 
-  // Har bir sahifa uchun kerakli 8 ta ma'lumotni qirqib olish
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentNews = gridNewsData.slice(startIndex, startIndex + itemsPerPage);
+  const [visibleCount, setVisibleCount] = useState(itemsPerPage);
 
-  // Sahifa linkini shakllantiruvchi yordamchi funksiya
+  // Yangi qo'shiladigan kartochkalar boshlanish nuqtasini ushlash uchun Ref
+  const newlyAddedRef = useRef(null);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentNews = gridNewsData.slice(startIndex, startIndex + visibleCount);
+
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + itemsPerPage);
+  };
+
   const getPageLink = (page) => {
     return page === 1 ? "/news" : `/news?page=${page}`;
   };
 
-  // Sahifa raqamlari qatorini hosil qilish
   const getPageNumbers = () => {
     const pages = [];
     if (totalPages <= 7) {
@@ -86,7 +91,7 @@ function NewsPage() {
             {t("newsPage.title")}
           </h2>
 
-          {/* Hero Slider Section (Faqat 1-sahifada ko'rinadi) */}
+          {/* Hero Slider Section */}
           {currentPage === 1 && NewsData.length > 0 && (
             <div className="hidden md:flex items-start mb-14">
               <div className="w-1/2 relative rounded-2xl overflow-hidden">
@@ -145,61 +150,67 @@ function NewsPage() {
             </div>
           )}
 
-          {/* Dinamik Grid (8 tadan yangilik) */}
+          {/* Dinamik Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-30">
-            {currentNews.map((item, index) => (
-              <div
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-                key={item.id}
-                className="group rounded-t-lg rounded-r-lg overflow-hidden"
-              >
-                <Link to={`/news/${item.slug}`}>
-                  <div className="w-full aspect-video">
-                    <img
-                      src={item.images[0]}
-                      alt={item.title[currentLang]}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-between h-43.75 py-5.5 px-2.75">
-                    <div>
-                      <span className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-black dark:text-white">
-                        {item.publishedAt}
-                      </span>
-                      <h3 className="line-clamp-3 font-FiraSans font-medium text-[16px] min-[456px]:text-[18px] leading-[110%] text-black dark:text-white mt-0.5 md:mt-1">
-                        {item.title[currentLang]}
-                      </h3>
+            {currentNews.map((item, index) => {
+              // Har safar bosilganda yangi qo'shiladigan birinchi kartochkaga Ref biriktirish
+              const isFirstNewItem = index === visibleCount - itemsPerPage;
+
+              return (
+                <div
+                  ref={isFirstNewItem ? newlyAddedRef : null}
+                  data-aos="fade-up"
+                  data-aos-delay={(index % itemsPerPage) * 100}
+                  key={item.id}
+                  className="group rounded-t-lg rounded-r-lg overflow-hidden scroll-mt-28"
+                >
+                  <Link to={`/news/${item.slug}`}>
+                    <div className="w-full aspect-video">
+                      <img
+                        src={item.images[0]}
+                        alt={item.title[currentLang]}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <div className="flex items-center gap-4 text-[#A1A1A1] group-hover:text-[#fec80b] transition-all duration-300">
-                      <span className="font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[110%]">
-                        {t("newsSection.readMore")}
-                      </span>
-                      <Images.rightArrowIcon />
+                    <div className="flex flex-1 flex-col justify-between h-43.75 py-5.5 px-2.75">
+                      <div>
+                        <span className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-black dark:text-white">
+                          {item.publishedAt}
+                        </span>
+                        <h3 className="line-clamp-3 font-FiraSans font-medium text-[16px] min-[456px]:text-[18px] leading-[110%] text-black dark:text-white mt-0.5 md:mt-1">
+                          {item.title[currentLang]}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-4 text-[#A1A1A1] group-hover:text-[#fec80b] transition-all duration-300">
+                        <span className="font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[110%]">
+                          {t("newsSection.readMore")}
+                        </span>
+                        <Images.rightArrowIcon />
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
 
           {/* Paginatsiya Bo'limi */}
-          <div className="flex flex-col items-center gap-10.75">
-            {totalPages > 1 && currentPage < totalPages && (
-              <Link
-                to={getPageLink(currentPage + 1)}
+          <div className="flex flex-col items-center gap-10.75 mb-10">
+            {startIndex + visibleCount < totalItems && (
+              <button
+                onClick={handleShowMore}
                 aria-label={t("newsPage.showMore")}
-                className="py-4.5 px-11.5 rounded bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans text-[16px] leading-[110%] text-black"
+                className="py-4.5 px-11.5 rounded bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans text-[16px] leading-[110%] text-black cursor-pointer"
               >
                 {t("newsPage.showMore")}
-              </Link>
+              </button>
             )}
 
             <div className="flex items-center gap-2 sm:gap-4 font-FiraSans text-[16px] select-none">
-              {/* Orqaga Link */}
               {currentPage > 1 ? (
                 <Link
                   to={getPageLink(currentPage - 1)}
+                  onClick={() => setVisibleCount(itemsPerPage)}
                   className="flex items-center gap-2 text-[#A1A1A1] hover:text-black dark:hover:text-white transition-colors duration-200 mr-2"
                 >
                   <Images.rightArrowIcon className="rotate-180" />
@@ -212,7 +223,6 @@ function NewsPage() {
                 </span>
               )}
 
-              {/* Sahifa raqamlari (Linklar) */}
               <div className="flex items-center gap-1 sm:gap-2">
                 {getPageNumbers().map((page, idx) =>
                   page === "..." ? (
@@ -223,6 +233,7 @@ function NewsPage() {
                     <Link
                       key={idx}
                       to={getPageLink(page)}
+                      onClick={() => setVisibleCount(itemsPerPage)}
                       className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-medium transition-all duration-200 ${
                         currentPage === page
                           ? "bg-[#FEC80B] text-black font-semibold shadow-sm pointer-events-none"
@@ -235,10 +246,10 @@ function NewsPage() {
                 )}
               </div>
 
-              {/* Oldinga Link */}
               {currentPage < totalPages ? (
                 <Link
                   to={getPageLink(currentPage + 1)}
+                  onClick={() => setVisibleCount(itemsPerPage)}
                   className="flex items-center gap-2 text-black dark:text-white hover:text-[#FEC80B] transition-colors duration-200 ml-2 font-medium"
                 >
                   <span>{t("pagination.next", "Дальше")}</span>

@@ -95,9 +95,9 @@ button {
 }
 
 .newsDescription a {
-  color: blue;
+  color: rgb(15, 15, 174);
   transition: all 0.3s;
 }
 .newsDescription a:hover {
-  color: rgb(16, 16, 217);
+  color: blue;
 }

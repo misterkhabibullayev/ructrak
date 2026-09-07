@@ -248,6 +248,10 @@ const resources = {
         backBtn: "Back",
         nextBtn: "Next",
       },
+      newsDetailes: {
+        back: "Назад",
+        moreNews: "Ещё новости",
+      },
     },
   },
   uz: {
@@ -498,6 +502,10 @@ const resources = {
         backBtn: "Orqaga",
         nextBtn: "Keyingisi",
       },
+      newsDetailes: {
+        back: "Orqaga",
+        moreNews: "Boshqa yangiliklar",
+      },
     },
   },
   en: {
@@ -744,6 +752,10 @@ const resources = {
         showMore: "Show more",
         backBtn: "Back",
         nextBtn: "Next",
+      },
+      newsDetailes: {
+        back: "Back",
+        moreNews: "More News",
       },
     },
   },
