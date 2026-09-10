@@ -446,14 +446,6 @@ function CatalogModal({ activeMenu, onClose }) {
                       </li>
                       <li>
                         <Link
-                          to={`remont`}
-                          className="font-FiraSans font-extrabold text-[22px] leading-[160%] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
-                        >
-                          {t("modal.remont")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
                           to={`news`}
                           className="font-FiraSans font-extrabold text-[22px] leading-[160%] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
                         >

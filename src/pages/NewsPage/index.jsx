@@ -214,14 +214,14 @@ function NewsPage() {
                   onClick={() => setVisibleCount(itemsPerPage)}
                   className="flex items-center gap-2 text-[#A1A1A1] hover:text-black dark:hover:text-white transition-colors duration-200 mr-2"
                 >
-                  <Images.rightArrowIcon className="rotate-180" />
+                  <Images.swiperPrevBtnIcon />
                   <span className="hidden md:block">
                     {t("newsPage.back", "Назад")}
                   </span>
                 </Link>
               ) : (
                 <span className="flex items-center gap-2 text-[#A1A1A1] opacity-40 cursor-not-allowed mr-2">
-                  <Images.rightArrowIcon className="rotate-180" />
+                  <Images.swiperPrevBtnIcon />
                   <span className="hidden md:block">
                     {t("newsPage.back", "Назад")}
                   </span>
@@ -257,13 +257,17 @@ function NewsPage() {
                   onClick={() => setVisibleCount(itemsPerPage)}
                   className="flex items-center gap-2 text-black dark:text-white hover:text-[#FEC80B] transition-colors duration-200 ml-2 font-medium"
                 >
-                  <span className="hidden md:block">{t("pagination.next", "Дальше")}</span>
-                  <Images.rightArrowIcon />
+                  <span className="hidden md:block">
+                    {t("pagination.next", "Дальше")}
+                  </span>
+                  <Images.swiperNextBtnIcon />
                 </Link>
               ) : (
                 <span className="flex items-center gap-2 text-black dark:text-white opacity-40 cursor-not-allowed ml-2 font-medium">
-                  <span className="hidden md:block">{t("newsPage.next", "Дальше")}</span>
-                  <Images.rightArrowIcon />
+                  <span className="hidden md:block">
+                    {t("newsPage.next", "Дальше")}
+                  </span>
+                  <Images.swiperNextBtnIcon />
                 </span>
               )}
             </div>

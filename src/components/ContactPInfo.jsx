@@ -59,7 +59,7 @@ export default function ContactPInfo() {
                 </a>
               </div>
             </div>
-            <div className="flex-1 w-full md:w-auto">
+            <div className="flex-1 w-full md:w-auto bg-slate-950">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17837.237299501296!2d60.6161839557784!3d41.5578149603997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9c80878ac9b%3A0xf6030e79bea9e3b9!2sLimon%20IT%20kompaniyasi!5e1!3m2!1suz!2s!4v1788457882337!5m2!1suz!2s"
                 // width={600}

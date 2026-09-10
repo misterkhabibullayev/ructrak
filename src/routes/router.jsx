@@ -13,6 +13,7 @@ import {
   ProductDetailesPage,
   SearchPage,
   ServicePage,
+  SuppliersPage,
 } from "../pages/pages";
 
 export const router = [
@@ -71,6 +72,10 @@ export const router = [
       {
         path: "*",
         element: <NotFoundPage />
+      },
+      {
+        path: "suppliers",
+        element: <SuppliersPage />
       }
     ],
   },
