@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "../../index.css";
 import { Images } from "../../utils/images";
 import { useState, useRef } from "react";
+import FeedbackForm from "../../components/FeedbackForm";
 
 function NewsPage() {
   const { t, i18n } = useTranslation();
@@ -214,12 +215,16 @@ function NewsPage() {
                   className="flex items-center gap-2 text-[#A1A1A1] hover:text-black dark:hover:text-white transition-colors duration-200 mr-2"
                 >
                   <Images.rightArrowIcon className="rotate-180" />
-                  {t("newsPage.back", "Назад")}
+                  <span className="hidden md:block">
+                    {t("newsPage.back", "Назад")}
+                  </span>
                 </Link>
               ) : (
                 <span className="flex items-center gap-2 text-[#A1A1A1] opacity-40 cursor-not-allowed mr-2">
                   <Images.rightArrowIcon className="rotate-180" />
-                  {t("pagination.prev", "Назад")}
+                  <span className="hidden md:block">
+                    {t("newsPage.back", "Назад")}
+                  </span>
                 </span>
               )}
 
@@ -252,12 +257,12 @@ function NewsPage() {
                   onClick={() => setVisibleCount(itemsPerPage)}
                   className="flex items-center gap-2 text-black dark:text-white hover:text-[#FEC80B] transition-colors duration-200 ml-2 font-medium"
                 >
-                  <span>{t("pagination.next", "Дальше")}</span>
+                  <span className="hidden md:block">{t("pagination.next", "Дальше")}</span>
                   <Images.rightArrowIcon />
                 </Link>
               ) : (
                 <span className="flex items-center gap-2 text-black dark:text-white opacity-40 cursor-not-allowed ml-2 font-medium">
-                  <span>{t("newsPage.next", "Дальше")}</span>
+                  <span className="hidden md:block">{t("newsPage.next", "Дальше")}</span>
                   <Images.rightArrowIcon />
                 </span>
               )}
@@ -265,6 +270,7 @@ function NewsPage() {
           </div>
         </div>
       </div>
+      <FeedbackForm />
     </>
   );
 }

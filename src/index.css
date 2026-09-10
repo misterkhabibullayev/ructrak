@@ -101,3 +101,10 @@ button {
 .newsDescription a:hover {
   color: blue;
 }
+
+.newsDetailes p {
+  font-family: var(--font-FiraSans);
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 18px;
+} 

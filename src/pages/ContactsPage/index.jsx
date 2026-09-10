@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import ContactPInfo from "../../components/ContactPInfo";
 import ContactsCard from "../../components/ContactsCard";
+import FeedbackForm from "../../components/FeedbackForm";
 
 function ContactsPage() {
   const { t } = useTranslation();
@@ -19,6 +20,7 @@ function ContactsPage() {
           <ContactsCard />
         </section>
       </div>
+      <FeedbackForm />
     </>
   );
 }

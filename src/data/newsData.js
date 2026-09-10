@@ -48,66 +48,65 @@ export const NewsData = [
     ],
     mainDescription: "",
     description: {
-      ru: `
-    <p>ООО «РУСТРАК» разработал <a href="/catalog/konteynerovozy">контейнеровоз на шасси КАМАЗ</a> 65658-1766-49 — первый в России проект на базе этого шасси. Это компактное и маневренное решение для контейнерной логистики. Предназначен для перевозки контейнеров с опасными грузами (категории ТС FL, АТ по классификации ДОПОГ).</p>
+      ru: `<p class="news-text">ООО «РУСТРАК» разработал <a href="https://rtrf.ru/catalog/konteynerovozy/">контейнеровоз на шасси КАМАЗ</a> 65658-1766-49 — первый в России проект на базе этого шасси. Это компактное и маневренное решение для контейнерной логистики. Предназначен для перевозки контейнеров с опасными грузами (категории ТС FL, АТ по классификации ДОПОГ).<br>
+ <br>
+ <b>Ключевые характеристики</b><br>
+ <br>
+ • Габариты — 9040 × 2550 × 3480 мм;<br>
+ • Грузоподъёмность — 20 000 кг, полная масса — 29 500 кг;<br>
+ • Двигатель — 400 л.с. (КАМАЗ 689);<br>
+ • КПП — F12JZ24DD (12-ти ступенчатая роботизированная);<br>
+ • Нагрузка на оси — до 9000 кг (передняя) и 20 500 кг (ведущий мост).<br>
+ <br>
+ <b>Конструкция</b><br>
+ <br>
+ Шасси укорочено для оптимального сопряжения согласно стандартам морских контейнеров. Усиленный надрамник изготовлен из швеллеров и гнутых профилей из сталей марок применяемых в автомобилестроении, платформа оснащена сертифицированными фитинговыми замками TLT-10 для надёжной фиксации груза. Контейнеровоз Рустрак на шасси КАМАЗ 65658 предназначен для перевозки контейнеров типов - 1CX, 1C, 1CC.<br>
+ <br>
+ <b>Защита</b><br>
+ <br>
+ Весь металл проходит трёхэтапную обработку: дробеструйную очистку, эпоксидное грунтование с цинкфосфатными соединениями и финишную многослойную окраску. Такая технология обеспечивает высокую адгезию покрытия, надёжную антикоррозионную защиту и продлевает срок службы конструкции даже в условиях агрессивной среды портов и терминалов.<br>
+ <br>
+ <i>Контейнеровоз «РУСТРАК» — оптимальное решение для перевозок «последней мили».</i></p>`,
 
-    <h3>Ключевые характеристики</h3>
-    <ul>
-      <li>Габариты — 9040 × 2550 × 3480 мм;</li>
-      <li>Грузоподъёмность — 20 000 кг, полная масса — 29 500 кг;</li>
-      <li>Двигатель — 400 л.с. (КАМАЗ 689);</li>
-      <li>КПП — F12JZ24DD (12-ти ступенчатая роботизированная);</li>
-      <li>Нагрузка на оси — до 9000 кг (передняя) и 20 500 кг (ведущий мост).</li>
-    </ul>
+      uz: `<p class="news-text">"RUSTRAK" MChJ <a href="https://rtrf.ru/catalog/konteynerovozy/">KAMAZ shassisi bazasida konteyner tashuvchi mashina</a>ni 65658-1766-49 ishlab chiqdi — bu ushbu shassi negizidagi Rossiyadagi birinchi loyihadir. Bu konteyner logistikasi uchun ixcham va chaqqon yechimdir. Xavfli yuklar bo'lgan konteynerlarni (YHQ/ADR tasnifiga ko'ra FL, AT transport vositalari kategoriyasi) tashish uchun mo'ljallangan.<br>
+ <br>
+ <b>Asosiy xususiyatlari</b><br>
+ <br>
+ • O'lchamlari — 9040 × 2550 × 3480 mm;<br>
+ • Yuk ko'tarish quvvati — 20 000 kg, to'liq vazni — 29 500 kg;<br>
+ • Dvigatel — 400 o.k. (KAMAZ 689);<br>
+ • Uzatma qutisi (KPP) — F12JZ24DD (12 bosqichli robotlashtirilgan);<br>
+ • O'qlarga tushadigan yuklama — 9000 kg gacha (old) va 20 500 kg gacha (yetakchi ko'prik).<br>
+ <br>
+ <b>Konstruksiyasi</b><br>
+ <br>
+ Shassi dengiz konteynerlari standartlariga muvofiq maqbul birikish uchun qisqartirilgan. Kuchaytirilgan ramka-ustqo'yma avtomobilsozlikda qo'llaniladigan po'lat markalaridan tayyorlangan shvellerlar va bukilgan profillardan tayyorlangan, platforma yukni ishonchli fiksatsiya qilish uchun sertifikatlangan TLT-10 fiting qulflari bilan jihozlangan. KAMAZ 65658 shassisidagi RUSTRAK konteyner tashuvchisi 1CX, 1C, 1CC turidagi konteynerlarni tashish uchun mo'ljallangan.<br>
+ <br>
+ <b>Himoyasi</b><br>
+ <br>
+ Barcha metal uch bosqichli ishlovdan o'tadi: drom-purkagichli tozalash, rux-fosfat birikmalari bilan epoksid astar berish va yakuniy ko'p qatlamli bo'yash. Ushbu texnologiya qoplamaning yuqori yopishuvchanligini (adgeziya), ishonchli korroziyaga qarshi himoyani ta'minlaydi va portlar hamda terminallarning tajovuzkor muhiti sharoitida ham konstruksiyaning xizmat ko'rsatish muddatini uzaytiradi.<br>
+ <br>
+ <i>"RUSTRAK" konteyner tashuvchisi — "oxirgi milya" tashuvlari uchun eng maqbul yechim.</i></p>`,
 
-    <h3>Конструкция</h3>
-    <p>Шасси укорочено для оптимального сопряжения согласно стандартам морских контейнеров. Усиленный надрамник изготовлен из швеллеров и гнутых профилей из сталей марок применяемых в автомобилестроении, платформа оснащена сертифицированными фитинговыми замками TLT-10 для надёжной фиксации груза. Контейнеровоз Рустрак на шасси КАМАЗ 65658 предназначен для перевозки контейнеров типов - 1CX, 1C, 1CC.</p>
-
-    <h3>Защита</h3>
-    <p>Весь металл проходит трёхэтапную обработку: дробеструйную очистку, эпоксидное грунтование с цинкфосфатными соединениями и финишную многослойную окраску. Такая технология обеспечивает высокую адгезию покрытия, надёжную антикоррозионную защиту и продлевает срок службы конструкции даже в условиях агрессивной среды портов и терминалов.</p>
-
-    <p><em>Контейнеровоз «РУСТРАК» — оптимальное решение для перевозок «последней мили».</em></p>
-  `,
-      uz: `
-    <p>"RUSTRAK" MChJ <a href="/catalog/konteynerovozy">KAMAZ shassisi bazasida контейнер tashuvchi mashina</a>ni 65658-1766-49 ishlab chiqdi — bu ushbu shassi negizidagi Rossiyadagi birinchi loyihadir. Bu konteyner logistikasi uchun ixcham va chaqqon yechimdir. Xavfli yuklar bo'lgan konteynerlarni (YHQ/ADR tasnifiga ko'ra FL, AT transport vositalari kategoriyasi) tashish uchun mo'ljallangan.</p>
-
-    <h3>Asosiy xususiyatlari</h3>
-    <ul>
-      <li>O'lchamlari — 9040 × 2550 × 3480 mm;</li>
-      <li>Yuk ko'tarish quvvati — 20 000 kg, to'liq vazni — 29 500 kg;</li>
-      <li>Dvigatel — 400 o.k. (KAMAZ 689);</li>
-      <li>Uzatma qutisi (KPP) — F12JZ24DD (12 bosqichli robotlashtirilgan);</li>
-      <li>O'qlarga tushadigan yuklama — 9000 kg gacha (old) va 20 500 kg gacha (yetakchi ko'prik).</li>
-    </ul>
-
-    <h3>Konstruksiyasi</h3>
-    <p>Shassi dengiz konteynerlari standartlariga muvofiq maqbul birikish uchun qisqartirilgan. Kuchaytirilgan ramka-ustqo'yma avtomobilsozlikda qo'llaniladigan po'lat markalaridan tayyorlangan shvellerlar va bukilgan profillardan tayyorlangan, platforma yukni ishonchli fiksatsiya qilish uchun sertifikatlangan TLT-10 fiting qulflari bilan jihozlangan. KAMAZ 65658 shassisidagi RUSTRAK konteyner tashuvchisi 1CX, 1C, 1CC turidagi konteynerlarni tashish uchun mo'ljallangan.</p>
-
-    <h3>Himoyasi</h3>
-    <p>Barcha metal uch bosqichli ishlovdan o'tadi: drom-purkagichli tozalash, rux-fosfat birikmalari bilan epoksid astar berish va yakuniy ko'p qatlamli bo'yash. Ushbu texnologiya qoplamaning yuqori yopishuvchanligini (adgeziya), ishonchli korroziyaga qarshi himoyani ta'minlaydi va portlar hamda terminallarning tajovuzkor muhiti sharoitida ham konstruksiyaning xizmat ko'rsatish muddatini uzaytiradi.</p>
-
-    <p><em>"RUSTRAK" konteyner tashuvchisi — "oxirgi milya" tashuvlari uchun eng maqbul yechim.</em></p>
-  `,
-      en: `
-    <p>LLC "RUSTRAK" has developed a <a href="/catalog/konteynerovozy">container carrier on the KAMAZ chassis</a> 65658-1766-49 — the first project in Russia based on this chassis. It is a compact and maneuverable solution for container logistics. Designed for transporting containers with dangerous goods (vehicle categories FL, AT according to ADR classification).</p>
-
-    <h3>Key Specifications</h3>
-    <ul>
-      <li>Dimensions — 9040 × 2550 × 3480 mm;</li>
-      <li>Payload capacity — 20 000 kg, gross weight — 29 500 kg;</li>
-      <li>Engine — 400 hp (KAMAZ 689);</li>
-      <li>Transmission — F12JZ24DD (12-speed automated);</li>
-      <li>Axle load — up to 9000 kg (front) and 20 500 kg (drive axle).</li>
-    </ul>
-
-    <h3>Design & Construction</h3>
-    <p>The chassis is shortened for optimal coupling according to sea container standards. The reinforced subframe is made of channels and bent profiles made of steel grades used in automotive industry, the platform is equipped with certified TLT-10 twist locks for reliable cargo securing. The Rustrak container carrier on the KAMAZ 65658 chassis is designed for carrying 1CX, 1C, 1CC type containers.</p>
-
-    <h3>Protection</h3>
-    <p>All metal undergoes a three-stage treatment: shot blasting, epoxy priming with zinc phosphate compounds, and final multi-layer painting. This technology ensures high coating adhesion, reliable anti-corrosion protection, and extends the service life of the structure even in aggressive environments of ports and terminals.</p>
-
-    <p><em>"RUSTRAK" container carrier — the optimal solution for "last mile" logistics.</em></p>
-  `,
+      en: `<p class="news-text">LLC "RUSTRAK" has developed a <a href="https://rtrf.ru/catalog/konteynerovozy/">container carrier on the KAMAZ chassis</a> 65658-1766-49 — the first project in Russia based on this chassis. It is a compact and maneuverable solution for container logistics. Designed for transporting containers with dangerous goods (vehicle categories FL, AT according to ADR classification).<br>
+ <br>
+ <b>Key Specifications</b><br>
+ <br>
+ • Dimensions — 9040 × 2550 × 3480 mm;<br>
+ • Payload capacity — 20 000 kg, gross weight — 29 500 kg;<br>
+ • Engine — 400 hp (KAMAZ 689);<br>
+ • Transmission — F12JZ24DD (12-speed automated);<br>
+ • Axle load — up to 9000 kg (front) and 20 500 kg (drive axle).<br>
+ <br>
+ <b>Design & Construction</b><br>
+ <br>
+ The chassis is shortened for optimal coupling according to sea container standards. The reinforced subframe is made of channels and bent profiles made of steel grades used in automotive industry, the platform is equipped with certified TLT-10 twist locks for reliable cargo securing. The Rustrak container carrier on the KAMAZ 65658 chassis is designed for carrying 1CX, 1C, 1CC type containers.<br>
+ <br>
+ <b>Protection</b><br>
+ <br>
+ All metal undergoes a three-stage treatment: shot blasting, epoxy priming with zinc phosphate compounds, and final multi-layer painting. This technology ensures high coating adhesion, reliable anti-corrosion protection, and extends the service life of the structure even in aggressive environments of ports and terminals.<br>
+ <br>
+ <i>"RUSTRAK" container carrier — the optimal solution for "last mile" logistics.</i></p>`,
     },
   },
   {
@@ -242,7 +241,7 @@ export const NewsData = [
   },
   {
     id: "news9",
-    slug: "rustrak-podvyel-itogi-uchastiya-v-vystavke-comvex-2026-",
+    slug: "rustrak-podvyel-itogi-uchastiya-v-vystavke-comvex-2026-variant-2",
     recommended: true,
     publishedAt: "08.06.2026",
     title: {
@@ -259,7 +258,7 @@ export const NewsData = [
   },
   {
     id: "news10",
-    slug: "sadko-9-fermer-obzavelsya-kmu-s-burilnoy-ustanovkoy-",
+    slug: "sadko-9-fermer-obzavelsya-kmu-s-burilnoy-ustanovkoy-variant-2",
     categorySlug: "krany-manipulyatory",
     recommended: true,
     publishedAt: "26.03.2026",
@@ -277,7 +276,7 @@ export const NewsData = [
   },
   {
     id: "news11",
-    slug: "rustrak-pozdravryalet-s-mezhdunarodnym-zhenskim-dnyem",
+    slug: "rustrak-pozdravryalet-s-mezhdunarodnym-zhenskim-dnyem-variant-2",
     recommended: true,
     publishedAt: "06.03.2026",
     title: {
@@ -294,7 +293,7 @@ export const NewsData = [
   },
   {
     id: "news12",
-    slug: "rustrak-prodlil-status-ofitsialnogo-dilera-inman-i-velmash-s",
+    slug: "rustrak-prodlil-status-ofitsialnogo-dilera-inman-i-velmash-s-variant-2",
     recommended: true,
     publishedAt: "26.02.2026",
     title: {
@@ -311,7 +310,7 @@ export const NewsData = [
   },
   {
     id: "news13",
-    slug: "rustrak-pozdravlyaet-s-dnem-zashchitnika-otechestva-",
+    slug: "rustrak-pozdravlyaet-s-dnem-zashchitnika-otechestva-variant-2",
     recommended: true,
     publishedAt: "20.02.2026",
     title: {
@@ -328,7 +327,7 @@ export const NewsData = [
   },
   {
     id: "news14",
-    slug: "avtotoplivozapravshchiki-rustrak-vklyucheny-v-reestr-minpromtorga",
+    slug: "avtotoplivozapravshchiki-rustrak-vklyucheny-v-reestr-minpromtorga-variant-2",
     recommended: true,
     publishedAt: "11.02.2026",
     title: {
@@ -355,7 +354,7 @@ export const NewsData = [
   },
   {
     id: "news15",
-    slug: "rustrak-pozdravlyaet-partnerov-s-novym-godom-i-rozhdestvom-",
+    slug: "rustrak-pozdravlyaet-partnerov-s-novym-godom-i-rozhdestvom-variant-2",
     recommended: true,
     publishedAt: "30.12.2025",
     title: {
@@ -372,7 +371,7 @@ export const NewsData = [
   },
   {
     id: "news16",
-    slug: "rustrak-podvyel-itogi-uchastiya-v-vystavke-comvex-2026-",
+    slug: "rustrak-podvyel-itogi-uchastiya-v-vystavke-comvex-2026-variant-3",
     recommended: true,
     publishedAt: "08.06.2026",
     title: {
@@ -389,7 +388,7 @@ export const NewsData = [
   },
   {
     id: "news17",
-    slug: "sadko-9-fermer-obzavelsya-kmu-s-burilnoy-ustanovkoy-",
+    slug: "sadko-9-fermer-obzavelsya-kmu-s-burilnoy-ustanovkoy-variant-3",
     categorySlug: "krany-manipulyatory",
     recommended: true,
     publishedAt: "26.03.2026",
@@ -407,7 +406,7 @@ export const NewsData = [
   },
   {
     id: "news18",
-    slug: "rustrak-pozdravryalet-s-mezhdunarodnym-zhenskim-dnyem",
+    slug: "rustrak-pozdravryalet-s-mezhdunarodnym-zhenskim-dnyem-variant-3",
     recommended: true,
     publishedAt: "06.03.2026",
     title: {
@@ -424,7 +423,7 @@ export const NewsData = [
   },
   {
     id: "news19",
-    slug: "rustrak-prodlil-status-ofitsialnogo-dilera-inman-i-velmash-s",
+    slug: "rustrak-prodlil-status-ofitsialnogo-dilera-inman-i-velmash-s-variant-3",
     recommended: true,
     publishedAt: "26.02.2026",
     title: {
@@ -441,7 +440,7 @@ export const NewsData = [
   },
   {
     id: "news20",
-    slug: "rustrak-pozdravlyaet-s-dnem-zashchitnika-otechestva-",
+    slug: "rustrak-pozdravlyaet-s-dnem-zashchitnika-otechestva-variant-3",
     recommended: true,
     publishedAt: "20.02.2026",
     title: {
@@ -458,7 +457,7 @@ export const NewsData = [
   },
   {
     id: "news21",
-    slug: "avtotoplivozapravshchiki-rustrak-vklyucheny-v-reestr-minpromtorga",
+    slug: "avtotoplivozapravshchiki-rustrak-vklyucheny-v-reestr-minpromtorga-variant-3",
     recommended: true,
     publishedAt: "11.02.2026",
     title: {
@@ -485,7 +484,7 @@ export const NewsData = [
   },
   {
     id: "news22",
-    slug: "rustrak-pozdravlyaet-partnerov-s-novym-godom-i-rozhdestvom-",
+    slug: "rustrak-pozdravlyaet-partnerov-s-novym-godom-i-rozhdestvom-variant-3",
     recommended: true,
     publishedAt: "30.12.2025",
     title: {
