@@ -6,6 +6,7 @@ import {
   ContactsPage,
   FavoritesPage,
   HomePage,
+  LeasingPage,
   NewsDeteiles,
   NewsPage,
   NotFoundPage,
@@ -76,6 +77,10 @@ export const router = [
       {
         path: "suppliers",
         element: <SuppliersPage />
+      },
+      {
+        path: "leasing",
+        element: <LeasingPage />
       }
     ],
   },

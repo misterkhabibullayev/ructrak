@@ -14,6 +14,7 @@ const ProductDetailesPage = lazy(() => import("./ProductDetailesPage"));
 const CatalogFilterPage = lazy(() => import("./CatalogFilterPage"));
 const NewsDeteiles = lazy(() => import("./NewsDetailes")); // bitti
 const SuppliersPage = lazy(() => import("./SuppliersPage")); // bitti
+const LeasingPage = lazy(() => import("./LeasingPage"));
 
 export {
   HomePage,
@@ -29,5 +30,6 @@ export {
   ProductDetailesPage,
   CatalogFilterPage,
   NewsDeteiles,
-  SuppliersPage
+  SuppliersPage,
+  LeasingPage,
 };
