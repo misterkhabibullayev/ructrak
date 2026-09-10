@@ -80,7 +80,11 @@ export function HeaderBottom({ isSticky }) {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden min-[456px]:flex items-center hidden"
                   >
-                    <Link to="/" aria-label={t("header.homeLink")} className="flex items-center gap-2.5">
+                    <Link
+                      to="/"
+                      aria-label={t("header.homeLink")}
+                      className="flex items-center gap-2.5"
+                    >
                       <Images.logoImage className="text-black dark:text-white transition-all duration-300 shrink-0" />
                     </Link>
                   </motion.div>
@@ -112,13 +116,21 @@ export function HeaderBottom({ isSticky }) {
                       ▼
                     </span>
                   </button>
-                  <Link to="/service" className="" aria-label={t("header.service")}>
+                  <Link
+                    to="/service"
+                    className=""
+                    aria-label={t("header.service")}
+                  >
                     {t("header.service")}
                   </Link>
                   <Link to="/news" className="" aria-label={t("header.news")}>
                     {t("header.news")}
                   </Link>
-                  <Link to="/contacts" className="" aria-label={t("header.contacts")}>
+                  <Link
+                    to="/contacts"
+                    className=""
+                    aria-label={t("header.contacts")}
+                  >
                     {t("header.contacts")}
                   </Link>
                 </nav>
@@ -135,7 +147,7 @@ export function HeaderBottom({ isSticky }) {
                 <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
               </div>
               <div className="block md:hidden">
-                <Images.searchIcon  className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
+                <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
               </div>
               <div>
                 <Link
@@ -161,7 +173,11 @@ export function HeaderBottom({ isSticky }) {
                 <LangModal />
               </div>
               <div className={isSticky ? "block" : "hidden"}>
-                <button onClick={() => setRequest("call")} aria-label={t("header.requesCall")} className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full">
+                <button
+                  onClick={() => setRequest("call")}
+                  aria-label={t("header.requesCall")}
+                  className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 flex items-center justify-center bg-[#FEC80B] rounded-full"
+                >
                   <Images.telephoneIcon className="w-4.25 h-4.25 md:w-6.75 md:h-6.75" />
                 </button>
                 <RequestCall request={request} closeRequest={closeRequest} />
