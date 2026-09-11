@@ -15,7 +15,8 @@ const CatalogFilterPage = lazy(() => import("./CatalogFilterPage"));
 const NewsDeteiles = lazy(() => import("./NewsDetailes")); // bitti
 const SuppliersPage = lazy(() => import("./SuppliersPage")); // bitti
 const LeasingPage = lazy(() => import("./LeasingPage")); // bitti
-const VacanciesPage = lazy(() => import("./VacansiesPage"));
+const VacanciesPage = lazy(() => import("./VacansiesPage")); // bitti
+const AboutPage = lazy(() => import("./AboutPage"));
 
 export {
   HomePage, // bitti
@@ -33,5 +34,6 @@ export {
   NewsDeteiles, // bitti
   SuppliersPage, // bitti
   LeasingPage, // bitti
-  VacanciesPage,
+  VacanciesPage, // bitti
+  AboutPage,
 };

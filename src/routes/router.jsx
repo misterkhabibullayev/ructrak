@@ -1,5 +1,6 @@
 import MainLayout from "../layouts/MainLayout";
 import {
+  AboutPage,
   CartPage,
   CatalogFilterPage,
   CatalogPage,
@@ -86,6 +87,10 @@ export const router = [
       {
         path: "vacancies",
         element: <VacanciesPage />
+      },
+      {
+        path: "about",
+        element: <AboutPage />
       }
     ],
   },

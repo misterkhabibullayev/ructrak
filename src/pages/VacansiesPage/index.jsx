@@ -4,6 +4,7 @@ import { vacanciesData } from "../../data/vacanciesData";
 import { Images } from "../../utils/images";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import FeedbackForm from "../../components/FeedbackForm";
 
 export default function VacanciesPage() {
   const { t, i18n } = useTranslation();
@@ -121,6 +122,7 @@ export default function VacanciesPage() {
           </div>
         </div>
       </section>
+      <FeedbackForm />
     </>
   );
 }

@@ -236,6 +236,7 @@ const resources = {
         suppliers: "Поставщикам и партнёрам",
         leasing: "Кредит и лизинг",
         vacancies: "Вакансии",
+        about: "О нас",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -310,6 +311,31 @@ const resources = {
         requirements: "Требования:",
         conditions: "Условия:",
         reply: "Откликнуться",
+      },
+      aboutPage: {
+        heroTitle:
+          "Автомобильный завод «РусТрак» - ведущий производитель коммерческого транспорта и специализированной техники в Нижнем Новгороде.",
+        experience: "лет опыта",
+        swiperTitle:
+          "Автомобильный завод «РусТрак» является предприятием полного цикла: от конструкторско-технологических разработок до готового изделия.",
+        prevBtn: "свайпер назад",
+        nextBtn: "свайпер следующий",
+        liTitle: "Сегодня ООО «Рустрак» - это:",
+        li1: "3 производственных корпуса, общей площадью более 7000 м2;",
+        li2: "производственная территория более 20000 м2;",
+        li3: "служба качества, гарантирующая выпуск высококачественной техники;",
+        li4: "современный парк станочного оборудования;",
+        li5: "ежемесячный объём выпускаемой техники - до 110 единиц.",
+        li6: "наличие собственной конструкторско-технологической службы",
+        tAboutTitle: "Отрасли применения выпускаемой техники:",
+        tAboutDesc:
+          "Cтроительная, телекоммуникационная, коммунальная, дорожное хозяйство, логистика, сельское хозяйство.",
+        tAboutTitle2: "Выпускаемая техника:",
+        tAboutDesc2:
+          "Краны-манипуляторы, автотопливозаправщики, автовышки, фургоны, самосвалы, бортовые платформы, эвакуаторы, крюковые погрузчики, мастерские, пищевые цистерны, вакуумные машины, автогидроподъёмники.",
+        bP1: "ООО «РусТрак» является официальным дилером на территории РФ следующих марок: Palfinger, ИНМАН, HKTC, UNIC, DongYang, FASSI, Hangil, XCMG, HIAB.",
+        bP2: "За 16 лет деятельности компания заслужила высокий уровень доверия дистрибьютеров и автопроизводителей: ИСУЗУ РУС, КАМАЗ, ГАЗ, DAEWOO, FAW, JAC, ТРАКС ВОСТОК РУС (КОМПАС), МАЗ РУС, ДАЙМЛЕР КАМАЗ РУС (FUSO), ХИНО МОТОРС, FOTON, DONG FENG, SHACHMAN, НЕФАЗ, ЗАВОД СТАРТ",
+        bp3: "Наши клиенты: Газпром, Росатом, Россети, РСК «МИГ», Роснефть и др.",
       },
     },
   },
@@ -549,6 +575,7 @@ const resources = {
         suppliers: "Yetkazib beruvchilar va hamkorlar uchun",
         leasing: "Kredit va lizing",
         vacancies: "Bo'sh ish o'rinlari",
+        about: "Biz haqimizda",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -624,6 +651,32 @@ const resources = {
         requirements: "Talablar:",
         conditions: "Sharoitlar:",
         reply: "Ariza topshirish",
+      },
+      aboutPage: {
+        heroTitle:
+          "«RusTrak» avtomobil zavodi — Nijnij Novgorod shahridagi tijorat transporti va maxsus texnikalarning yetakchi ishlab chiqaruvchisi.",
+        experience: "yillik tajriba",
+        swiperTitle:
+          "«RusTrak» avtomobil zavodi to'liq siklli korxona hisoblanadi: loyihalash-konstruktorlik ishlanmalaridan tortib tayyor mahsulotgacha.",
+        prevBtn: "oldingi slayder",
+        nextBtn: "keyingi slayder",
+        liTitle: "Bugungi kunda «RusTrak» MChJ bu:",
+        li1: "Umumiy maydoni 7000 m² dan ortiq bo'lgan 3 ta ishlab chiqarish korpusi;",
+        li2: "20 000 m² dan ortiq ishlab chiqarish hududi;",
+        li3: "Yuqori sifatli texnika ishlab chiqarishni kafolatlaydigan sifat xizmati;",
+        li4: "Zamonaviy stanok va uskunalar parki;",
+        li5: "Oylik ishlab chiqarish hajmi — 110 birlikkacha texnika;",
+        li6: "Xususiy loyihalash-konstruktorlik xizmatining mavjudligi;",
+        tAboutTitle:
+          "Ishlab chiqarilayotgan texnikalarning qo'llanilish sohasi:",
+        tAboutDesc:
+          "Qurilish, telekommunikatsiya, kommunal xizmat, yo'l xo'jaligi, logistika, qishloq xo'jaligi.",
+        tAboutTitle2: "Ishlab chiqariladigan texnikalar:",
+        tAboutDesc2:
+          "Kran-manipulyatorlar, yonilg'i tashish avtomillari, avto-vishkalar, furgonlar, agdarma yuk mashinalari (samosval), bortli platformalar, evakuatorlar, ilmoqli yuklagichlar (mushuk), ustaxonalar, oziq-ovqat sisternalari, vakuumli mashinalar, avtogidro-ko'targichlar.",
+        bP1: "«RusTrak» MChJ Rossiya Federatsiyasi hududida quyidagi brendlarning rasmiy dileri hisoblanadi: Palfinger, INMAN, HKTC, UNIC, DongYang, FASSI, Hangil, XCMG, HIAB.",
+        bP2: "16 yillik faoliyati davomida kompaniya rasmiy distribyutorlar va avtoishlab chiqaruvchilarning yuqori ishonchini qozondi: ISUZU RUS, KAMAZ, GAZ, DAEWOO, FAW, JAC, TRAKS VOSTOK RUS (KOMPAS), MAZ RUS, DAIMLER KAMAZ RUS (FUSO), HINO MOTORS, FOTON, DONG FENG, SHACMAN, NEFAZ, ZAVOD START.",
+        bp3: "Bizning mijozlarimiz: Gazprom, Rosatom, Rosseti, «MIG» RSK, Rosneft va boshqalar.",
       },
     },
   },
@@ -860,6 +913,7 @@ const resources = {
         suppliers: "For suppliers and partners",
         leasing: "Credit and leasing",
         vacancies: "Vacancies",
+        about: "About Us",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -934,6 +988,31 @@ const resources = {
         requirements: "Requirements:",
         conditions: "Conditions:",
         reply: "Apply",
+      },
+      aboutPage: {
+        heroTitle:
+          "«RusTrak» Automobile Plant is a leading manufacturer of commercial vehicles and specialized equipment in Nizhny Novgorod.",
+        experience: "years of experience",
+        swiperTitle:
+          "«RusTrak» Automobile Plant is a full-cycle enterprise: from engineering design and development to the finished product.",
+        prevBtn: "previous slide",
+        nextBtn: "next slide",
+        liTitle: "Today, «RusTrak» LLC is:",
+        li1: "3 production facilities with a total area of more than 7,000 m²;",
+        li2: "Production area of more than 20,000 m²;",
+        li3: "Quality control department guaranteeing high-quality equipment manufacturing;",
+        li4: "Modern fleet of machine tools and equipment;",
+        li5: "Monthly production volume of up to 110 units of equipment;",
+        li6: "In-house engineering and design department;",
+        tAboutTitle: "Industries of equipment application:",
+        tAboutDesc:
+          "Construction, telecommunications, public utilities, road maintenance, logistics, agriculture.",
+        tAboutTitle2: "Manufactured equipment:",
+        tAboutDesc2:
+          "Crane manipulators, fuel tankers, aerial work platforms, vans, dump trucks, drop-side trucks, tow trucks, hook loaders, mobile workshops, food tankers, vacuum trucks, hydraulic aerial platforms.",
+        bP1: "«RusTrak» LLC is an official dealer in the Russian Federation for the following brands: Palfinger, INMAN, HKTC, UNIC, DongYang, FASSI, Hangil, XCMG, HIAB.",
+        bP2: "Over 16 years of operation, the company has earned high trust from distributors and automakers: ISUZU RUS, KAMAZ, GAZ, DAEWOO, FAW, JAC, TRUCKS VOSTOK RUS (COMPASS), MAZ RUS, DAIMLER KAMAZ RUS (FUSO), HINO MOTORS, FOTON, DONG FENG, SHACMAN, NEFAZ, START PLANT.",
+        bp3: "Our clients: Gazprom, Rosatom, Rosseti, RAC «MiG», Rosneft, and others.",
       },
     },
   },
