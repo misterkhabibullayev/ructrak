@@ -3,6 +3,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 import { vacanciesData } from "../../data/vacanciesData";
 import { Images } from "../../utils/images";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function VacanciesPage() {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,13 @@ export default function VacanciesPage() {
   };
   return (
     <>
+      <Helmet>
+        <title>{t("metaTitleDescriptions.vakansiTitle")}</title>
+        <meta
+          name="description"
+          content={t("metaTitleDescriptions.vakansiDescription")}
+        />
+      </Helmet>
       <section>
         <div className="container1">
           <div>

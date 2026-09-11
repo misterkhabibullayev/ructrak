@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { contactdata } from "../../data/contactData";
 import FeedbackForm from "../../components/FeedbackForm";
+import { Helmet } from "react-helmet-async";
 
 function ServicePage() {
   const { t, i18n } = useTranslation();
@@ -9,6 +10,13 @@ function ServicePage() {
   const currentContact = contactdata[0];
   return (
     <>
+      <Helmet>
+        <title>{t("metaTitleDescriptions.serviceTitle")}</title>
+        <meta
+          name="description"
+          content={t("metaTitleDescriptions.serviceDescription")}
+        />
+      </Helmet>
       <div className="container1">
         <div>
           <Breadcrumbs />
@@ -79,7 +87,11 @@ function ServicePage() {
                 {t("servicePage.asks")}
               </h2>
               <ul className="lg:pl-8 flex flex-col gap-6 mb-14">
-                <li data-aos="fade-right" data-aos-delay="300" className="flex gap-5">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex gap-5"
+                >
                   <span className="min-w-9.5 h-9.5 bg-[#FEC80B] rounded-full flex items-center justify-center font-FiraSans font-medium text-2xl leading-[100%] text-black">
                     1
                   </span>
@@ -87,7 +99,11 @@ function ServicePage() {
                     {t("servicePage.li1")}
                   </span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="400" className="flex gap-5">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                  className="flex gap-5"
+                >
                   <span className="min-w-9.5 h-9.5 bg-[#FEC80B] rounded-full flex items-center justify-center font-FiraSans font-medium text-2xl leading-[100%] text-black">
                     2
                   </span>
@@ -95,7 +111,11 @@ function ServicePage() {
                     {t("servicePage.li2")}
                   </span>
                 </li>
-                <li data-aos="fade-right" data-aos-delay="500" className="flex gap-5">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                  className="flex gap-5"
+                >
                   <span className="min-w-9.5 h-9.5 bg-[#FEC80B] rounded-full flex items-center justify-center font-FiraSans font-medium text-2xl leading-[100%] text-black">
                     3
                   </span>
@@ -104,10 +124,18 @@ function ServicePage() {
                   </span>
                 </li>
               </ul>
-              <p data-aos="fade-up" data-aos-delay="600" className="font-FiraSans font-normal text-lg leading-[150%] text-black dark:text-white mb-8.75">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="600"
+                className="font-FiraSans font-normal text-lg leading-[150%] text-black dark:text-white mb-8.75"
+              >
                 {t("servicePage.text2")}
               </p>
-              <p data-aos="fade-up" data-aos-delay="700" className="font-FiraSans font-normal text-lg leading-[150%] text-black dark:text-white mb-14 md:mb-30">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="700"
+                className="font-FiraSans font-normal text-lg leading-[150%] text-black dark:text-white mb-14 md:mb-30"
+              >
                 {t("servicePage.text3")}
               </p>
               <div className="block md:hidden mb-20">

@@ -1,11 +1,16 @@
 import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import FeedbackForm from "../../components/FeedbackForm";
+import { Helmet } from "react-helmet-async";
 
 export default function LeasingPage() {
   const { t } = useTranslation();
   return (
     <>
+    <Helmet>
+      <title>{t("metaTitleDescriptions.kreditsTitle")}</title>
+      <meta name="description" content="metaTitleDescriptions.kreditsDescription" />
+    </Helmet>
       <div className="container1">
         <div>
           <Breadcrumbs />

@@ -1,11 +1,16 @@
 import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import FeedbackForm from "../../components/FeedbackForm";
+import { Helmet } from "react-helmet-async";
 
 export default function SuppliersPage() {
   const { t } = useTranslation();
   return (
     <>
+    <Helmet>
+      <title>{t("metaTitleDescriptions.collabTitle")}</title>
+      <meta name="description" content="metaTitleDescriptions.collabDescription" />
+    </Helmet>
       <div className="container1">
         <div>
           <Breadcrumbs />
