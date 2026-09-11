@@ -14,22 +14,24 @@ const ProductDetailesPage = lazy(() => import("./ProductDetailesPage"));
 const CatalogFilterPage = lazy(() => import("./CatalogFilterPage"));
 const NewsDeteiles = lazy(() => import("./NewsDetailes")); // bitti
 const SuppliersPage = lazy(() => import("./SuppliersPage")); // bitti
-const LeasingPage = lazy(() => import("./LeasingPage"));
+const LeasingPage = lazy(() => import("./LeasingPage")); // bitti
+const VacanciesPage = lazy(() => import("./VacansiesPage"));
 
 export {
-  HomePage,
-  CatalogPage,
-  NewsPage,
+  HomePage, // bitti
+  CatalogPage, // bitti
+  NewsPage, // bitti
   PhotoGalleryPage,
   SearchPage,
-  ServicePage,
-  ContactsPage,
+  ServicePage, // bitti
+  ContactsPage, // bitti
   CartPage,
   FavoritesPage,
-  NotFoundPage,
+  NotFoundPage, // bitti
   ProductDetailesPage,
   CatalogFilterPage,
-  NewsDeteiles,
-  SuppliersPage,
-  LeasingPage,
+  NewsDeteiles, // bitti
+  SuppliersPage, // bitti
+  LeasingPage, // bitti
+  VacanciesPage,
 };

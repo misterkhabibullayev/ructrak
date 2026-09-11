@@ -15,6 +15,7 @@ import {
   SearchPage,
   ServicePage,
   SuppliersPage,
+  VacanciesPage,
 } from "../pages/pages";
 
 export const router = [
@@ -81,6 +82,10 @@ export const router = [
       {
         path: "leasing",
         element: <LeasingPage />
+      },
+      {
+        path: "vacancies",
+        element: <VacanciesPage />
       }
     ],
   },

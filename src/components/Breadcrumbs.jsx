@@ -49,7 +49,7 @@ export default function Breadcrumbs() {
             ) : (
               <Link
                 to={to}
-                className="text-black dark:text-gray-400 hover:text-gray-400 transition-all duration-300"
+                className="text-black dark:text-gray-400 hover:text-white transition-all duration-300"
               >
                 {label}
               </Link>
