@@ -34,59 +34,61 @@ export function AbourSwiperSection() {
           </div>
         </div>
         <div className="">
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={24}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 12,
-              },
-              575: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 24,
-              },
-            }}
-            loop={true}
-            navigation={{
-              prevEl: ".custom-prev-btn",
-              nextEl: ".custom-next-btn",
-            }}
-            modules={[Pagination, Navigation]}
-            className="mySwiper hidden md:block"
-          >
-            {aboutCardsData.map((item, index) => (
-              <SwiperSlide key={item.id} className="py-10">
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="w-full h-auto md:h-91 pt-11.5 pb-5 px-4.5 border border-[#EBEBEB] rounded-lg"
-                >
-                  <div>
-                    <div className="mb-4 md:mb-6 inline-block rounded px-3 py-2 dark:bg-white">
-                      <img src={item.img} alt={item.title[currentLang]} />
-                    </div>
+          <div className="hidden md:block">
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={24}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 12,
+                },
+                575: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 24,
+                },
+              }}
+              loop={true}
+              navigation={{
+                prevEl: ".custom-prev-btn",
+                nextEl: ".custom-next-btn",
+              }}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
+              {aboutCardsData.map((item, index) => (
+                <SwiperSlide key={item.id} className="py-10">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                    className="w-full h-auto md:h-91 pt-11.5 pb-5 px-4.5 border border-[#EBEBEB] rounded-lg"
+                  >
                     <div>
-                      <h3 className="font-FiraSans font-medium text-lg md:text-2xl text-black dark:text-white mb-2 md:mb-3.25 line-clamp-2 leading-[120%]">
-                        {item.title[currentLang]}
-                      </h3>
-                      <p className="font-FiraSans font-normal text-sm md:text-base leading-[150%] text-black dark:text-white line-clamp-5">
-                        {item.description[currentLang]}
-                      </p>
+                      <div className="mb-4 md:mb-6 inline-block rounded px-3 py-2 dark:bg-white">
+                        <img src={item.img} alt={item.title[currentLang]} />
+                      </div>
+                      <div>
+                        <h3 className="font-FiraSans font-medium text-lg md:text-2xl text-black dark:text-white mb-2 md:mb-3.25 line-clamp-2 leading-[120%]">
+                          {item.title[currentLang]}
+                        </h3>
+                        <p className="font-FiraSans font-normal text-sm md:text-base leading-[150%] text-black dark:text-white line-clamp-5">
+                          {item.description[currentLang]}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
           <div className="flex flex-col gap-6 md:hidden mb-6">
             {aboutCardsData.map((item, index) => (
               <div
