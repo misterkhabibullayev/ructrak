@@ -200,14 +200,6 @@ function CatalogModal({ activeMenu, onClose }) {
                             </li>
                             <li>
                               <Link
-                                to={`production`}
-                                className="font-FiraSans font-normal text-[15px] md:text-[16px] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
-                              >
-                                {t("modal.production")}
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
                                 to={`suppliers`}
                                 className="font-FiraSans font-normal text-[15px] md:text-[16px] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
                               >
@@ -274,14 +266,6 @@ function CatalogModal({ activeMenu, onClose }) {
                           className="font-FiraSans font-normal text-[15px] md:text-[16px] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
                         >
                           {t("modal.partners")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`production`}
-                          className="font-FiraSans font-normal text-[15px] md:text-[16px] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
-                        >
-                          {t("modal.production")}
                         </Link>
                       </li>
                       <li>

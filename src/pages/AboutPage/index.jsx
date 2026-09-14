@@ -3,6 +3,7 @@ import AboutPageLastSection from "../../components/AboutPageLastSection";
 import AboutPageULSection from "../../components/AboutPageULSection";
 import { AbourSwiperSection } from "../../components/AboutSwiperSection";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import FeedbackForm from "../../components/FeedbackForm";
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <AbourSwiperSection />
       <AboutPageULSection />
       <AboutPageLastSection />
+      <FeedbackForm />
     </>
   );
 }
