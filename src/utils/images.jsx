@@ -529,4 +529,15 @@ export const Images = {
       />
     </svg>
   ),
+  checkMarkedIcon: (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="#fec80b"
+        fillRule="evenodd"
+        d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1m6.2 7.324a1 1 0 0 0-1.414.014l-6.568 6.694L7.84 12.34a1 1 0 1 0-1.5 1.322l2.732 3.098a1.5 1.5 0 0 0 2.196.057l6.945-7.078a1 1 0 0 0-.014-1.414"
+        clipRule="evenodd"
+      />
+    </svg>
+  ),
 };

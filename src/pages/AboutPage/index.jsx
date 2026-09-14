@@ -1,4 +1,6 @@
 import AboutPageHeroSection from "../../components/AboutPageHeroSection";
+import AboutPageLastSection from "../../components/AboutPageLastSection";
+import AboutPageULSection from "../../components/AboutPageULSection";
 import { AbourSwiperSection } from "../../components/AboutSwiperSection";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
@@ -12,6 +14,8 @@ export default function AboutPage() {
       </div>
       <AboutPageHeroSection />
       <AbourSwiperSection />
+      <AboutPageULSection />
+      <AboutPageLastSection />
     </>
   );
 }
