@@ -37,11 +37,11 @@ export const productsData = [
       en: "Curtainsider truck MAZ 438121 (model 5389D5)",
     },
     price: {
-      isPriceOnRequest: true,
-      amount: null,
-      currecy: "RUB",
+      isPriceOnRequest: false,
+      amount: 1000000,
+      currency: "RUB",
     },
-    inStock: true,
+    inStock: false,
     media: {
       mainImage: productImg1,
       gallery: [productGallery1],
@@ -392,7 +392,7 @@ export const productsData = [
     price: {
       isPriceOnRequest: true,
       amount: null,
-      currecy: "RUB",
+      currency: "RUB",
     },
     inStock: true,
     media: {
@@ -1254,7 +1254,7 @@ export const productsData = [
     price: {
       isPriceOnRequest: true,
       amount: null,
-      currecy: "RUB",
+      currency: "RUB",
     },
     inStock: true,
     media: {
@@ -1612,7 +1612,7 @@ export const productsData = [
     price: {
       isPriceOnRequest: true,
       amount: null,
-      currecy: "RUB",
+      currency: "RUB",
     },
     inStock: true,
     media: {

@@ -540,4 +540,67 @@ export const Images = {
       />
     </svg>
   ),
+  listBtnIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 1024 1024"
+      {...props}
+    >
+      <path fill="none" d="M0 0h1024v1024H0z" />
+      <path
+        fill="currentColor"
+        d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8m0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8m0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8M104 228a56 56 0 1 0 112 0 56 56 0 1 0-112 0m0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0m0 284a56 56 0 1 0 112 0 56 56 0 1 0-112 0"
+      />
+    </svg>
+  ),
+  gridBtnIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="currentColor"
+        d="M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1m10 0h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1M4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1m10 0h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1"
+      />
+    </svg>
+  ),
+  filterSlidersIcon: (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M8 13c-1.86 0-3.41 1.28-3.86 3H2v2h2.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22v-2H11.86c-.45-1.72-2-3-3.86-3m0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2M19.86 6c-.45-1.72-2-3-3.86-3s-3.41 1.28-3.86 3H2v2h10.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22V6zM16 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2" />
+    </svg>
+  ),
+  rubleIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={18}
+      height={18}
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        fill="currentColor"
+        d="M8 21h2v-4h6v-2h-6v-2h5c2.76 0 5-2.24 5-5s-2.24-5-5-5H9c-.55 0-1 .45-1 1v7H4v2h4v2H4v2h4zm2-16h5c1.65 0 3 1.35 3 3s-1.35 3-3 3h-5z"
+      />
+    </svg>
+  ),
+  mailIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 16 16"
+      {...props}
+    >
+      <path fill="none" d="M0 0h16v16H0z" />
+      <path d="M13 3H3c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M3 4h10c.552 0 1 .449 1 1v.201L8 8.432 2 5.201V5c0-.551.448-1 1-1m10 8H3a1 1 0 0 1-1-1V6.337L7.763 9.44a.5.5 0 0 0 .474 0L14 6.337V11a1 1 0 0 1-1 1" />
+    </svg>
+  ),
 };
