@@ -168,7 +168,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
 
   return (
     <div className="fixed inset-0 z-52 flex items-center justify-center px-5">
-      <div onClick={handleClose} className="fixed inset-0 bg-black/50" />
+      <div onClick={handleClose} className="fixed inset-0 bg-black/30" />
       <div className="w-125 relative z-10 bg-white dark:bg-slate-900 pt-13 px-5 pb-9 rounded-lg">
         <button
           onClick={handleClose}

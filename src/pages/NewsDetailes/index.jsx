@@ -27,7 +27,7 @@ function NewsDetailes() {
     <>
       <section className="bg-[#F9F9F9] dark:bg-slate-900">
         <div className="container1">
-          <div className="my-4">
+          <div className="py-4">
             <Link
               to={"/news"}
               className="flex items-center gap-2 text-black dark:text-white"
@@ -47,7 +47,7 @@ function NewsDetailes() {
                 {currentNews.publishedAt}
               </p>
             </div>
-            <div className="flex flex-col lg:flex-row gap-10 mb-39">
+            <div className="flex flex-col lg:flex-row gap-10 pb-39">
               {currentNewsDetailes.map((item) => (
                 <div
                   key={item.id}
@@ -84,8 +84,8 @@ function NewsDetailes() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="container1 mb-10">
+      <section className="bg-[#F9F9F9]">
+        <div className="container1 pb-10">
           <h2 className="font-FiraSans font-medium text-[20px] md:text-2xl leading-[120%] text-black dark:text-white mb-3 md:mb-8">{t("newsDetailes.moreNews")}</h2>
           <div className="">
             <Swiper
@@ -121,7 +121,7 @@ function NewsDetailes() {
                   <div
                     data-aos="fade-up"
                     data-aos-delay={index * 100}
-                    className="group rounded-3xl overflow-hidden bg-slate-950"
+                    className="group rounded-3xl overflow-hidden bg-white dark:bg-slate-950"
                   >
                     <a href={`news/${item.slug}`}>
                       <div className="flex flex-1 flex-col justify-between h-43.75 py-5.5 px-2.75">
