@@ -16,6 +16,7 @@ function ProductFilter() {
   const [request, setRequest] = useState(null);
   const closeRequest = () => setRequest(null);
   const { setDynamicName } = useBreadcrumbStore();
+  const [isListGrid, setIsListGrid] = useState(true);
 
   const activeProduct = productsData.find(
     (productId) => productId.id === selectedProductId,
@@ -39,61 +40,80 @@ function ProductFilter() {
   );
   return (
     <>
-      <div className="container1">
-        <div>
-          <Breadcrumbs />
-        </div>
-        <div className="mb-6 md:mb-7.5 lg:mb-10 flex flex-col gap-6 md:flex-row md:justify-between">
-          <div className="flex flex-col md:flex-row md:items-end md:gap-6">
-            <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] text-black dark:text-white mb-1.25 md:mb-0 mt-8 md:mt-2">
-              {productTitle}
-            </h1>
-            <span className="font-FiraSans font-normal text-base text-black dark:text-white pb-1">
-              {categoriesFilter.length} {t("catFilPage.goods")}
-            </span>
+      <div className="bg-[#F9F9F9] dark:bg-slate-900">
+        <div className="container1">
+          <div>
+            <Breadcrumbs />
           </div>
-          <div className="flex items-center justify-between md:justify-normal">
-            <div className="flex md:hidden items-center gap-4">
-              <button className="w-10 h-10 flex items-center justify-center bg-[#FEC80B] rounded">
-                <Images.filterSlidersIcon />
-              </button>
-              <span className="font-FiraSans font-medium text-lg leading-[150%] text-black dark:text-white">
-                {t("catFilPage.filter")}
+          <div className="mb-6 md:mb-7.5 lg:mb-10 flex flex-col gap-6 md:flex-row md:justify-between">
+            <div className="flex flex-col md:flex-row md:items-end md:gap-6">
+              <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] text-black dark:text-white mb-1.25 md:mb-0 mt-8 md:mt-2">
+                {productTitle}
+              </h1>
+              <span className="font-FiraSans font-normal text-base text-black dark:text-white pb-1">
+                {categoriesFilter.length} {t("catFilPage.goods")}
               </span>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-1">
-              <p className="font-FiraSans font-normal text-sm leading-[110%] text-[#A1A1A1]">
-                {t("catFilPage.sorting")}
-              </p>
-              <button className="font-FiraSans font-normal text-base leading-[130%] text-black dark:text-white">
-                currentSort
-              </button>
-            </div>
-            <div className="hidden md:flex items-center">
-              <button>
-                <Images.listBtnIcon className="text-[#A1A1A1] hover:text-black transition-all duration-300" />
-              </button>
-              <button>
-                <Images.gridBtnIcon className="text-[#A1A1A1] hover:text-black transition-all duration-300" />
-              </button>
+            <div className="flex items-center justify-between md:justify-normal md:gap-10">
+              <div className="flex md:hidden items-center gap-4">
+                <button className="w-10 h-10 flex items-center justify-center bg-[#FEC80B] rounded">
+                  <Images.filterSlidersIcon />
+                </button>
+                <span className="font-FiraSans font-medium text-lg leading-[150%] text-black dark:text-white">
+                  {t("catFilPage.filter")}
+                </span>
+              </div>
+              <div className="flex flex-col md:flex-row items-center gap-1">
+                <p className="font-FiraSans font-normal text-sm leading-[110%] text-[#A1A1A1]">
+                  {t("catFilPage.sorting")}
+                </p>
+                <button className="font-FiraSans font-normal text-base leading-[130%] text-black dark:text-white">
+                  currentSort
+                </button>
+              </div>
+              <div className="hidden md:flex items-center gap-2">
+                <button
+                  onClick={() => setIsListGrid(false)}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center group transition-all duration-300 ${!isListGrid ? "bg-[#FEC80B]" : ""}`}
+                >
+                  <Images.listBtnIcon
+                    className={`text-[#A1A1A1] group-hover:text-black dark:group-hover:text-[#A1A1A1] transition-all duration-300 ${!isListGrid ? "text-black " : ""}`}
+                  />
+                </button>
+                <button
+                  onClick={() => setIsListGrid(true)}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center group transition-all duration-300 ${isListGrid ? "bg-[#FEC80B] text-black" : ""}`}
+                >
+                  <Images.gridBtnIcon
+                    className={`text-[#A1A1A1] group-hover:text-black dark:group-hover:text-[#A1A1A1] transition-all duration-300 ${isListGrid ? "text-black" : ""}`}
+                  />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex">
-          <div className="hidden lg:flex min-w-[320px]">filter</div>
+          <div className="flex">
+            <div className="hidden lg:flex min-w-[320px]">filter</div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 gap-3.75">
-            {categoriesFilter.map((item) => (
-              <ProductCard
-                key={item.id}
-                handleProductOpen={handleProductOpen}
-                item={item}
-                request={request}
-                setRequest={setRequest}
-                closeRequest={closeRequest}
-                activeProduct={activeProduct}
-              />
-            ))}
+            <div
+              className={
+                !isListGrid
+                  ? "flex flex-col gap-4"
+                  : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 gap-3.75"
+              }
+            >
+              {categoriesFilter.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  handleProductOpen={handleProductOpen}
+                  item={item}
+                  request={request}
+                  setRequest={setRequest}
+                  closeRequest={closeRequest}
+                  activeProduct={activeProduct}
+                  isListGrid={isListGrid}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

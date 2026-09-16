@@ -9,7 +9,7 @@ function ProductDetailes() {
   const { detailes } = useParams();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  const {setDynamicName} = useBreadcrumbStore()
+  const { setDynamicName } = useBreadcrumbStore();
 
   const currentProduct = productsData.find((item) => item.slug === detailes);
   const productTitle = currentProduct.title[currentLang];
@@ -25,7 +25,9 @@ function ProductDetailes() {
         <div>
           <Breadcrumbs />
         </div>
-        {currentProduct.categorySlug}
+        {currentProduct && (
+          <div dangerouslySetInnerHTML={{__html: currentProduct.fullSpecificationsText.ru}}></div>
+        )}
       </div>
     </>
   );

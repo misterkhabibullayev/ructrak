@@ -10,6 +10,7 @@ export default function ProductCard({
   request,
   activeProduct,
   closeRequest,
+  isListGrid,
 }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
@@ -17,9 +18,11 @@ export default function ProductCard({
     <>
       <div
         key={item.id}
-        className="rounded-lg overflow-hidden p-0.5 bg-white dark:bg-slate-950"
+        className={`rounded-lg overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "flex justify-between" : ""}`}
       >
-        <div className="aspect-4/3 overflow-hidden rounded-t-lg relative">
+        <div
+          className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "w-[20%] rounded-lg aspect-square" : ""}`}
+        >
           <Link to={item.slug}>
             <img
               src={item.media.mainImage}
@@ -42,13 +45,17 @@ export default function ProductCard({
             </button>
           </div>
         </div>
-        <div className="py-4 px-3">
+        <div
+          className={`py-4 px-3 ${!isListGrid ? "flex-1 flex justify-between" : ""}`}
+        >
           <Link to={item.slug}>
             <h2 className="font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10">
               {item.title[currentLang]}
             </h2>
           </Link>
-          <p className="flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal">
+          <p
+            className={`flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal ${!isListGrid ? "hidden" : ""}`}
+          >
             {item.price.isPriceOnRequest || !item.price.amount ? (
               t("recommendedSection.cena")
             ) : (
@@ -59,16 +66,28 @@ export default function ProductCard({
             )}
           </p>
           <div
-            className={`flex flex-col md:flex-row justify-between items-center ${item.inStock ? "flex" : "hidden"}`}
+            className={`flex-col md:flex-row justify-between items-center ${item.inStock ? "flex" : "hidden"} ${!isListGrid ? "flex-col md:flex-col! justify-center! gap-3!" : "md:flex-row"}`}
           >
-            <div className="flex items-center justify-between gap-3 pr-3 w-full">
+            <p
+              className={`flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal ${!isListGrid ? "flex" : "hidden"}`}
+            >
+              {item.price.isPriceOnRequest || !item.price.amount ? (
+                t("recommendedSection.cena")
+              ) : (
+                <>
+                  {new Intl.NumberFormat().format(item.price.amount)}{" "}
+                  <Images.rubleIcon />
+                </>
+              )}
+            </p>
+            <div className={`flex items-center justify-between gap-3 pr-3 w-full`}>
               <Link
                 to={item.slug}
                 className="w-full text-center py-3.25 px-3.25 bg-[#FEC80B] rounded font-FiraSans font-normal text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300"
               >
                 {t("recommendedSection.podrobne")}
               </Link>
-              <button>
+              <button className={`${!isListGrid ? "hidden" : "block"}`}>
                 <Images.cartIcon className="text-black dark:text-white" />
               </button>
             </div>

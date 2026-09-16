@@ -17,11 +17,11 @@ import productGalleryMaz631228_2 from "../Image/productGalleryMaz631228_2.webp";
 import productGalleryMaz631228_3 from "../Image/productGalleryMaz631228_3.webp";
 import productGalleryMaz631228_4 from "../Image/productGalleryMaz631228_4.webp";
 import productGalleryMaz631228_5 from "../Image/productGalleryMaz631228_5.webp";
-import productGalleryKamaz43082_1 from "../Image/productGalleryKamaz43082_1.webp"
-import productGalleryKamaz43082_2 from "../Image/productGalleryKamaz43082_2.webp"
-import productGalleryKamaz43082_3 from "../Image/productGalleryKamaz43082_3.webp"
-import productGalleryKamaz43082_4 from "../Image/productGalleryKamaz43082_4.webp"
-import productGalleryKamaz43082_5 from "../Image/productGalleryKamaz43082_5.webp"
+import productGalleryKamaz43082_1 from "../Image/productGalleryKamaz43082_1.webp";
+import productGalleryKamaz43082_2 from "../Image/productGalleryKamaz43082_2.webp";
+import productGalleryKamaz43082_3 from "../Image/productGalleryKamaz43082_3.webp";
+import productGalleryKamaz43082_4 from "../Image/productGalleryKamaz43082_4.webp";
+import productGalleryKamaz43082_5 from "../Image/productGalleryKamaz43082_5.webp";
 
 export const productsData = [
   {
@@ -38,10 +38,10 @@ export const productsData = [
     },
     price: {
       isPriceOnRequest: false,
-      amount: 1000000,
+      amount: null,
       currency: "RUB",
     },
-    inStock: false,
+    inStock: true,
     media: {
       mainImage: productImg1,
       gallery: [productGallery1],
@@ -205,177 +205,11 @@ export const productsData = [
         },
       },
     ],
-    fullSpecifications: [
-      {
-        id: "spec-1",
-        name: {
-          uz: "Baza shassisi",
-          ru: "Базовое шасси",
-          en: "Base chassis",
-        },
-        value: {
-          uz: "MAZ 438121-2540-025",
-          ru: "МАЗ 438121-2540-025",
-          en: "MAZ 438121-2540-025",
-        },
-      },
-      {
-        id: "spec-2",
-        name: {
-          uz: "Dvigatel",
-          ru: "Двигатель",
-          en: "Engine",
-        },
-        value: {
-          uz: "WP4.1NQ190E50, 190 ot kuchi",
-          ru: "WP4.1NQ190E50, 190 л.с.",
-          en: "WP4.1NQ190E50, 190 hp",
-        },
-      },
-      {
-        id: "spec-3",
-        name: {
-          uz: "Uzatmalar qutisi (KPP)",
-          ru: "КПП",
-          en: "Transmission",
-        },
-        value: {
-          uz: "Mexanik, 6 bosqichli FAST GEAR 6J76T",
-          ru: "Механическая, 6-ти ступенчатая FAST GEAR 6J76T",
-          en: "Manual, 6-speed FAST GEAR 6J76T",
-        },
-      },
-      {
-        id: "spac-4",
-        name: {
-          uz: "G'ildirak bazasi, mm",
-          ru: "Колесная база, мм",
-          en: "Wheelbase, mm",
-        },
-        value: {
-          uz: "5200",
-          ru: "5200",
-          en: "5200",
-        },
-      },
-      {
-        id: "spac-5",
-        name: {
-          uz: "Ustki qurilma o'lchamlari, mm",
-          ru: "Габаритные размеры надстройки, мм",
-          en: "Superstructure overall dimensions, mm",
-        },
-        value: {
-          uz: "7500x2550x2850",
-          ru: "7500x2550x2850",
-          en: "7500x2550x2850",
-        },
-      },
-      {
-        id: "spac-6",
-        name: {
-          uz: "Bort platformasi asosi",
-          ru: "Основание бортовой платформы",
-          en: "Flatbed platform base",
-        },
-        value: {
-          uz: "Ochiq profillardan payvandlangan karkas konstruktsiyasi. Bo'ylama lonjeronlar va ko'ndalang balkalardan, HOSSEN kontur va old devor profilidan iborat. Platformaning o'rovchi profilida yukni mahkamlash uchun ruxlangan ilmoqlar (yuklash kengligini kamaytirmaydi), har bir tomonda 7 tadan.",
-          ru: "Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.",
-          en: "Welded frame construction made of open profiles. Consists of longitudinal side members and cross beams, edging and front wall of the HOSSEN profile. Galvanized cargo attachment loops in the edging profile (do not reduce platform loading width), 7 pcs on each side.",
-        },
-      },
-      {
-        id: "spac-7",
-        name: {
-          uz: "Pol",
-          ru: "Пол",
-          en: "Floor",
-        },
-        value: {
-          uz: "Sirpanishga qarshi qoplamali namlikka chidamli fanera.",
-          ru: "Влагостойкая фанера с противоскользящим покрытием.",
-          en: "Moisture-resistant plywood with anti-slip coating.",
-        },
-      },
-      {
-        id: "spac-8",
-        name: {
-          uz: "Platforma bortlari",
-          ru: "Борта платформы",
-          en: "Platform sides",
-        },
-        value: {
-          uz: "Alyuminiy yoki po'lat ruxlangan bortlar, ochiladigan, sektsiyalar soni — har bir tomonda 2 tadan, balandligi 400 mm. Bortlarning ochilish burchagi — 180°. Alyuminiy qulflarga ega tez yechiladigan ustunlar har bir tomonda 2 tadan.",
-          ru: "Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм. Угол открывания бортов – 180°. Быстросъёмные стойки 2 шт. на сторону с алюминиевыми замками.",
-          en: "Aluminum or steel galvanized sides, fold-down, section count – 2 pcs per side, height 400 mm. Side opening angle – 180°. Quick-release posts 2 pcs per side with aluminum locks.",
-        },
-      },
-      {
-        id: "spac-9",
-        name: {
-          uz: "Old devor",
-          ru: "Передняя стенка",
-          en: "Front wall",
-        },
-        value: {
-          uz: "Ustki qurilmaning to'liq balandligi bo'ylab alyuminiy profildan tayyorlangan.",
-          ru: "Выполнена из алюминиевого профиля на всю высоту надстройки",
-          en: "Made of aluminum profile for the full height of the superstructure",
-        },
-      },
-      {
-        id: "spac-10",
-        name: {
-          uz: "Karkas",
-          ru: "Каркас",
-          en: "Frame",
-        },
-        value: {
-          uz: "Po'latdan, balandligi 2850 mm. Roliklardagi alyuminiy yo'naltiruvchilar bilan tentni alohida surish mexanizmi: tom, yon tomonlar. Karkasning o'ng orqa ustunida kronshteynli mahkamlagichga ega tomni surish uchun ilgak-bagor. Uch qatorli taxta panjara. Darvoza ustidagi yechiladigan ko'ndalang to'sin, balandlik bo'yicha cheklovlarsiz yuklash imkonini beradi. Orqa darvoza ustidagi suvni chetlashtiruvchi alyuminiy soyabon. Orqa va old ustunlar ruxlangan.",
-          ru: "Стальной, высотой 2850 мм. Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны. Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса. Обрешетка из доски в три ряда. Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте. Водоотводящий алюминиевый козырек над задними воротами. Задние и передние стойки оцинкованные.",
-          en: "Steel, height 2850 mm. Separate curtain sliding mechanism with aluminum roller guides: roof, side panels. Hook-pole for roof sliding with a mounting bracket on the right rear frame post. Three-row board lathing. Removable roof crossmember above the doors allows loading without height restrictions. Water-diverting aluminum visor over the rear doors. Rear and front posts are galvanized.",
-        },
-      },
-      {
-        id: "spac-11",
-        name: {
-          uz: "Orqa darvoza",
-          ru: "Задние ворота",
-          en: "Rear doors",
-        },
-        value: {
-          uz: "Karkas turidagi ochiladigan darvoza, tashqi qoplamasi armaturalangan plastik, ichkisi 6 mm qalinlikdagi namlikka chidamli fanera. Ochiq holatda fiksatsiya qilish imkoniyatiga ega. Ruxlangan po'latdan furnitura, har bir eshikka 2 tadan shtanga va 4 tadan oshiq-moshiq. Ochiq holatda fiksatsiya qilish imkoniyatiga ega.",
-          ru: "Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении. Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.",
-          en: "Hinged frame-type doors, outer layer reinforced plastic, inner layer 6 mm moisture-resistant plywood. Can be fixed in the open position. Galvanized steel fittings, 2 rods and 4 hinges per door. Fixable in open position.",
-        },
-      },
-      {
-        id: "spac-12",
-        name: {
-          uz: "Tent",
-          ru: "Тент",
-          en: "Tarpaulin / Curtain",
-        },
-        value: {
-          uz: "Matoli tent, solishtirma og'irligi 650 g/m². Burchaklarda tent mustahkamlanishi. Ikkala tomondan orqa qismda gorizontal yo'nalishda tent tortgichlar (treshotka). Vertikal yo'nalishda tent tortgichlar (tasmalik va ilgakli tortish qulfi) qadami 0,6 m. Yon pardani orqaga oson surish uchun yechiladigan old parda shtangasi.",
-          ru: "Тент из ткани, удельный вес 650 г/м2. Усиление тента крыши на углах. Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон. Натяжители тента в вертикальном направлении (натяжной замок со стропом и крюком) шаг 0,6м. Съёмная передняя штанга боковой шторы для облегченного движения шторы назад.",
-          en: "Fabric tarpaulin, specific weight 650 g/m². Roof tarpaulin reinforcement at corners. Horizontal tarpaulin tensioners (ratchet) at the rear on both sides. Vertical tarpaulin tensioners (tension lock with strap and hook) step 0.6 m. Removable front bar of the side curtain for easier movement backward.",
-        },
-      },
-      {
-        id: "spac-13",
-        name: {
-          uz: "Boshqa jihozlar",
-          ru: "Прочее оборудование",
-          en: "Other equipment",
-        },
-        value: {
-          uz: "Plastik qanotlar, loydan himoya vositalari (bryzgoviki). Yon namlikdan himoyalangan gabarit chiroqlari. Baza shassisining yon himoyasi. Orqa himoya moslamasi. Ruxlangan chiqadigan zinapoya. Platformaga chiqish uchun tutqich.",
-          ru: "Пластиковые крылья, брызговики. Боковые влагозащитные габаритные огни. Боковая защита от базового шасси. Заднее защитное устройство. Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.",
-          en: "Plastic mudguards, mud flaps. Side moisture-proof clearance lights. Base chassis side protection. Rear protective device. Galvanized retractable ladder. Grab handle for climbing onto the platform.",
-        },
-      },
-    ],
+    fullSpecificationsText: {
+      ru: `<table class=""><tbody class="border border-[#A1A1A1]"><tr><th colspan="2" class="py-2 bg-[#FEC80B]">Шторный грузовик МАЗ 438121-2540-025</th></tr><tr class="border"><td class="border-l">Базовое шасси</td><td class="border-l">МАЗ 438121-2540-025</td></tr><tr><td>Двигатель</td><td>WP4.1NQ190E50, 190 л.с.</td></tr><tr><td>КПП</td><td>Механическая, 6-ти ступенчатая FAST GEAR 6J76T</td></tr><tr><td>Колесная база, мм</td><td>5200</td></tr><tr><td>Габаритные размеры надстройки, мм</td><td>7500x2550x2850</td></tr><tr><td>Основание бортовой платформы</td><td>Сварная рамная конструкция из открытых профилей. Состоит из продольных лонжеронов и поперечных балок, окантовочного и передней стенки профиля HOSSEN. Оцинкованные петли крепления груза в окантовочном профиле платформы (не уменьшают погрузочную ширину платформы), 7 шт. с каждой стороны.</td></tr><tr><td>Пол</td><td>Влагостойкая фанера с противоскользящим покрытием.</td></tr><tr><td>Борта платформы</td><td>Алюминиевые или стальные оцинкованные борта, откидывающиеся, количество секций – 2 шт. на сторону, высота 400 мм.<br>Угол открывания бортов – 180°<br>Быстросъёмные стойки 2 шт. на сторону с алюминиевыми замками.</td></tr><tr><td>Передняя стенка</td><td>Выполнена из алюминиевого профиля на всю высоту надстройки</td></tr><tr><td>Каркас</td><td>Стальной, высотой 2850 мм.<br>Механизм раздельного сдвижения тента с алюминиевыми направляющими на роликах: крыша, боковые стороны<br>Крюк-багор для сдвижения крыши с кронштейном крепления на правой задней стойке каркаса<br>Обрешетка из доски в три ряда.<br>Съемная поперечина крыши над воротами, позволяет осуществлять загрузку без ограничений по высоте<br>Водоотводящий алюминиевый козырек над задними воротами<br>Задние и передние стойки оцинкованные</td></tr><tr><td>Задние ворота</td><td>Распашные ворота каркасного типа, наружное покрытие армированный пластик, внутреннее влагостойкая фанера толщиной 6 мм. С возможностью фиксации в открытом положении.<br>Фурнитура из оцинкованной стали, по 2 штанги на дверь по 4 петли на дверь. С возможностью фиксации в открытом положении.</td></tr><tr><td>Тент</td><td>Тент из ткани, удельный вес 650 г/м2<br>Усиление тента крыши на углах<br>Натяжители тента в горизонтальном направлении (трещотка) сзади с обеих сторон<br>Натяжители тента в вертикальном направлении (натяжной замок со стропом и крюком) шаг 0,6м<br>Съёмная передняя штанга боковой шторы для облегченного движения шторы назад.</td></tr><tr><td>Прочее оборудование</td><td>Пластиковые крылья, брызговики.<br>Боковые влагозащитные габаритные огни.<br>Боковая защита от базового шасси<br>Заднее защитное устройство<br>Оцинкованная выдвижная лестница. Поручень для подъёма на платформу.</td></tr></tbody></table>`,
+      uz: `<table><tbody><tr><th colspan="2">Curtainsider yuk mashinasi MAZ 438121-2540-025</th></tr><tr><td>Baza shassisi</td><td>MAZ 438121-2540-025</td></tr><tr><td>Dvigatel</td><td>WP4.1NQ190E50, 190 ot kuchi</td></tr><tr><td>Uzatmalar qutisi (KPP)</td><td>Mexanik, 6 bosqichli FAST GEAR 6J76T</td></tr><tr><td>G'ildirak bazasi, mm</td><td>5200</td></tr><tr><td>Ustki qurilma o'lchamlari, mm</td><td>7500x2550x2850</td></tr><tr><td>Bort platformasi asosi</td><td>Ochiq profillardan payvandlangan karkas konstruktsiyasi. Bo'ylama lonjeronlar va ko'ndalang balkalardan, HOSSEN kontur va old devor profilidan iborat. Platformaning o'rovchi profilida yukni mahkamlash uchun ruxlangan ilmoqlar (yuklash kengligini kamaytirmaydi), har bir tomonda 7 tadan.</td></tr><tr><td>Pol</td><td>Sirpanishga qarshi qoplamali namlikka chidamli fanera.</td></tr><tr><td>Platforma bortlari</td><td>Alyuminiy yoki po'lat ruxlangan bortlar, ochiladigan, sektsiyalar soni — har bir tomonda 2 tadan, balandligi 400 mm.<br>Bortlarning ochilish burchagi — 180°<br>Alyuminiy qulflarga ega tez yechiladigan ustunlar har bir tomonda 2 tadan.</td></tr><tr><td>Old devor</td><td>Ustki qurilmaning to'liq balandligi bo'ylab alyuminiy profildan tayyorlangan.</td></tr><tr><td>Karkas</td><td>Po'latdan, balandligi 2850 mm.<br>Roliklardagi alyuminiy yo'naltiruvchilar bilan tentni alohida surish mexanizmi: tom, yon tomonlar<br>Karkasning o'ng orqa ustunida kronshteynli mahkamlagichga ega tomni surish uchun ilgak-bagor<br>Uch qatorli taxta panjara.<br>Darvoza ustidagi yechiladigan ko'ndalang to'sin, balandlik bo'yicha cheklovlarsiz yuklash imkonini beradi<br>Orqa darvoza ustidagi suvni chetlashtiruvchi alyuminiy soyabon<br>Orqa va old ustunlar ruxlangan</td></tr><tr><td>Orqa darvoza</td><td>Karkas turidagi ochiladigan darvoza, tashqi qoplamasi armaturalangan plastik, ichkisi 6 mm qalinlikdagi namlikka chidamli fanera. Ochiq holatda fiksatsiya qilish imkoniyatiga ega.<br>Ruxlangan po'latdan furnitura, har bir eshikka 2 tadan shtanga va 4 tadan oshiq-moshiq. Ochiq holatda fiksatsiya qilish imkoniyatiga ega.</td></tr><tr><td>Tent</td><td>Matoli tent, solishtirma og'irligi 650 g/m²<br>Burchaklarda tent mustahkamlanishi<br>Ikkala tomondan orqa qismda gorizontal yo'nalishda tent tortgichlar (treshotka)<br>Vertikal yo'nalishda tent tortgichlar (tasmalik va ilgakli tortish qulfi) qadami 0,6 m<br>Yon pardani orqaga oson surish uchun yechiladigan old parda shtangasi.</td></tr><tr><td>Boshqa jihozlar</td><td>Plastik qanotlar, loydan himoya vositalari (bryzgoviki).<br>Yon namlikdan himoyalangan gabarit chiroqlari.<br>Baza shassisining yon himoyasi<br>Orqa himoya moslamasi<br>Ruxlangan chiqadigan zinapoya. Platformaga chiqish uchun tutqich.</td></tr></tbody></table>`,
+      en: `<table><tbody><tr><th colspan="2">Curtainsider truck MAZ 438121-2540-025</th></tr><tr><td>Base chassis</td><td>MAZ 438121-2540-025</td></tr><tr><td>Engine</td><td>WP4.1NQ190E50, 190 hp</td></tr><tr><td>Transmission</td><td>Manual, 6-speed FAST GEAR 6J76T</td></tr><tr><td>Wheelbase, mm</td><td>5200</td></tr><tr><td>Superstructure overall dimensions, mm</td><td>7500x2550x2850</td></tr><tr><td>Flatbed platform base</td><td>Welded frame construction made of open profiles. Consists of longitudinal side members and cross beams, edging and front wall of the HOSSEN profile. Galvanized cargo attachment loops in the edging profile (do not reduce platform loading width), 7 pcs on each side.</td></tr><tr><td>Floor</td><td>Moisture-resistant plywood with anti-slip coating.</td></tr><tr><td>Platform sides</td><td>Aluminum or steel galvanized sides, fold-down, section count – 2 pcs per side, height 400 mm.<br>Side opening angle – 180°<br>Quick-release posts 2 pcs per side with aluminum locks.</td></tr><tr><td>Front wall</td><td>Made of aluminum profile for the full height of the superstructure</td></tr><tr><td>Frame</td><td>Steel, height 2850 mm.<br>Separate curtain sliding mechanism with aluminum roller guides: roof, side panels<br>Hook-pole for roof sliding with a mounting bracket on the right rear frame post<br>Three-row board lathing.<br>Removable roof crossmember above the doors allows loading without height restrictions<br>Water-diverting aluminum visor over the rear doors<br>Rear and front posts are galvanized</td></tr><tr><td>Rear doors</td><td>Hinged frame-type doors, outer layer reinforced plastic, inner layer 6 mm moisture-resistant plywood. Can be fixed in open position.<br>Galvanized steel fittings, 2 rods and 4 hinges per door. Fixable in open position.</td></tr><tr><td>Tarpaulin / Curtain</td><td>Fabric tarpaulin, specific weight 650 g/m²<br>Roof tarpaulin reinforcement at corners<br>Horizontal tarpaulin tensioners (ratchet) at the rear on both sides<br>Vertical tarpaulin tensioners (tension lock with strap and hook) step 0.6 m<br>Removable front bar of the side curtain for easier movement backward.</td></tr><tr><td>Other equipment</td><td>Plastic mudguards, mud flaps.<br>Side moisture-proof clearance lights.<br>Base chassis side protection<br>Rear protective device<br>Galvanized retractable ladder. Grab handle for climbing onto the platform.</td></tr></tbody></table>`,
+    },
   },
   {
     id: "maz-631228",
