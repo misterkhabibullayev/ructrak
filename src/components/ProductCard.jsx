@@ -18,10 +18,10 @@ export default function ProductCard({
     <>
       <div
         key={item.id}
-        className={`rounded-lg overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "flex justify-between" : ""}`}
+        className={`rounded-lg overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "md:flex md:justify-between" : ""}`}
       >
         <div
-          className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "w-[20%] rounded-lg aspect-square" : ""}`}
+          className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "md:w-[25%] md:rounded-lg md:aspect-square" : ""}`}
         >
           <Link to={item.slug}>
             <img
@@ -46,13 +46,48 @@ export default function ProductCard({
           </div>
         </div>
         <div
-          className={`py-4 px-3 ${!isListGrid ? "flex-1 flex justify-between" : ""}`}
+          className={`py-4 px-3 ${!isListGrid ? "md:flex-1 md:flex md:justify-between md:items-center md:py-10" : ""}`}
         >
-          <Link to={item.slug}>
-            <h2 className="font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10">
-              {item.title[currentLang]}
-            </h2>
-          </Link>
+          <div className={`${!isListGrid ? "md:pl-4 md:pr-15 md:flex-1" : ""}`}>
+            <Link to={item.slug}>
+              <h2
+                className={`font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10 ${!isListGrid ? "md:text-[22px] font-medium mb-8" : ""}`}
+              >
+                {item.title[currentLang]}
+              </h2>
+            </Link>
+            <div
+              className={`text-[#a1a1a1] hidden ${!isListGrid ? "md:flex md:flex-col md:gap-4" : ""}`}
+            >
+              <div className="flex items-center justify-between">
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.name1?.[currentLang]}
+                </p>
+                <div className="border-b border-dashed border-[#a1a1a1] flex-1 h-2 mx-2"></div>
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.value1?.[currentLang]}
+                </p>
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.name2?.[currentLang]}
+                </p>
+                <div className="border-b border-dashed border-[#a1a1a1] flex-1 h-2 mx-2"></div>
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.value2?.[currentLang]}
+                </p>
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.name3?.[currentLang]}
+                </p>
+                <div className="border-b border-dashed border-[#a1a1a1] flex-1 h-2 mx-2"></div>
+                <p className="font-FiraSans font-normal text-sm leading-[110%] ">
+                  {item.specifications?.[0]?.value3?.[currentLang]}
+                </p>
+              </div>
+            </div>
+          </div>
           <p
             className={`flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal ${!isListGrid ? "hidden" : ""}`}
           >
@@ -69,7 +104,7 @@ export default function ProductCard({
             className={`flex-col md:flex-row justify-between items-center ${item.inStock ? "flex" : "hidden"} ${!isListGrid ? "flex-col md:flex-col! justify-center! gap-3!" : "md:flex-row"}`}
           >
             <p
-              className={`flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal ${!isListGrid ? "flex" : "hidden"}`}
+              className={`flex items-center font-FiraSans font-medium text-base md:text-[22px] leading-[120%] text-black dark:text-white whitespace-nowrap mt-2.5 md:mt-3.5 mb-2 md:mb-2.75 justify-center xl:justify-normal ${!isListGrid ? "md:flex" : "hidden"}`}
             >
               {item.price.isPriceOnRequest || !item.price.amount ? (
                 t("recommendedSection.cena")
@@ -80,14 +115,16 @@ export default function ProductCard({
                 </>
               )}
             </p>
-            <div className={`flex items-center justify-between gap-3 pr-3 w-full`}>
+            <div
+              className={`flex items-center justify-between gap-3 w-full ${!isListGrid ? "pr-0" : "pr-3"}`}
+            >
               <Link
                 to={item.slug}
                 className="w-full text-center py-3.25 px-3.25 bg-[#FEC80B] rounded font-FiraSans font-normal text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300"
               >
                 {t("recommendedSection.podrobne")}
               </Link>
-              <button className={`${!isListGrid ? "hidden" : "block"}`}>
+              <button className={`${!isListGrid ? "md:hidden" : "block"}`}>
                 <Images.cartIcon className="text-black dark:text-white" />
               </button>
             </div>

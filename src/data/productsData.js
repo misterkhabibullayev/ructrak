@@ -49,6 +49,39 @@ export const productsData = [
     },
     specifications: [
       {
+        id: "titleSpecific1",
+        name1: {
+          uz: "Brend",
+          ru: "Марка",
+          en: "Brend",
+        },
+        value1: {
+          uz: "MAZ",
+          ru: "МАЗ",
+          en: "MAZ",
+        },
+        name2: {
+          uz: "Tra. V o'lchamlari",
+          ru: "Габариты ТС",
+          en: "Dimensions of the vehicle",
+        },
+        value2: {
+          uz: "9510 x 2550 x 2550 mm",
+          ru: "9510 x 2550 x 2550 мм",
+          en: "9510 x 2550 x 2550 mm",
+        },
+        name3: {
+          uz: "Yuk ko'tarish hajmi, kg",
+          ru: "Грузоподъёмность, кг",
+          en: "Load capacity, kg",
+        },
+        value3: {
+          uz: "6340",
+          ru: "6340",
+          en: "6340",
+        },
+      },
+      {
         id: "specific-1",
         name: {
           uz: "Baza shassisi",
@@ -235,6 +268,39 @@ export const productsData = [
       blueprints: ["/src/Image/631228-texnik-chizma.png"],
     },
     specifications: [
+      {
+        id: "titleSpecific2",
+        name1: {
+          uz: "Brend",
+          ru: "Марка",
+          en: "Brand",
+        },
+        value1: {
+          uz: "MAZ",
+          ru: "МАЗ",
+          en: "MAZ",
+        },
+        name2: {
+          uz: "Tra. V o'lchamlari",
+          ru: "Габариты ТС",
+          en: "Dimensions of the vehicle",
+        },
+        value2: {
+          uz: "10070 x 2550 x 2550 mm",
+          ru: "10070 x 2550 x 2550 мм",
+          en: "10070 x 2550 x 2550 mm",
+        },
+        name3: {
+          uz: "Yuk ko'tarish hajmi, kg",
+          ru: "Грузоподъёмность, кг",
+          en: "Load capacity, kg",
+        },
+        value3: {
+          uz: "13800",
+          ru: "13800",
+          en: "13800",
+        },
+      },
       {
         id: "specific-1",
         name: {
@@ -601,6 +667,39 @@ export const productsData = [
       blueprints: ["/src/Image/kran-manipulator-texnika.jpg"],
     },
     specification: [
+      {
+        id: "titleSpecific3",
+        name1: {
+          uz: "Brend",
+          ru: "Марка",
+          en: "Brand",
+        },
+        value1: {
+          uz: "KAMAZ",
+          ru: "КАМАЗ",
+          en: "KAMAZ",
+        },
+        name2: {
+          uz: "Tra. V o'lchamlari",
+          ru: "Габариты ТС",
+          en: "Dimensions of the vehicle",
+        },
+        value2: {
+          uz: "10900 x 2550 x 2550 mm",
+          ru: "10900 x 2550 x 2550 мм",
+          en: "10900 x 2550 x 2550 mm",
+        },
+        name3: {
+          uz: "Yuk ko'tarish hajmi, kg",
+          ru: "Грузоподъёмность, кг",
+          en: "Load capacity, kg",
+        },
+        value3: {
+          uz: "4780",
+          ru: "4780",
+          en: "4780",
+        },
+      },
       {
         id: "specific-1",
         name: {
@@ -1103,6 +1202,39 @@ export const productsData = [
     },
     specifications: [
       {
+        id: "titleSpecific3",
+        name1: {
+          uz: "Brend",
+          ru: "Марка",
+          en: "Brand",
+        },
+        value1: {
+          uz: "KAMAZ",
+          ru: "КАМАЗ",
+          en: "KAMAZ",
+        },
+        name2: {
+          uz: "Tra. V o'lchamlari",
+          ru: "Габариты ТС",
+          en: "Dimensions of the vehicle",
+        },
+        value2: {
+          uz: "10900 x 2550 x 2550 mm",
+          ru: "10900 x 2550 x 2550 мм",
+          en: "10900 x 2550 x 2550 mm",
+        },
+        name3: {
+          uz: "Yuk ko'tarish hajmi, kg",
+          ru: "Грузоподъёмность, кг",
+          en: "Load capacity, kg",
+        },
+        value3: {
+          uz: "4780",
+          ru: "4780",
+          en: "4780",
+        },
+      },
+      {
         id: "specific-1",
         name: {
           uz: "Baza shassisi",
@@ -1460,6 +1592,39 @@ export const productsData = [
       blueprints: ["/src/Image/65657-texnik-chizma.png"],
     },
     specifications: [
+      {
+        id: "titleSpecific4",
+        name1: {
+          uz: "Brend",
+          ru: "Марка",
+          en: "Brand",
+        },
+        value1: {
+          uz: "KAMAZ",
+          ru: "КАМАЗ",
+          en: "KAMAZ",
+        },
+        name2: {
+          uz: "Tra. V o'lchamlari",
+          ru: "Габариты ТС",
+          en: "Dimensions of the vehicle",
+        },
+        value2: {
+          uz: "11985 x 2440 x 2440 mm",
+          ru: "11985 x 2440 x 2440 мм",
+          en: "11985 x 2440 x 2440 mm",
+        },
+        name3: {
+          uz: "Yuk ko'tarish hajmi, kg",
+          ru: "Грузоподъёмность, кг",
+          en: "Load capacity, kg",
+        },
+        value3: {
+          uz: "14800",
+          ru: "14800",
+          en: "14800",
+        },
+      },
       {
         id: "specific-1",
         name: {

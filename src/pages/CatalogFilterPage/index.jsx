@@ -74,18 +74,18 @@ function ProductFilter() {
               <div className="hidden md:flex items-center gap-2">
                 <button
                   onClick={() => setIsListGrid(false)}
-                  className={`w-8 h-8 rounded-full flex items-center justify-center group transition-all duration-300 ${!isListGrid ? "bg-[#FEC80B]" : ""}`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${!isListGrid ? "bg-[#FEC80B]" : ""}`}
                 >
                   <Images.listBtnIcon
-                    className={`text-[#A1A1A1] group-hover:text-black dark:group-hover:text-[#A1A1A1] transition-all duration-300 ${!isListGrid ? "text-black " : ""}`}
+                    className={`text-[#A1A1A1] transition-all duration-300 ${!isListGrid ? "text-black " : ""}`}
                   />
                 </button>
                 <button
                   onClick={() => setIsListGrid(true)}
-                  className={`w-8 h-8 rounded-full flex items-center justify-center group transition-all duration-300 ${isListGrid ? "bg-[#FEC80B] text-black" : ""}`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isListGrid ? "bg-[#FEC80B] text-black" : ""}`}
                 >
                   <Images.gridBtnIcon
-                    className={`text-[#A1A1A1] group-hover:text-black dark:group-hover:text-[#A1A1A1] transition-all duration-300 ${isListGrid ? "text-black" : ""}`}
+                    className={`text-[#A1A1A1] transition-all duration-300 ${isListGrid ? "text-black" : ""}`}
                   />
                 </button>
               </div>
@@ -97,8 +97,8 @@ function ProductFilter() {
             <div
               className={
                 !isListGrid
-                  ? "flex flex-col gap-4"
-                  : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 gap-3.75"
+                  ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4"
+                  : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75"
               }
             >
               {categoriesFilter.map((item) => (
