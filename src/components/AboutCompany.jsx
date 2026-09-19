@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Images } from "../utils/images";
-import aboutImg from "../Image/about-truck32.png";
+import aboutImg from "../Image/about-truck32.webp";
 
 export function AboutCompanySection() {
   const { t } = useTranslation();
@@ -41,7 +41,12 @@ export function AboutCompanySection() {
           </div>
         </div>
         <div className="w-full md:w-1/2 overflow-hidden">
-          <img data-aos="fade-left" src={aboutImg} alt="about img" />
+          <img
+            loading="lazy"
+            data-aos="fade-left"
+            src={aboutImg}
+            alt="about img"
+          />
         </div>
       </div>
     </div>

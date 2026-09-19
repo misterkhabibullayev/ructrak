@@ -83,6 +83,7 @@ export function NewsSection() {
                   <a href={`news/${item.slug}`}>
                     <div className="w-full aspect-video">
                       <img
+                        loading="lazy"
                         src={item.images[0]}
                         alt={item.title[currentLang]}
                         className="w-full h-full object-cover"

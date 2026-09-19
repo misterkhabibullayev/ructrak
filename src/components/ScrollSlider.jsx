@@ -21,7 +21,6 @@ function ScrollSlider() {
 
   const item = items[activeIndex] || {};
 
-  // String ko'rinishida solishtiramiz: String(svg.id) === String(item?.id)
   const ItemSvgObj = lineSvg?.find(
     (svg) => String(svg.id) === String(item?.id),
   );
@@ -62,6 +61,7 @@ function ScrollSlider() {
           <div className="relative w-full max-w-120 mb-10 min-[1300px]:mb-0">
             <div className="w-70 mx-auto md:mx-0 md:w-full aspect-square">
               <img
+                loading="lazy"
                 className="w-full h-full object-contain"
                 src={sliderImage}
                 alt="slider image"

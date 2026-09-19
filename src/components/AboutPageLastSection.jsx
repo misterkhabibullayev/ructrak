@@ -26,6 +26,7 @@ export default function AboutPageLastSection() {
             <div className="grid grid-cols-1 xl:grid-cols-2 col-span-1 md:col-span-5 xl:col-span-8 gap-x-6 gap-y-6">
               <div className="max-h-70.75 xl:max-h-none rounded-lg overflow-hidden">
                 <img
+                  loading="lazy"
                   src={AboutImage1}
                   alt={t("aboutPage.tAboutTitle")}
                   className="w-full h-full object-cover object-center"
@@ -33,6 +34,7 @@ export default function AboutPageLastSection() {
               </div>
               <div className="max-h-67.5 xl:max-h-none rounded-lg overflow-hidden">
                 <img
+                  loading="lazy"
                   src={AboutImage2}
                   alt={t("aboutPage.tAboutTitle2")}
                   className="w-full h-full object-cover object-center"

@@ -404,34 +404,59 @@ export default function Footer() {
                 target="_blank"
                 className="text-white w-8.75 h-8.75"
               >
-                <img src={MaxRuImage} alt="sl" className="w-8.75" />
+                <img
+                  loading="lazy"
+                  src={MaxRuImage}
+                  alt="sl"
+                  className="w-8.75"
+                />
               </Link>
               <Link to="https://t.me/" target="_blank" className="text-white">
-                <img src={TelegrmaImage} alt="sl" className="w-8.75" />
+                <img
+                  loading="lazy"
+                  src={TelegrmaImage}
+                  alt="sl"
+                  className="w-8.75"
+                />
               </Link>
               <Link to="https://vk.com/" target="_blank" className="text-white">
-                <img src={VKImage} alt="sl" className="w-8.75" />
+                <img loading="lazy" src={VKImage} alt="sl" className="w-8.75" />
               </Link>
               <Link
                 to="https://rutube.ru/"
                 target="_blank"
                 className="text-white"
               >
-                <img src={RuTubeImage} alt="sl" className="w-8.75" />
+                <img
+                  loading="lazy"
+                  src={RuTubeImage}
+                  alt="sl"
+                  className="w-8.75"
+                />
               </Link>
               <Link
                 to="https://youtube.com/"
                 target="_blank"
                 className="text-white"
               >
-                <img src={YouTubeImage} alt="sl" className="w-8.75" />
+                <img
+                  loading="lazy"
+                  src={YouTubeImage}
+                  alt="sl"
+                  className="w-8.75"
+                />
               </Link>
               <Link
                 to="https://dzen.ru/"
                 target="_blank"
                 className="text-white"
               >
-                <img src={DzenImage} alt="sl" className="w-8.75" />
+                <img
+                  loading="lazy"
+                  src={DzenImage}
+                  alt="sl"
+                  className="w-8.75"
+                />
               </Link>
             </div>
           </div>

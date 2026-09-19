@@ -1,7 +1,5 @@
 import { useParams, useSearchParams } from "react-router-dom";
-import { productsData } from "../../data/productsData";
-import { categoriesData } from "../../data/categoriesData";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { useBreadcrumbStore } from "../../store/useBreadcrumbStore";
 import { useTranslation } from "react-i18next";
@@ -11,6 +9,7 @@ import CatalogFilter from "../../components/CatalogFilter";
 import RequestCall from "../../components/RequestCallModal";
 import Pagination from "../../components/Pagination";
 import FeedbackForm from "../../components/FeedbackForm";
+import SortDropdown from "../../components/SortDropdown";
 
 function ProductFilter() {
   const { t, i18n } = useTranslation();
@@ -18,7 +17,13 @@ function ProductFilter() {
   const { filter } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const [productsData, setProductsData] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const currentPage = Number(searchParams.get("page")) || 1;
+  const currentSortParam = searchParams.get("sort") || "property_BRAND";
+  const currentOrderParam = searchParams.get("order") || "desc";
 
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [request, setRequest] = useState(null);
@@ -28,16 +33,42 @@ function ProductFilter() {
 
   const itemsPerPage = 10;
 
-  const activeProduct = productsData.find(
-    (productId) => productId.id === selectedProductId,
+  useEffect(() => {
+    let isMounted = true;
+
+    Promise.all([
+      import("../../data/productsData"),
+      import("../../data/categoriesData"),
+    ]).then(([productsMod, categoriesMod]) => {
+      if (isMounted) {
+        setProductsData(productsMod.productsData || []);
+        setCategoriesData(categoriesMod.categoriesData || []);
+        setIsLoading(false);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const activeProduct = useMemo(
+    () => productsData.find((productId) => productId.id === selectedProductId),
+    [productsData, selectedProductId],
   );
+
   const handleProductOpen = (id) => {
     setSelectedProductId(id);
     setRequest("variant");
   };
 
-  const currentFilter = categoriesData.find((item) => item.slug === filter);
+  const currentFilter = useMemo(
+    () => categoriesData.find((item) => item.slug === filter),
+    [categoriesData, filter],
+  );
+
   const productTitle = currentFilter?.title?.[currentLang];
+
   useEffect(() => {
     if (productTitle) {
       setDynamicName(productTitle);
@@ -45,14 +76,48 @@ function ProductFilter() {
     return () => setDynamicName("");
   }, [productTitle, setDynamicName]);
 
-  const categoriesFilter = productsData.filter(
-    (product) => product?.categorySlug === currentFilter?.slug,
+  const categoriesFilter = useMemo(
+    () =>
+      productsData.filter(
+        (product) => product?.categorySlug === currentFilter?.slug,
+      ),
+    [productsData, currentFilter],
   );
 
-  const totalPages = Math.ceil(categoriesFilter.length / itemsPerPage);
+  const sortedProducts = useMemo(() => {
+    const list = [...categoriesFilter];
+
+    return list.sort((a, b) => {
+      let result;
+      switch (currentSortParam) {
+        case "show_counter":
+          result = (b.views || 0) - (a.views || 0);
+          break;
+        case "date_create":
+          result = new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+          break;
+        case "property_NOT_AVAILABLE":
+          result = (b.inStock ? 1 : 0) - (a.inStock ? 1 : 0);
+          break;
+        case "property_PRICE":
+          result = (a.price || 0) - (b.price || 0);
+          break;
+        case "property_BRAND":
+        default: {
+          const brandA = a.brand || a.title?.[currentLang] || "";
+          const brandB = b.brand || b.title?.[currentLang] || "";
+          result = brandA.localeCompare(brandB);
+          break;
+        }
+      }
+      return currentOrderParam === "asc" ? result : -result;
+    });
+  }, [categoriesFilter, currentSortParam, currentOrderParam, currentLang]);
+
+  const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentProducts = categoriesFilter.slice(
+  const currentProducts = sortedProducts.slice(
     indexOfFirstItem,
     indexOfLastItem,
   );
@@ -68,6 +133,14 @@ function ProductFilter() {
     });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  if (isLoading) {
+    return (
+      <div className="container1 py-20 text-center font-FiraSans text-xl text-black dark:text-white">
+        {t("loading", "Yuklanmoqda...")}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -94,14 +167,9 @@ function ProductFilter() {
                   {t("catFilPage.filter")}
                 </span>
               </div>
-              <div className="flex flex-col md:flex-row items-center gap-1">
-                <p className="font-FiraSans font-normal text-sm leading-[110%] text-[#A1A1A1]">
-                  {t("catFilPage.sorting")}
-                </p>
-                <button className="font-FiraSans font-normal text-base leading-[130%] text-black dark:text-white">
-                  currentSort
-                </button>
-              </div>
+
+              <SortDropdown />
+
               <div className="hidden md:flex items-center gap-2">
                 <button
                   onClick={() => setIsListGrid(false)}
@@ -157,7 +225,7 @@ function ProductFilter() {
 
               <div
                 dangerouslySetInnerHTML={{
-                  __html: currentFilter.description[currentLang],
+                  __html: currentFilter?.description?.[currentLang] || "",
                 }}
                 className="text-black dark:text-white"
               ></div>
@@ -174,4 +242,5 @@ function ProductFilter() {
     </>
   );
 }
+
 export default ProductFilter;

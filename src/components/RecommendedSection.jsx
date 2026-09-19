@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { productsData } from "../data/productsData";
 import { Images } from "../utils/images";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,6 +18,22 @@ export default function Recommended() {
   const [isEnd, setIsEnd] = useState(false);
   const [request, setRequest] = useState(null);
   const closeRequest = () => setRequest(null);
+
+  const [productsData, setProductsData] = useState([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    Promise.all([import("../data/productsData")]).then(([productsMod]) => {
+      if (isMounted) {
+        setProductsData(productsMod.productsData || []);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
   return (
     <>
       <section className="mt-40 mb-30 bg-[#F9F9F9] dark:bg-slate-950 py-14">
@@ -92,6 +107,7 @@ export default function Recommended() {
                     <a href={`catalog/${product.categorySlug}/${product.slug}`}>
                       <div className="w-full aspect-video">
                         <img
+                          loading="lazy"
                           src={product.media.mainImage}
                           alt={product.title[currentLang]}
                           className="w-full h-full object-cover"

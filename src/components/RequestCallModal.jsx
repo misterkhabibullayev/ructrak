@@ -207,6 +207,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
           <div className="flex items-center">
             <div className="w-20 h-14.5 md:w-28 md:h-20.5">
               <img
+                loading="lazy"
                 src={activeProduct?.media?.mainImage}
                 alt="stokda qolmagan mashina rasmi"
                 className="w-full h-full object-cover"

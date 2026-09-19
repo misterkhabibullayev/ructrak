@@ -71,6 +71,7 @@ function NewsDetailes() {
                     <SwiperSlide key={i} className="w-full lg:w-1/2">
                       <div>
                         <img
+                          loading="lazy"
                           src={item}
                           alt={newsTitle}
                           className="w-full h-auto object-contain rounded-xl"
@@ -86,7 +87,9 @@ function NewsDetailes() {
       </section>
       <section className="bg-[#F9F9F9]">
         <div className="container1 pb-10">
-          <h2 className="font-FiraSans font-medium text-[20px] md:text-2xl leading-[120%] text-black dark:text-white mb-3 md:mb-8">{t("newsDetailes.moreNews")}</h2>
+          <h2 className="font-FiraSans font-medium text-[20px] md:text-2xl leading-[120%] text-black dark:text-white mb-3 md:mb-8">
+            {t("newsDetailes.moreNews")}
+          </h2>
           <div className="">
             <Swiper
               slidesPerView={4}

@@ -42,7 +42,10 @@ export default function AboutPageULSection() {
               </h2>
               <ul>
                 {liData.map((item) => (
-                  <li key={item.id} className="flex gap-3 md:gap-3 mb-3 md:mb-4.75">
+                  <li
+                    key={item.id}
+                    className="flex gap-3 md:gap-3 mb-3 md:mb-4.75"
+                  >
                     <span className="w-6 h-6">
                       <Images.checkMarkedIcon />
                     </span>
@@ -54,7 +57,11 @@ export default function AboutPageULSection() {
               </ul>
             </div>
             <div>
-              <img src={AboutImage} alt={t("aboutPage.liTitle")} />
+              <img
+                loading="lazy"
+                src={AboutImage}
+                alt={t("aboutPage.liTitle")}
+              />
             </div>
           </div>
         </div>

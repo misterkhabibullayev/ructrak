@@ -31,6 +31,7 @@ function NotFound() {
           </div>
           <div className="hidden md:flex items-center justify-center">
             <img
+              loading="lazy"
               src={Img404}
               alt="notFound"
               className="min-w-143.5 object-cover"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import TruckImage from "../Image/truckImage.png";
+import TruckImage from "../Image/truckImage.webp";
 import { Link } from "react-router-dom";
 
 export default function FeedbackForm() {
@@ -199,6 +199,7 @@ export default function FeedbackForm() {
             </div>
             <div className="w-100 h-85.25 shrink-0 hidden min-[1200px]:flex items-center">
               <img
+                loading="lazy"
                 src={TruckImage}
                 alt="truck image"
                 className="w-auto h-full object-contain object-left max-w-none"

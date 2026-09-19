@@ -16,6 +16,9 @@ import swiper2Img from "../Image/swiper-2.webp";
 import swiper3Img from "../Image/swiper-3.jpg";
 import swiper4Img from "../Image/swiper-4.jpg";
 import swiper5Img from "../Image/swiper-5.jpg";
+import { preload } from "react-dom";
+
+preload(swiper1Img, { as: "image", fetchPriority: "high" });
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -178,6 +181,7 @@ export function HeroSection() {
           spaceBetween={30}
           loop={true}
           centeredSlides={true}
+          lazyPreloadPrevNext={1}
           autoplay={{
             delay: 4500,
             disableOnInteraction: false,

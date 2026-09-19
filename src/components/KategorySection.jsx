@@ -95,6 +95,7 @@ export function KategorySection() {
                     <div className="flex items-end justify-end mt-6">
                       <div className="w-57.5 h-57.5">
                         <img
+                          loading="lazy"
                           src={item.img}
                           alt={item?.title?.[currentLang]}
                           loading="lazy"

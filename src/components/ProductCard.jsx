@@ -14,13 +14,14 @@ export default function ProductCard({
     <>
       <div
         key={item.id}
-        className={`rounded-lg h-min overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "md:flex md:justify-between" : ""}`}
+        className={`rounded-lg h-min overflow-hidden p-0.5 bg-white dark:bg-slate-950 ${!isListGrid ? "md:flex md:justify-between" : ""}`}
       >
         <div
           className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "md:w-[25%] md:rounded-lg md:aspect-square" : ""}`}
         >
           <Link to={item.slug}>
             <img
+              loading="lazy"
               src={item.media.mainImage}
               alt={item.title[currentLang]}
               className="w-full h-full object-cover"
@@ -47,7 +48,7 @@ export default function ProductCard({
           <div className={`${!isListGrid ? "md:pl-4 md:pr-15 md:flex-1" : ""}`}>
             <Link to={item.slug}>
               <h2
-                className={`font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10 ${!isListGrid ? "md:text-[22px] font-medium mb-8" : ""}`}
+                className={`font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10 mt-0! ${!isListGrid ? "md:text-[22px] font-medium mb-8" : ""}`}
               >
                 {item.title[currentLang]}
               </h2>

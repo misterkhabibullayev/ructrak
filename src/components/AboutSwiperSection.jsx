@@ -73,7 +73,11 @@ export function AbourSwiperSection() {
                   >
                     <div>
                       <div className="mb-4 md:mb-6 inline-block rounded px-3 py-2 dark:bg-white">
-                        <img src={item.img} alt={item.title[currentLang]} />
+                        <img
+                          loading="lazy"
+                          src={item.img}
+                          alt={item.title[currentLang]}
+                        />
                       </div>
                       <div>
                         <h3 className="font-FiraSans font-medium text-lg md:text-2xl text-black dark:text-white mb-2 md:mb-3.25 line-clamp-2 leading-[120%]">
@@ -99,7 +103,11 @@ export function AbourSwiperSection() {
               >
                 <div>
                   <div className="mb-4 md:mb-6 inline-block rounded px-3 py-2 dark:bg-white">
-                    <img src={item.img} alt={item.title[currentLang]} />
+                    <img
+                      loading="lazy"
+                      src={item.img}
+                      alt={item.title[currentLang]}
+                    />
                   </div>
                   <div>
                     <h3 className="font-FiraSans font-medium text-lg md:text-2xl text-black dark:text-white mb-2 md:mb-3.25 line-clamp-2 leading-[120%]">

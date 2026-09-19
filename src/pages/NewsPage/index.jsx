@@ -78,6 +78,7 @@ function NewsPage() {
                   {NewsData[0].images.map((item, idx) => (
                     <SwiperSlide key={idx} className="h-full">
                       <img
+                        loading="lazy"
                         src={item}
                         alt={NewsData[0].title[currentLang]}
                         className="w-full h-full object-cover"
@@ -129,6 +130,7 @@ function NewsPage() {
                 <Link to={`/news/${item.slug}`}>
                   <div className="w-full aspect-video">
                     <img
+                      loading="lazy"
                       src={item.images[0]}
                       alt={item.title[currentLang]}
                       className="w-full h-full object-cover"

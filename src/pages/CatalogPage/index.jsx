@@ -1,11 +1,42 @@
 import { useTranslation } from "react-i18next";
-import { categoriesData } from "../../data/categoriesData";
-import { productsData } from "../../data/productsData";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import { useEffect, useState } from "react";
 
 function CatalogPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+
+  const [productsData, setProductsData] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    Promise.all([
+      import("../../data/productsData"),
+      import("../../data/categoriesData"),
+    ]).then(([productsMod, categoriesMod]) => {
+      if (isMounted) {
+        setProductsData(productsMod.productsData || []);
+        setCategoriesData(categoriesMod.categoriesData || []);
+        setIsLoading(false);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="container1 py-20 text-center font-FiraSans text-xl text-black dark:text-white">
+        {t("loading", "Yuklanmoqda...")}
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="container1 pb-10">
@@ -44,6 +75,7 @@ function CatalogPage() {
                   <div className="flex items-end justify-end mt-6">
                     <div className="w-57.5 h-57.5">
                       <img
+                        loading="lazy"
                         src={item.img}
                         alt={item?.title?.[currentLang]}
                         loading="lazy"

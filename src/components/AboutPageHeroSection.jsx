@@ -14,6 +14,7 @@ export default function AboutPageHeroSection() {
           </div>
           <div className="w-35 absolute -bottom-0.75">
             <img
+              loading="lazy"
               src={UnionImg}
               alt="union image"
               draggable={false}

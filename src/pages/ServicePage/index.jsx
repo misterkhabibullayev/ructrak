@@ -47,6 +47,7 @@ function ServicePage() {
                     <div>
                       <div className="w-35 h-35 rounded-full overflow-hidden mx-auto border border-[#EBEBEB] dark:border-[#868585]">
                         <img
+                          loading="lazy"
                           src={currentContact.img}
                           alt={currentContact.name}
                           className="w-full h-full object-cover"
@@ -184,6 +185,7 @@ function ServicePage() {
                 <div>
                   <div className="w-35 h-35 rounded-full overflow-hidden mx-auto border border-[#EBEBEB] dark:border-[#868585]">
                     <img
+                      loading="lazy"
                       src={currentContact.img}
                       alt={currentContact.name}
                       className="w-full h-full object-cover"
