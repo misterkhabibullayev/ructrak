@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { productsData } from "../../data/productsData";
 import { categoriesData } from "../../data/categoriesData";
 import { useEffect, useState } from "react";
@@ -7,16 +7,26 @@ import { useBreadcrumbStore } from "../../store/useBreadcrumbStore";
 import { useTranslation } from "react-i18next";
 import { Images } from "../../utils/images";
 import ProductCard from "../../components/ProductCard";
+import CatalogFilter from "../../components/CatalogFilter";
+import RequestCall from "../../components/RequestCallModal";
+import Pagination from "../../components/Pagination";
+import FeedbackForm from "../../components/FeedbackForm";
 
 function ProductFilter() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const { filter } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const currentPage = Number(searchParams.get("page")) || 1;
+
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [request, setRequest] = useState(null);
   const closeRequest = () => setRequest(null);
   const { setDynamicName } = useBreadcrumbStore();
   const [isListGrid, setIsListGrid] = useState(true);
+
+  const itemsPerPage = 10;
 
   const activeProduct = productsData.find(
     (productId) => productId.id === selectedProductId,
@@ -27,7 +37,7 @@ function ProductFilter() {
   };
 
   const currentFilter = categoriesData.find((item) => item.slug === filter);
-  const productTitle = currentFilter.title[currentLang];
+  const productTitle = currentFilter?.title?.[currentLang];
   useEffect(() => {
     if (productTitle) {
       setDynamicName(productTitle);
@@ -38,6 +48,27 @@ function ProductFilter() {
   const categoriesFilter = productsData.filter(
     (product) => product?.categorySlug === currentFilter?.slug,
   );
+
+  const totalPages = Math.ceil(categoriesFilter.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentProducts = categoriesFilter.slice(
+    indexOfFirstItem,
+    indexOfLastItem,
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setSearchParams((prev) => {
+      if (pageNumber === 1) {
+        prev.delete("page");
+      } else {
+        prev.set("page", pageNumber);
+      }
+      return prev;
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="bg-[#F9F9F9] dark:bg-slate-900">
@@ -91,32 +122,55 @@ function ProductFilter() {
               </div>
             </div>
           </div>
-          <div className="flex">
-            <div className="hidden lg:flex min-w-[320px]">filter</div>
+          <div className="flex mb-20">
+            <div className="hidden lg:flex w-[320px]">
+              <CatalogFilter
+                currentFilter={currentFilter}
+                categoriesFilter={categoriesFilter}
+              />
+            </div>
 
-            <div
-              className={
-                !isListGrid
-                  ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4"
-                  : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75"
-              }
-            >
-              {categoriesFilter.map((item) => (
-                <ProductCard
-                  key={item.id}
-                  handleProductOpen={handleProductOpen}
-                  item={item}
-                  request={request}
-                  setRequest={setRequest}
-                  closeRequest={closeRequest}
-                  activeProduct={activeProduct}
-                  isListGrid={isListGrid}
-                />
-              ))}
+            <div className="flex-1 flex flex-col justify-between">
+              <div
+                className={
+                  !isListGrid
+                    ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4"
+                    : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 mb-20"
+                }
+              >
+                {currentProducts.map((item) => (
+                  <ProductCard
+                    key={item.id}
+                    handleProductOpen={handleProductOpen}
+                    item={item}
+                    setRequest={setRequest}
+                    isListGrid={isListGrid}
+                  />
+                ))}
+              </div>
+
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: currentFilter.description[currentLang],
+                }}
+                className="text-black dark:text-white"
+              ></div>
             </div>
           </div>
         </div>
       </div>
+      <FeedbackForm />
+      <RequestCall
+        request={request}
+        activeProduct={activeProduct}
+        closeRequest={closeRequest}
+      />
     </>
   );
 }

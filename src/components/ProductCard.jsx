@@ -1,15 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Images } from "../utils/images";
-import RequestCall from "./RequestCallModal";
 
 export default function ProductCard({
   item,
   handleProductOpen,
   setRequest,
-  request,
-  activeProduct,
-  closeRequest,
   isListGrid,
 }) {
   const { t, i18n } = useTranslation();
@@ -18,7 +14,7 @@ export default function ProductCard({
     <>
       <div
         key={item.id}
-        className={`rounded-lg overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "md:flex md:justify-between" : ""}`}
+        className={`rounded-lg h-min overflow-hidden p-0.5 bg-white dark:bg-slate-950 transition-all duration-300 ${!isListGrid ? "md:flex md:justify-between" : ""}`}
       >
         <div
           className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "md:w-[25%] md:rounded-lg md:aspect-square" : ""}`}
@@ -147,11 +143,6 @@ export default function ProductCard({
           </div>
         </div>
       </div>
-      <RequestCall
-        request={request}
-        activeProduct={activeProduct}
-        closeRequest={closeRequest}
-      />
     </>
   );
 }

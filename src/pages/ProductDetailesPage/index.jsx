@@ -26,7 +26,9 @@ function ProductDetailes() {
           <Breadcrumbs />
         </div>
         {currentProduct && (
-          <div dangerouslySetInnerHTML={{__html: currentProduct.fullSpecificationsText.ru}}></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: currentProduct.title[currentLang]}}
+          ></div>
         )}
       </div>
     </>
