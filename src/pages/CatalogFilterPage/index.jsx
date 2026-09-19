@@ -10,6 +10,8 @@ import RequestCall from "../../components/RequestCallModal";
 import Pagination from "../../components/Pagination";
 import FeedbackForm from "../../components/FeedbackForm";
 import SortDropdown from "../../components/SortDropdown";
+import { categoriesData } from "../../data/categoriesData";
+import { useProductStore } from "../../store/useProductStore";
 
 function ProductFilter() {
   const { t, i18n } = useTranslation();
@@ -17,9 +19,7 @@ function ProductFilter() {
   const { filter } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [productsData, setProductsData] = useState([]);
-  const [categoriesData, setCategoriesData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { products, isLoading, fetchProducts } = useProductStore();
 
   const currentPage = Number(searchParams.get("page")) || 1;
   const currentSortParam = searchParams.get("sort") || "property_BRAND";
@@ -33,28 +33,14 @@ function ProductFilter() {
 
   const itemsPerPage = 10;
 
+  // Sahifa yuklanganda store orqali fetch chaqiramiz
   useEffect(() => {
-    let isMounted = true;
-
-    Promise.all([
-      import("../../data/productsData"),
-      import("../../data/categoriesData"),
-    ]).then(([productsMod, categoriesMod]) => {
-      if (isMounted) {
-        setProductsData(productsMod.productsData || []);
-        setCategoriesData(categoriesMod.categoriesData || []);
-        setIsLoading(false);
-      }
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+    fetchProducts();
+  }, [fetchProducts]);
 
   const activeProduct = useMemo(
-    () => productsData.find((productId) => productId.id === selectedProductId),
-    [productsData, selectedProductId],
+    () => products.find((product) => product.id === selectedProductId),
+    [products, selectedProductId],
   );
 
   const handleProductOpen = (id) => {
@@ -64,7 +50,7 @@ function ProductFilter() {
 
   const currentFilter = useMemo(
     () => categoriesData.find((item) => item.slug === filter),
-    [categoriesData, filter],
+    [filter],
   );
 
   const productTitle = currentFilter?.title?.[currentLang];
@@ -78,10 +64,10 @@ function ProductFilter() {
 
   const categoriesFilter = useMemo(
     () =>
-      productsData.filter(
+      products.filter(
         (product) => product?.categorySlug === currentFilter?.slug,
       ),
-    [productsData, currentFilter],
+    [products, currentFilter],
   );
 
   const sortedProducts = useMemo(() => {
@@ -134,7 +120,7 @@ function ProductFilter() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (isLoading) {
+  if (isLoading && products.length === 0) {
     return (
       <div className="container1 py-20 text-center font-FiraSans text-xl text-black dark:text-white">
         {t("loading", "Yuklanmoqda...")}

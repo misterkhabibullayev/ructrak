@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import RequestCall from "./RequestCallModal";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MaxRuImage from "../Image/max-messenger-sign-logo.svg";
+import MaxRuImage from "../Image/max-messenger-sign-logo.webp";
 import TelegrmaImage from "../Image/telegram.svg";
 import VKImage from "../Image/VK_com-logo.svg";
 import RuTubeImage from "../Image/Rutube_icon.png";

@@ -11,7 +11,6 @@ export default function ContactsCard() {
           {contactdata.map((item, index) => (
             <div
               data-aos="fade-up"
-              data-aos-delay={index * 100}
               key={item.id}
               className="h-100 border border-[#EBEBEB] dark:border-[#868585] rounded-lg shadow-xl p-6 flex flex-col justify-between"
             >

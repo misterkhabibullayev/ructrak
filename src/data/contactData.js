@@ -1,4 +1,4 @@
-import Img1 from "../Image/Gemini_Generated_Image_jyxf94jyxf94jyxf.jpeg";
+import Img1 from "../Image/Gemini_Generated_Image_jyxf94jyxf94jyxf.webp";
 export const contactdata = [
   {
     id: 1,

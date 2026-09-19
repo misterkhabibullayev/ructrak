@@ -77,7 +77,6 @@ export function NewsSection() {
               <SwiperSlide key={item.id}>
                 <div
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
                   className="group rounded-t-sm rounded-r-sm overflow-hidden"
                 >
                   <a href={`news/${item.slug}`}>

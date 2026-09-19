@@ -11,11 +11,11 @@ import "../index.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import swiper1Img from "../../public/Image/swiper-1.webp";
+import swiper1Img from "../Image/swiper-1.webp";
 import swiper2Img from "../Image/swiper-2.webp";
-import swiper3Img from "../Image/swiper-3.jpg";
-import swiper4Img from "../Image/swiper-4.jpg";
-import swiper5Img from "../Image/swiper-5.jpg";
+import swiper3Img from "../Image/swiper-3.webp";
+import swiper4Img from "../Image/swiper-4.webp";
+import swiper5Img from "../Image/swiper-5.webp";
 import { preload } from "react-dom";
 
 preload(swiper1Img, { as: "image", fetchPriority: "high" });
@@ -56,7 +56,6 @@ export function HeroSection() {
                 </h1>
                 <p
                   data-aos="fade-up"
-                  data-aos-delay="100"
                   className="hidden md:block font-FiraSans font-normal text-[18px] mt-4 mb-8 text-white max-w-full md:max-w-113"
                 >
                   {t("heroSection.swiper1.description")}
@@ -66,7 +65,6 @@ export function HeroSection() {
                 <div className="flex items-start">
                   <button
                     data-aos="fade-up"
-                    data-aos-delay="200"
                     className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
                   >
                     {t("heroSection.swiper1.requestCall")}
@@ -209,7 +207,6 @@ export function HeroSection() {
                 </h1>
                 <p
                   data-aos="fade-up"
-                  data-aos-delay="100"
                   className="hidden md:block font-FiraSans font-normal text-[18px] mt-4 mb-8 text-white max-w-full md:max-w-113"
                 >
                   {t("heroSection.swiper1.description")}
@@ -219,7 +216,6 @@ export function HeroSection() {
                 <div className="flex items-start">
                   <button
                     data-aos="fade-up"
-                    data-aos-delay="200"
                     className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
                   >
                     {t("heroSection.swiper1.requestCall")}

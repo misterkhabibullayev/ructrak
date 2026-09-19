@@ -68,7 +68,6 @@ export function AbourSwiperSection() {
                 <SwiperSlide key={item.id} className="py-10">
                   <div
                     data-aos="fade-up"
-                    data-aos-delay={index * 100}
                     className="w-full h-auto md:h-91 pt-11.5 pb-5 px-4.5 border border-[#EBEBEB] rounded-lg"
                   >
                     <div>
@@ -98,7 +97,6 @@ export function AbourSwiperSection() {
               <div
                 key={item.id}
                 data-aos="fade-up"
-                data-aos-delay={index * 100}
                 className="w-full h-auto md:h-91 pt-4.5 px-3 pb-4.5 border border-[#EBEBEB] rounded-lg"
               >
                 <div>

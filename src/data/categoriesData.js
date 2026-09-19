@@ -15,6 +15,7 @@ export const categoriesData = [
     id: 1,
     slug: "shtornye-avtomobili",
     img: kategoriyImg1,
+    count: 10,
     title: {
       uz: "Pardali avtomobillar",
       ru: "Шторные автомобили",
@@ -374,6 +375,7 @@ export const categoriesData = [
     id: 2,
     slug: "krany-manipulyatory",
     img: kategoriyImg2,
+    count: 10,
     title: {
       uz: "Kran-manipulyatorlar",
       ru: "Краны-манипуляторы",
@@ -729,6 +731,7 @@ export const categoriesData = [
     id: 3,
     slug: "avtotoplivozapravshchiki",
     img: kategoriyImg3,
+    count: 10,
     title: {
       uz: "Yonilg'i quyish mashinalari (ATZ)",
       ru: "Автотопливозаправщики",
@@ -1137,6 +1140,7 @@ export const categoriesData = [
     id: 4,
     slug: "avtogidropodiyemniki",
     img: kategoriyImg4,
+    count: 10,
     title: {
       uz: "Avtogidroko'targichlar (Vishka)",
       ru: "Автогидроподъёмники",
@@ -1147,6 +1151,7 @@ export const categoriesData = [
     id: 5,
     slug: "avtocisterny",
     img: kategoriyImg5,
+    count: 10,
     title: {
       uz: "Avtosisternalar",
       ru: "Автоцистерны",
@@ -1157,6 +1162,7 @@ export const categoriesData = [
     id: 6,
     slug: "avtoevakuatory",
     img: kategoriyImg6,
+    count: 10,
     title: {
       uz: "Avtoevakuatorlar",
       ru: "Автоэвакуаторы",
@@ -1167,6 +1173,7 @@ export const categoriesData = [
     id: 7,
     slug: "izotermicheskie-furgony",
     img: kategoriyImg7,
+    count: 10,
     title: {
       uz: "Izotermik furgonlar",
       ru: "Изотермические фургоны",
@@ -1177,6 +1184,7 @@ export const categoriesData = [
     id: 8,
     slug: "konteynerovozy",
     img: kategoriyImg8,
+    count: 10,
     title: {
       uz: "Konteyner tashuvchilar",
       ru: "Контейнеровозы",
@@ -1187,6 +1195,7 @@ export const categoriesData = [
     id: 9,
     slug: "kryukovye-pogruzchiki",
     img: kategoriyImg9,
+    count: 10,
     title: {
       uz: "Ilgakli yuklagichlar (Multilift)",
       ru: "Крюковые погрузчики",
@@ -1197,6 +1206,7 @@ export const categoriesData = [
     id: 10,
     slug: "samosvaly",
     img: kategoriyImg10,
+    count: 10,
     title: {
       uz: "Samosvallar",
       ru: "Самосвалы",
@@ -1207,6 +1217,7 @@ export const categoriesData = [
     id: 11,
     slug: "avtomobili-dopog-kategoriya-exii",
     img: kategoriyImg11,
+    count: 10,
     title: {
       uz: "EXII toifasidagi ADR transport vositalari",
       ru: "Автомобили ДОПОГ категория EXII",

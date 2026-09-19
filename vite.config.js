@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
-import tailwindcss from '@tailwindcss/vite'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { defineConfig } from "vite";
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
+import babel from "@rolldown/plugin-babel";
+import tailwindcss from "@tailwindcss/vite";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
   plugins: [
@@ -10,13 +10,39 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
     ViteImageOptimizer({
-      // Barcha papkalardagi rasmlarni qamrab olish
       includePublic: true,
-      include: ['**/*.{png,jpg,jpeg,gif,svg,webp,avif}'],
-      
+      include: ["**/*.{png,jpg,jpeg,gif,svg,webp,avif}"],
+
       png: { quality: 80 },
       jpeg: { quality: 80 },
       webp: { quality: 80 },
     }),
   ],
-})
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (
+            id.includes("node_modules/react") ||
+            id.includes("node_modules/react-dom") ||
+            id.includes("node_modules/react-router")
+          ) {
+            return "react-vendor";
+          }
+          if (id.includes("node_modules/swiper")) {
+            return "swiper-vendor";
+          }
+          if (
+            id.includes("node_modules/aos") ||
+            id.includes("node_modules/framer-motion")
+          ) {
+            return "animation-vendor";
+          }
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
+  },
+});
