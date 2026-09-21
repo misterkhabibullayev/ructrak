@@ -10,16 +10,28 @@ function ProductDetailes() {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const { setDynamicName } = useBreadcrumbStore();
-  const productsData = useProductStore();
+  const products = useProductStore((state) => state.products);
+  const fetchProducts = useProductStore((state) => state.fetchProducts);
 
-  const currentProduct = productsData.find((item) => item.slug === detailes);
-  const productTitle = currentProduct.title[currentLang];
+  useEffect(() => {
+    if (products.length === 0 && fetchProducts) {
+      fetchProducts();
+    }
+  }, [products.length, fetchProducts]);
+
+  const currentProduct = products.find((item) => item.slug === detailes);
+  const productTitle = currentProduct?.title?.[currentLang];
+
   useEffect(() => {
     if (productTitle) {
       setDynamicName(productTitle);
     }
     return () => setDynamicName("");
   }, [productTitle, setDynamicName]);
+
+  if (products.length === 0) {
+    return <div>Yuklanmoqda...</div>;
+  }
   return (
     <>
       <div className="container1">

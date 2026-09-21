@@ -1,13 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useBreadcrumbStore } from "../store/useBreadcrumbStore";
-import { categoriesData } from "../data/categoriesData";
+import { useCategoryStore } from "../store/useCategoriesStore";
+import { useEffect } from "react";
 
 export default function Breadcrumbs() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const location = useLocation();
   const { dynamicName } = useBreadcrumbStore();
+
+  const { categories, fetchCategories } = useCategoryStore();
+
+  useEffect(() => {
+    if (categories.length === 0) {
+      fetchCategories();
+    }
+  }, [categories.length, fetchCategories]);
 
   const pathnames = location.pathname.split("/").filter((x) => x);
 
@@ -27,7 +36,7 @@ export default function Breadcrumbs() {
         const to = `/${pathnames.slice(0, index + 1).join("/")}`;
 
         const hasTranslation = t(`breadCrumbs.${value}`, { defaultValue: "" });
-        const categoryMatch = categoriesData?.find((cat) => cat.slug === value);
+        const categoryMatch = categories?.find((cat) => cat.slug === value);
         const categoryTitle = categoryMatch?.title?.[currentLang];
 
         let label = value;
@@ -49,7 +58,7 @@ export default function Breadcrumbs() {
             ) : (
               <Link
                 to={to}
-                className="text-black dark:text-gray-400 hover:text-white transition-all duration-300"
+                className="text-black dark:text-gray-400 hover:text-gray-400 dark:hover:text-white transition-all duration-300"
               >
                 {label}
               </Link>

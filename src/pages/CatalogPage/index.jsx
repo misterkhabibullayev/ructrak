@@ -1,10 +1,25 @@
 import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
-import { categoriesData } from "../../data/categoriesData";
+import { useCategoryStore } from "../../store/useCategoriesStore";
+import { useEffect } from "react";
 
 function CatalogPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
+
+  const { categories, isLoading, fetchCategories } = useCategoryStore();
+
+  useEffect(() => {
+    fetchCategories();
+  }, [fetchCategories]);
+
+  if (isLoading && categories.length === 0) {
+    return (
+      <div className="container1 py-20 text-center font-FiraSans text-xl text-black dark:text-white">
+        {t("loading", "Yuklanmoqda...")}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -13,7 +28,7 @@ function CatalogPage() {
           <Breadcrumbs />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-5">
-          {categoriesData.map((item) => (
+          {categories.map((item) => (
             <div key={item.id}>
               <div
                 data-aos="fade-up"

@@ -1,20 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { categoriesData } from "../data/categoriesData";
 import { Link, useLocation } from "react-router-dom";
+import { useCategoryStore } from "../store/useCategoriesStore";
 
 function CatalogModal({ activeMenu, onClose }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const location = useLocation();
   const prevPathname = useRef(location.pathname);
+
+  const { categories, fetchCategories } = useCategoryStore();
+
   const [openSections, setOpenSections] = useState({
     catalog: false,
     aboutUs: false,
     media: false,
   });
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (activeMenu && categories.length === 0) {
+      fetchCategories();
+    }
+  }, [activeMenu, categories.length, fetchCategories]);
 
   useEffect(() => {
     if (prevPathname.current !== location.pathname) {
@@ -113,7 +122,7 @@ function CatalogModal({ activeMenu, onClose }) {
                           className="overflow-hidden"
                         >
                           <ul className="pl-4 mb-4 flex flex-col gap-4 m-0 p-0 list-none">
-                            {categoriesData.map((item) => (
+                            {categories.map((item) => (
                               <li key={item.slug}>
                                 <Link
                                   to={`/catalog/${item.slug}`}
@@ -129,7 +138,7 @@ function CatalogModal({ activeMenu, onClose }) {
                     </AnimatePresence>
                   ) : (
                     <ul className="flex flex-col gap-4 m-0 p-0 list-none">
-                      {categoriesData.map((item) => (
+                      {categories.map((item) => (
                         <li key={item.slug}>
                           <Link
                             to={`/catalog/${item.slug}`}

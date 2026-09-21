@@ -16,7 +16,7 @@
       "amount": null,
       "currency": "RUB"
     },
-    "inStock": true,
+    "inStock": false,
     "media": {
       "mainImage": "https://images.unsplash.com/photo-1772852336286-933f5b460e33?auto=format&fit=crop&fm=jpg&q=80&w=1600",
       "gallery": [

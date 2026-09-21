@@ -55,7 +55,7 @@ export default function SortDropdown() {
   };
 
   return (
-    <div className="flex items-center gap-2 select-none">
+    <div className="flex flex-col md:flex-row items-center gapp-1 md:gap-2 select-none">
       <span className="font-FiraSans text-sm text-[#A1A1A1]">
         {t("catFilPage.sorting", "Сортировка:")}
       </span>
@@ -90,7 +90,7 @@ export default function SortDropdown() {
       >
         <button
           type="button"
-          className="font-FiraSans font-medium text-base text-black dark:text-white hover:text-[#FEC80B] transition-colors cursor-pointer bg-transparent border-none outline-none"
+          className="font-FiraSans font-medium text-base text-black dark:text-white hover:text-[#FEC80B] transition-colors cursor-pointer bg-transparent border-none outline-none "
         >
           {activeOption.label}
         </button>

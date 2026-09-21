@@ -10,8 +10,8 @@ import RequestCall from "../../components/RequestCallModal";
 import Pagination from "../../components/Pagination";
 import FeedbackForm from "../../components/FeedbackForm";
 import SortDropdown from "../../components/SortDropdown";
-import { categoriesData } from "../../data/categoriesData";
 import { useProductStore } from "../../store/useProductStore";
+import { useCategoryStore } from "../../store/useCategoriesStore";
 
 function ProductFilter() {
   const { t, i18n } = useTranslation();
@@ -20,6 +20,11 @@ function ProductFilter() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const { products, isLoading, fetchProducts } = useProductStore();
+  const {
+    categories,
+    isLoading: isCategoriesLoading,
+    fetchCategories,
+  } = useCategoryStore();
 
   const currentPage = Number(searchParams.get("page")) || 1;
   const currentSortParam = searchParams.get("sort") || "property_BRAND";
@@ -31,12 +36,13 @@ function ProductFilter() {
   const { setDynamicName } = useBreadcrumbStore();
   const [isListGrid, setIsListGrid] = useState(true);
 
-  const itemsPerPage = 10;
+  const itemsPerPage = 2;
 
   // Sahifa yuklanganda store orqali fetch chaqiramiz
   useEffect(() => {
     fetchProducts();
-  }, [fetchProducts]);
+    fetchCategories();
+  }, [fetchProducts, fetchCategories]);
 
   const activeProduct = useMemo(
     () => products.find((product) => product.id === selectedProductId),
@@ -49,8 +55,8 @@ function ProductFilter() {
   };
 
   const currentFilter = useMemo(
-    () => categoriesData.find((item) => item.slug === filter),
-    [filter],
+    () => categories.find((item) => item.slug === filter),
+    [categories, filter],
   );
 
   const productTitle = currentFilter?.title?.[currentLang];
@@ -120,7 +126,10 @@ function ProductFilter() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (isLoading && products.length === 0) {
+  if (
+    (isLoading && products.length === 0) ||
+    (isCategoriesLoading && categories.length === 0)
+  ) {
     return (
       <div className="container1 py-20 text-center font-FiraSans text-xl text-black dark:text-white">
         {t("loading", "Yuklanmoqda...")}
@@ -176,7 +185,7 @@ function ProductFilter() {
               </div>
             </div>
           </div>
-          <div className="flex mb-20">
+          <div className="flex pb-20">
             <div className="hidden lg:flex w-[320px]">
               <CatalogFilter
                 currentFilter={currentFilter}
@@ -188,7 +197,7 @@ function ProductFilter() {
               <div
                 className={
                   !isListGrid
-                    ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4"
+                    ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4 mb-20"
                     : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 mb-20"
                 }
               >

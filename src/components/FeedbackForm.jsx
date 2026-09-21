@@ -91,7 +91,7 @@ export default function FeedbackForm() {
   };
   return (
     <>
-      <section className="relative overflow-hidden bg-[#F9F9F9] dark:bg-slate-950 py-12.5 min-[1200px]:py-0">
+      <section className="relative overflow-hidden bg-[#F2F2F2] dark:bg-slate-950 py-12.5 min-[1200px]:py-0">
         <div className="container1">
           <div className="flex items-center">
             <div className="w-full h-full">
