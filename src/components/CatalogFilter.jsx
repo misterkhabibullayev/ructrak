@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Images } from "../utils/images";
 import PriceFilter from "./PriceFilter";
 
-export default function CatalogFilter({ currentFilter, categoriesFilter }) {
+export default function CatalogFilter({
+  currentFilter,
+  categoriesFilter,
+  filterOpen,
+  setFilterOpen,
+}) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
 
@@ -15,6 +20,13 @@ export default function CatalogFilter({ currentFilter, categoriesFilter }) {
     total_weight: [],
     cistern_volume: { min: "", max: "" },
   });
+
+  useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    return () => {
+      document.body.style.overflowY = "";
+    };
+  }, [filterOpen]);
 
   const handleCheckboxChange = (filterId, optionId) => {
     setFilterValues((prev) => {
@@ -46,7 +58,19 @@ export default function CatalogFilter({ currentFilter, categoriesFilter }) {
   const filtersList = currentFilter?.filters || [];
 
   return (
-    <aside className="w-full max-h-[82vh] overflow-y-auto py-5 px-4 bg-white dark:bg-slate-950 rounded-lg sticky top-30 left-0 mr-6">
+    <aside
+      className={`filterAside w-full overflow-y-auto bg-white dark:bg-slate-950 sticky top-30 left-0 mr-6 ${filterOpen ? "min-h-screen mr-0" : "max-h-[82vh] rounded-lg"}`}
+    >
+      <div
+        className={`items-center justify-between py-4.5 px-6 bg-slate-900 ${filterOpen ? "flex" : "hidden"}`}
+      >
+        <span className="font-FiraSans font-black text-xl leading-[120%] mt-0 mb-0 text-black dark:text-white">
+          {t("catFilPage.filter")}
+        </span>
+        <div>
+          <Images.closeIcon className="text-black dark:text-white" />
+        </div>
+      </div>
       {filtersList.map((filter) => {
         const isBrandFilter = filter.id === "brand";
         const filteredOptions = filter.options?.filter((option) => {
@@ -56,7 +80,7 @@ export default function CatalogFilter({ currentFilter, categoriesFilter }) {
         });
 
         return (
-          <div key={filter.id} className="">
+          <div key={filter.id} className="py-5 px-4">
             <h3 className="font-FiraSans font-medium text-lg leading-[110%] text-black dark:text-white mb-3.5">
               {getLocalizedText(filter.title)}
             </h3>
@@ -114,11 +138,13 @@ export default function CatalogFilter({ currentFilter, categoriesFilter }) {
           </div>
         );
       })}
-      <button className="w-full rounded py-3.25 px-7.5 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 mt-6 mb-7.5">
-        {t("catFilPage.showProducts")}
-        {""}
-        <span>({categoriesFilter.length})</span>
-      </button>
+      <div className="px-5">
+        <button className="w-full rounded py-3.25 px-3.75 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 mt-6 mb-7.5">
+          {t("catFilPage.showProducts")}
+          {""}
+          <span>({categoriesFilter.length})</span>
+        </button>
+      </div>
     </aside>
   );
 }

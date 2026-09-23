@@ -38,12 +38,12 @@ export default function ProductCard({
             className={`absolute top-1 right-1 ${item.inStock ? "flex" : "hidden"}`}
           >
             <button>
-              <Images.favoritesIcon className="hover:scale-105" />
+              <Images.favoritesIcon className="hover:scale-105 w-7 md:w-auto" />
             </button>
           </div>
         </div>
         <div
-          className={`py-4 px-3 ${!isListGrid ? "md:flex-1 md:flex md:justify-between md:items-center md:py-10" : ""}`}
+          className={`py-2 md:py-4 px-1 md:px-3 ${!isListGrid ? "md:flex-1 md:flex md:justify-between md:items-center md:py-10" : ""}`}
         >
           <div className={`${!isListGrid ? "md:pl-4 md:pr-15 md:flex-1" : ""}`}>
             <Link to={item.slug}>
@@ -117,12 +117,12 @@ export default function ProductCard({
             >
               <Link
                 to={item.slug}
-                className="w-full text-center py-3.25 px-3.25 bg-[#FEC80B] rounded font-FiraSans font-normal text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300"
+                className="w-full text-center py-3.25 px-2.25 md:px-3.25 bg-[#FEC80B] rounded font-FiraSans font-normal text-xs md:text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300"
               >
                 {t("recommendedSection.podrobne")}
               </Link>
               <button className={`${!isListGrid ? "md:hidden" : "block"}`}>
-                <Images.cartIcon className="text-black dark:text-white" />
+                <Images.cartIcon className="text-black dark:text-white w-5 md:w-auto" />
               </button>
             </div>
             <button

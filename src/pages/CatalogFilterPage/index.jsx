@@ -19,6 +19,8 @@ function ProductFilter() {
   const { filter } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const [filterOpen, setFilterOpen] = useState(false);
+
   const { products, isLoading, fetchProducts } = useProductStore();
   const {
     categories,
@@ -38,7 +40,6 @@ function ProductFilter() {
 
   const itemsPerPage = 2;
 
-  // Sahifa yuklanganda store orqali fetch chaqiramiz
   useEffect(() => {
     fetchProducts();
     fetchCategories();
@@ -155,7 +156,10 @@ function ProductFilter() {
             </div>
             <div className="flex items-center justify-between md:justify-normal md:gap-10">
               <div className="flex md:hidden items-center gap-4">
-                <button className="w-10 h-10 flex items-center justify-center bg-[#FEC80B] rounded">
+                <button
+                  onClick={() => setFilterOpen(true)}
+                  className="w-10 h-10 flex items-center justify-center bg-[#FEC80B] rounded"
+                >
                   <Images.filterSlidersIcon />
                 </button>
                 <span className="font-FiraSans font-medium text-lg leading-[150%] text-black dark:text-white">
@@ -226,6 +230,14 @@ function ProductFilter() {
               ></div>
             </div>
           </div>
+        </div>
+        <div className={`w-full z-100 transition-all duration-300 ${filterOpen ? "absolute top-0 translate-x-0" : "absolute top-0 -translate-x-full"}`}>
+          <CatalogFilter
+            currentFilter={currentFilter}
+            categoriesFilter={categoriesFilter}
+            setFilterOpen={setFilterOpen}
+            filterOpen={filterOpen}
+          />
         </div>
       </div>
       <FeedbackForm />
