@@ -10,7 +10,7 @@ export default function CatalogFilter({
   setFilterOpen,
 }) {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language || "uz" || "uz";
+  const currentLang = i18n.language || "uz";
 
   const [searchQuery, setSearchQuery] = useState("");
 
