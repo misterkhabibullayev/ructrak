@@ -15,7 +15,7 @@ import { useCategoryStore } from "../../store/useCategoriesStore";
 
 function ProductFilter() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const { filter } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -231,7 +231,9 @@ function ProductFilter() {
             </div>
           </div>
         </div>
-        <div className={`w-full z-100 transition-all duration-300 ${filterOpen ? "absolute top-0 translate-x-0" : "absolute top-0 -translate-x-full"}`}>
+        <div
+          className={`w-full z-100 transition-all duration-300 ${filterOpen ? "absolute top-0 translate-x-0" : "absolute top-0 -translate-x-full"}`}
+        >
           <CatalogFilter
             currentFilter={currentFilter}
             categoriesFilter={categoriesFilter}

@@ -8,7 +8,7 @@ import { useProductStore } from "../../store/useProductStore";
 function ProductDetailes() {
   const { detailes } = useParams();
   const { i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const { setDynamicName } = useBreadcrumbStore();
   const products = useProductStore((state) => state.products);
   const fetchProducts = useProductStore((state) => state.fetchProducts);

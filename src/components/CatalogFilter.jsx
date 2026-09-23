@@ -10,7 +10,7 @@ export default function CatalogFilter({
   setFilterOpen,
 }) {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language || "uz";
+  const currentLang = i18n.language || "uz" || "uz";
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -22,7 +22,11 @@ export default function CatalogFilter({
   });
 
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
+    if (filterOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflowY = "";
     };
@@ -67,7 +71,7 @@ export default function CatalogFilter({
         <span className="font-FiraSans font-black text-xl leading-[120%] mt-0 mb-0 text-black dark:text-white">
           {t("catFilPage.filter")}
         </span>
-        <div>
+        <div onClick={() => setFilterOpen(false)}>
           <Images.closeIcon className="text-black dark:text-white" />
         </div>
       </div>

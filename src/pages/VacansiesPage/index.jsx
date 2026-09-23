@@ -8,7 +8,7 @@ import FeedbackForm from "../../components/FeedbackForm";
 
 export default function VacanciesPage() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
 
   const [isAccOpen, setIsAccOpen] = useState(null);
   const handleAccOpen = (accName) => {

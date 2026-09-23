@@ -14,7 +14,7 @@ import FeedbackForm from "../../components/FeedbackForm";
 
 function NewsDetailes() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const { newsdetailes } = useParams();
 
   const currentNews = NewsData.find((item) => item.slug === newsdetailes);

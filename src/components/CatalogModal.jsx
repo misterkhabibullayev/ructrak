@@ -6,7 +6,7 @@ import { useCategoryStore } from "../store/useCategoriesStore";
 
 function CatalogModal({ activeMenu, onClose }) {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const location = useLocation();
   const prevPathname = useRef(location.pathname);
 

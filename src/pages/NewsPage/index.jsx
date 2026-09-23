@@ -17,7 +17,7 @@ import Pagination from "../../components/Pagination";
 
 function NewsPage() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
 
   const [searchParams] = useSearchParams();
   const pageFromUrl = parseInt(searchParams.get("page") || "1", 10);

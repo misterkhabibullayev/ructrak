@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 function ServicePage() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const currentContact = contactdata[0];
   return (
     <>

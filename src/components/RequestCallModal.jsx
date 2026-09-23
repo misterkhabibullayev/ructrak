@@ -7,7 +7,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const prevPathname = useRef(location.pathname);
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [formData, setFormData] = useState({

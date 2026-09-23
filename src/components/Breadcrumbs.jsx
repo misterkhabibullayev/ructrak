@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function Breadcrumbs() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   const location = useLocation();
   const { dynamicName } = useBreadcrumbStore();
 

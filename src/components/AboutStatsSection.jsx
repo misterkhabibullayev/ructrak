@@ -3,7 +3,7 @@ import { statsData } from "../data/statsData";
 import CountMotion from "./CountMotion";
 function AboutStatsSection() {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   return (
     <section className="bg-[#FEC80B] py-12.5">
       <div className="container1">

@@ -3,7 +3,7 @@ import { contactdata } from "../data/contactData";
 
 export default function ContactsCard() {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   return (
     <>
       <div>

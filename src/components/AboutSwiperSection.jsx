@@ -16,7 +16,7 @@ import { aboutCardsData } from "../data/aboutData";
 
 export function AbourSwiperSection() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   return (
     <section className="overflow-hidden my-20">
       <div className="container1 mt-20">

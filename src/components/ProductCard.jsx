@@ -9,7 +9,7 @@ export default function ProductCard({
   isListGrid,
 }) {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
   return (
     <>
       <div

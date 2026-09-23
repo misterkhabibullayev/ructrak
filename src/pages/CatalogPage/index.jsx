@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 function CatalogPage() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
 
   const { categories, isLoading, fetchCategories } = useCategoryStore();
 

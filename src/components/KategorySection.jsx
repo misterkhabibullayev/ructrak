@@ -17,7 +17,7 @@ import { useEffect } from "react";
 
 export function KategorySection() {
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const currentLang = i18n.language || "uz";
 
   const { categories, loading, fetchCategories } = useCategoryStore();
 
