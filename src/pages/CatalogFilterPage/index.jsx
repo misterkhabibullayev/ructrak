@@ -232,7 +232,7 @@ function ProductFilter() {
           </div>
         </div>
         <div
-          className={`w-full z-100 transition-all duration-300 ${filterOpen ? "absolute top-0 translate-x-0" : "absolute top-0 -translate-x-full"}`}
+          className={`fixed inset-0 lg:hidden w-full h-full z-100 transition-transform duration-300 ${filterOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
           <CatalogFilter
             currentFilter={currentFilter}
