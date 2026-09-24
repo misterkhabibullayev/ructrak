@@ -5,6 +5,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   ru: {
     translation: {
+      loading: "Загрузка...",
       metaTitleDescriptions: {
         mainTitle: "Завод производитель автоспецтехники «РусТрак»",
         mainDescription:
@@ -33,6 +34,7 @@ const resources = {
         kreditsTitle: "Условия кредитования и лизинга - Ructrak",
         kreditsDescription:
           "Приобретайте специализированное оборудование на выгодных условиях кредитования и лизинга. Низкие процентные ставки и быстрое оформление заявок.",
+        favorites: "Избранное - Ructrak",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -237,6 +239,7 @@ const resources = {
         leasing: "Кредит и лизинг",
         vacancies: "Вакансии",
         about: "О нас",
+        favorites: "Избранное",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -354,10 +357,17 @@ const resources = {
         from: "от",
         to: "до",
       },
+      favoritesPage: {
+        notFavorites:
+          "Ваше избранное пусто. \nВоспользуйтесь каталогом или поиском, чтобы сохранить подходящий товар.",
+        home: "На главную",
+        catalog: "Открыть каталог",
+      },
     },
   },
   uz: {
     translation: {
+      loading: "Yuklanmoqda...",
       metaTitleDescriptions: {
         mainTitle:
           "RusTrak - maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
@@ -387,6 +397,7 @@ const resources = {
         kreditsTitle: "Kredit va Lizing Shartlari - Ructrak",
         kreditsDescription:
           "Maxsus texnikalarni qulay kredit va lizing shartlari asosida xarid qiling. Past foiz stavkalari va tezkor rasmiylashtirish.",
+        favorites: "Sevimlilar - Ructrak",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -593,6 +604,7 @@ const resources = {
         leasing: "Kredit va lizing",
         vacancies: "Bo'sh ish o'rinlari",
         about: "Biz haqimizda",
+        favorites: "Sevimlilar",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -712,10 +724,17 @@ const resources = {
         from: "dan",
         to: "gacha",
       },
+      favoritesPage: {
+        notFavorites:
+          "Sevimlilaringiz bo'sh. \nMos mahsulotni saqlash uchun katalogdan foydalaning yoki qidiruvdan foydalaning.",
+        home: "Bosh sahifaga",
+        catalog: "Katalogni ochish",
+      },
     },
   },
   en: {
     translation: {
+      loading: "Loading...",
       metaTitleDescriptions: {
         mainTitle: "RusTrak - a manufacturer of special-purpose vehicles",
         mainDescription:
@@ -744,6 +763,7 @@ const resources = {
         kreditsTitle: "Credit & Leasing Terms - Ructrak",
         kreditsDescription:
           "Purchase specialized equipment on favorable credit and leasing terms. Low interest rates and quick application processing.",
+        favorites: "Favorites - Ructrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -948,6 +968,7 @@ const resources = {
         leasing: "Credit and leasing",
         vacancies: "Vacancies",
         about: "About Us",
+        favorites: "Favorites",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1063,7 +1084,13 @@ const resources = {
         find: "Find",
         showProducts: "Show products",
         from: "from",
-        to: "to"
+        to: "to",
+      },
+      favoritesPage: {
+        notFavorites:
+          "Your favorites are empty. \nUse the catalog or search to save a suitable product.",
+        home: "Home",
+        catalog: "Open Catalog",
       },
     },
   },

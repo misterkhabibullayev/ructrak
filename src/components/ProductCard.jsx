@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Images } from "../utils/images";
+import { useState } from "react";
+import { useFavoritesStore } from "../store/useFavoritesStore";
 
 export default function ProductCard({
   item,
@@ -10,6 +12,11 @@ export default function ProductCard({
 }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
+
+  const { favorites ,toggleFavorite } = useFavoritesStore();
+  const isFav = favorites.some((fav) => fav.id === item.id);
+  const [cartAdd, setCartAdd] = useState(false);
+
   return (
     <>
       <div
@@ -37,8 +44,12 @@ export default function ProductCard({
           <div
             className={`absolute top-1 right-1 ${item.inStock ? "flex" : "hidden"}`}
           >
-            <button>
-              <Images.favoritesIcon className="hover:scale-105 w-7 md:w-auto" />
+            <button onClick={() => toggleFavorite(item)}>
+              {isFav ? (
+                <Images.favoritesAddIcon className="w-7 md:w-auto" />
+              ) : (
+                <Images.favoritesIcon className="hover:scale-105 w-7 md:w-auto stroke-black" />
+              )}
             </button>
           </div>
         </div>

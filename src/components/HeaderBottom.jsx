@@ -6,12 +6,14 @@ import { lazy, Suspense, useState } from "react";
 import { LangModal } from "./LangModal";
 import { AnimatePresence, motion } from "framer-motion";
 import RequestCall from "./RequestCallModal";
+import { useFavoritesStore } from "../store/useFavoritesStore";
 
 const CatalogModal = lazy(() => import("../components/CatalogModal"));
 export function HeaderBottom({ isSticky }) {
   const { t } = useTranslation();
   const [activeMenu, setActiveMenu] = useState(null);
   const [request, setRequest] = useState(null);
+  const { favorites } = useFavoritesStore();
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
@@ -158,14 +160,17 @@ export function HeaderBottom({ isSticky }) {
                   <Images.cartIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
                 </Link>
               </div>
-              <div>
+              <div className="flex items-center relative">
                 <Link
                   to="/favorites"
                   aria-label={t("header.favorites")}
                   className="text-black dark:text-white transition-all duration-300"
                 >
-                  <Images.favoritesIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
+                  <Images.favoritesIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 stroke-black dark:stroke-white" />
                 </Link>
+                <span className="absolute bottom-1.5 right-0 px-1.75 rounded font-FiraSans font-medium text-[12px] leading-[100%] bg-[#FEC80B] flex items-center justify-center">
+                  {favorites.length > 9 ? "9+" : favorites.length}
+                </span>
               </div>
               <div
                 className={`flex items-center justify-center ${isSticky ? "hidden" : "block"}`}
