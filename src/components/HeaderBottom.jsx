@@ -168,9 +168,11 @@ export function HeaderBottom({ isSticky }) {
                 >
                   <Images.favoritesIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 stroke-black dark:stroke-white" />
                 </Link>
-                <span className="absolute bottom-1.5 right-0 px-1.75 rounded font-FiraSans font-medium text-[12px] leading-[100%] bg-[#FEC80B] flex items-center justify-center">
-                  {favorites.length > 9 ? "9+" : favorites.length}
-                </span>
+                {favorites.length > 0 && (
+                  <span className="absolute bottom-1.5 right-0 px-1.75 rounded font-FiraSans font-medium text-[12px] leading-[100%] bg-[#FEC80B] flex items-center justify-center">
+                    {favorites.length > 9 ? "9+" : favorites.length}
+                  </span>
+                )}
               </div>
               <div
                 className={`flex items-center justify-center ${isSticky ? "hidden" : "block"}`}
