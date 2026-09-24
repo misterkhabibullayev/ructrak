@@ -12,7 +12,7 @@
       "en": "Curtain trucks model 1 — 0001"
     },
     "price": {
-      "isPriceOnRequest": false,
+      "isPriceOnRequest": true,
       "amount": null,
       "currency": "RUB"
     },
