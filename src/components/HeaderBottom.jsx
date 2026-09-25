@@ -7,6 +7,7 @@ import { LangModal } from "./LangModal";
 import { AnimatePresence, motion } from "framer-motion";
 import RequestCall from "./RequestCallModal";
 import { useFavoritesStore } from "../store/useFavoritesStore";
+import { useCartStore } from "../store/useCartStore";
 
 const CatalogModal = lazy(() => import("../components/CatalogModal"));
 export function HeaderBottom({ isSticky }) {
@@ -14,6 +15,7 @@ export function HeaderBottom({ isSticky }) {
   const [activeMenu, setActiveMenu] = useState(null);
   const [request, setRequest] = useState(null);
   const { favorites } = useFavoritesStore();
+  const {cart} = useCartStore()
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
@@ -151,7 +153,7 @@ export function HeaderBottom({ isSticky }) {
               <div className="block md:hidden">
                 <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
               </div>
-              <div>
+              <div className="flex items-center relative">
                 <Link
                   to="/cart"
                   aria-label={t("header.cart")}
@@ -159,6 +161,11 @@ export function HeaderBottom({ isSticky }) {
                 >
                   <Images.cartIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75" />
                 </Link>
+                {cart.length > 0 && (
+                  <span className="absolute bottom-1.5 right-0 px-1.75 rounded font-FiraSans font-medium text-[12px] leading-[100%] bg-[#FEC80B] flex items-center justify-center">
+                    {cart.length > 9 ? "9+" : cart.length}
+                  </span>
+                )}
               </div>
               <div className="flex items-center relative">
                 <Link

@@ -35,6 +35,7 @@ const resources = {
         kreditsDescription:
           "Приобретайте специализированное оборудование на выгодных условиях кредитования и лизинга. Низкие процентные ставки и быстрое оформление заявок.",
         favorites: "Избранное - Ructrak",
+        cart: "Корзина - Ructrak",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -240,6 +241,7 @@ const resources = {
         vacancies: "Вакансии",
         about: "О нас",
         favorites: "Избранное",
+        cart: "Корзина",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -363,6 +365,13 @@ const resources = {
         home: "На главную",
         catalog: "Открыть каталог",
       },
+      cartPage: {
+        notCart:
+          "Ваша корзина пуста. \nВоспользуйтесь каталогом или поиском, чтобы найти подходящий товар.",
+        home: "На главную",
+        catalog: "Открыть каталог",
+        delete: "Удалить",
+      },
     },
   },
   uz: {
@@ -398,6 +407,7 @@ const resources = {
         kreditsDescription:
           "Maxsus texnikalarni qulay kredit va lizing shartlari asosida xarid qiling. Past foiz stavkalari va tezkor rasmiylashtirish.",
         favorites: "Sevimlilar - Ructrak",
+        cart: "Savat - Ructrak",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -605,6 +615,7 @@ const resources = {
         vacancies: "Bo'sh ish o'rinlari",
         about: "Biz haqimizda",
         favorites: "Sevimlilar",
+        cart: "Savat",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -730,6 +741,13 @@ const resources = {
         home: "Bosh sahifaga",
         catalog: "Katalogni ochish",
       },
+      cartPage: {
+        notCart:
+          "Savatingiz bo'sh. \nTo'g'ri mahsulotni topish uchun katalogdan foydalaning yoki qidiruvdan foydalaning.",
+        home: "Bosh sahifaga",
+        catalog: "Katalogni ochish",
+        delete: "O'chirish",
+      },
     },
   },
   en: {
@@ -764,6 +782,7 @@ const resources = {
         kreditsDescription:
           "Purchase specialized equipment on favorable credit and leasing terms. Low interest rates and quick application processing.",
         favorites: "Favorites - Ructrak",
+        cart: "Cart - Ructrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -969,6 +988,7 @@ const resources = {
         vacancies: "Vacancies",
         about: "About Us",
         favorites: "Favorites",
+        cart: "Cart",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1091,6 +1111,13 @@ const resources = {
           "Your favorites are empty. \nUse the catalog or search to save a suitable product.",
         home: "Home",
         catalog: "Open Catalog",
+      },
+      cartPage: {
+        notCart:
+          "Your cart is empty. \nUse the catalog or search to find the right product.",
+        home: "Home",
+        catalog: "Open Catalog",
+        delete: "Delete"
       },
     },
   },

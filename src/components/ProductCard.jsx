@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Images } from "../utils/images";
-import { useState } from "react";
 import { useFavoritesStore } from "../store/useFavoritesStore";
+import { useCartStore } from "../store/useCartStore";
 
 export default function ProductCard({
   item,
@@ -13,9 +13,10 @@ export default function ProductCard({
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
 
-  const { favorites ,toggleFavorite } = useFavoritesStore();
+  const { favorites, toggleFavorite } = useFavoritesStore();
   const isFav = favorites.some((fav) => fav.id === item.id);
-  const [cartAdd, setCartAdd] = useState(false);
+  const { cart, toggleCart } = useCartStore();
+  const isCart = cart.some((cart) => cart.id === item.id);
 
   return (
     <>
@@ -132,8 +133,15 @@ export default function ProductCard({
               >
                 {t("recommendedSection.podrobne")}
               </Link>
-              <button className={`${!isListGrid ? "md:hidden" : "block"}`}>
-                <Images.cartIcon className="text-black dark:text-white w-5 md:w-auto" />
+              <button
+                onClick={() => toggleCart(item)}
+                className={`${!isListGrid ? "md:hidden" : "block"}`}
+              >
+                {isCart ? (
+                  <Images.cartAddIcon className="w-5 md:w-auto text-black dark:text-white" />
+                ) : (
+                  <Images.cartIcon className="text-black dark:text-white w-5 md:w-auto" />
+                )}
               </button>
             </div>
             <button
