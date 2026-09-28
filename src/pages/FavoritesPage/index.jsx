@@ -26,7 +26,7 @@ function FavoritesPage() {
         </div>
         {favorites.length === 0 ? (
           <div>
-            <h2 className="font-FiraSans font-normal text-lg md:text-2xl leading-[120%] text-black dark:text-white whitespace-pre-line">
+            <h2 className="font-FiraSans font-normal text-lg md:text-2xl leading-[120%] text-black dark:text-white whitespace-pre-line pt-8 md:pt-2">
               {t("favoritesPage.notFavorites")}
             </h2>
             <div className="flex items-center gap-6 my-14">

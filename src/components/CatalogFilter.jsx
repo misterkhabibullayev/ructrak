@@ -63,9 +63,9 @@ export default function CatalogFilter({
 
   return (
     <aside
-      className={`filterAside w-full overflow-y-auto bg-white dark:bg-slate-950 ${filterOpen ? "h-full min-h-screen pb-10" : "lg:max-h-[82vh] rounded-lg lg:sticky top-30 left-0 mr-6"}`}
+      className={`filterAside w-full overflow-y-auto ${filterOpen ? "h-full min-h-screen pb-10 bg-white dark:bg-slate-900" : "lg:max-h-[82vh] rounded-lg lg:sticky top-30 left-0 mr-6 bg-white dark:bg-slate-950"}`}
     >
-      <div className="flex lg:hidden items-center justify-between py-4.5 px-6 bg-slate-900 sticky top-0 z-1">
+      <div className="flex lg:hidden items-center justify-between py-4.5 px-6 bg-black dark:bg-slate-950 sticky top-0 z-1">
         <span className="font-FiraSans font-black text-xl leading-[120%] mt-0 mb-0 text-black dark:text-white">
           {t("catFilPage.filter")}
         </span>

@@ -48,6 +48,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
       document.body.style.paddingRight = "0px";
     };
   }, [request]);
+  
   useEffect(() => {
     if (prevPathname.current !== location.pathname) {
       handleClose();
