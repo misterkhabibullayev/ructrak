@@ -15,6 +15,7 @@ import {
   PartnersPage,
   PhotoGalleryPage,
   ProductDetailesPage,
+  ReklamsMaterialPage,
   ReviewsPage,
   SearchPage,
   ServicePage,
@@ -111,6 +112,10 @@ export const router = [
       {
         path: "video",
         element: <VideosPage />
+      },
+      {
+        path: "promo",
+        element: <ReklamsMaterialPage />
       }
     ],
   },

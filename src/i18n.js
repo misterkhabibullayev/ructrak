@@ -43,6 +43,7 @@ const resources = {
         cert: "Сертификаты | Производитель автоспецтехники РусТрак",
         photogallery: "Фотогалерея | Производитель автоспецтехники РусТрак",
         video: "Видеогалерея производителя автоспецтехники РусТрак",
+        promo: "Рекламные материалы | Производитель автоспецтехники РусТрак",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -255,6 +256,7 @@ const resources = {
         cert: "Сертификаты",
         photogallery: "Фотогалерея",
         video: "Видео",
+        promo: "Рекламные материалы",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -411,6 +413,17 @@ const resources = {
       videoPage: {
         photo: "Смотреть фото",
       },
+      promoPage: {
+        title1: "OOO РУСТРАК",
+        link1: "Завод-доработчик коммерческого транспорта",
+        title2: "Автотопливозаправщики",
+        link2: "Листовка ГАЗ NEXT",
+        link3: "Листовка ГАЗ",
+        link4: "Листовка FUSO",
+        title3: "Пищевые цистерны",
+        link5: "Листовка ГАЗ NEXT пищевая цистерна",
+        link6: "Листовка FUSO пищевая цистерна",
+      },
     },
   },
   uz: {
@@ -456,6 +469,8 @@ const resources = {
           "Fotogalereya | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
         video:
           "RusTrak maxsus avtomobil ishlab chiqaruvchisining video galereyasi",
+        promo:
+          "Reklama materiallari | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -670,6 +685,7 @@ const resources = {
         cert: "Sertifikatlar",
         photogallery: "Fotogalereya",
         video: "Video",
+        promo: "Reklama materiallari",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -829,6 +845,17 @@ const resources = {
       videoPage: {
         photo: "Rasmlarni ko'rish",
       },
+      promoPage: {
+        title1: '"RusTrak" MChJ',
+        link1: "Tijorat transportini qayta jihozlash zavodi",
+        title2: "Avtoyonilg'i tashuvchilar",
+        link2: "GAZ NEXT bukleti",
+        link3: "GAZ bukleti",
+        link4: "FUSO bukleti",
+        title3: "Oziq-ovqat tsisternalari",
+        link5: "GAZ NEXT oziq-ovqat tsisternasi bukleti",
+        link6: "FUSO oziq-ovqat tsisternasi bukleti",
+      },
     },
   },
   en: {
@@ -872,6 +899,8 @@ const resources = {
         cert: "Certificates | Manufacturer of special vehicles RusTrak",
         photogallery: "Photogallery | Manufacturer of special vehicles RusTrak",
         video: "Video gallery of special-purpose vehicle manufacturer RusTrak",
+        promo:
+          "Promotional materials | Manufacturer of special vehicles RusTrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -1085,6 +1114,7 @@ const resources = {
         cert: "Certificates",
         photogallery: "Photogallery",
         video: "Video",
+        promo: "Promotional materials",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1239,6 +1269,17 @@ const resources = {
       },
       videoPage: {
         photo: "View photos",
+      },
+      promoPage: {
+        title1: "LLC RUSTRAK",
+        link1: "Commercial vehicle modification plant",
+        title2: "Fuel tanker trucks",
+        link2: "GAZ NEXT flyer",
+        link3: "GAZ flyer",
+        link4: "FUSO flyer",
+        title3: "Food-grade tankers",
+        link5: "GAZ NEXT food-grade tanker flyer",
+        link6: "FUSO food-grade tanker flyer",
       },
     },
   },

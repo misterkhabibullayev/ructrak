@@ -16,11 +16,11 @@ const SuppliersPage = lazy(() => import("./SuppliersPage")); // bitti
 const LeasingPage = lazy(() => import("./LeasingPage")); // bitti
 const VacanciesPage = lazy(() => import("./VacansiesPage")); // bitti
 const AboutPage = lazy(() => import("./AboutPage")); // bitti
-const PhotoGalleryPage = lazy(() => import("./PhotoGalleryPage"));
-const PartnersPage = lazy(() => import("./PartnersPage"));
-const ReviewsPage = lazy(() => import("./ReviewsPage"));
-const CertifikatsPage = lazy(() => import("./CertifikatsPage"));
-const VideosPage = lazy(() => import("./VideosPage"));
+const PhotoGalleryPage = lazy(() => import("./PhotoGalleryPage")); // bitti
+const PartnersPage = lazy(() => import("./PartnersPage")); // bitti
+const ReviewsPage = lazy(() => import("./ReviewsPage")); // bitti
+const CertifikatsPage = lazy(() => import("./CertifikatsPage")); // bitti
+const VideosPage = lazy(() => import("./VideosPage")); // bitti
 const ReklamsMaterialPage = lazy(() => import("./ReklamsMaterialPage"));
 
 export {
