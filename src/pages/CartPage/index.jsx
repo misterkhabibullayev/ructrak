@@ -15,6 +15,15 @@ function CartPage() {
   const [request, setRequest] = useState(null);
   const closeRequest = () => setRequest(null);
 
+  const [cartCount, setCartCount] = useState(1);
+
+  const handleCountUp = () => {
+    setCartCount((prev) => prev + 1);
+  };
+  const handleCountDown = () => {
+    setCartCount((prev) => (prev > 1 ? prev - 1 : 1));
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -184,19 +193,25 @@ function CartPage() {
                             </h2>
                           </Link>
                           <div className="hidden md:flex lg:hidden w-[123.6px] items-center border border-[#a2a2a2] rounded">
-                            <button className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                            <button
+                              onClick={handleCountDown}
+                              className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                            >
                               -
                             </button>
                             <span className="border-l border-r border-[#a2a2a2] px-1">
                               <input
                                 type="text"
-                                value={1}
+                                value={cartCount}
                                 maxLength={4}
                                 readOnly
                                 className="w-8 h-8 text-center text-[#a2a2a2] outline-none font-FiraSans text-base font-medium leading-[110%]"
                               />
                             </span>
-                            <button className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                            <button
+                              onClick={handleCountUp}
+                              className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                            >
                               +
                             </button>
                           </div>
@@ -217,25 +232,30 @@ function CartPage() {
                           </div>
                         </div>
                         <div className="hidden lg:flex items-center border border-[#a2a2a2] rounded">
-                          <button className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                          <button
+                            onClick={handleCountDown}
+                            className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                          >
                             -
                           </button>
                           <span className="border-l border-r border-[#a2a2a2] px-1">
                             <input
                               type="text"
-                              value={1}
+                              value={cartCount}
                               maxLength={4}
                               readOnly
                               className="w-8 h-8 text-center text-[#a2a2a2] outline-none font-FiraSans text-base font-medium leading-[110%]"
                             />
                           </span>
-                          <button className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                          <button
+                            onClick={handleCountUp}
+                            className="text-[#a2a2a2] w-8 h-8 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                          >
                             +
                           </button>
                         </div>
                       </div>
                       <div className="hidden md:flex flex-col items-center justify-center gap-3">
-                        
                         <div className="flex flex-col items-center justify-between gap-3 w-full pr-0">
                           <button
                             onClick={() => setRequest("kp")}
@@ -259,19 +279,25 @@ function CartPage() {
                     </div>
                     <div className="w-full flex md:hidden items-center justify-between py-4 px-1.75">
                       <div className="flex items-center border border-[#a2a2a2] rounded">
-                        <button className="text-[#a2a2a2] w-6 h-6 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                        <button
+                          onClick={handleCountDown}
+                          className="text-[#a2a2a2] w-6 h-6 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                        >
                           -
                         </button>
                         <span className="border-l border-r border-[#a2a2a2] px-1">
                           <input
                             type="text"
-                            value={1}
+                            value={cartCount}
                             maxLength={4}
                             readOnly
                             className="w-6 h-6 text-center text-[#a2a2a2] outline-none font-FiraSans text-base font-medium leading-[110%]"
                           />
                         </span>
-                        <button className="text-[#a2a2a2] w-6 h-6 m-1 font-FiraSans text-2xl font-medium leading-[110%]">
+                        <button
+                          onClick={handleCountUp}
+                          className="text-[#a2a2a2] w-6 h-6 m-1 font-FiraSans text-2xl font-medium leading-[110%]"
+                        >
                           +
                         </button>
                       </div>

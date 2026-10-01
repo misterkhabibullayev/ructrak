@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.15",
     "@tailwindcss/vite": "^4.3.3",
     "antd": "^6.6.4",
     "aos": "^2.3.4",

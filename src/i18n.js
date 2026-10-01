@@ -6,6 +6,7 @@ const resources = {
   ru: {
     translation: {
       loading: "Загрузка...",
+      noData: "Товар не найден",
       metaTitleDescriptions: {
         mainTitle: "Завод производитель автоспецтехники «РусТрак»",
         mainDescription:
@@ -377,11 +378,17 @@ const resources = {
           "Свяжитесь с нашим менеджером или оставьте заявку на обратный звонок",
         requestCall: "Заказать звонок",
       },
+      productFilPage: {
+        addCart: "Добавить в корзину",
+        getAQuote: "Получить КП",
+        allSpesifications: "Смотреть все характеристики",
+      },
     },
   },
   uz: {
     translation: {
       loading: "Yuklanmoqda...",
+      noData: "Mahsulot topilmadi",
       metaTitleDescriptions: {
         mainTitle:
           "RusTrak - maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
@@ -758,11 +765,17 @@ const resources = {
           "Menejerimiz bilan bog'laning yoki qayta qo'ng'iroq uchun so'rov qoldiring",
         requestCall: "Qo'ng'iroqga buyurtma berish",
       },
+      productFilPage: {
+        addCart: "Savatga qo'shish",
+        getAQuote: "Taklif olish",
+        allSpesifications: "Barcha texnik xususiyatlarni ko'ring",
+      },
     },
   },
   en: {
     translation: {
       loading: "Loading...",
+      noData: "Product not found",
       metaTitleDescriptions: {
         mainTitle: "RusTrak - a manufacturer of special-purpose vehicles",
         mainDescription:
@@ -1132,6 +1145,11 @@ const resources = {
         questionsTitle: "Have questions?",
         questionsText: "Contact our manager or request a callback",
         requestCall: "Request a call",
+      },
+      productFilPage: {
+        addCart: "Add to cart",
+        getAQuote: "Get a quote",
+        allSpesifications: "See all specifications",
       },
     },
   },
