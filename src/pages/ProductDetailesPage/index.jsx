@@ -37,7 +37,7 @@ function ProductDetailes() {
   }, [products.length, fetchProducts]);
 
   const currentProduct = products.find((item) => item.slug === detailes);
-  const productTitle = currentProduct?.title?.[currentLang].toUpperCase();
+  const productTitle = currentProduct?.title?.[currentLang];
 
   useEffect(() => {
     if (productTitle) {
@@ -53,6 +53,14 @@ function ProductDetailes() {
       </div>
     );
   }
+
+  const handleScrollToFeature = (e) => {
+    e.preventDefault();
+    const element = document.getElementById("feature");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       <div className="container1">
@@ -61,7 +69,7 @@ function ProductDetailes() {
         </div>
         <div className="mb-6">
           <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] text-black dark:text-white mb-2 pt-2">
-            {productTitle}
+            {productTitle.toUpperCase()}
           </h1>
         </div>
         <div>
@@ -141,6 +149,7 @@ function ProductDetailes() {
                     </ul>
                     <a
                       href="#feature"
+                      onClick={handleScrollToFeature}
                       className="inline-block font-FiraSans text-sm leading-[110%] underline text-[#a2a2a2] hover:no-underline transition-all duration-300"
                     >
                       {t("productFilPage.allSpesifications")}
@@ -149,9 +158,16 @@ function ProductDetailes() {
                 </div>
               </div>
               <div>
-                <img src={currentProduct?.media.blueprints} alt="blueprints prosta qo'ymin qo'yibman" />
+                <img
+                  src={currentProduct?.media.blueprints}
+                  alt="blueprints prosta qo'ymin qo'yibman"
+                  className="bg-[#FEC80B] h-10 my-10"
+                />
               </div>
-              <div className="text-black dark:text-white">
+              <div
+                id="feature"
+                className="text-black text-center pt-10 w-full h-125 bg-[#FEC80B] scroll-mt-30"
+              >
                 bera text editordan table galishi garak
               </div>
             </div>
