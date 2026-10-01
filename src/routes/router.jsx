@@ -4,6 +4,7 @@ import {
   CartPage,
   CatalogFilterPage,
   CatalogPage,
+  CertifikatsPage,
   ContactsPage,
   FavoritesPage,
   HomePage,
@@ -101,6 +102,10 @@ export const router = [
       {
         path: "reviews",
         element: <ReviewsPage />
+      },
+      {
+        path: "cert",
+        element: <CertifikatsPage />
       }
     ],
   },
