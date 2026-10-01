@@ -243,6 +243,7 @@ const resources = {
         about: "О нас",
         favorites: "Избранное",
         cart: "Корзина",
+        search: "Поиск",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -382,6 +383,11 @@ const resources = {
         addCart: "Добавить в корзину",
         getAQuote: "Получить КП",
         allSpesifications: "Смотреть все характеристики",
+      },
+      searchPage: {
+        notFoundTitle: "По запросу «{{query}}» ничего не найдено",
+        notFoundText:
+          "Убедитесь, что название бренда и модели написано правильно. Или попробуйте найти необходимый вам товар через категории.",
       },
     },
   },
@@ -628,6 +634,7 @@ const resources = {
         about: "Biz haqimizda",
         favorites: "Sevimlilar",
         cart: "Savat",
+        search: "Qidiruv",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -769,6 +776,11 @@ const resources = {
         addCart: "Savatga qo'shish",
         getAQuote: "Taklif olish",
         allSpesifications: "Barcha texnik xususiyatlarni ko'ring",
+      },
+      searchPage: {
+        notFoundTitle: "«{{query}}» so'rovi bo'yicha hech narsa topilmadi",
+        notFoundText:
+          "Brend va model nomi to'g'ri yozilganligiga ishonch hosil qiling. Yoki kerakli mahsulotni kategoriyalar orqali qidirib ko'ring.",
       },
     },
   },
@@ -1012,6 +1024,7 @@ const resources = {
         about: "About Us",
         favorites: "Favorites",
         cart: "Cart",
+        search: "Search",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1150,6 +1163,11 @@ const resources = {
         addCart: "Add to cart",
         getAQuote: "Get a quote",
         allSpesifications: "See all specifications",
+      },
+      searchPage: {
+        notFoundTitle: "No results found for «{{query}}»",
+        notFoundText:
+          "Make sure the brand and model name are spelled correctly. Or try searching for the product you need through categories.",
       },
     },
   },

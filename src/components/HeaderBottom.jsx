@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Images } from "../utils/images";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { LangModal } from "./LangModal";
 import { AnimatePresence, motion } from "framer-motion";
 import RequestCall from "./RequestCallModal";
@@ -16,6 +16,43 @@ export function HeaderBottom({ isSticky }) {
   const [request, setRequest] = useState(null);
   const { favorites } = useFavoritesStore();
   const { cart } = useCartStore();
+
+  const [searchMod, setSearchMod] = useState(false);
+  const searchModalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchModalRef.current &&
+        !searchModalRef.current.contains(event.target)
+      ) {
+        setSearchMod(false);
+      }
+    };
+
+    if (searchMod) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [searchMod]);
+
+  const navigate = useNavigate();
+  const [searchTerm, setSerachTerm] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    if (searchTerm.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+      setSerachTerm("");
+      setSearchMod(false);
+    }
+  };
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
@@ -142,16 +179,44 @@ export function HeaderBottom({ isSticky }) {
             </div>
             <div className="flex items-center gap-2 md:gap-4">
               <div className="hidden xl:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
-                <input
-                  type="search"
-                  aria-label={t("header.search")}
-                  placeholder={t("header.searchPlaceholder")}
-                  className="bg-transparent text-gray-900 placeholder:text-black dark:text-white dark:placeholder:text-white outline-none min-w-60"
-                />
-                <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
+                <form onSubmit={handleSearch} className="flex items-center">
+                  <input
+                    type="search"
+                    value={searchTerm}
+                    onChange={(e) => setSerachTerm(e.target.value)}
+                    aria-label={t("header.search")}
+                    placeholder={t("header.searchPlaceholder")}
+                    className="bg-transparent text-gray-900 placeholder:text-black dark:text-white dark:placeholder:text-white outline-none min-w-60"
+                  />
+                  <button type="submit">
+                    <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
+                  </button>
+                </form>
               </div>
-              <div className="block md:hidden">
-                <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
+              <div className="md:hidden flex items-center">
+                <button onClick={() => setSearchMod(true)}>
+                  <Images.searchIcon className="w-6.25 h-6.25 md:w-8.75 md:h-8.75 text-black dark:text-white transition-all duration-300" />
+                </button>
+
+                <div
+                  className={`absolute top-[140%] left-0 px-5 w-full z-100 ${searchMod ? "block" : "hidden"}`}
+                >
+                  <div className="w-full p-3.75 bg-white dark:bg-slate-950 relative">
+                    <form onSubmit={handleSearch} className="flex items-center">
+                      <input
+                        type="search"
+                        value={searchTerm}
+                        onChange={(e) => setSerachTerm(e.target.value)}
+                        aria-label={t("header.search")}
+                        placeholder={t("header.searchPlaceholder")}
+                        className="bg-transparent text-gray-900 placeholder:text-black dark:text-white dark:placeholder:text-white outline-none min-w-full border border-[#FEC80B] py-2 pl-3.75 pr-10.25 rounded-full"
+                      />
+                      <button type="submit" className="absolute right-6.75">
+                        <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center">
                 <Link
