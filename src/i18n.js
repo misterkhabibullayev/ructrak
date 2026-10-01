@@ -7,6 +7,7 @@ const resources = {
     translation: {
       loading: "Загрузка...",
       noData: "Товар не найден",
+      reviews: "Отзывы",
       metaTitleDescriptions: {
         mainTitle: "Завод производитель автоспецтехники «РусТрак»",
         mainDescription:
@@ -38,6 +39,7 @@ const resources = {
         favorites: "Избранное - Ructrak",
         cart: "Корзина - Ructrak",
         partners: "Партнёры завода-производителя автоспецтехники «РусТрак»",
+        reviews: "Отзывы | Производитель автоспецтехники РусТрак",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -246,6 +248,7 @@ const resources = {
         cart: "Корзина",
         search: "Поиск",
         partners: "Партнёры",
+        reviews: "Отзывы и рекомендательные письма партнёров ООО «Рустрак»",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -397,6 +400,7 @@ const resources = {
     translation: {
       loading: "Yuklanmoqda...",
       noData: "Mahsulot topilmadi",
+      reviews: "Sharhlar",
       metaTitleDescriptions: {
         mainTitle:
           "RusTrak - maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
@@ -429,6 +433,7 @@ const resources = {
         favorites: "Sevimlilar - Ructrak",
         cart: "Savat - Ructrak",
         partners: "«RusTrak» maxsus avtomobil ishlab chiqaruvchisi hamkorlari",
+        reviews: "Sharhlar | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -639,6 +644,7 @@ const resources = {
         cart: "Savat",
         search: "Qidiruv",
         partners: "Hamkorlar",
+        reviews: "«RusTrak» MChJ hamkorlarining sharhlari va tavsiyanomalari",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -792,6 +798,7 @@ const resources = {
     translation: {
       loading: "Loading...",
       noData: "Product not found",
+      reviews: "Reviews",
       metaTitleDescriptions: {
         mainTitle: "RusTrak - a manufacturer of special-purpose vehicles",
         mainDescription:
@@ -824,6 +831,7 @@ const resources = {
         cart: "Cart - Ructrak",
         partners:
           "Partners of the manufacturer of special-purpose vehicles «RusTrak»",
+        reviews: "Reviews | Manufacturer of special vehicles RusTrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -1032,6 +1040,8 @@ const resources = {
         cart: "Cart",
         search: "Search",
         partners: "Partners",
+        reviews:
+          "Reviews and letters of recommendation from partners of Rustrak LLC",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",

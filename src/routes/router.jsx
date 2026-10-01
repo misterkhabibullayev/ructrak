@@ -14,6 +14,7 @@ import {
   PartnersPage,
   PhotoGalleryPage,
   ProductDetailesPage,
+  ReviewsPage,
   SearchPage,
   ServicePage,
   SuppliersPage,
@@ -96,6 +97,10 @@ export const router = [
       {
         path: "partners",
         element: <PartnersPage />
+      },
+      {
+        path: "reviews",
+        element: <ReviewsPage />
       }
     ],
   },
