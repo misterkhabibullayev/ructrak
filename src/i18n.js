@@ -41,6 +41,7 @@ const resources = {
         partners: "Партнёры завода-производителя автоспецтехники «РусТрак»",
         reviews: "Отзывы | Производитель автоспецтехники РусТрак",
         cert: "Сертификаты | Производитель автоспецтехники РусТрак",
+        photogallery: "Фотогалерея | Производитель автоспецтехники РусТрак",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -251,6 +252,7 @@ const resources = {
         partners: "Партнёры",
         reviews: "Отзывы и рекомендательные письма партнёров ООО «Рустрак»",
         cert: "Сертификаты",
+        photogallery: "Фотогалерея",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -396,6 +398,14 @@ const resources = {
         notFoundText:
           "Убедитесь, что название бренда и модели написано правильно. Или попробуйте найти необходимый вам товар через категории.",
       },
+      photoGalleryPage: {
+        title: "Фотогалерея производителя автоспецтехники РусТрак",
+        video: "Смотреть видео",
+        filAuto: "Автомобили",
+        filPromo: "Производство",
+        filAbout: "О компании",
+        filExhi: "Выставки",
+      },
     },
   },
   uz: {
@@ -437,6 +447,8 @@ const resources = {
         partners: "«RusTrak» maxsus avtomobil ishlab chiqaruvchisi hamkorlari",
         reviews: "Sharhlar | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
         cert: "Sertifikatlar | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
+        photogallery:
+          "Fotogalereya | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -649,6 +661,7 @@ const resources = {
         partners: "Hamkorlar",
         reviews: "«RusTrak» MChJ hamkorlarining sharhlari va tavsiyanomalari",
         cert: "Sertifikatlar",
+        photogallery: "Fotogalereya",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -796,6 +809,15 @@ const resources = {
         notFoundText:
           "Brend va model nomi to'g'ri yozilganligiga ishonch hosil qiling. Yoki kerakli mahsulotni kategoriyalar orqali qidirib ko'ring.",
       },
+      photoGalleryPage: {
+        title:
+          "RusTrak maxsus avtotexnika ishlab chiqaruvchisining fotogalereyasi",
+        video: "Videoni ko'rish",
+        filAuto: "Avtomobillar",
+        filPromo: "Ishlab chiqarish",
+        filAbout: "Kompaniya haqida",
+        filExhi: "Ko'rgazmalar",
+      },
     },
   },
   en: {
@@ -837,6 +859,7 @@ const resources = {
           "Partners of the manufacturer of special-purpose vehicles «RusTrak»",
         reviews: "Reviews | Manufacturer of special vehicles RusTrak",
         cert: "Certificates | Manufacturer of special vehicles RusTrak",
+        photogallery: "Photogallery | Manufacturer of special vehicles RusTrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -1048,6 +1071,7 @@ const resources = {
         reviews:
           "Reviews and letters of recommendation from partners of Rustrak LLC",
         cert: "Certificates",
+        photogallery: "Photogallery",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1191,6 +1215,14 @@ const resources = {
         notFoundTitle: "No results found for «{{query}}»",
         notFoundText:
           "Make sure the brand and model name are spelled correctly. Or try searching for the product you need through categories.",
+      },
+      photoGalleryPage: {
+        title: "Photo gallery of the special vehicles manufacturer RusTrak",
+        video: "Watch video",
+        filAuto: "Vehicles",
+        filPromo: "Production",
+        filAbout: "About the company",
+        filExhi: "Exhibitions",
       },
     },
   },
