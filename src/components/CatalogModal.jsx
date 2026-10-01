@@ -377,14 +377,6 @@ function CatalogModal({ activeMenu, onClose }) {
                                   {t("modal.promo")}
                                 </Link>
                               </li>
-                              <li>
-                                <Link
-                                  to={`info`}
-                                  className="font-FiraSans font-normal text-[15px] md:text-[16px] text-black dark:text-white hover:text-[#FEC80B] transition-all duration-300"
-                                >
-                                  {t("modal.info")}
-                                </Link>
-                              </li>
                             </ul>
                           </motion.div>
                         )}
