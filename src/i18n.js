@@ -42,6 +42,7 @@ const resources = {
         reviews: "Отзывы | Производитель автоспецтехники РусТрак",
         cert: "Сертификаты | Производитель автоспецтехники РусТрак",
         photogallery: "Фотогалерея | Производитель автоспецтехники РусТрак",
+        video: "Видеогалерея производителя автоспецтехники РусТрак",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -253,6 +254,7 @@ const resources = {
         reviews: "Отзывы и рекомендательные письма партнёров ООО «Рустрак»",
         cert: "Сертификаты",
         photogallery: "Фотогалерея",
+        video: "Видео",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -406,6 +408,9 @@ const resources = {
         filAbout: "О компании",
         filExhi: "Выставки",
       },
+      videoPage: {
+        photo: "Смотреть фото",
+      },
     },
   },
   uz: {
@@ -449,6 +454,8 @@ const resources = {
         cert: "Sertifikatlar | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
         photogallery:
           "Fotogalereya | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
+        video:
+          "RusTrak maxsus avtomobil ishlab chiqaruvchisining video galereyasi",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -662,6 +669,7 @@ const resources = {
         reviews: "«RusTrak» MChJ hamkorlarining sharhlari va tavsiyanomalari",
         cert: "Sertifikatlar",
         photogallery: "Fotogalereya",
+        video: "Video",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -818,6 +826,9 @@ const resources = {
         filAbout: "Kompaniya haqida",
         filExhi: "Ko'rgazmalar",
       },
+      videoPage: {
+        photo: "Rasmlarni ko'rish",
+      },
     },
   },
   en: {
@@ -860,6 +871,7 @@ const resources = {
         reviews: "Reviews | Manufacturer of special vehicles RusTrak",
         cert: "Certificates | Manufacturer of special vehicles RusTrak",
         photogallery: "Photogallery | Manufacturer of special vehicles RusTrak",
+        video: "Video gallery of special-purpose vehicle manufacturer RusTrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -1072,6 +1084,7 @@ const resources = {
           "Reviews and letters of recommendation from partners of Rustrak LLC",
         cert: "Certificates",
         photogallery: "Photogallery",
+        video: "Video",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
@@ -1223,6 +1236,9 @@ const resources = {
         filPromo: "Production",
         filAbout: "About the company",
         filExhi: "Exhibitions",
+      },
+      videoPage: {
+        photo: "View photos",
       },
     },
   },

@@ -20,6 +20,7 @@ import {
   ServicePage,
   SuppliersPage,
   VacanciesPage,
+  VideosPage,
 } from "../pages/pages";
 
 export const router = [
@@ -106,6 +107,10 @@ export const router = [
       {
         path: "cert",
         element: <CertifikatsPage />
+      },
+      {
+        path: "video",
+        element: <VideosPage />
       }
     ],
   },
