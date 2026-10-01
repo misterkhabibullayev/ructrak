@@ -37,6 +37,7 @@ const resources = {
           "Приобретайте специализированное оборудование на выгодных условиях кредитования и лизинга. Низкие процентные ставки и быстрое оформление заявок.",
         favorites: "Избранное - Ructrak",
         cart: "Корзина - Ructrak",
+        partners: "Партнёры завода-производителя автоспецтехники «РусТрак»",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -244,6 +245,7 @@ const resources = {
         favorites: "Избранное",
         cart: "Корзина",
         search: "Поиск",
+        partners: "Партнёры",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -426,6 +428,7 @@ const resources = {
           "Maxsus texnikalarni qulay kredit va lizing shartlari asosida xarid qiling. Past foiz stavkalari va tezkor rasmiylashtirish.",
         favorites: "Sevimlilar - Ructrak",
         cart: "Savat - Ructrak",
+        partners: "«RusTrak» maxsus avtomobil ishlab chiqaruvchisi hamkorlari",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -635,6 +638,7 @@ const resources = {
         favorites: "Sevimlilar",
         cart: "Savat",
         search: "Qidiruv",
+        partners: "Hamkorlar",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -818,6 +822,8 @@ const resources = {
           "Purchase specialized equipment on favorable credit and leasing terms. Low interest rates and quick application processing.",
         favorites: "Favorites - Ructrak",
         cart: "Cart - Ructrak",
+        partners:
+          "Partners of the manufacturer of special-purpose vehicles «RusTrak»",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -1025,6 +1031,7 @@ const resources = {
         favorites: "Favorites",
         cart: "Cart",
         search: "Search",
+        partners: "Partners",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",

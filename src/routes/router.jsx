@@ -11,6 +11,7 @@ import {
   NewsDeteiles,
   NewsPage,
   NotFoundPage,
+  PartnersPage,
   PhotoGalleryPage,
   ProductDetailesPage,
   SearchPage,
@@ -91,6 +92,10 @@ export const router = [
       {
         path: "about",
         element: <AboutPage />
+      },
+      {
+        path: "partners",
+        element: <PartnersPage />
       }
     ],
   },

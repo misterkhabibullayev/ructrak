@@ -99,14 +99,6 @@ export default function Footer() {
                     </li>
                     <li className="mb-4 break-inside-avoid">
                       <Link
-                        to="/production"
-                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                      >
-                        {t("footer.production")}
-                      </Link>
-                    </li>
-                    <li className="mb-4 break-inside-avoid">
-                      <Link
                         to="/suppliers"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
@@ -155,26 +147,10 @@ export default function Footer() {
                     </li>
                     <li className="mb-4 break-inside-avoid">
                       <Link
-                        to="/remont"
-                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                      >
-                        {t("footer.repair")}
-                      </Link>
-                    </li>
-                    <li className="mb-4 break-inside-avoid">
-                      <Link
                         to="/contacts"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
                         {t("footer.contacts")}
-                      </Link>
-                    </li>
-                    <li className="mb-4 break-inside-avoid">
-                      <Link
-                        to="/stati"
-                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                      >
-                        {t("footer.articles")}
                       </Link>
                     </li>
                   </ul>
@@ -213,14 +189,6 @@ export default function Footer() {
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.partners")}
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/production"
-                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                            >
-                              {t("footer.production")}
                             </Link>
                           </li>
                           <li>
@@ -273,26 +241,10 @@ export default function Footer() {
                           </li>
                           <li>
                             <Link
-                              to="/remont"
-                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                            >
-                              {t("footer.repair")}
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
                               to="/contacts"
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.contacts")}
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="/stati"
-                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
-                            >
-                              {t("footer.articles")}
                             </Link>
                           </li>
                         </ul>

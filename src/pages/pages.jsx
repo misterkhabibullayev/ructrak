@@ -3,8 +3,7 @@ import { lazy } from "react";
 const HomePage = lazy(() => import("./HomePage")); // bitti
 const CatalogPage = lazy(() => import("./CatalogPage")); // bitti
 const NewsPage = lazy(() => import("./NewsPage")); // bitti
-const PhotoGalleryPage = lazy(() => import("./PhotoGalleryPage"));
-const SearchPage = lazy(() => import("./SearchPage"));
+const SearchPage = lazy(() => import("./SearchPage")); // bitti
 const ServicePage = lazy(() => import("./ServicePage")); // bitti
 const ContactsPage = lazy(() => import("./ContactsPage")); // bitti
 const CartPage = lazy(() => import("./CartPage")); // bitti
@@ -17,23 +16,34 @@ const SuppliersPage = lazy(() => import("./SuppliersPage")); // bitti
 const LeasingPage = lazy(() => import("./LeasingPage")); // bitti
 const VacanciesPage = lazy(() => import("./VacansiesPage")); // bitti
 const AboutPage = lazy(() => import("./AboutPage")); // bitti
+const PhotoGalleryPage = lazy(() => import("./PhotoGalleryPage"));
+const PartnersPage = lazy(() => import("./PartnersPage"));
+const ReviewsPage = lazy(() => import("./ReviewsPage"));
+const CertifikatsPage = lazy(() => import("./CertifikatsPage"));
+const VideosPage = lazy(() => import("./VideosPage"));
+const ReklamsMaterialPage = lazy(() => import("./ReklamsMaterialPage"));
 
 export {
-  HomePage, // bitti
-  CatalogPage, // bitti
-  NewsPage, // bitti
+  HomePage,
+  CatalogPage,
+  NewsPage,
   PhotoGalleryPage,
   SearchPage,
-  ServicePage, // bitti
-  ContactsPage, // bitti
+  ServicePage,
+  ContactsPage,
   CartPage,
   FavoritesPage,
-  NotFoundPage, // bitti
+  NotFoundPage,
   ProductDetailesPage,
   CatalogFilterPage,
-  NewsDeteiles, // bitti
-  SuppliersPage, // bitti
-  LeasingPage, // bitti
-  VacanciesPage, // bitti
+  NewsDeteiles,
+  SuppliersPage,
+  LeasingPage,
+  VacanciesPage,
   AboutPage,
+  PartnersPage,
+  ReviewsPage,
+  CertifikatsPage,
+  VideosPage,
+  ReklamsMaterialPage
 };
