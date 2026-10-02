@@ -43,7 +43,7 @@ export function KategorySection() {
         <div className="">
           {loading ? (
             <div className="py-10 text-center dark:text-white font-FiraSans">
-              Yuklanmoqda...
+              {t("loading")}
             </div>
           ) : (
             <Swiper

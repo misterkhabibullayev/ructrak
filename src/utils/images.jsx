@@ -347,6 +347,21 @@ export const Images = {
       />
     </svg>
   ),
+  noDataIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={100}
+      height={100}
+      viewBox="0 0 1200 1200"
+      {...props}
+    >
+      <path fill="none" d="M0 0h1200v1200H0z" />
+      <path
+        fill="currentColor"
+        d="m93.75 637.5 277.837-375h456.825l277.838 375H900l-150 150H450l-150-150zm235.538-450L0 637.5v375h1200v-375l-329.287-450z"
+      />
+    </svg>
+  ),
   arrowUpIcon: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

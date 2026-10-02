@@ -198,23 +198,30 @@ function ProductFilter() {
             </div>
 
             <div className="flex-1 flex flex-col justify-between">
-              <div
-                className={
-                  !isListGrid
-                    ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4 mb-20"
-                    : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 mb-20"
-                }
-              >
-                {currentProducts.map((item) => (
-                  <ProductCard
-                    key={item.id}
-                    handleProductOpen={handleProductOpen}
-                    item={item}
-                    setRequest={setRequest}
-                    isListGrid={isListGrid}
-                  />
-                ))}
-              </div>
+              {currentProducts.length === 0 ? (
+                <div className="w-full col-span-2 sm:col-span-3 lg:col-span-2 xl:col-span-3 flex flex-col justify-center items-center py-20 text-black dark:text-white">
+                  <Images.noDataIcon className="text-[#a2a2a2]" />
+                  <span>{t("noData")}</span>
+                </div>
+              ) : (
+                <div
+                  className={
+                    !isListGrid
+                      ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 md:flex md:flex-col md:gap-4 mb-20"
+                      : "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3.75 mb-20"
+                  }
+                >
+                  {currentProducts.map((item) => (
+                    <ProductCard
+                      key={item.id}
+                      handleProductOpen={handleProductOpen}
+                      item={item}
+                      setRequest={setRequest}
+                      isListGrid={isListGrid}
+                    />
+                  ))}
+                </div>
+              )}
 
               <Pagination
                 currentPage={currentPage}

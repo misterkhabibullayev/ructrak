@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useBreadcrumbStore } from "../../store/useBreadcrumbStore";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { useProductStore } from "../../store/useProductStore";
-import { Empty } from "antd";
 import { Images } from "../../utils/images";
 import { useCartStore } from "../../store/useCartStore";
 import RequestCall from "../../components/RequestCallModal";
@@ -49,7 +48,8 @@ function ProductDetailes() {
   if (products.length === 0) {
     return (
       <div className="flex justify-center items-center py-20 text-black dark:text-white">
-        <Empty description={t("noData")} />
+        <Images.noDataIcon className="text-[#a2a2a2]" />
+        <span>{t("noData")}</span>
       </div>
     );
   }
@@ -173,7 +173,8 @@ function ProductDetailes() {
             </div>
           ) : (
             <div className="flex justify-center items-center py-20">
-              <Empty description={t("noData")} />
+              <Images.noDataIcon className="text-[#a2a2a2]" />
+              <span>{t("noData")}</span>
             </div>
           )}
         </div>
