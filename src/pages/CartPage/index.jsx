@@ -176,7 +176,7 @@ function CartPage() {
                   >
                     <div className="flex w-full py-4 md:py-0">
                       <div className="aspect-video lg:aspect-4/3 overflow-hidden w-[20%]">
-                        <Link to={item.slug}>
+                        <Link to={`/catalog/${item.categorySlug}/${item.slug}`}>
                           <img
                             loading="lazy"
                             src={item.media.mainImage}
@@ -187,7 +187,9 @@ function CartPage() {
                       </div>
                       <div className="pl-4.5 md:pl-7.5 md:py-4 md:pr-20 flex-1 flex items-center justify-between gap-20">
                         <div className="flex-1">
-                          <Link to={item.slug}>
+                          <Link
+                            to={`/catalog/${item.categorySlug}/${item.slug}`}
+                          >
                             <h2 className="font-FiraSans text-base leading-[120%] text-black dark:text-white text-left line-clamp-2 min-h-10 mt-0! md:text-[22px] font-medium mb-0 md:mb-8">
                               {item.title[currentLang]}
                             </h2>
@@ -262,7 +264,6 @@ function CartPage() {
                             className="w-full text-center py-3.25 px-13 rounded bg-[#FEC80B] font-FiraSans font-normal text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300 flex items-center gap-2"
                           >
                             {t("recommendedSection.poluchit")}
-                            <Images.arrowIcon />
                           </button>
                           <button
                             onClick={() => toggleCart(item)}
