@@ -147,6 +147,14 @@ export default function Footer() {
                     </li>
                     <li className="mb-4 break-inside-avoid">
                       <Link
+                        to="/remont"
+                        className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                      >
+                        {t("modal.remont")}
+                      </Link>
+                    </li>
+                    <li className="mb-4 break-inside-avoid">
+                      <Link
                         to="/contacts"
                         className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                       >
@@ -237,6 +245,14 @@ export default function Footer() {
                               className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
                             >
                               {t("footer.service")}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="/remont"
+                              className="font-FiraSans font-normal text-[14px] leading-[110%] text-white opacity-90 hover:opacity-100 transition-all duration-300"
+                            >
+                              {t("footer.remont")}
                             </Link>
                           </li>
                           <li>
