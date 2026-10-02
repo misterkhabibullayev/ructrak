@@ -146,7 +146,6 @@ export default function Recommended() {
                         className="font-FiraSans font-normal text-[11px] min-[456px]:text-[16px] leading-[110%] text-[#A1A1A1] flex items-center justify-center gap-0.5"
                       >
                         {t("recommendedSection.poluchit")}
-                        <Images.arrowIcon className="hidden min-[456px]:block" />
                       </button>
                     </div>
                   </div>

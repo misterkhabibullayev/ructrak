@@ -149,7 +149,6 @@ export default function ProductCard({
               className="text-black dark:text-white flex items-center gap-1 font-FiraSans font-normal text-base lg:text-lg mt-3 md:mt-0 whitespace-nowrap"
             >
               {t("recommendedSection.poluchit")}
-              <Images.arrowIcon className="hidden min-[456px]:block" />
             </button>
           </div>
           <div className={`${item.inStock ? "hidden" : "block"}`}>
