@@ -45,7 +45,7 @@ export function KategorySection() {
             <div className="py-10 text-center dark:text-white font-FiraSans">
               {t("loading")}
             </div>
-          ) : (
+          ) : categories.length > 0 ? (
             <Swiper
               slidesPerView={4}
               spaceBetween={24}
@@ -112,6 +112,11 @@ export function KategorySection() {
                 </SwiperSlide>
               ))}
             </Swiper>
+          ) : (
+            <div className="text-black dark:text-white">
+              <Images.noDataIcon />
+              {t("noData")}
+            </div>
           )}
         </div>
       </div>
