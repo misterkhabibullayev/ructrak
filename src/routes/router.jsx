@@ -16,6 +16,7 @@ import {
   PhotoGalleryPage,
   ProductDetailesPage,
   ReklamsMaterialPage,
+  RemontPage,
   ReviewsPage,
   SearchPage,
   ServicePage,
@@ -39,11 +40,11 @@ export const router = [
       },
       {
         path: "catalog/:filter",
-        element: <CatalogFilterPage />
+        element: <CatalogFilterPage />,
       },
       {
         path: "catalog/:filter/:detailes",
-        element: <ProductDetailesPage />
+        element: <ProductDetailesPage />,
       },
       {
         path: "news",
@@ -51,7 +52,7 @@ export const router = [
       },
       {
         path: "news/:newsdetailes",
-        element: <NewsDeteiles />
+        element: <NewsDeteiles />,
       },
       {
         path: "photogallery",
@@ -75,48 +76,52 @@ export const router = [
       },
       {
         path: "favorites",
-        element: <FavoritesPage />
+        element: <FavoritesPage />,
       },
       {
         path: "*",
-        element: <NotFoundPage />
+        element: <NotFoundPage />,
       },
       {
         path: "suppliers",
-        element: <SuppliersPage />
+        element: <SuppliersPage />,
       },
       {
         path: "leasing",
-        element: <LeasingPage />
+        element: <LeasingPage />,
       },
       {
         path: "vacancies",
-        element: <VacanciesPage />
+        element: <VacanciesPage />,
       },
       {
         path: "about",
-        element: <AboutPage />
+        element: <AboutPage />,
       },
       {
         path: "partners",
-        element: <PartnersPage />
+        element: <PartnersPage />,
       },
       {
         path: "reviews",
-        element: <ReviewsPage />
+        element: <ReviewsPage />,
       },
       {
         path: "cert",
-        element: <CertifikatsPage />
+        element: <CertifikatsPage />,
       },
       {
         path: "video",
-        element: <VideosPage />
+        element: <VideosPage />,
       },
       {
         path: "promo",
-        element: <ReklamsMaterialPage />
-      }
+        element: <ReklamsMaterialPage />,
+      },
+      {
+        path: "remont",
+        element: <RemontPage />,
+      },
     ],
   },
 ];

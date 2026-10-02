@@ -188,6 +188,14 @@ function RequestCall({ request, closeRequest, activeProduct }) {
             {t("requestModal.modalP")}
           </p>
         </div>
+        <div className={`mb-13.25 ${request === "tm" ? "block" : "hidden"}`}>
+          <h2 className="font-FiraSans font-medium text-[20px] md:text-[32px] leading-[120%] text-black dark:text-white text-center mb-2">
+            {t("requestModal.tmTitle")}
+          </h2>
+          <p className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[160%] text-black dark:text-white text-center">
+            {t("requestModal.tmText")}
+          </p>
+        </div>
 
         <div className={`mb-11 ${request === "kp" ? "block" : "hidden"}`}>
           <h2 className="font-FiraSans font-medium text-[20px] md:text-[32px] leading-[120%] text-black dark:text-white text-center mb-2">
@@ -227,7 +235,9 @@ function RequestCall({ request, closeRequest, activeProduct }) {
           <div className="flex flex-col gap-6.25 mb-10">
             <div
               className={`flex flex-col ${
-                request === "call" || request === "kp" ? "block" : "hidden"
+                request === "call" || request === "kp" || request === "tm"
+                  ? "block"
+                  : "hidden"
               }`}
             >
               <label
@@ -327,7 +337,7 @@ function RequestCall({ request, closeRequest, activeProduct }) {
               </span>
             </div>
 
-            <div className="flex items-start gap-2.5">
+            <div className={`flex items-start gap-2.5 ${request === "tm" ? "hidden" : ""}`}>
               <input
                 type="checkbox"
                 id="chekedInput"
@@ -381,6 +391,14 @@ function RequestCall({ request, closeRequest, activeProduct }) {
               }`}
             >
               {t("requestModal.submitBtnVariant")}
+            </button>
+            <button
+              type="submit"
+              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] ${
+                request === "tm" ? "block" : "hidden"
+              }`}
+            >
+              {t("requestModal.tmBtn")}
             </button>
           </div>
 

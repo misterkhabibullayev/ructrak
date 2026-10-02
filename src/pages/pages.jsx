@@ -21,7 +21,8 @@ const PartnersPage = lazy(() => import("./PartnersPage")); // bitti
 const ReviewsPage = lazy(() => import("./ReviewsPage")); // bitti
 const CertifikatsPage = lazy(() => import("./CertifikatsPage")); // bitti
 const VideosPage = lazy(() => import("./VideosPage")); // bitti
-const ReklamsMaterialPage = lazy(() => import("./ReklamsMaterialPage"));
+const ReklamsMaterialPage = lazy(() => import("./ReklamsMaterialPage")); // bitti
+const RemontPage = lazy(() => import("./RemontPage"));
 
 export {
   HomePage,
@@ -45,5 +46,6 @@ export {
   ReviewsPage,
   CertifikatsPage,
   VideosPage,
-  ReklamsMaterialPage
+  ReklamsMaterialPage,
+  RemontPage,
 };

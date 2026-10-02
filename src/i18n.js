@@ -44,6 +44,7 @@ const resources = {
         photogallery: "Фотогалерея | Производитель автоспецтехники РусТрак",
         video: "Видеогалерея производителя автоспецтехники РусТрак",
         promo: "Рекламные материалы | Производитель автоспецтехники РусТрак",
+        remont: "Ремонт - Ructrak",
       },
       header: {
         tagline: "производство и продажа автоспецтехники",
@@ -101,6 +102,10 @@ const resources = {
         close: "Закрыть",
         uvedam: "Подобрать аналогичный грузовик",
         submitBtnVariant: "Получить варианты",
+        tmTitle: "Рассчитать стоимость ремонта",
+        tmText:
+          "Оставьте свои данные, и наш менеджер свяжется с вами для расчета стоимости.",
+        tmBtn: "Рассчитать стоимость",
       },
       notFound: {
         sahifaTopilmadi: "Страница не найдена",
@@ -257,6 +262,7 @@ const resources = {
         photogallery: "Фотогалерея",
         video: "Видео",
         promo: "Рекламные материалы",
+        remont: "Ремонт",
       },
       contactPage: {
         title: "Контакты производителя автоспецтехники РусТрак",
@@ -471,6 +477,7 @@ const resources = {
           "RusTrak maxsus avtomobil ishlab chiqaruvchisining video galereyasi",
         promo:
           "Reklama materiallari | RusTrak maxsus avtotexnika ishlab chiqaruvchisi",
+        remont: "Ta'mirlash - Ructrak",
       },
       header: {
         tagline: "maxsus avtotexnikalarni ishlab chiqarish va sotish",
@@ -528,6 +535,10 @@ const resources = {
         close: "Yopish",
         uvedam: "O'xshash yuk mashinasini toping",
         submitBtnVariant: "Variantlarni olish",
+        tmTitle: "Ta'mirlash narxini hisoblash",
+        tmText:
+          "Ma'lumotlaringizni qoldiring, menejerimiz narxni hisoblash uchun siz bilan bog'lanadi.",
+        tmBtn: "Narxni hisoblash",
       },
       notFound: {
         sahifaTopilmadi: "Sahifa topilmadi",
@@ -686,6 +697,7 @@ const resources = {
         photogallery: "Fotogalereya",
         video: "Video",
         promo: "Reklama materiallari",
+        remont: "Ta'mirlash",
       },
       contactPage: {
         title: "RusTrak maxsus avtotexnika ishlab chiqaruvchisi kontaktlari",
@@ -901,6 +913,7 @@ const resources = {
         video: "Video gallery of special-purpose vehicle manufacturer RusTrak",
         promo:
           "Promotional materials | Manufacturer of special vehicles RusTrak",
+        remont: "Repair - Ructrak",
       },
       header: {
         tagline: "production and sale of special vehicles",
@@ -958,6 +971,10 @@ const resources = {
         close: "Close",
         uvedam: "Find a similar truck",
         submitBtnVariant: "Get Options",
+        tmTitle: "Calculate repair cost",
+        tmText:
+          "Leave your contact details, and our manager will contact you to calculate the cost.",
+        tmBtn: "Calculate cost",
       },
       notFound: {
         sahifaTopilmadi: "Page not found",
@@ -1115,6 +1132,7 @@ const resources = {
         photogallery: "Photogallery",
         video: "Video",
         promo: "Promotional materials",
+        remont: "Repair",
       },
       contactPage: {
         title: "Contacts of RusTrak special vehicles manufacturer",
