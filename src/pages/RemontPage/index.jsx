@@ -145,7 +145,7 @@ export default function RemontPage() {
               dangerouslySetInnerHTML={{
                 __html: remonts.description[currentLang],
               }}
-              className="pb-20"
+              className="pb-20 text-black dark:text-white"
             ></div>
           </div>
         </div>
