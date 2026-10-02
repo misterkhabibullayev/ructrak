@@ -11,10 +11,6 @@ function RequestCall({ request, closeRequest, activeProduct }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isPlaceHover, setIsPlaceHover] = useState(false);
 
-  useEffect(() => {
-    
-  },[])
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -313,8 +309,10 @@ function RequestCall({ request, closeRequest, activeProduct }) {
                 onFocus={handlePhoneFocus}
                 onBlur={handlePhoneBlur}
                 onChange={handlePhoneChange}
-                placeholder="+998"
-                className={`py-1.75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 hover:placeholder:text-white focus:placeholder-transparent transition-all duration-300 ${
+                onMouseEnter={() => setIsPlaceHover(true)}
+                onMouseLeave={() => setIsPlaceHover(false)}
+                placeholder={isPlaceHover ? "+998 (__) ___ __ __" : "+998"}
+                className={`py-1.75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 hover:placeholder:text-black dark:hover:placeholder:text-white focus:placeholder-transparent transition-all duration-300 ${
                   errors.phone
                     ? "border-[#FF3939]"
                     : "border-black/50 dark:border-white/50 focus:border-[#fec80b] focus:shadow-InputHover"

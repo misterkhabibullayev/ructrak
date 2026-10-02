@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function FeedbackForm() {
   const { t } = useTranslation();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isPlaceHover, setIsPlaceHover] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -157,8 +158,12 @@ export default function FeedbackForm() {
                       onFocus={handlePhoneFocus}
                       onBlur={handlePhoneBlur}
                       onChange={handlePhoneChange}
-                      placeholder="+998"
-                      className={`py-1.75 min-w-full md:min-w-75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 focus:placeholder-transparent transition-all duration-300 ${
+                      onMouseEnter={() => setIsPlaceHover(true)}
+                      onMouseLeave={() => setIsPlaceHover(false)}
+                      placeholder={
+                        isPlaceHover ? "+998 (__) ___ __ __" : "+998"
+                      }
+                      className={`py-1.75 min-w-full md:min-w-75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 focus:placeholder-transparent hover:placeholder:text-black dark:hover:placeholder:text-white transition-all duration-300 ${
                         errors.phone
                           ? "border-[#FF3939]"
                           : "border-black/50 dark:border-white/50 focus:border-[#fec80b] focus:shadow-InputHover"
