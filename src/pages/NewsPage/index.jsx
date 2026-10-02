@@ -58,7 +58,6 @@ function NewsPage() {
             {t("newsPage.title")}
           </h2>
 
-          {/* Hero Slider Section */}
           {currentPage === 1 && NewsData.length > 0 && (
             <div className="hidden md:flex items-start mb-14">
               <div className="w-1/2 relative rounded-2xl overflow-hidden">
@@ -118,7 +117,6 @@ function NewsPage() {
             </div>
           )}
 
-          {/* Dinamik Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
             {currentNews.map((item, index) => (
               <div
@@ -157,7 +155,6 @@ function NewsPage() {
             ))}
           </div>
 
-          {/* Paginatsiya va Show More */}
           <div className="flex flex-col items-center gap-6 mb-10">
             {startIndex + visibleCount < totalItems && (
               <button
@@ -169,7 +166,6 @@ function NewsPage() {
               </button>
             )}
 
-            {/* ALOHIDA PAGINATSIYA KOMPONENTI */}
             <Pagination
               currentPage={currentPage}
               totalPages={totalPages}

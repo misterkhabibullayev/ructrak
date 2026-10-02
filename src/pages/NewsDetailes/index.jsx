@@ -85,8 +85,8 @@ function NewsDetailes() {
           </div>
         </div>
       </section>
-      <section className="bg-[#F9F9F9]">
-        <div className="container1 pb-10">
+      <section className="bg-[#F9F9F9] dark:bg-slate-900">
+        <div className="container1 py-10">
           <h2 className="font-FiraSans font-medium text-[20px] md:text-2xl leading-[120%] text-black dark:text-white mb-3 md:mb-8">
             {t("newsDetailes.moreNews")}
           </h2>
@@ -119,13 +119,13 @@ function NewsDetailes() {
               loop={true}
               className="mySwiper"
             >
-              {NewsData.map((item, index) => (
+              {NewsData.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div
                     data-aos="fade-up"
                     className="group rounded-3xl overflow-hidden bg-white dark:bg-slate-950"
                   >
-                    <a href={`news/${item.slug}`}>
+                    <a href={`/news/${item.slug}`}>
                       <div className="flex flex-1 flex-col justify-between h-43.75 py-5.5 px-2.75">
                         <div>
                           <span className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[130%] text-black dark:text-white">
