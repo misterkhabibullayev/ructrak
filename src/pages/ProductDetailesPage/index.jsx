@@ -37,6 +37,7 @@ function ProductDetailes() {
 
   const currentProduct = products.find((item) => item.slug === detailes);
   const productTitle = currentProduct?.title?.[currentLang];
+  const upperProductTitle = currentProduct?.title?.[currentLang].toUpperCase();
 
   useEffect(() => {
     if (productTitle) {
@@ -69,7 +70,7 @@ function ProductDetailes() {
         </div>
         <div className="mb-6">
           <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] text-black dark:text-white mb-2 pt-2">
-            {productTitle.toUpperCase()}
+            {upperProductTitle.toUpperCase()}
           </h1>
         </div>
         <div>
