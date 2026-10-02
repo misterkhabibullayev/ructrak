@@ -10,7 +10,7 @@ function ContactsPage() {
   return (
     <>
       <Helmet>
-        <title>{t("metaTitleDescriptions.vakansiTitle")}</title>
+        <title>{t("metaTitleDescriptions.contactsTitle")}</title>
         <meta
           name="description"
           content={t("metaTitleDescriptions.serviceDescription")}
