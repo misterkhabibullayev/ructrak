@@ -347,6 +347,23 @@ export const Images = {
       />
     </svg>
   ),
+  arrowUpIcon: (props) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={44}
+      height={44}
+      fill="none"
+      viewBox="0 0 44 44"
+      {...props}
+    >
+      <circle cx={22} cy={22} r={22} fill="#EBEBEB" opacity={0.8} />
+      <path
+        fill="#000"
+        d="M22.495 13.505a.7.7 0 0 0-.99 0L17.05 17.96a.7.7 0 1 0 .99.99L22 14.99l3.96 3.96a.7.7 0 1 0 .99-.99l-4.455-4.455ZM21.3 14v16h1.4V14h-1.4Z"
+        opacity={0.8}
+      />
+    </svg>
+  ),
   deleteIcon: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -4,6 +4,7 @@ import { useThemeStore } from "../store/useThemeStore";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import ArrowUp from "../components/ScrollToTopBt";
 
 function MainLayout() {
   const { theme } = useThemeStore();
@@ -19,13 +20,14 @@ function MainLayout() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col transition-colors duration-300">
+      <div className="min-h-screen flex flex-col transition-colors duration-300 relative">
         <ScrollToTop />
         <Header />
         <main className="flex-1 dark:bg-slate-900">
           <Outlet />
         </main>
         <Footer />
+        <ArrowUp />
       </div>
     </>
   );

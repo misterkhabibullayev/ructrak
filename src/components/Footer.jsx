@@ -20,7 +20,7 @@ export default function Footer() {
   const [openMedia, setOpenMedia] = useState(false);
   return (
     <>
-      <footer className="bg-black pt-15.5 pb-9.75">
+      <footer className="bg-black pt-15.5 pb-9.75 relative">
         <div className="container1">
           <div className="grid grid-cols-1 md:grid-cols-13 mb-7.5">
             <div className="col-span-5 text-white">
