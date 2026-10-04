@@ -78,7 +78,7 @@
     "id": 2,
     "slug": "krany-manipulyatory",
     "img": "/Image/kategoriy-2.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Kran-manipulyatorlar",
       "ru": "Краны-манипуляторы",
@@ -227,7 +227,7 @@
     "id": 3,
     "slug": "avtotoplivozapravshchiki",
     "img": "/Image/kategoriy-3.png",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Yonilg'i quyish mashinalari (ATZ)",
       "ru": "Автотопливозаправщики",
@@ -324,7 +324,7 @@
     "id": 4,
     "slug": "avtogidropodiyemniki",
     "img": "/Image/kategoriy-4.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Avtogidroko'targichlar (Vishka)",
       "ru": "Автогидроподъёмники",
@@ -366,7 +366,7 @@
     "id": 5,
     "slug": "avtocisterny",
     "img": "/Image/kategoriy-5.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Avtosisternalar",
       "ru": "Автоцистерны",
@@ -449,7 +449,7 @@
     "id": 6,
     "slug": "avtoevakuatory",
     "img": "/Image/kategoriy-6.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Avtoevakuatorlar",
       "ru": "Автоэвакуаторы",
@@ -530,7 +530,7 @@
     "id": 7,
     "slug": "izotermicheskie-furgony",
     "img": "/Image/kategoriy-7.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Izotermik furgonlar",
       "ru": "Изотермические фургоны",
@@ -579,7 +579,7 @@
     "id": 8,
     "slug": "konteynerovozy",
     "img": "/Image/kategoriy-8.png",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Konteyner tashuvchilar",
       "ru": "Контейнеровозы",
@@ -628,7 +628,7 @@
     "id": 9,
     "slug": "kryukovye-pogruzchiki",
     "img": "/Image/kategoriy-9.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "Ilgakli yuklagichlar (Multilift)",
       "ru": "Крюковые погрузчики",
@@ -659,7 +659,7 @@
     "id": 10,
     "slug": "samosvaly",
     "img": "/Image/kategoriy-10.png",
-    "count": 10,
+    "count": 2,
     "title": { "uz": "Samosvallar", "ru": "Самосвалы", "en": "Dump trucks" },
     "filters": [
       {
@@ -730,7 +730,7 @@
     "id": 11,
     "slug": "avtomobili-dopog-kategoriya-exii",
     "img": "/Image/kategoriy-11.webp",
-    "count": 10,
+    "count": 2,
     "title": {
       "uz": "EXII toifasidagi ADR transport vositalari",
       "ru": "Автомобили ДОПОГ категория EXII",

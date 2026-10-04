@@ -25,7 +25,9 @@ function HomePage() {
       <AboutCompanySection />
       <AboutStatsSection />
       <ScrollSlider />
-      <Recommended />
+      <section className="mt-40 mb-30 bg-[#F9F9F9] dark:bg-slate-950 py-14">
+        <Recommended />
+      </section>
       <NewsSection />
       <FeedbackForm />
     </>

@@ -10,6 +10,8 @@ import RequestCall from "../../components/RequestCallModal";
 import FeedbackForm from "../../components/FeedbackForm";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { Helmet } from "react-helmet-async";
+import Recommended from "../../components/RecommendedSection";
 
 function ProductDetailes() {
   const { detailes } = useParams();
@@ -23,9 +25,18 @@ function ProductDetailes() {
   const closeRequest = () => setRequest(null);
 
   useEffect(() => {
-    Fancybox.bind("[data-fancybox='gallery']", {});
+    Fancybox.bind("[data-fancybox='main-gallery']", {
+      groupAll: false,
+    });
+
+    Fancybox.bind("[data-fancybox='blueprint-gallery']", {
+      groupAll: false,
+    });
+
     return () => {
-      Fancybox.destroy();
+      Fancybox.unbind("[data-fancybox='main-gallery']");
+      Fancybox.unbind("[data-fancybox='blueprint-gallery']");
+      Fancybox.close();
     };
   }, []);
 
@@ -64,6 +75,9 @@ function ProductDetailes() {
   };
   return (
     <>
+      <Helmet>
+        <title>{productTitle}</title>
+      </Helmet>
       <div className="container1">
         <div>
           <Breadcrumbs />
@@ -82,7 +96,7 @@ function ProductDetailes() {
                     {currentProduct?.media?.mainImage && (
                       <a
                         href={currentProduct.media.mainImage}
-                        data-fancybox="gallery"
+                        data-fancybox="main-gallery"
                         className="min-w-full shrink-0 snap-start"
                       >
                         <img
@@ -109,7 +123,7 @@ function ProductDetailes() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <p className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] text-black dark:text-white ml-3 mb-4">
+                  <p className="flex items-center font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] text-black dark:text-white ml-3 mb-4">
                     {currentProduct?.price?.isPriceOnRequest ||
                     !currentProduct?.price?.amount ? (
                       t("recommendedSection.cena")
@@ -118,7 +132,7 @@ function ProductDetailes() {
                         {new Intl.NumberFormat().format(
                           currentProduct?.price?.amount,
                         )}{" "}
-                        <Images.rubleIcon />
+                        <Images.rubleIcon className="w-8 h-8" />
                       </>
                     )}
                   </p>
@@ -158,18 +172,56 @@ function ProductDetailes() {
                   </div>
                 </div>
               </div>
-              <div>
-                <img
-                  src={currentProduct?.media.blueprints}
-                  alt="blueprints prosta qo'ymin qo'yibman"
-                  className="bg-[#FEC80B] h-10 my-10"
-                />
+              <div className="w-full h-auto mb-10 px-5">
+                {currentProduct?.media?.blueprints?.length > 0 && (
+                  <div className="border border-[#a2a2a2]">
+                    <a
+                      href={currentProduct?.media?.blueprints}
+                      data-fancybox="blueprint-gallery"
+                      className="min-w-full shrink-0"
+                    >
+                      <img
+                        src={currentProduct?.media?.blueprints}
+                        alt={currentProduct.title[currentLang]}
+                        className="w-full h-full object-cover"
+                      />
+                    </a>
+                  </div>
+                )}
+              </div>
+              <div className="pt-14 pb-10">
+                <h2 className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] text-black dark:text-white">
+                  {t("karakter")}
+                </h2>
               </div>
               <div
                 id="feature"
-                className="text-black text-center pt-10 w-full h-125 bg-[#FEC80B] scroll-mt-30"
+                className="text-black text-center pt-10 scroll-mt-30"
               >
-                bera text editordan table galishi garak
+                <table className="w-full rounded-t-sm overflow-hidden border-collapse">
+                  <thead className="">
+                    <tr>
+                      <th colSpan={2} className="w-full py-3 px-5 bg-[#FEC80B]">
+                        {productTitle}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="w-full">
+                    {currentProduct?.fullSpecifications?.map((item) => (
+                      <tr
+                        key={item.id}
+                        className="w-full font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white"
+                      >
+                        <td className="w-1/2 py-5 px-7 text-left border-x border-b border-[#a2a2a2]">
+                          {item.name[currentLang]}
+                        </td>
+                        <td className="w-1/2 p-1 border-x border-b border-[#a2a2a2]">
+                          {item.value[currentLang]}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           ) : (
@@ -178,6 +230,9 @@ function ProductDetailes() {
               <span>{t("noData")}</span>
             </div>
           )}
+        </div>
+        <div className="py-12.5">
+          <Recommended />
         </div>
       </div>
       <FeedbackForm />

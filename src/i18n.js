@@ -8,6 +8,7 @@ const resources = {
       loading: "Загрузка...",
       noData: "Товар не найден",
       reviews: "Отзывы",
+      karakter: "Характеристики",
       metaTitleDescriptions: {
         mainTitle: "Завод производитель автоспецтехники «РусТрак»",
         mainDescription:
@@ -437,6 +438,7 @@ const resources = {
       loading: "Yuklanmoqda...",
       noData: "Mahsulot topilmadi",
       reviews: "Sharhlar",
+      karakter: "Xususiyatlar",
       metaTitleDescriptions: {
         mainTitle:
           "RusTrak - maxsus maqsadli transport vositalari ishlab chiqaruvchisi",
@@ -875,6 +877,7 @@ const resources = {
       loading: "Loading...",
       noData: "Product not found",
       reviews: "Reviews",
+      karakter: "Specifications",
       metaTitleDescriptions: {
         mainTitle: "RusTrak - a manufacturer of special-purpose vehicles",
         mainDescription:
