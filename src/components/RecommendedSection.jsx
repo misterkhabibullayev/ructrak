@@ -122,7 +122,7 @@ export default function Recommended() {
                     <div>
                       <a
                         href={`catalog/${product.categorySlug}/${product.slug}`}
-                        className="font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
+                        className="min-h-11 font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
                       >
                         {product?.title?.[currentLang]}
                       </a>
