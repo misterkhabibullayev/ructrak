@@ -8,18 +8,13 @@ export default function CatalogFilter({
   categoriesFilter,
   filterOpen,
   setFilterOpen,
+  filterValues,
+  setFilterValues,
 }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
 
   const [searchQuery, setSearchQuery] = useState("");
-
-  const [filterValues, setFilterValues] = useState({
-    price: { min: "", max: "" },
-    brand: [],
-    total_weight: [],
-    cistern_volume: { min: "", max: "" },
-  });
 
   useEffect(() => {
     if (filterOpen) {
@@ -141,7 +136,11 @@ export default function CatalogFilter({
         );
       })}
       <div className="px-5">
-        <button className="w-full rounded py-3.25 px-3.75 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 mt-6 mb-7.5">
+        <button
+          type="button"
+          onClick={() => setFilterOpen(false)}
+          className="w-full rounded py-3.25 px-3.75 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 mt-6 mb-7.5"
+        >
           {t("catFilPage.showProducts")}
           {""}
           <span>({categoriesFilter.length})</span>

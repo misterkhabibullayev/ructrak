@@ -398,6 +398,10 @@
       "uz": " Curtain trucks uchun 1-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 1 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 1 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "total_weight": "up_to_12"
     }
   },
   {
@@ -807,6 +811,10 @@
       "uz": " Curtain trucks uchun 2-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 2 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 2 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "total_weight": "over_20"
     }
   },
   {
@@ -1201,6 +1209,10 @@
       "uz": " Curtain trucks uchun 3-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 3 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 3 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "total_weight": "up_to_12"
     }
   },
   {
@@ -1595,6 +1607,10 @@
       "uz": " Curtain trucks uchun 4-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 4 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 4 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "total_weight": "over_20"
     }
   },
   {
@@ -1823,6 +1839,10 @@
       "uz": " Curtain trucks uchun 5-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 5 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 5 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "total_weight": "up_to_12"
     }
   },
   {
@@ -2230,6 +2250,10 @@
       "uz": " Curtain trucks uchun 6-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 6 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 6 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "total_weight": "over_20"
     }
   },
   {
@@ -2624,6 +2648,10 @@
       "uz": " Curtain trucks uchun 7-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 7 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 7 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "total_weight": "up_to_12"
     }
   },
   {
@@ -3020,6 +3048,10 @@
       "uz": " Curtain trucks uchun 8-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 8 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 8 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "total_weight": "over_20"
     }
   },
   {
@@ -3250,6 +3282,10 @@
       "uz": " Curtain trucks uchun 9-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 9 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 9 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "total_weight": "up_to_12"
     }
   },
   {
@@ -3657,6 +3693,10 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "total_weight": "over_20"
     }
   },
   {
@@ -4066,6 +4106,13 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "wheel_formula": "4x2",
+      "total_weight": "over_20",
+      "platform_length": "length_3500",
+      "lifting_capacity": 3
     }
   },
   {
@@ -4473,6 +4520,13 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "maz",
+      "wheel_formula": "6x4",
+      "total_weight": "over_20",
+      "platform_length": "length_4400",
+      "lifting_capacity": 5
     }
   },
   {
@@ -4882,6 +4936,12 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "price": 8800000,
+      "brand": "gaz",
+      "total_weight": "up_to_12",
+      "cistern_volume": 3000
     }
   },
   {
@@ -5289,6 +5349,12 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "price": 6200000,
+      "brand": "jac",
+      "total_weight": "up_to_12",
+      "cistern_volume": 5000
     }
   },
   {
@@ -5696,6 +5762,10 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "gaz",
+      "wheel_formula": "4x2"
     }
   },
   {
@@ -6103,6 +6173,10 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "gaz",
+      "wheel_formula": "4x2"
     }
   },
   {
@@ -6510,6 +6584,11 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "gaz",
+      "tank_type": "vacuum",
+      "tank_volume": 3000
     }
   },
   {
@@ -6917,6 +6996,11 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "tank_type": "food",
+      "tank_volume": 5000
     }
   },
   {
@@ -7324,6 +7408,12 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "platform_type": "direct_type",
+      "wheel_formula": "4x2",
+      "platform_length": "length_4600"
     }
   },
   {
@@ -7731,6 +7821,12 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "platform_type": "direct_type",
+      "wheel_formula": "4x2",
+      "platform_length": "length_4600"
     }
   },
   {
@@ -8138,6 +8234,9 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz"
     }
   },
   {
@@ -8545,6 +8644,9 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "jac"
     }
   },
   {
@@ -8952,6 +9054,10 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "gas",
+      "wheel_formula": "4x2"
     }
   },
   {
@@ -9359,6 +9465,10 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "wheel_formula": "6x4"
     }
   },
   {
@@ -9766,6 +9876,9 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "wheel_formula": "4x2"
     }
   },
   {
@@ -10173,6 +10286,9 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "wheel_formula": "6x4"
     }
   },
   {
@@ -10580,6 +10696,11 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "wheel_formula": "4x2",
+      "platform_length": "4600"
     }
   },
   {
@@ -10987,6 +11108,11 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "jac",
+      "wheel_formula": "4x2",
+      "platform_length": "5000"
     }
   },
   {
@@ -11394,6 +11520,14 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "kamaz",
+      "platform_type": "168",
+      "gross_weight": "up_to_12",
+      "wheel_formula": "4x2",
+      "platform_length": "5_2_6_2",
+      "cmu_lifting_capacity": 3
     }
   },
   {
@@ -11801,6 +11935,14 @@
       "uz": " Curtain trucks uchun 10-variant: shaharlararo va professional tashuvlarda foydalanishga moslashtirilgan, amaliy va ishonchli yuk transport yechimi.",
       "ru": " Вариант 10 для категории «Curtain trucks»: практичное и надежное решение для профессиональных грузовых перевозок и междугородних маршрутов.",
       "en": " Variant 10 for Curtain trucks: a practical and reliable truck solution designed for professional cargo transport and long-distance routes."
+    },
+    "filters": {
+      "brand": "jac",
+      "platform_type": "168",
+      "gross_weight": "up_to_20",
+      "wheel_formula": "6x4",
+      "platform_length": "6_2",
+      "cmu_lifting_capacity": 5
     }
   }
 ]

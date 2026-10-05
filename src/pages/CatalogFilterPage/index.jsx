@@ -1,5 +1,5 @@
 import { useParams, useSearchParams } from "react-router-dom";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { useBreadcrumbStore } from "../../store/useBreadcrumbStore";
 import { useTranslation } from "react-i18next";
@@ -13,13 +13,28 @@ import SortDropdown from "../../components/SortDropdown";
 import { useProductStore } from "../../store/useProductStore";
 import { useCategoryStore } from "../../store/useCategoriesStore";
 
-function ProductFilter() {
+function ProductFilterContent() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
   const { filter } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [filterOpen, setFilterOpen] = useState(false);
+
+  const [filterValues, setFilterValues] = useState({});
+
+  const handleFiltersChange = useCallback(
+    (updater) => {
+      setFilterValues(updater);
+
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("page");
+        return next;
+      });
+    },
+    [setSearchParams],
+  );
 
   const { products, isLoading, fetchProducts } = useProductStore();
   const {
@@ -69,13 +84,56 @@ function ProductFilter() {
     return () => setDynamicName("");
   }, [productTitle, setDynamicName]);
 
-  const categoriesFilter = useMemo(
-    () =>
-      products.filter(
-        (product) => product?.categorySlug === currentFilter?.slug,
-      ),
-    [products, currentFilter],
-  );
+  const categoriesFilter = useMemo(() => {
+    if (!currentFilter) return [];
+
+    return products.filter((product) => {
+      if (product.categorySlug !== currentFilter.slug) return false;
+
+      return (currentFilter.filters || []).every((filter) => {
+        const selected = filterValues[filter.id];
+        const value = product.filters?.[filter.id];
+
+        if (filter.type === "checkbox") {
+          if (!Array.isArray(selected) || selected.length === 0) {
+            return true;
+          }
+
+          if (Array.isArray(value)) {
+            return value.some((item) => selected.includes(item));
+          }
+
+          return selected.includes(value);
+        }
+
+        if (filter.type === "range_input") {
+          const min = selected?.min;
+          const max = selected?.max;
+
+          const hasMin =
+            min !== undefined && min !== null && String(min).trim() !== "";
+          const hasMax =
+            max !== undefined && max !== null && String(max).trim() !== "";
+
+          if (!hasMin && !hasMax) return true;
+
+          if (value === null || value === undefined || value === "") {
+            return false;
+          }
+
+          const number = Number(value);
+
+          if (!Number.isFinite(number)) return false;
+          if (hasMin && number < Number(min)) return false;
+          if (hasMax && number > Number(max)) return false;
+
+          return true;
+        }
+
+        return true;
+      });
+    });
+  }, [products, currentFilter, filterValues]);
 
   const sortedProducts = useMemo(() => {
     const list = [...categoriesFilter];
@@ -194,6 +252,10 @@ function ProductFilter() {
               <CatalogFilter
                 currentFilter={currentFilter}
                 categoriesFilter={categoriesFilter}
+                filterValues={filterValues}
+                setFilterValues={handleFiltersChange}
+                filterOpen={false}
+                setFilterOpen={setFilterOpen}
               />
             </div>
 
@@ -244,8 +306,10 @@ function ProductFilter() {
           <CatalogFilter
             currentFilter={currentFilter}
             categoriesFilter={categoriesFilter}
-            setFilterOpen={setFilterOpen}
+            filterValues={filterValues}
+            setFilterValues={handleFiltersChange}
             filterOpen={filterOpen}
+            setFilterOpen={setFilterOpen}
           />
         </div>
       </div>
@@ -257,6 +321,12 @@ function ProductFilter() {
       />
     </>
   );
+}
+
+function ProductFilter() {
+  const { filter } = useParams();
+
+  return <ProductFilterContent key={filter} />;
 }
 
 export default ProductFilter;

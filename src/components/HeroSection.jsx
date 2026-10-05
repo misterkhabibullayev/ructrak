@@ -17,11 +17,16 @@ import swiper3Img from "../Image/swiper-3.webp";
 import swiper4Img from "../Image/swiper-4.webp";
 import swiper5Img from "../Image/swiper-5.webp";
 import { preload } from "react-dom";
+import { useState } from "react";
+import RequestCall from "./RequestCallModal";
 
 preload(swiper1Img, { as: "image", fetchPriority: "high" });
 
 export function HeroSection() {
   const { t } = useTranslation();
+
+  const [request, setRequest] = useState(null);
+  const closeRequest = () => setRequest(null);
   return (
     <section>
       <div className="flex container1 pt-7 rounded-2xl relative group">
@@ -66,6 +71,7 @@ export function HeroSection() {
                 <div className="flex items-start">
                   <button
                     data-aos="fade-up"
+                    onClick={() => setRequest("call")}
                     className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
                   >
                     {t("heroSection.swiper1.requestCall")}
@@ -87,9 +93,12 @@ export function HeroSection() {
                   {t("heroSection.swiper2.description")}
                 </p>
                 <div className="flex items-center">
-                  <button className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]">
+                  <a
+                    href="/catalog/shtornye-avtomobili"
+                    className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                  >
                     {t("heroSection.swiper2.readMore")}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -113,7 +122,10 @@ export function HeroSection() {
                   >
                     {t("heroSection.swiper3.openKatalog")}
                   </a>
-                  <button className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]">
+                  <button
+                    onClick={() => setRequest("call")}
+                    className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                  >
                     {t("heroSection.swiper3.requestCall")}
                   </button>
                 </div>
@@ -134,12 +146,15 @@ export function HeroSection() {
                 </p>
                 <div className="flex flex-col gap-3 md:flex-row items-start">
                   <a
-                    href="/catalog/krany-manipulyatory/"
+                    href="/catalog/krany-manipulyatory"
                     className="px-7.5 py-3 bg-[#FEC80B] border-2 border-[#FEC80B] text-black rounded cursor-pointer hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-center text-[16px] leading-[110%]"
                   >
                     {t("heroSection.swiper4.readMore")}
                   </a>
-                  <button className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]">
+                  <button
+                    onClick={() => setRequest("call")}
+                    className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                  >
                     {t("heroSection.swiper4.requestCall")}
                   </button>
                 </div>
@@ -160,12 +175,15 @@ export function HeroSection() {
                 </p>
                 <div className="flex flex-col gap-3 md:flex-row items-start">
                   <a
-                    href="/catalog/krany-manipulyatory/"
+                    href="/catalog/krany-manipulyatory"
                     className="px-7.5 py-3 bg-[#FEC80B] border-2 border-[#FEC80B] text-black rounded cursor-pointer hover:bg-[#FFD43A] transition-all duration-300 font-FiraSans font-normal text-center text-[16px] leading-[110%]"
                   >
                     {t("heroSection.swiper5.readMore")}
                   </a>
-                  <button className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]">
+                  <button
+                    onClick={() => setRequest("call")}
+                    className="px-7.5 py-3 bg-transparent border-2 border-[#FEC80B] text-white rounded cursor-pointer hover:bg-[#FEC80B] hover:text-black transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
+                  >
                     {t("heroSection.swiper5.requestCall")}
                   </button>
                 </div>
@@ -175,6 +193,7 @@ export function HeroSection() {
         </Swiper>
         <div className="hero-pagination absolute bottom-10 left-0 right-0 z-10 flex justify-center items-center gap-2"></div>
       </div>
+      <RequestCall request={request} closeRequest={closeRequest} />
     </section>
   );
 }

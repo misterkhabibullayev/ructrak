@@ -132,7 +132,7 @@ export function HeaderBottom({ isSticky }) {
                 )}
               </AnimatePresence>
               <div>
-                <nav className="text-black dark:text-white transition-all duration-300 hidden lg:flex md:items-center gap-7 font-FiraSans font-normal text-[16px] leading-[130%]">
+                <nav className="text-black dark:text-white transition-all duration-300 hidden lg:flex md:items-center gap-7 font-FiraSans font-normal text-[16px] leading-[130%] whitespace-nowrap">
                   <button
                     onClick={() => toggleMenu("about")}
                     aria-label={t("header.aboutUs")}
@@ -185,8 +185,8 @@ export function HeaderBottom({ isSticky }) {
               </div>
             </div>
             <div className="flex items-center gap-2 md:gap-4">
-              <div className="hidden xl:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1">
-                <form onSubmit={handleSearch} className="flex items-center">
+              <div className="hidden xl:flex items-center border border-[#FEC80B] rounded-[40px] px-3 py-1 max-w-65">
+                <form onSubmit={handleSearch} className="flex items-center relative">
                   <input
                     type="search"
                     value={searchTerm}
@@ -195,7 +195,7 @@ export function HeaderBottom({ isSticky }) {
                     placeholder={t("header.searchPlaceholder")}
                     className="bg-transparent text-gray-900 placeholder:text-black dark:text-white dark:placeholder:text-white outline-none min-w-60"
                   />
-                  <button type="submit">
+                  <button type="submit" className="absolute right-1.5">
                     <Images.searchIcon className="text-black dark:text-white transition-all duration-300" />
                   </button>
                 </form>
