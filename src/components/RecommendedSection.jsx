@@ -108,7 +108,7 @@ export default function Recommended() {
             {recommendedProducts.map((product) => (
               <SwiperSlide key={product.id}>
                 <div data-aos="fade-up">
-                  <a href={`catalog/${product.categorySlug}/${product.slug}`}>
+                  <a href={`/catalog/${product.categorySlug}/${product.slug}`}>
                     <div className="w-full aspect-video">
                       <img
                         loading="lazy"
@@ -121,7 +121,7 @@ export default function Recommended() {
                   <div className="px-3 py-4 bg-white dark:bg-slate-900">
                     <div>
                       <a
-                        href={`catalog/${product.categorySlug}/${product.slug}`}
+                        href={`/catalog/${product.categorySlug}/${product.slug}`}
                         className="min-h-11 font-FiraSans font-normal text-[11px] min-[456px]:text-[18px] leading-[120%] text-black dark:text-white line-clamp-2"
                       >
                         {product?.title?.[currentLang]}
@@ -134,7 +134,7 @@ export default function Recommended() {
                     </div>
                     <div className="flex flex-col min-[890px]:flex-row md:justify-between">
                       <a
-                        href={`catalog/${product.categorySlug}/${product.slug}`}
+                        href={`/catalog/${product.categorySlug}/${product.slug}`}
                         aria-label={t("recommendedSection.podrobne")}
                         className="py-1.5 min-[456px]:py-3.25 px-2.75 min-[456px]:px-7.75 bg-[#fec80b] hover:bg-[#FFD43A] rounded transition-all duration-300 font-FiraSans font-normal text-[11px] min-[456px]:text-[16px] text-center leading-[110%] text-black mb-3 min-[890px]:mb-0"
                       >

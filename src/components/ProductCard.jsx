@@ -27,7 +27,7 @@ export default function ProductCard({
         <div
           className={`aspect-4/3 overflow-hidden rounded-t-lg relative ${!isListGrid ? "md:w-[25%] md:rounded-lg md:aspect-square" : ""}`}
         >
-          <Link to={item.slug}>
+          <Link to={`/catalog/${item.categorySlug}/${item.slug}`}>
             <img
               loading="lazy"
               src={item.media.mainImage}
@@ -58,7 +58,7 @@ export default function ProductCard({
           className={`py-2 md:py-4 px-1 md:px-3 ${!isListGrid ? "md:flex-1 md:flex md:justify-between md:items-center md:py-10" : ""}`}
         >
           <div className={`${!isListGrid ? "md:pl-4 md:pr-15 md:flex-1" : ""}`}>
-            <Link to={item.slug}>
+            <Link to={`/catalog/${item.categorySlug}/${item.slug}`}>
               <h2
                 className={`font-FiraSans font-normal text-base leading-[120%] text-black dark:text-white text-center xl:text-left line-clamp-2 min-h-10 mt-0! ${!isListGrid ? "md:text-[22px] font-medium mb-8" : ""}`}
               >
@@ -128,7 +128,7 @@ export default function ProductCard({
               className={`flex items-center justify-between gap-3 w-full ${!isListGrid ? "pr-0" : "pr-3"}`}
             >
               <Link
-                to={item.slug}
+                to={`/catalog/${item.categorySlug}/${item.slug}`}
                 className="w-full text-center py-3.25 px-2.25 md:px-3.25 bg-[#FEC80B] rounded font-FiraSans font-normal text-xs md:text-base leading-[110%] text-black hover:bg-[#FFD43A] transition-all duration-300"
               >
                 {t("recommendedSection.podrobne")}

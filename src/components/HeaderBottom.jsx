@@ -62,7 +62,7 @@ export function HeaderBottom({ isSticky }) {
       <div className="relative">
         <div className="container1">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4 md:gap-10">
+            <div className="flex items-center gap-4 md:gap-6">
               <button
                 onClick={() => toggleMenu("catalog")}
                 aria-label={t("header.catalog")}
@@ -132,7 +132,7 @@ export function HeaderBottom({ isSticky }) {
                 )}
               </AnimatePresence>
               <div>
-                <nav className="text-black dark:text-white transition-all duration-300 hidden lg:flex md:items-center gap-7.5 font-FiraSans font-normal text-[16px] leading-[130%]">
+                <nav className="text-black dark:text-white transition-all duration-300 hidden lg:flex md:items-center gap-7 font-FiraSans font-normal text-[16px] leading-[130%]">
                   <button
                     onClick={() => toggleMenu("about")}
                     aria-label={t("header.aboutUs")}
@@ -163,6 +163,13 @@ export function HeaderBottom({ isSticky }) {
                     aria-label={t("header.service")}
                   >
                     {t("header.service")}
+                  </Link>
+                  <Link
+                    to="/remont"
+                    className=""
+                    aria-label={t("modal.remont")}
+                  >
+                    {t("modal.remont")}
                   </Link>
                   <Link to="/news" className="" aria-label={t("header.news")}>
                     {t("header.news")}
