@@ -107,6 +107,9 @@ const resources = {
         tmText:
           "Оставьте свои данные, и наш менеджер свяжется с вами для расчета стоимости.",
         tmBtn: "Рассчитать стоимость",
+        vakansiModalT: "Оставить заявку",
+        navakan: "на вакансию «{{vakan}}»",
+        linkSite: "Ссылка на резюме",
       },
       notFound: {
         sahifaTopilmadi: "Страница не найдена",
@@ -541,6 +544,9 @@ const resources = {
         tmText:
           "Ma'lumotlaringizni qoldiring, menejerimiz narxni hisoblash uchun siz bilan bog'lanadi.",
         tmBtn: "Narxni hisoblash",
+        vakansiModalT: "Ariza topshirish",
+        navakan: "«{{vakan}}» vakansiyasiga",
+        linkSite: "Rezyumega havola",
       },
       notFound: {
         sahifaTopilmadi: "Sahifa topilmadi",
@@ -978,6 +984,9 @@ const resources = {
         tmText:
           "Leave your contact details, and our manager will contact you to calculate the cost.",
         tmBtn: "Calculate cost",
+        vakansiModalT: "Submit application",
+        navakan: "for the vacancy «{{vakan}}»",
+        linkSite: "Link to CV",
       },
       notFound: {
         sahifaTopilmadi: "Page not found",
@@ -1311,7 +1320,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "en",
+    fallbackLng: "uz",
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],

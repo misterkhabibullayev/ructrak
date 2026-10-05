@@ -2,17 +2,32 @@ import { useTranslation } from "react-i18next";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { vacanciesData } from "../../data/vacanciesData";
 import { Images } from "../../utils/images";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import FeedbackForm from "../../components/FeedbackForm";
+import RequestCall from "../../components/RequestCallModal";
 
 export default function VacanciesPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "uz";
 
-  const [isAccOpen, setIsAccOpen] = useState(null);
+  const [request, setRequest] = useState(null);
+  const closeRequest = () => setRequest(null);
+
+  const [selectedProductId, setSelectedProductId] = useState(null);
+
+  const activeVakansi = useMemo(
+    () => vacanciesData.find((product) => product.id === selectedProductId),
+    [vacanciesData, selectedProductId],
+  );
+  const handleProductOpen = (id) => {
+    setSelectedProductId(id);
+    setRequest("vakan");
+  };
+
+  const [isAccOpen, setisOpen] = useState(null);
   const handleAccOpen = (accName) => {
-    setIsAccOpen((prev) => (prev === accName ? null : accName));
+    setisOpen((prev) => (prev === accName ? null : accName));
   };
   return (
     <>
@@ -34,94 +49,106 @@ export default function VacanciesPage() {
             </h1>
           </div>
           <div className="mb-20 md:mb-30 select-none">
-            {vacanciesData.map((item) => (
-              <div
-                key={item.id}
-                className={`border border-[#EBEBEB] rounded-lg ${isAccOpen ? "border-none" : ""}`}
-              >
+            {vacanciesData.map((item) => {
+              const isOpen = isAccOpen === item.id
+              return (
                 <div
-                  onClick={() => handleAccOpen(item.id)}
-                  className={`flex items-center justify-between p-4 cursor-pointer transition-all duration-300 rounded-t-lg ${isAccOpen ? "bg-[#FEC80B]" : "bg-transparent"}`}
+                  key={item.id}
+                  className={`border border-[#EBEBEB] rounded-lg ${isOpen ? "border-none" : ""}`}
                 >
-                  <h2
-                    className={`font-FiraSans font-medium text-lg md:text-2xl leading-[120%] transition-all duration-300 ${isAccOpen ? "text-black dark:text-black" : "text-black dark:text-white"}`}
+                  <div
+                    onClick={() => handleAccOpen(item.id)}
+                    className={`flex items-center justify-between p-4 cursor-pointer transition-all duration-300 rounded-t-lg ${isOpen ? "bg-[#FEC80B]" : "bg-transparent"}`}
                   >
-                    {item.title[currentLang]}
-                  </h2>
-                  <span>
-                    <Images.swiperNextBtnIcon
-                      className={`rotate-90 transition-all duration-300 ${isAccOpen ? "text-black dark:text-black rotate-270" : "text-black dark:text-white"}`}
-                    />
-                  </span>
-                </div>
-                <div
-                  className={`grid dark:bg-slate-950 transition-[grid-template-rows] duration-300 ease-in-out ${isAccOpen ? "grid-rows-[1fr] border border-t-0 border-l-[#EBEBEB] border-r-[#EBEBEB] border-b-[#EBEBEB]" : "grid-rows-[0fr]"}`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="py-8 px-4 rounded-lg">
-                      <div className="mb-6 md:mb-8">
-                        <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
-                          {t("vacanciesPage.responsibilities")}
-                        </h3>
-                        <ul className="pl-4">
-                          {item.responsibilities[currentLang].map(
-                            (res, index) => (
+                    <h2
+                      className={`font-FiraSans font-medium text-lg md:text-2xl leading-[120%] transition-all duration-300 ${isOpen ? "text-black dark:text-black" : "text-black dark:text-white"}`}
+                    >
+                      {item.title[currentLang]}
+                    </h2>
+                    <span>
+                      <Images.swiperNextBtnIcon
+                        className={`rotate-90 transition-all duration-300 ${isOpen ? "text-black dark:text-black rotate-270" : "text-black dark:text-white"}`}
+                      />
+                    </span>
+                  </div>
+                  <div
+                    className={`grid dark:bg-slate-950 transition-[grid-template-rows] duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] border border-t-0 border-l-[#EBEBEB] border-r-[#EBEBEB] border-b-[#EBEBEB]" : "grid-rows-[0fr]"}`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="py-8 px-4 rounded-lg">
+                        <div className="mb-6 md:mb-8">
+                          <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
+                            {t("vacanciesPage.responsibilities")}
+                          </h3>
+                          <ul className="pl-4">
+                            {item.responsibilities[currentLang].map(
+                              (res, index) => (
+                                <li
+                                  key={index}
+                                  className="font-FiraSans font-normal text-base md:text-lg leading-[150%] text-black dark:text-white"
+                                >
+                                  • {res}
+                                </li>
+                              ),
+                            )}
+                          </ul>
+                        </div>
+                        <div className="mb-6 md:mb-8">
+                          <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
+                            {t("vacanciesPage.requirements")}
+                          </h3>
+                          <ul className="pl-4">
+                            {item.requirements[currentLang].map(
+                              (res, index) => (
+                                <li
+                                  key={index}
+                                  className="font-FiraSans font-normal text-base md:text-lg leading-[150%] text-black dark:text-white"
+                                >
+                                  • {res}
+                                </li>
+                              ),
+                            )}
+                          </ul>
+                        </div>
+                        <div className="mb-8 md:mb-12">
+                          <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
+                            {t("vacanciesPage.conditions")}
+                          </h3>
+                          <ul className="pl-4">
+                            {item.conditions[currentLang].map((res, index) => (
                               <li
                                 key={index}
                                 className="font-FiraSans font-normal text-base md:text-lg leading-[150%] text-black dark:text-white"
                               >
                                 • {res}
                               </li>
-                            ),
-                          )}
-                        </ul>
-                      </div>
-                      <div className="mb-6 md:mb-8">
-                        <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
-                          {t("vacanciesPage.requirements")}
-                        </h3>
-                        <ul className="pl-4">
-                          {item.requirements[currentLang].map((res, index) => (
-                            <li
-                              key={index}
-                              className="font-FiraSans font-normal text-base md:text-lg leading-[150%] text-black dark:text-white"
-                            >
-                              • {res}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="mb-8 md:mb-12">
-                        <h3 className="font-FiraSans font-medium text-base md:text-lg leading-[110%] text-black dark:text-white mb-2.25">
-                          {t("vacanciesPage.conditions")}
-                        </h3>
-                        <ul className="pl-4">
-                          {item.conditions[currentLang].map((res, index) => (
-                            <li
-                              key={index}
-                              className="font-FiraSans font-normal text-base md:text-lg leading-[150%] text-black dark:text-white"
-                            >
-                              • {res}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <button
-                          aria-label={t("vacanciesPage.reply")}
-                          className="py-1.5 px-6 bg-[#FEC80B] hover:bg-[#FFD43A] rounded ml-8.75"
-                        >
-                          {t("vacanciesPage.reply")}
-                        </button>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <button
+                            onClick={() => handleProductOpen(item.id)}
+                            aria-label={t("vacanciesPage.reply")}
+                            className="py-1.5 px-6 bg-[#FEC80B] hover:bg-[#FFD43A] rounded ml-8.75"
+                          >
+                            {t("vacanciesPage.reply")}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+      <RequestCall
+        request={request}
+        closeRequest={closeRequest}
+        setRequest={setRequest}
+        title={activeVakansi?.title[currentLang] || ""}
+      />
       <FeedbackForm />
     </>
   );

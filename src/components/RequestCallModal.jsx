@@ -3,7 +3,7 @@ import { Images } from "../utils/images";
 import { Link, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-function RequestCall({ request, closeRequest, activeProduct }) {
+function RequestCall({ request, closeRequest, activeProduct, title }) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const prevPathname = useRef(location.pathname);
@@ -197,6 +197,15 @@ function RequestCall({ request, closeRequest, activeProduct }) {
           </p>
         </div>
 
+        <div className={`mb-13.25 ${request === "vakan" ? "block" : "hidden"}`}>
+          <h2 className="font-FiraSans font-medium text-[20px] md:text-[32px] leading-[120%] text-black dark:text-white text-center mb-2">
+            {t("requestModal.vakansiModalT")}
+          </h2>
+          <p className="font-FiraSans font-normal text-[14px] md:text-[16px] leading-[160%] text-black dark:text-white text-center">
+            {t("requestModal.navakan", { vakan: title })}
+          </p>
+        </div>
+
         <div className={`mb-11 ${request === "kp" ? "block" : "hidden"}`}>
           <h2 className="font-FiraSans font-medium text-[20px] md:text-[32px] leading-[120%] text-black dark:text-white text-center mb-2">
             {t("requestModal.modalTitleKommer")}
@@ -235,7 +244,10 @@ function RequestCall({ request, closeRequest, activeProduct }) {
           <div className="flex flex-col gap-6.25 mb-10">
             <div
               className={`flex flex-col ${
-                request === "call" || request === "kp" || request === "tm"
+                request === "call" ||
+                request === "kp" ||
+                request === "tm" ||
+                request === "vakan"
                   ? "block"
                   : "hidden"
               }`}
@@ -271,7 +283,9 @@ function RequestCall({ request, closeRequest, activeProduct }) {
 
             <div
               className={`flex flex-col ${
-                request === "variant" || request === "kp" ? "block" : "hidden"
+                request === "variant" || request === "kp" || request === "vakan"
+                  ? "block"
+                  : "hidden"
               }`}
             >
               <label
@@ -337,7 +351,43 @@ function RequestCall({ request, closeRequest, activeProduct }) {
               </span>
             </div>
 
-            <div className={`flex items-start gap-2.5 ${request === "tm" ? "hidden" : ""}`}>
+            <div
+              className={`flex flex-col ${
+                request === "vakan" ? "block" : "hidden"
+              }`}
+            >
+              <label
+                htmlFor="emailInput"
+                className={`font-FiraSans font-normal text-[14px] mb-1 transition-colors duration-300 ${
+                  errors.email ? "text-[#FF3939]" : "text-black dark:text-white"
+                }`}
+              >
+                {t("requestModal.linkSite")}
+              </label>
+              <input
+                type="email"
+                id="emailInput"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="your@mail.com"
+                className={`py-1.75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 focus:placeholder-transparent transition-all duration-300 ${
+                  errors.email
+                    ? "border-[#FF3939]"
+                    : "border-black/50 dark:border-white/50 focus:border-[#fec80b] focus:shadow-InputHover"
+                }`}
+              />
+              <span
+                className={`font-FiraSans font-normal text-[14px] leading-[110%] text-[#FF3939] mt-1 ${
+                  errors.email ? "block" : "hidden"
+                }`}
+              >
+                {t("requestModal.inputError")}
+              </span>
+            </div>
+
+            <div
+              className={`flex items-start gap-2.5 ${request === "tm" ? "hidden" : ""}`}
+            >
               <input
                 type="checkbox"
                 id="chekedInput"
