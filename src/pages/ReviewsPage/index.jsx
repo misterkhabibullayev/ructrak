@@ -54,24 +54,29 @@ export default function ReviwsPage() {
           <div>
             <Breadcrumbs />
           </div>
-          <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] mb-8 pt-8 md:pt-2 text-black dark:text-white">{t("reviews")}</h1>
+          <h1 className="font-FiraSans font-medium text-2xl md:text-[32px] leading-[118%] mb-8 pt-8 md:pt-2 text-black dark:text-white">
+            {t("reviews")}
+          </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 pb-10">
             {reviews.map((item) => (
-              <div key={item.id} className="relative w-full h-full group rounded overflow-hidden border border-[#a2a2a2]">
+              <div
+                key={item.id}
+                className="w-full h-full group rounded overflow-hidden border border-[#a2a2a2]"
+              >
                 <a
                   href={item.img}
                   data-fancybox="gallery"
-                  className="inline-block group"
+                  className="inline-block group relative"
                 >
                   <img
                     src={item.img}
                     alt="reviews"
                     className="w-full h-full object-cover"
                   />
-                </a>
                   <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex opacity-0 text-white group-hover:opacity-100 items-center justify-center transition-all duration-300">
                     <Images.plusSearchIcon />
                   </div>
+                </a>
               </div>
             ))}
           </div>

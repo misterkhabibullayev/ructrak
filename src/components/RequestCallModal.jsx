@@ -15,6 +15,7 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
     name: "",
     email: "",
     phone: "",
+    link: "",
     agree: true,
   });
 
@@ -22,12 +23,19 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
     name: false,
     email: false,
     phone: false,
+    link: false,
     agree: false,
   });
 
   const handleClose = useCallback(() => {
-    setFormData({ name: "", email: "", phone: "", agree: true });
-    setErrors({ name: false, email: false, phone: false, agree: false });
+    setFormData({ name: "", email: "", phone: "", link: "", agree: true });
+    setErrors({
+      name: false,
+      email: false,
+      phone: false,
+      link: "",
+      agree: false,
+    });
     setIsSuccess(false);
     if (typeof closeRequest === "function") {
       closeRequest();
@@ -73,11 +81,22 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
     return !cleanPhone || cleanPhone.length < 12;
   };
 
+  const validateLink = (link) => {
+    if (!link || link.trim() === "") return true;
+    try {
+      new URL(link.startsWith("http") ? link : `https://${link}`);
+      return false;
+    } catch {
+      return true;
+    }
+  };
+
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
     const fieldMap = {
       nameInput: "name",
       emailInput: "email",
+      linkInput: "link",
       chekedInput: "agree",
     };
 
@@ -133,16 +152,21 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
     e.preventDefault();
     const newErrors = {};
 
-    if (request === "call" || request === "kp") {
+    if (["call", "kp", "tm", "vakan"].includes(request)) {
       if (validateName(formData.name)) newErrors.name = true;
     }
 
-    if (request === "variant" || request === "kp") {
+    if (["variant", "kp", "vakan"].includes(request)) {
       if (validateEmail(formData.email)) newErrors.email = true;
     }
 
+    // 3. Link (URL) validatsiyasi (faqat vakan)
+    if (request === "vakan") {
+      if (validateLink(formData.link)) newErrors.link = true;
+    }
+
     if (validatePhone(formData.phone)) newErrors.phone = true;
-    if (!formData.agree) newErrors.agree = true;
+    if (!formData.agree && request !== "tm") newErrors.agree = true;
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -156,22 +180,32 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
       agree: formData.agree,
     };
 
-    if (request === "call" || request === "kp") {
+    if (["call", "kp", "tm", "vakan"].includes(request)) {
       cleanData.name = formData.name.trim();
     }
 
-    if (request === "variant" || request === "kp") {
+    if (["variant", "kp", "vakan"].includes(request)) {
       cleanData.email = formData.email.trim();
     }
 
-    setErrors({ name: false, email: false, phone: false, agree: false });
+    if (request === "vakan") {
+      cleanData.link = formData.link.trim();
+    }
+
+    setErrors({
+      name: false,
+      email: false,
+      phone: false,
+      link: false,
+      agree: false,
+    });
     console.log(cleanData);
   };
 
   return (
-    <div className="fixed inset-0 z-52 flex items-center justify-center px-5">
+    <div className="fixed inset-0 z-52 flex items-center justify-center px-5 overflow-hidden">
       <div onClick={handleClose} className="fixed inset-0 bg-black/30" />
-      <div className="w-125 relative z-10 bg-white dark:bg-slate-900 pt-13 px-5 pb-9 rounded-lg">
+      <div className="w-full max-w-125 max-h-[90vh] overflow-y-auto relative z-10 bg-white dark:bg-slate-900 pt-13 px-5 pb-9 rounded-lg">
         <button
           onClick={handleClose}
           aria-label={t("requestModal.close")}
@@ -357,28 +391,28 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
               }`}
             >
               <label
-                htmlFor="emailInput"
+                htmlFor="linkInput"
                 className={`font-FiraSans font-normal text-[14px] mb-1 transition-colors duration-300 ${
-                  errors.email ? "text-[#FF3939]" : "text-black dark:text-white"
+                  errors.link ? "text-[#FF3939]" : "text-black dark:text-white"
                 }`}
               >
                 {t("requestModal.linkSite")}
               </label>
               <input
-                type="email"
-                id="emailInput"
-                value={formData.email}
+                type="url"
+                id="linkInput"
+                value={formData.link}
                 onChange={handleChange}
-                placeholder="your@mail.com"
+                placeholder="https://"
                 className={`py-1.75 min-[575px]:py-2.75 px-2.25 min-[575px]:px-3.25 outline-none border rounded text-black dark:text-white placeholder:transition-all placeholder:duration-300 focus:placeholder-transparent transition-all duration-300 ${
-                  errors.email
+                  errors.link
                     ? "border-[#FF3939]"
                     : "border-black/50 dark:border-white/50 focus:border-[#fec80b] focus:shadow-InputHover"
                 }`}
               />
               <span
                 className={`font-FiraSans font-normal text-[14px] leading-[110%] text-[#FF3939] mt-1 ${
-                  errors.email ? "block" : "hidden"
+                  errors.link ? "block" : "hidden"
                 }`}
               >
                 {t("requestModal.inputError")}
@@ -450,6 +484,14 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
             >
               {t("requestModal.tmBtn")}
             </button>
+            <button
+              type="submit"
+              className={`w-full flex items-center justify-center p-4 bg-[#FEC80B] hover:bg-[#FFD43A] transition-all duration-300 rounded font-FiraSans font-normal text-[16px] leading-[110%] ${
+                request === "vakan" ? "block" : "hidden"
+              }`}
+            >
+              {t("requestModal.vakansiModalT")}
+            </button>
           </div>
 
           <div
@@ -492,7 +534,7 @@ function RequestCall({ request, closeRequest, activeProduct, title }) {
               </p>
               <div className="flex items-center justify-center">
                 <button
-                  onClick={closeRequest}
+                  onClick={handleClose}
                   aria-label={t("requestModal.close")}
                   className="p-4 border-2 border-black rounded max-w-75 w-full hover:bg-black hover:text-white transition-all duration-300 font-FiraSans font-normal text-[16px] leading-[110%]"
                 >
